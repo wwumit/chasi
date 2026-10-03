@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-10-03 — repository name
+
+The repository is named **`authority-provenance`**. It names the subject of the layer these volumes add — **where a subject's authority comes from, and how a third party traces that back independently** — rather than the two subjects the volumes carry (the Organization and the Group), which `governance-architecture.md` §0 already states.
+
+Names considered and set aside, with the reason:
+
+| Name | Set aside because |
+|---|---|
+| `cross-org` | an active GitHub organization for JavaScript cross-runtime projects, so the word reads as "cross-runtime" to a developer audience |
+| `agent-cross-org` | descriptive of geography, and carries no subject |
+| `surety` | 708 same-named repositories, and the surety-bond sense |
+| `agent-infra` | an existing GitHub organization whose principal repository has 6,061 stars, and a registered npm package |
+| `agent-accountability` | 62 same-named repositories; accurate but neither specific nor distinctive |
+
 ## 2026-10-03 — repository split (first release of this repository)
 
 ### What moved, and from where

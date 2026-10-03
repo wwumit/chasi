@@ -1,5 +1,7 @@
 # Cross-Organization Agent Governance
 
+> **On this repository's name.** `authority-provenance` names the subject of the layer these volumes add: **where a subject's authority comes from, and how a third party traces that back independently.** The volumes carry the two subjects that make it operable — the **Organization** as a governance subject and the **Group** as a collaboration subject (`governance-architecture.md` §0).
+
 Documents for agents that act **across organizational boundaries**: the **Organization** as a governance subject, and the **Group** as a collaboration subject.
 
 ## Core claim
