@@ -47,7 +47,7 @@ Identity, evidence and the DID method itself live in the companion repository **
 
 ## Language convention
 
-English-first. Each volume carries a Chinese edition with a `-zh` suffix. The two editions state the same rules, and their section headings and § references correspond one to one.
+English-first. Each volume carries a Chinese edition with a `-zh` suffix — this document's is [`README-zh.md`](./README-zh.md). The two editions state the same rules, and their section headings and § references correspond one to one.
 
 ## Status
 

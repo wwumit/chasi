@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-03 — Chinese edition of this README
+
+`README-zh.md` added, so that the repository's own entry document follows the same language convention it states for the volumes. `README.md` links to it from its "Language convention" section, and it links back. The two editions carry the same eight sections and the same § references — checked heading by heading.
+
 ## 2026-10-03 — repository name
 
 The repository is named **`authority-provenance`**. It names the subject of the layer these volumes add — **where a subject's authority comes from, and how a third party traces that back independently** — rather than the two subjects the volumes carry (the Organization and the Group), which `governance-architecture.md` §0 already states.
