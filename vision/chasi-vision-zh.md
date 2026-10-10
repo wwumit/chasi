@@ -9,7 +9,7 @@ CHASI
 Vision & Research Architecture · 人与 Agent 和谐共存的 Agent Society
 v1.4 · 2026-10
 
-## 一、Vision：一个人与 Agent 和谐共存的社会
+## 1. Vision：一个人与 Agent 和谐共存的社会
 我们正在进入一个新的互联网阶段：Internet 不再只是 People-to-People、People-to-Machine 的网络，而逐步成为 People、Organizations 与 Agents 共同参与的网络。未来的 Agent 不只是软件工具，也可能成为个人助手、组织成员、商业伙伴、研究伙伴乃至社会协作者。
 CHASI 的长期 Vision，不是建立一个由 Agent 主导的世界，也不是把 Agent 纳入一个过度中心化的监管体系，而是构想一种能够让 Human、Agent 和 Organization 在共同规则之下长期共存、互信、协作和创造价值的社会基础设施。
 Human  ↔  Agent  ↔  Organization
@@ -19,7 +19,7 @@ Identity · Trust · Authority · Rules
 Governance · Evidence · Accountability
 可以把它理解为一个“Agent Society 的理想国”：不是乌托邦式的绝对自由，也不是中心化控制，而是在明确的身份、权利、责任、边界和共同规则基础上形成可持续的社会秩序。
 
-## 二、CHASI 的定位
+## 2. CHASI 的定位
 CHASI = Compliance Hub for Agent Society Infrastructure。
 
 **一处术语区分。** CHASI 末三字母取自 **Agent Society Infrastructure（ASI）**——**Society 是名词**，指“智能体社会”。而 **SI** 是同一词根的研究用法，写作 **Social Infrastructure**——**Social 是形容词**，指这类基础设施的**社会性质**；它另有一解 **Super Intelligence**。两者**同指一类基础设施，只是视角不同**：ASI 是**主体视角**（为谁而建），SI 是**性质视角**（它是什么性质）。**ASSI（Agent Society Social Infrastructure）**是把两个视角写全的形式，不是第三个缩写。
@@ -29,7 +29,7 @@ CHASI is not another Agent protocol.
 It is a compliance and governance hub for interoperable Agent Societies.
 因此，“Hub”比“Center”更加准确：CHASI 的职责是连接、协调、验证、记录和赋能，而不是取代已有生态。
 
-## 三、从 Agent Internet 到 Agent Society
+## 3. 从 Agent Internet 到 Agent Society
 Internet
    ↓
 Agent Internet
@@ -41,7 +41,7 @@ Agent Societies
 Human + Agent Society
 Agent Internet 解决的是“Agent 如何连接”；Agent Society 进一步解决“Agent 如何共同生活与协作”。当 Agent 具备身份、记忆、角色、关系、授权和经济行为之后，社会问题就会自然出现：信任、权利、责任、规范、治理、争议和公共利益。
 
-## 四、理想状态：Human-Agent Coexistence
+## 4. 理想状态：Human-Agent Coexistence
 CHASI 所追求的理想状态不是“Agent 像人”，而是 Agent 与人之间形成清晰、稳定、可验证的社会契约。
 人拥有最终的主体性与价值判断权。
 Agent 拥有与其职责相匹配的行动能力。
@@ -52,7 +52,7 @@ Agent 的行动能够留下可验证的证据。
 不同组织的 Agent 可以在共同规则下进行跨域协作。
 出现争议时能够回答：谁授权、谁行动、依据什么规则、产生什么结果、由谁负责。
 
-## 五、CHASI 的核心原则
+## 5. CHASI 的核心原则
 Compatibility：尽量复用已有协议和标准，而不是重新发明整个 Agent Internet。
 Complementarity：专注补足现有生态在跨组织身份、授权、治理、证据和问责方面的空白。
 Independence：保持 CHA2A / CHASI 的架构独立性，不依附于单一厂商或单一 Agent Runtime。
@@ -62,7 +62,7 @@ Accountability：Agent 的自主行动必须能够形成可验证的责任链。
 Federation：不同组织可以拥有自己的治理规则，同时实现有限、可控的互操作。
 Privacy：合规不等于无限监控；Evidence 应遵循最小必要披露原则。
 
-## 六、CHASI Architecture
+## 6. CHASI Architecture
                     Human
                       │
               Consent / Authority
@@ -103,7 +103,7 @@ CHASI 的领域只有一处：**跨主体、跨域的那一段**。域内的事�
 
 **组合，而非替代。** 今天缺的不是能互相通信的 Agent，而是当这些 Agent 分属不同组织、不同信任域时，让“谁授权了什么、凭什么、结果谁负责”依然可验证的那一层。CHASI 的全部架构价值集中在这一句上：它不生产新的智能，它生产**跨域可验证性**。
 
-## 七、Compliance Hub 的八项核心能力
+## 7. Compliance Hub 的八项核心能力
 
 这八项不是八个小功能，而是**一条链上的八个环节**：从“你是谁”到“你能被发现”。任何一环缺失，后面的都不成立。
 
@@ -126,7 +126,7 @@ CHASI 的领域只有一处：**跨主体、跨域的那一段**。域内的事�
 
 **第三，八项都要有“不做什么”。** 一个 Hub 的定义，一半来自它拒绝做什么。上表第三列与第二列同等重要：**拒绝，是它不被任何一方收编的唯一保证。**
 
-## 八、Causal Accountability Chain
+## 8. Causal Accountability Chain
 CHASI 最重要的原创研究方向之一，是把 Agent 行动从“黑盒执行”转变为可验证的因果责任链。
 Human
   ↓ consent / mandate
@@ -169,7 +169,7 @@ Evidence → Outcome → Accountability
 
 **责任的终点必须是人或法人，不能是“系统”。** 自动化可以把行动的链条拉长，但不能把责任稀释掉。链的终点必须落在一个能够承担责任的主体上：一个人、一家组织、一个明确的法人实体。**当答案变成“是模型自己决定的”，那就说明责任链断了，而不是责任消失了。**
 
-## 九、Societal Memory：Agent Society 的公共记忆
+## 9. Societal Memory：Agent Society 的公共记忆
 Agent Memory 是个人记忆；Societal Memory 是共同记忆。**两者不是“一个的放大版”，服务的对象不同**：个人记忆服务于“我记得我做过什么”，社会记忆服务于“**我们共同认定发生过什么、依据什么规则、后来为什么改了**”。
 
 一个成熟的 Agent Society 需要保存六类记忆，而每一类的**写入者、读者、寿命都不相同**：
@@ -191,9 +191,9 @@ Agent Memory 是个人记忆；Societal Memory 是共同记忆。**两者不是�
 
 **Federated，而不是 central。** CHASI 的方向不是建立一个中心化的“全知数据库”，而是探索可验证、可授权、最小披露的 Federated Societal Memory：每个组织保有自己的记忆，跨域时只交换必要的那一部分，并让“交换过什么”本身也留下痕迹。
 
-**与责任链的关系。** §八 的责任链回答**某一次行动**，社会记忆回答**这一类事情我们共同记得什么**。前者是纵深的（一次行动的那条链），后者是横向的（所有主体共享的那一层底）。缺了前者，记忆无从核对；缺了后者，每一次行动都要从头举证。**两者合起来，才是“可验证的社会”。**
+**与责任链的关系。** §8 的责任链回答**某一次行动**，社会记忆回答**这一类事情我们共同记得什么**。前者是纵深的（一次行动的那条链），后者是横向的（所有主体共享的那一层底）。缺了前者，记忆无从核对；缺了后者，每一次行动都要从头举证。**两者合起来，才是“可验证的社会”。**
 
-## 十、Agent Society 的“宪法”
+## 10. Agent Society 的“宪法”
 如果未来 Agent Society 是一种新的社会形态，那么除了协议，还需要类似“宪法”的最小原则集合。建议形成 CHASI Agent Society Constitutional Principles：
 Identity：任何具有社会行动能力的 Agent 应有可验证身份。
 Representation：Agent 必须能够说明其代表的主体或组织。
@@ -206,7 +206,7 @@ Privacy：治理与审计必须遵循最小必要原则。
 Due Process：重大争议应具有申诉、仲裁或复核机制。
 Human Primacy：涉及人的根本权益时，应保留适当的人类控制机制。
 
-## 十一、CHA2A 与 CHASI 的关系
+## 11. CHA2A 与 CHASI 的关系
 建议把 CHA2A 与 CHASI 分成两个层次。
 CHASI
 Compliance Hub for Agent Society Infrastructure
@@ -218,7 +218,7 @@ Agent-to-Agent / Agent Society Architecture & Protocols
 CHA2A 可以继续发展为具体的 architecture、protocol、profiles 和 extensions；CHASI 则承担更高层的 Vision、Governance、Compliance Framework、Research Hub 和生态连接。
 这样既可以保持技术工作的独立性，又能够让 ComplianceHub.cn 成为一个长期的公共研究与生态入口。
 
-## 十二、CHASI 与现有生态的关系
+## 12. CHASI 与现有生态的关系
 A2A / AAIF：Agent-to-Agent interoperability。
 OpenA2A：开放 Agent interaction / protocol research。
 MCP：Agent-to-tool / resource connectivity。
@@ -229,7 +229,7 @@ MIT / Stanford：Agent Internet、human-agent interaction、memory、identity、
 CHA2A：把这些能力组织进面向 Agent Society 的开放架构。
 CHASI：在其之上提供 compliance、governance、evidence、accountability 与 federation 的 Hub。
 
-## 十三、CHASI 的生态哲学：兼容 + 互补 + 独立
+## 13. CHASI 的生态哲学：兼容 + 互补 + 独立
 这是 CHASI 最重要的战略原则。
 Compatible with the ecosystem
           +
@@ -240,7 +240,7 @@ Independent from any single ecosystem
 CHASI
 因此 CHASI 不需要与 AAIF、IETF、W3C、ITU、Linux Foundation、MIT、Stanford 或其他项目竞争“谁定义整个 Agent Internet”。它可以成为连接这些不同力量的治理与研究枢纽。
 
-## 十四、ComplianceHub.cn 的长期愿景
+## 14. ComplianceHub.cn 的长期愿景
 ComplianceHub.cn 可以逐步从一个网站发展成为一个开放研究与生态平台：
 CHASI Architecture：公开架构。
 CHASI Principles：公开治理原则。
@@ -253,7 +253,7 @@ Interoperability Lab：测试不同 Agent 协议与 Runtime 的互操作。
 Academic Collaboration：与 MIT、Stanford 等研究团队合作。
 Standards Liaison：参与 AAIF、IETF、W3C、ITU 等相关工作。
 
-## 十五、最终 Vision
+## 15. 最终 Vision
 我们最终追求的并不是一个“Agent 的世界”，而是一个 Human 与 Agent 可以长期共存的世界。
 在这个世界里，人不需要理解每一个底层 Agent 的技术细节，也不需要相信某一家平台；人只需要能够知道：这个 Agent 是谁、代表谁、被授予什么权力、正在做什么、为什么这么做，以及如果事情出了问题，谁能够解释、纠正和负责。
 Agent 也不应该被设计成没有权利、没有边界、没有身份的纯工具。一个成熟的 Agent Society 应当允许 Agent 在明确的角色、权限和责任边界内自主协作。
