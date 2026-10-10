@@ -19,7 +19,7 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 
 | 层 | 文档 | 版本 |
 |---|---|---|
-| **L1 · 立场** | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.7 |
+| **L1 · 立场** | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.8 |
 | | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v2.5 |
 | **L2 · 架构**（*不陈述要求*） | [`governance-architecture-zh.md`](./architecture/governance-architecture-zh.md) · [`en`](./architecture/governance-architecture.md) | v0.3 |
 | **L3 · 规范** | [`organization-governance-zh.md`](./specs/organization-governance-zh.md) · [`en`](./specs/organization-governance.md) | v0.1 |
