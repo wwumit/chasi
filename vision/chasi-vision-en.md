@@ -2,12 +2,13 @@
 
 **Compliance Hub for Agent Society Infrastructure**
 
-> **Not a parallel edition.** This is the English **v1.0** (16 sections). The Chinese edition in this directory is **v1.1** — a superset carrying an additional brand appendix (§A.1–A.7). The two are **different versions, not two languages of one text**; reconciling them is an open item.
-
 ---
 
 Toward a Governed, Interoperable and Human-Centric Agent Society
-Vision Paper · v1.0 · 2026
+Vision Paper · v1.1 · 2026-10
+
+> **v1.1** — removes the v1.0 roadmap section. A vision states direction, not schedule.
+> The Chinese document in `vision/` is a separate document, not a translation of this one.
 
 ## Executive Summary
 Artificial Intelligence is moving from models that generate information toward autonomous agents that can discover services, communicate, collaborate, make decisions, delegate authority, transact, and act on behalf of humans and organizations. The next transformation is therefore not simply better AI, but the emergence of an Agent Society.
@@ -117,16 +118,7 @@ Agent becomes a participant of the Internet society, not merely a feature of an 
 
 ## 14. CHASI Principles
 
-## 15. A Practical Roadmap
-Run the first cross-organization Group experiment using existing CHA2A and Governance foundations.
-Formalize Identity, Membership, Delegation, Policy and Evidence models exposed by the experiment.
-Extend the experiment to federated organizations and trust domains.
-Test Human Override, multi-context authority and Human–Agent coexistence.
-Introduce Agentic Commerce only after identity, delegation and evidence are sufficiently mature.
-Publish Working Drafts, research papers and open experimental results.
-Engage with relevant standards communities and academic partners without prematurely freezing the architecture.
-
-## 16. CHASI Vision: A Living Document
+## 15. CHASI Vision: A Living Document
 This Vision should remain deliberately open. It is not a claim that the final form of Agent Society is already known. It is a direction and a set of principles against which architecture, experiments and ecosystem decisions can be evaluated.
 As CHASI Lab experiments generate evidence, this Vision may evolve. Architecture and protocol documents should become more precise; the Vision should remain sufficiently broad to accommodate new technologies, social models and forms of human–agent interaction.
 

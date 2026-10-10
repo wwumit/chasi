@@ -2,14 +2,15 @@
 
 **Compliance Hub for Agent Society Infrastructure**
 
-> **非平行版本。** 本文件是中文 **v1.1**（17 节 + 附录 A.1–A.7），是英文 **v1.0**（16 节）的**超集**。两者是**不同版本，不是同一文本的两种语言**；两者合一尚待处理。
-
 ---
 
 CHASI
 
 Vision & Research Architecture · 人与 Agent 和谐共存的 Agent Society
-v1.0 · 2026-10
+v1.2 · 2026-10
+
+> **v1.2** — 删去 v1.1 的「研究路线」「18 个月目标」两节：Vision 陈述方向，不排期。
+> 英文 Vision 是另一份文档，不是本文件的译本。
 
 ## 一、Vision：一个人与 Agent 和谐共存的社会
 我们正在进入一个新的互联网阶段：Internet 不再只是 People-to-People、People-to-Machine 的网络，而逐步成为 People、Organizations 与 Agents 共同参与的网络。未来的 Agent 不只是软件工具，也可能成为个人助手、组织成员、商业伙伴、研究伙伴乃至社会协作者。
@@ -165,24 +166,7 @@ Interoperability Lab：测试不同 Agent 协议与 Runtime 的互操作。
 Academic Collaboration：与 MIT、Stanford 等研究团队合作。
 Standards Liaison：参与 AAIF、IETF、W3C、ITU 等相关工作。
 
-## 十五、研究路线
-阶段 1：定义 Agent Society Vocabulary 与 Constitutional Principles。
-阶段 2：形成 CHASI Governance Architecture。
-阶段 3：形成 CHA2A Identity / Delegation / Federation Profiles。
-阶段 4：建立 Agent Society Testbed。
-阶段 5：开展 Cross-Organization Agent Society 实验。
-阶段 6：研究 Agentic Commerce 与责任链。
-阶段 7：形成学术论文、技术报告和开放规范。
-阶段 8：推动与现有标准组织及产业生态的互操作。
-
-## 十六、18 个月目标
-0–3 月：完成 CHASI Vision、Principles、Architecture。
-3–6 月：完成 Identity / Delegation / Evidence / Accountability 模型。
-6–9 月：完成 Federation 与 Agent Society Testbed。
-9–12 月：形成第一批技术报告、论文和开放 Profiles。
-12–18 月：与 MIT / Stanford / NANDA / AAIF 等建立公开技术互动，并推动实际互操作。
-
-## 十七、最终 Vision
+## 十五、最终 Vision
 我们最终追求的并不是一个“Agent 的世界”，而是一个 Human 与 Agent 可以长期共存的世界。
 在这个世界里，人不需要理解每一个底层 Agent 的技术细节，也不需要相信某一家平台；人只需要能够知道：这个 Agent 是谁、代表谁、被授予什么权力、正在做什么、为什么这么做，以及如果事情出了问题，谁能够解释、纠正和负责。
 Agent 也不应该被设计成没有权利、没有边界、没有身份的纯工具。一个成熟的 Agent Society 应当允许 Agent 在明确的角色、权限和责任边界内自主协作。
@@ -201,7 +185,7 @@ A Sustainable Agent Society
 如果 CHA2A 是我们对于 Agent Internet / Agent Society 的技术探索，那么 CHASI 可以成为更大的 Vision：一个不属于任何单一公司、平台或 Agent Runtime 的开放治理枢纽。
 它不是为了控制 Agent，而是为了让自主性、信任、责任和自由能够同时存在。
 从这个意义上说，Compliance 不是限制 Agent Society 的力量，而是使这种社会真正能够规模化存在的基础条件。
-—— CHASI Vision · Draft v1.0
+—— CHASI Vision · v1.2
 附录：CHASI / SI 品牌语义与命名战略
 从 Compliance Hub 到 Social Infrastructure，再到 Super Intelligence
 
@@ -231,7 +215,7 @@ CHASI
 
 ## A.4 Social Infrastructure 与 Agent Society 的研究渊源
 值得纳入研究史的是，Social Infrastructure 并非本项目临时创造的术语。早期 Multi-Agent Systems 研究中已经出现 SOCS-SI（Social Infrastructure）等工作，并讨论 Agent Society、社会规则、compliance verification、trust、reputation 以及 Agent 加入 Society 后如何获得和遵循规则。这说明 CHASI 的“SI”语义不仅适合品牌，也能够连接到已有的学术研究传统。
-因此，未来可以把 Social Infrastructure 作为 CHASI 的一个重要研究术语，并进一步定义 Agent Society Social Infrastructure（ASSI）等概念，但是否形成正式缩写应在后续研究中谨慎决定。
+因此，Social Infrastructure 可以成为 CHASI 的一个重要研究术语，并进一步连接 Agent Society Social Infrastructure（ASSI）等既有研究概念。
 
 ## A.5 域名与品牌战略
 目前更稳妥的品牌结构是：
@@ -265,5 +249,5 @@ SI
 ## A.7 战略判断
 本轮讨论形成一个重要的品牌哲学：Compliance 是基础条件，Trust 是运行机制，Coexistence 是长期 Vision。CHASI 因而不应被理解为一个单纯的“合规检查中心”，而应被理解为一个帮助 Human、Agent 和 Organization 建立可信关系、共同规则与责任边界的开放 Hub。
 SI 则提供更大的时代背景：如果 Super Intelligence 代表智能能力的未来，那么 Social Infrastructure 就是让这种智能能够进入真实社会、与人和组织长期共存所需要的基础设施。CHASI 可以成为两者之间的重要连接点。
-建议后续在 ComplianceHub.cn 上逐步形成这一完整叙事，但在正式技术规范中仍保持术语定义的严谨性。
-CHASI Vision · v1.1
+这一叙事在品牌与传播层面可以充分展开，但在正式技术规范中，术语定义仍应保持严谨。
+CHASI Vision · v1.2
