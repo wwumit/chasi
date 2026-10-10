@@ -7,7 +7,7 @@
 CHASI
 
 Vision & Research Architecture · 人与 Agent 和谐共存的 Agent Society
-v1.2 · 2026-10
+v1.3 · 2026-10
 
 ## 一、Vision：一个人与 Agent 和谐共存的社会
 我们正在进入一个新的互联网阶段：Internet 不再只是 People-to-People、People-to-Machine 的网络，而逐步成为 People、Organizations 与 Agents 共同参与的网络。未来的 Agent 不只是软件工具，也可能成为个人助手、组织成员、商业伙伴、研究伙伴乃至社会协作者。
@@ -21,6 +21,9 @@ Governance · Evidence · Accountability
 
 ## 二、CHASI 的定位
 CHASI = Compliance Hub for Agent Society Infrastructure。
+
+**一处术语区分。** CHASI 末三字母取自 **Agent Society Infrastructure（ASI）**——**Society 是名词**，指"智能体社会"。而 **SI** 是同一词根的研究用法，写作 **Social Infrastructure**——**Social 是形容词**，指这类基础设施的**社会性质**；它另有一解 **Super Intelligence**。两者**同指一类基础设施，只是视角不同**：ASI 是**主体视角**（为谁而建），SI 是**性质视角**（它是什么性质）。**ASSI（Agent Society Social Infrastructure）**是把两个视角写全的形式，不是第三个缩写。
+
 CHASI 不是另一个 Agent Protocol，也不是一个监管机构。它是一个开放的 Compliance & Governance Hub，为不同 Agent Runtime、Agent Protocol、Identity System、Organization 和 Agent Society 提供互操作的合规与治理基础设施。
 CHASI is not another Agent protocol.
 It is a compliance and governance hub for interoperable Agent Societies.
@@ -182,69 +185,4 @@ A Sustainable Agent Society
 如果 CHA2A 是我们对于 Agent Internet / Agent Society 的技术探索，那么 CHASI 可以成为更大的 Vision：一个不属于任何单一公司、平台或 Agent Runtime 的开放治理枢纽。
 它不是为了控制 Agent，而是为了让自主性、信任、责任和自由能够同时存在。
 从这个意义上说，Compliance 不是限制 Agent Society 的力量，而是使这种社会真正能够规模化存在的基础条件。
-—— CHASI Vision · v1.2
-附录：CHASI / SI 品牌语义与命名战略
-从 Compliance Hub 到 Social Infrastructure，再到 Super Intelligence
-
-## A.1 CHASI 的品牌定位
-经过进一步讨论，建议保留 CHASI 作为项目、架构和研究生态名称：CHASI = Compliance Hub for Agent Society Infrastructure。与“Compliance Center”相比，“Hub”强调连接、协调、兼容和生态协作，而不是监管机构或单一控制中心。
-CHASI 的正式含义保持技术严谨；与此同时，可以允许它形成温和、积极的文化联想。中文语音可以自然产生“扎西”等正向联想，但不把这种联想表述为严格的词源关系。
-核心原则：正式定义保持准确；品牌气质保持开放、正向和有理想主义色彩。
-
-## A.2 “扎西 / 吉祥”作为品牌文化联想
-“Tashi / 扎西”在藏语文化中与吉祥、祝福等积极意涵相关；“Tashi Delek / 扎西德勒”也是广为人知的藏语问候与祝福表达。CHASI 与其在中文听感上的接近，可以作为品牌气质上的自然联想。
-需要明确：CHASI 的正式词源仍然来自英文缩写，不应声称 CHASI 是 Tashi 的藏语转写。品牌层面无需过度解释，保留这种积极、和谐、祝福的联想即可。
-
-## A.3 SI 的双重战略含义
-SI 是值得长期占位和观察的战略词根。它至少有两种与 CHASI Vision 高度相关的解释：
-Super Intelligence：代表下一阶段的智能形态，尤其是高度自主的智能体与智能系统。
-Social Infrastructure：代表支撑 Agent Society 的身份、信任、授权、治理、记忆、证据和互操作基础设施。
-这两个含义形成一个非常有价值的关系：Super Intelligence 代表“智能能力的上升”，Social Infrastructure 代表“社会基础设施的成熟”。CHASI 正处于两者交汇的位置。
-Super Intelligence
-↓
-Autonomous Agents
-↓
-Agent Society
-↓
-Social Infrastructure
-↓
-CHASI
-
-## A.4 Social Infrastructure 与 Agent Society 的研究渊源
-值得纳入研究史的是，Social Infrastructure 并非本项目临时创造的术语。早期 Multi-Agent Systems 研究中已经出现 SOCS-SI（Social Infrastructure）等工作，并讨论 Agent Society、社会规则、compliance verification、trust、reputation 以及 Agent 加入 Society 后如何获得和遵循规则。这说明 CHASI 的“SI”语义不仅适合品牌，也能够连接到已有的学术研究传统。
-因此，Social Infrastructure 可以成为 CHASI 的一个重要研究术语，并进一步连接 Agent Society Social Infrastructure（ASSI）等既有研究概念。
-
-## A.5 域名与品牌战略
-目前更稳妥的品牌结构是：
-ComplianceHub.cn：作为公开网站、研究入口和长期品牌门户。
-CHASI：作为架构、研究项目和生态名称。
-CHA2A：继续承担 Agent-to-Agent / Agent Society Architecture 与协议体系的技术工作。
-SI：作为长期战略词根，重点关注 Super Intelligence 与 Social Infrastructure 两个方向。
-这一结构避免把 CHASI 立即定位成单一商业商标，同时保留其长期品牌潜力。由于已有同名或近名 AI/技术项目存在，未来若进行国际商业化或商标注册，应另行进行专业的商标和域名 clearance。
-
-## A.6 品牌架构草图
-ComplianceHub.cn
-        │
-        ▼
-      CHASI
-Compliance Hub for Agent Society Infrastructure
-        │
-        ├── Social Infrastructure
-        │       ├── Identity
-        │       ├── Trust
-        │       ├── Delegation
-        │       ├── Memory
-        │       ├── Governance
-        │       └── Accountability
-        │
-        └── CHA2A
-                Agent Society Architecture / Protocols
-SI
-├── Super Intelligence
-└── Social Infrastructure
-
-## A.7 战略判断
-本轮讨论形成一个重要的品牌哲学：Compliance 是基础条件，Trust 是运行机制，Coexistence 是长期 Vision。CHASI 因而不应被理解为一个单纯的“合规检查中心”，而应被理解为一个帮助 Human、Agent 和 Organization 建立可信关系、共同规则与责任边界的开放 Hub。
-SI 则提供更大的时代背景：如果 Super Intelligence 代表智能能力的未来，那么 Social Infrastructure 就是让这种智能能够进入真实社会、与人和组织长期共存所需要的基础设施。CHASI 可以成为两者之间的重要连接点。
-这一叙事在品牌与传播层面可以充分展开，但在正式技术规范中，术语定义仍应保持严谨。
-CHASI Vision · v1.2
+—— CHASI Vision · v1.3

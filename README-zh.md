@@ -19,7 +19,7 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 
 | 层 | 文档 | 版本 |
 |---|---|---|
-| **L1 · 立场** | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v1.2 |
+| **L1 · 立场** | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v1.3 |
 | | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v1.1 |
 | **L2 · 架构**（*不陈述要求*） | [`governance-architecture-zh.md`](./architecture/governance-architecture-zh.md) · [`en`](./architecture/governance-architecture.md) | v0.3 |
 | **L3 · 规范** | [`organization-governance-zh.md`](./specs/organization-governance-zh.md) · [`en`](./specs/organization-governance.md) | v0.1 |
@@ -32,7 +32,7 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 
 ### 关于 Vision 的两个版本
 
-**它们不是平行版本。** 英文是 **v1.1**（15 节）；中文是 **v1.2**（15 节，**另带**品牌附录 §A.1–§A.7），且**不是**英文的译本。这是**两份不同的文档**，引用时各按自身版本号引用。
+**它们不是平行版本。** 两版都是 15 节，但**不是彼此的译本**，且中段处理的是**不同题目**：英文讲兼容性与社会契约，中文讲架构、责任链与社会记忆。这是**两份不同的文档**，引用时各按自身版本号引用。
 
 **Vision 不承载工作计划。** 两版都不写时间、交付物和动作指派——路线图是另一种文件，读者不同、寿命也不同。
 

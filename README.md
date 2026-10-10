@@ -20,7 +20,7 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 | Layer | Document | Version |
 |---|---|---|
 | **L1 · stance** | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v1.1 |
-| | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v1.2 |
+| | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v1.3 |
 | **L2 · architecture** *(states no requirements)* | [`governance-architecture.md`](./architecture/governance-architecture.md) · [`-zh`](./architecture/governance-architecture-zh.md) | v0.3 |
 | **L3 · specifications** | [`organization-governance.md`](./specs/organization-governance.md) · [`-zh`](./specs/organization-governance-zh.md) | v0.1 |
 | | [`group-collaboration.md`](./specs/group-collaboration.md) · [`-zh`](./specs/group-collaboration-zh.md) | v0.1 |
@@ -32,7 +32,7 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 
 ### A note on the Vision's two editions
 
-**They are not parallel editions.** The English is **v1.1** (15 sections); the Chinese is **v1.2** (15 sections **plus** a brand appendix, §A.1–A.7), and is **not a translation** of the English. These are two **different documents**; cite each by its own version.
+**They are not parallel editions.** Both run to 15 sections, but they are **not translations of each other**, and their middles treat **different subjects**: the English covers compatibility and the social contract, the Chinese covers the architecture, the accountability chain and societal memory. They are two **different documents**; cite each by its own version.
 
 **A vision carries no work plan.** Neither edition states dates, deliverables or assigned actions. A roadmap is a different document with a different audience and a different lifetime.
 
