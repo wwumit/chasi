@@ -25,7 +25,6 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 | **L3 · 规范** | [`organization-governance-zh.md`](./specs/organization-governance-zh.md) · [`en`](./specs/organization-governance.md) | v0.1 |
 | | [`group-collaboration-zh.md`](./specs/group-collaboration-zh.md) · [`en`](./specs/group-collaboration.md) | v0.1 |
 | **L4 · 剖面** | *预留——尚未填充* | — |
-| — | [`CHANGELOG.md`](./CHANGELOG.md) | — |
 
 **哪一层归谁。** L1 陈述立场。**L2 不陈述任何要求**——凡出现「必须」，都指向拥有该条的分册（`governance-architecture.md` §1.1）。L3 陈述要求，每一册管自己的主题。L4 承载叠在其下各层之上的剖面。
 
@@ -77,12 +76,10 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 
 治理三册写在 CHA2A 规范组内，后迁入本仓，以便治理模型在阅读时不预设某个特定的 DID 方法。主规范 §11——其并列索引，**未被编辑**——列出的是 `evidence-record.md`、`agent-identity.md` 与 `EVIDENCE.md`，从来不含这三册，因此那次迁移没有改动它里的任何引用。
 
-本仓自 2026-10-03 至 2026-10-09 名为 `authority-provenance`，此后取 umbrella 名 `chasi` 并按层重构。两者都记录在 `CHANGELOG.md`。
-
 ## 参与与变更控制
 
 - **许可**：Apache License 2.0（见 `LICENSE`）。
 - **参与**：通过 GitHub issues / PRs。
-- **变更纪律**：对某一册的实质变更，提升该册版本号并在 `CHANGELOG.md` 说明理由；编辑与链接可以单独提交。
+- **变更纪律**：对某一册的实质变更，提升该册版本号，并在**该册自己的前言**里写明改了什么、为什么。本仓不设仓级 changelog——分册的版本说明就是规范的日志。编辑与链接可以单独提交。
 - **复核节奏**：留给部署方的条目、以及某一册未回答的问题，在该册版本提升时重新审视。
 - **所依据绑定的参考部署**：`https://compliancehub.cn`。

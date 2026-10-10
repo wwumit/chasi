@@ -25,7 +25,6 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 | **L3 · specifications** | [`organization-governance.md`](./specs/organization-governance.md) · [`-zh`](./specs/organization-governance-zh.md) | v0.1 |
 | | [`group-collaboration.md`](./specs/group-collaboration.md) · [`-zh`](./specs/group-collaboration-zh.md) | v0.1 |
 | **L4 · profiles** | *reserved — not yet populated* | — |
-| — | [`CHANGELOG.md`](./CHANGELOG.md) | — |
 
 **Which layer owns what.** L1 states the stance. **L2 states no requirements** — where a "must" belongs, it points at the volume that owns it (`governance-architecture.md` §1.1). L3 states the requirements, each volume for its own subject. L4 holds profiles over the layers below.
 
@@ -77,12 +76,10 @@ Experimental drafts. Each specification volume states requirements for its own s
 
 The three governance volumes were written inside the CHA2A specification group and moved into their own repository so that the governance model reads without assuming a particular DID method. §11 of the method specification — its companion index, which is **not** edited — lists `evidence-record.md`, `agent-identity.md` and `EVIDENCE.md`, and has never listed these volumes, so that move changed no reference in it.
 
-The repository was named `authority-provenance` from 2026-10-03 to 2026-10-09, when it took the umbrella name `chasi` and was restructured into layers. `CHANGELOG.md` records both.
-
 ## Participation and change control
 
 - **Licence**: Apache License 2.0 (see `LICENSE`).
 - **Participation**: via GitHub issues / PRs.
-- **Change discipline**: a substantive change to a volume bumps that volume's version and states its reason in `CHANGELOG.md`; editing and links may be committed on their own.
+- **Change discipline**: a substantive change to a volume bumps that volume's version and states what changed, and why, **in that volume's own front matter**. There is no repository-level changelog — a volume's version note is the specification's log. Editing and links may be committed on their own.
 - **Review cadence**: items left to the deploying parties, and any question a volume does not answer, are revisited when that volume is version-bumped.
 - **Reference deployment of the worked binding**: `https://compliancehub.cn`.
