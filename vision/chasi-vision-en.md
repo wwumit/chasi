@@ -4,7 +4,7 @@
 
 ---
 
-> Status: draft v2.3 | Kind: **stance (vision)**
+> Status: draft v2.4 | Kind: **stance (vision)**
 > **This document says *why*, and *where to*. It requires nothing of anyone.** Where it conflicts with a specification, the specification governs.
 
 ---
@@ -18,19 +18,19 @@
 
 ## 1. Membership Is Plural
 
-An agent society is not "a crowd of agents", and it is not "humans and agents". Its members fall into at least five kinds, and **they are not on the same level**:
+An agent society is not "a crowd of agents", and it is not "humans and agents". From the Internet to the Agent Internet to Agent Societies, what has increased is never the number of connections, but **which kinds of member have appeared in the society**.
 
-| Member | What it is |
-|---|---|
-| **Person** | individuals, families, communities |
-| **Organization** | companies, institutions, governments, non-profits |
-| **Agent** | personal assistant, organizational member, business partner, research partner, social collaborator |
-| **Group** | temporary, long-lived, cross-organizational; **it may have rules and a memory of its own** |
-| **Things that are not subjects** | services, tools, resources, data. They do not "belong to" the society, but the society uses them — **so they too need names that can be cited** |
+| Position | Who / what | Note |
+|---|---|---|
+| **Subject** | **Person** | a natural person |
+| | **Organization** | companies, institutions, governments, non-profits |
+| | **Agent** | may act as personal assistant, organizational member, business partner, research partner, social collaborator — **these are its roles, not its kind** |
+| | **Group** | temporary, long-lived, cross-organizational; **a family or a community is its smallest form**; it may have rules and a memory of its own |
+| **Not a subject** | **Service · tool · resource · data** | they do not belong to the society, but the society uses them — **so they too need names that can be cited, and those names must not be mistaken for subjects** |
 
-**One agent may hold several of these roles at once.** This is the ground the whole vision stands on: **if "belongs to whom" has only one answer, there is no society, only ownership.**
+**One agent may belong to several organizations and groups at once**, and its role in each may differ. This is the ground the whole vision stands on: **if "belongs to whom" has only one answer, there is no society, only ownership.**
 
-Seen as a technical progression, the path runs Internet → Agent Internet → Agent Organizations → Agent Societies. But the table above is the point: **what the progression adds is not quantity, it is kinds of member.**
+**One kind that has no place here yet.** The four kinds of subject above are peers, but there will be entities that are **both an agent and an organization** — an autonomous entity that is itself a legal person, holding assets, concluding contracts, bearing responsibility and being held to it. This table has no place for it yet. **That is a question deliberately left open, not an omission**: when such a subject does appear, what it needs is a fresh answer to "which kind", not one more row.
 
 ## 2. What Is in This Society
 
@@ -185,6 +185,8 @@ Organization ──── CHASI Hub ──── Organization
 | Evidence | on what basis we say this happened, and whose responsibility it is |
 | Interconnection | how it composes with existing protocols, runtimes and identity systems |
 
+**Things that are not subjects have a place in the table too.** Services, tools, resources and data are not subjects, but they need to be referable; they are handled by the **identity and trust layer** as *named resources*, and **may not** be given the capacities only a subject has — acting on another's behalf, being granted authority, being held responsible. This is the same cut as the table in §1.
+
 **Dependency runs one way: an upper layer makes no demand of a lower one.** The governance layer does not dictate which cryptography the identity layer uses; the evidence layer does not dictate what organizational form the governance layer takes. The point of this rule is to let **every layer be replaceable** — the family's `governance-architecture` declares of itself that it "states no requirements", which is the same rule.
 
 **What CHASI does not own.** This matters more than the diagram above:
@@ -206,7 +208,7 @@ These eight are not eight small features but **eight links in one chain**: from 
 
 | # | Capability | What it does | **What it does not do** |
 |---|---|---|---|
-| 1 | Identity and resolution | let any subject (person / agent / organization / group) be resolved across domains, and give its current status | does not require any particular identity system |
+| 1 | Identity and resolution | let any subject (person / agent / organization / group) be resolved across domains and give its current status; **and let non-subject resources that need to be referred to (services / tools / data) be resolved too** | does not require any particular identity system; **and does not treat a non-subject resource as a subject — it may be named, it may not be authorized** |
 | 2 | Organization and governance | carry the source of authority, membership, and the record of governance actions | does not decide how an organization governs itself internally |
 | 3 | Authority and delegation | make authority declarable, limitable, revocable and traceable; support delegation layer by layer | does not make authorization decisions for people, and does not widen authority already granted |
 | 4 | Group and collaboration | let subjects from different organizations collaborate under common rules | introduces no external group service as its core |
@@ -368,4 +370,4 @@ It is not there to control agents, but so that autonomy, trust, responsibility a
 
 In that sense, compliance is not the force that restricts an Agent Society; it is the basic condition that lets such a society exist at scale.
 
-—— CHASI Vision · v2.3
+—— CHASI Vision · v2.4
