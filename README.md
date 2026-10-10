@@ -20,7 +20,7 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 | Layer | Document | Version |
 |---|---|---|
 | **L1 · stance** | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v1.1 |
-| | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.0 |
+| | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.1 |
 | **L2 · architecture** *(states no requirements)* | [`governance-architecture.md`](./architecture/governance-architecture.md) · [`-zh`](./architecture/governance-architecture-zh.md) | v0.3 |
 | **L3 · specifications** | [`organization-governance.md`](./specs/organization-governance.md) · [`-zh`](./specs/organization-governance-zh.md) | v0.1 |
 | | [`group-collaboration.md`](./specs/group-collaboration.md) · [`-zh`](./specs/group-collaboration-zh.md) | v0.1 |
