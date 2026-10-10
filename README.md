@@ -28,6 +28,7 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 | | [`question.md`](./specs/question.md) · [`-zh`](./specs/question-zh.md) | v0.1 |
 | | [`naming.md`](./specs/naming.md) · [`-zh`](./specs/naming-zh.md) | v0.1 |
 | **L4 · profiles** | [`assembly.md`](./profiles/assembly.md) · [`-zh`](./profiles/assembly-zh.md) | v0.1 |
+| | [`lexicon.md`](./profiles/lexicon.md) · [`-zh`](./profiles/lexicon-zh.md) | v0.1 |
 | **L5 · evidence and conformance** | *not in this repository* — it lives in `did-method-cha2a` | — |
 | **L6 · implementation and operation** | *not in this repository* — implementations live in their own repositories | — |
 | **L7 · method** | [`use-case-laboratory.md`](./method/use-case-laboratory.md) · [`-zh`](./method/use-case-laboratory-zh.md) | v1.0 |

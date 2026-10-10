@@ -10,13 +10,13 @@
 
 ## 1. One general rule
 
-> **The hash is the verifier; names, uris, repository names and version numbers are all just locators.**
+> **The hash is the check basis; names, uris, repository names and version numbers are all just locators.**
 
-This rule is already fixed in `organization-governance.md` §4① — in `charter_ref`, the `hash` is the verifier and the `uri` is only a locator. This volume **generalizes it to the four classes**.
+This rule is already fixed in `organization-governance.md` §4① — in `charter_ref`, the `hash` is the check basis and the `uri` is only a locator. This volume **generalizes it to the four classes**.
 
 **Two things follow:**
 
-- **a locator may change; the verifier may not.** Changing a domain, a repository name or a file path does not change *which* thing this is;
+- **a locator may change; the check basis may not.** Changing a domain, a repository name or a file path does not change *which* thing this is;
 - **a reference that gives only a locator is not acceptable.** A reference with a uri and no hash cannot prove that "the thing then had this content".
 
 ---
@@ -39,7 +39,7 @@ This rule is already fixed in `organization-governance.md` §4① — in `charte
 
 ### 2.2 Rule version
 
-**Rule**: each version carries a **hash** (the verifier), an **`effective_from`** (when it takes effect) and an optional **uri** (a locator only). **An amendment appends a version; it never rewrites an existing entry.**
+**Rule**: each version carries a **hash** (the check basis), an **`effective_from`** (when it takes effect) and an optional **uri** (a locator only). **An amendment appends a version; it never rewrites an existing entry.**
 
 - **Positive example**: `{hash: "sha256:…", uri: "https://a.example/charter/3", effective_from: "2026-09-01"}`. Older appointments remain valid — their basis is **the version in force when they were made**.
 - **Counter-example**: rewriting a charter in place without changing the version. That makes "which rule was in force at the time" (Q3) **permanently unanswerable**.
@@ -64,7 +64,7 @@ This rule is already fixed in `organization-governance.md` §4① — in `charte
 
 ## 3. Three hard requirements on a reference
 
-1. **A reference must carry the verifier.** Any reference to a rule version, a commitment or a record carries a hash (or its equivalent);
+1. **A reference must carry the check basis.** Any reference to a rule version, a commitment or a record carries a hash (or its equivalent);
 2. **A reference must point at "the version in force when it was made".** "Latest version" may not be substituted;
 3. **A locator failing must not affect verification.** Not being able to obtain the content is one thing; **not being able to prove it is the same content** is another — the second rests on the hash alone.
 

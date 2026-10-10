@@ -28,6 +28,7 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 | | [`question-zh.md`](./specs/question-zh.md) · [`en`](./specs/question.md) | v0.1 |
 | | [`naming-zh.md`](./specs/naming-zh.md) · [`en`](./specs/naming.md) | v0.1 |
 | **L4 · 剖面** | [`assembly-zh.md`](./profiles/assembly-zh.md) · [`en`](./profiles/assembly.md) | v0.1 |
+| | [`lexicon-zh.md`](./profiles/lexicon-zh.md) · [`en`](./profiles/lexicon.md) | v0.1 |
 | **L5 · 证据与一致性** | *不在本仓*——由 `did-method-cha2a` 承载 | — |
 | **L6 · 实现与运营** | *不在本仓*——各实现另在自己的仓 | — |
 | **L7 · 方法** | [`use-case-laboratory-zh.md`](./method/use-case-laboratory-zh.md) · [`en`](./method/use-case-laboratory.md) | v1.0 |

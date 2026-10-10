@@ -72,6 +72,14 @@ An assembly holds not when "all four slots are filled" but when **all four verdi
 
 **"Partially answered" must say which slot it falls short in.** The division of labour: **this document specifies the slots and interfaces; `question.md` specifies the judgment format.**
 
+**An assembly holding is not the family being sufficient.** The verdicts above concern **one assembly**. At the family level there is a stronger criterion:
+
+> **Agents of two organizations that do not belong to each other complete one task with verifiable evidence, without using any specification from outside this family along the way.**
+
+**If that cannot be met, the family is missing a volume** — and which volume, by working back from "what did we have to go outside for". This criterion is also the family's **adoption** criterion: **a system can be built from this family, and nothing outside it is needed along the way.**
+
+**Its relation to A8**: A8 judges that **one assembly** contains no Define; this judges that **building a working system** contains no outside dependency at any point. The first is necessary but not sufficient for the second.
+
 ---
 
 ## 5. Assembly vectors
