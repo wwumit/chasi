@@ -23,7 +23,8 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 | | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.22 |
 | **L2 · architecture** *(states no requirements)* | [`protocol-suite-architecture.md`](./architecture/protocol-suite-architecture.md) · [`-zh`](./architecture/protocol-suite-architecture-zh.md) — the upper architecture | v0.2 |
 | | [`governance-architecture.md`](./architecture/governance-architecture.md) · [`-zh`](./architecture/governance-architecture-zh.md) | v0.3 |
-| **L3 · specifications** | [`organization-governance.md`](./specs/organization-governance.md) · [`-zh`](./specs/organization-governance-zh.md) | v0.1 |
+| **L3 · specifications** | [`overview.md`](./specs/overview.md) · [`-zh`](./specs/overview-zh.md) — **the entry to this layer, and to the family** | v0.1 |
+| | [`organization-governance.md`](./specs/organization-governance.md) · [`-zh`](./specs/organization-governance-zh.md) | v0.1 |
 | | [`group-collaboration.md`](./specs/group-collaboration.md) · [`-zh`](./specs/group-collaboration-zh.md) | v0.1 |
 | | [`question.md`](./specs/question.md) · [`-zh`](./specs/question-zh.md) | v0.1 |
 | | [`naming.md`](./specs/naming.md) · [`-zh`](./specs/naming-zh.md) | v0.2 |
@@ -35,7 +36,7 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 | | [`ecosystem-matrix.md`](./method/ecosystem-matrix.md) · [`-zh`](./method/ecosystem-matrix-zh.md) | v0.1 |
 | **L8 · distribution** | *not in this repository* — distribution is dated per delivery and is not kept here | — |
 
-**Which layer owns what.** L1 states the stance. **L2 states no requirements** — where a "must" belongs, it points at the volume that owns it (`governance-architecture.md` §1.1). L3 states the requirements, each volume for its own subject. L4 holds profiles over the layers below. L5 holds conformance vectors and checkers. L6 holds implementations and operations. L7 holds the method — how an experiment is designed, run and recorded. L8 holds what is delivered outward.
+**Which layer owns what.** L1 states the stance. **L2 states no requirements** — where a "must" belongs, it points at the volume that owns it (`governance-architecture.md` §1.1). L3 states the requirements, each volume for its own subject. L4 holds profiles over the layers below. L5 holds conformance vectors and checkers. L6 holds implementations and operations. L7 holds the method — how an experiment is designed, run and recorded. L8 holds what is delivered outward. **`specs/overview.md` is the family's entry document**; the table above is **this repository's** layer index. They are not alternatives: the entry says what the family is, the index says what this repository holds.
 
 **Every layer is either present or accounted for.** L5, L6 and L8 are empty *here* by decision, not by omission: L5 is held by the companion repository, L6 by the implementations' own repositories, L8 is dated per delivery. **L4 holds one profile and reserves another**: the assembly profile is written; the high-grade ecosystem trust state stays reserved until at least two independent real verifiers exist.
 

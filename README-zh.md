@@ -23,7 +23,8 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 | | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v2.22 |
 | **L2 · 架构**（*不陈述要求*） | [`protocol-suite-architecture-zh.md`](./architecture/protocol-suite-architecture-zh.md) · [`en`](./architecture/protocol-suite-architecture.md) —— 上位架构 | v0.2 |
 | | [`governance-architecture-zh.md`](./architecture/governance-architecture-zh.md) · [`en`](./architecture/governance-architecture.md) | v0.3 |
-| **L3 · 规范** | [`organization-governance-zh.md`](./specs/organization-governance-zh.md) · [`en`](./specs/organization-governance.md) | v0.1 |
+| **L3 · 规范** | [`overview-zh.md`](./specs/overview-zh.md) · [`en`](./specs/overview.md) —— **本层的入口，也是本族的入口** | v0.1 |
+| | [`organization-governance-zh.md`](./specs/organization-governance-zh.md) · [`en`](./specs/organization-governance.md) | v0.1 |
 | | [`group-collaboration-zh.md`](./specs/group-collaboration-zh.md) · [`en`](./specs/group-collaboration.md) | v0.1 |
 | | [`question-zh.md`](./specs/question-zh.md) · [`en`](./specs/question.md) | v0.1 |
 | | [`naming-zh.md`](./specs/naming-zh.md) · [`en`](./specs/naming.md) | v0.2 |
@@ -35,7 +36,7 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 | | [`ecosystem-matrix-zh.md`](./method/ecosystem-matrix-zh.md) · [`en`](./method/ecosystem-matrix.md) | v0.1 |
 | **L8 · 分发** | *不在本仓*——分发物按次 dated，不留存于此 | — |
 
-**哪一层归谁。** L1 陈述立场。**L2 不陈述任何要求**——凡出现「必须」，都指向拥有该条的分册（`governance-architecture.md` §1.1）。L3 陈述要求，每一册管自己的主题。L4 承载叠在其下各层之上的剖面。L5 承载一致性向量与核对器。L6 承载实现与运营。L7 承载方法——一次实验怎么设计、怎么跑、怎么记。L8 承载对外交付物。
+**哪一层归谁。** L1 陈述立场。**L2 不陈述任何要求**——凡出现「必须」，都指向拥有该条的分册（`governance-architecture.md` §1.1）。L3 陈述要求，每一册管自己的主题。L4 承载叠在其下各层之上的剖面。L5 承载一致性向量与核对器。L6 承载实现与运营。L7 承载方法——一次实验怎么设计、怎么跑、怎么记。L8 承载对外交付物。**`specs/overview-zh.md` 是本族的入口文档**；上表是**本仓**的层索引。两者不是二选一——入口讲这一族是什么，索引讲本仓有什么。
 
 **每一层要么有，要么有交代。** L5 / L6 / L8 在**本仓**为空，是决定，不是遗漏：L5 由并列仓承载，L6 由各实现自己的仓承载，L8 按次 dated。**L4 有一份、留一份**：组装剖面已写；「高级别的生态信任态」仍预留，直到出现至少两个独立真实验证方。
 
