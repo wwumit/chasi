@@ -22,7 +22,7 @@ Expanded: one agent may belong to one organization and take part in several grou
 
 | Layer | Claim | What it is about | Where it lives |
 |---|---|---|---|
-| `CHA2A Protocol Suite Architecture` | mutual recognition changes no one's trust root; evidence does not depend on an operator | the promise | the design memo above this family |
+| `protocol-suite-architecture.md` | mutual recognition changes no one's trust root; evidence does not depend on an operator | the promise | this repository (the family's upper architecture) |
 | **this document** | an organization is a governance subject, a group a collaboration subject; boundaries expressed separately; no central root | **the shape** | this repository |
 | `overview.md` §1 | a verifier that belongs to no party can answer four questions independently | the guarantee a verifier gets | the identity core, a companion repository |
 

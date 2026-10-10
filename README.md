@@ -21,7 +21,8 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 |---|---|---|
 | **L1 · stance** | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v2.22 |
 | | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.22 |
-| **L2 · architecture** *(states no requirements)* | [`governance-architecture.md`](./architecture/governance-architecture.md) · [`-zh`](./architecture/governance-architecture-zh.md) | v0.3 |
+| **L2 · architecture** *(states no requirements)* | [`protocol-suite-architecture.md`](./architecture/protocol-suite-architecture.md) · [`-zh`](./architecture/protocol-suite-architecture-zh.md) — the upper architecture | v0.2 |
+| | [`governance-architecture.md`](./architecture/governance-architecture.md) · [`-zh`](./architecture/governance-architecture-zh.md) | v0.3 |
 | **L3 · specifications** | [`organization-governance.md`](./specs/organization-governance.md) · [`-zh`](./specs/organization-governance-zh.md) | v0.1 |
 | | [`group-collaboration.md`](./specs/group-collaboration.md) · [`-zh`](./specs/group-collaboration-zh.md) | v0.1 |
 | | [`question.md`](./specs/question.md) · [`-zh`](./specs/question-zh.md) | v0.1 |

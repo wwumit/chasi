@@ -4,7 +4,7 @@
 > Date: 2026-10-10
 > Position: this family's **first profile**, and the only document that specifies **how to use other people's parts**
 > Principle: **if an existing standard can be used, do not invent one** — this document defines no primitive; it specifies only what each of four slots may hold, and what an assembly must then satisfy
-> Related: `overview.md` §1 (the four conditions) · `question.md` (how an assembly is judged) · `naming.md` (how the objects in a slot are referred to) · `CHA2A Protocol Suite Architecture` §0 and §5 (the core claim, and the five dispositions)
+> Related: `overview.md` §1 (the four conditions) · `question.md` (how an assembly is judged) · `naming.md` (how the objects in a slot are referred to) · `protocol-suite-architecture.md` §0 and §5 (the core claim, and the five dispositions)
 
 ---
 

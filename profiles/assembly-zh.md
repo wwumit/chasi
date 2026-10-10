@@ -4,7 +4,7 @@
 > 日期：2026-10-10
 > 定位：本族的**第一份剖面**，也是唯一规定「怎么用别人的件」的一件
 > 原则：**已有标准能用就不另造**——本件不定义任何原语，只规定四个槽各允许装什么、装完必须满足什么
-> 相关：`overview.md` §1（四条件）· `question.md`（组装后如何判定）· `naming.md`（槽内对象如何被指称）· `CHA2A Protocol Suite Architecture` §0 与 §5（核心主张与五种处置）
+> 相关：`overview.md` §1（四条件）· `question.md`（组装后如何判定）· `naming.md`（槽内对象如何被指称）· `protocol-suite-architecture.md` §0 与 §5（核心主张与五种处置）
 
 ---
 
