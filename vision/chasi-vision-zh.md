@@ -9,9 +9,6 @@ CHASI
 Vision & Research Architecture · 人与 Agent 和谐共存的 Agent Society
 v1.2 · 2026-10
 
-> **v1.2** — 删去 v1.1 的「研究路线」「18 个月目标」两节：Vision 陈述方向，不排期。
-> 英文 Vision 是另一份文档，不是本文件的译本。
-
 ## 一、Vision：一个人与 Agent 和谐共存的社会
 我们正在进入一个新的互联网阶段：Internet 不再只是 People-to-People、People-to-Machine 的网络，而逐步成为 People、Organizations 与 Agents 共同参与的网络。未来的 Agent 不只是软件工具，也可能成为个人助手、组织成员、商业伙伴、研究伙伴乃至社会协作者。
 CHASI 的长期 Vision，不是建立一个由 Agent 主导的世界，也不是把 Agent 纳入一个过度中心化的监管体系，而是构想一种能够让 Human、Agent 和 Organization 在共同规则之下长期共存、互信、协作和创造价值的社会基础设施。

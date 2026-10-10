@@ -7,9 +7,6 @@
 Toward a Governed, Interoperable and Human-Centric Agent Society
 Vision Paper · v1.1 · 2026-10
 
-> **v1.1** — removes the v1.0 roadmap section. A vision states direction, not schedule.
-> The Chinese document in `vision/` is a separate document, not a translation of this one.
-
 ## Executive Summary
 Artificial Intelligence is moving from models that generate information toward autonomous agents that can discover services, communicate, collaborate, make decisions, delegate authority, transact, and act on behalf of humans and organizations. The next transformation is therefore not simply better AI, but the emergence of an Agent Society.
 CHASI proposes a vision for the social infrastructure needed by that society: an open, interoperable and governed environment in which humans, agents, organizations and groups can establish identity, trust, authority, relationships, evidence and accountability.

@@ -82,6 +82,7 @@ The three governance volumes were written inside the CHA2A specification group a
 
 - **Licence**: Apache License 2.0 (see `LICENSE`).
 - **Participation**: via GitHub issues / PRs.
-- **Change discipline**: a substantive change to a volume bumps that volume's version and states what changed, and why, **in that volume's own front matter**. There is no repository-level changelog — a volume's version note is the specification's log. Editing and links may be committed on their own.
+- **What belongs in this repository**: **only material intended to be read.** This repository is private today, but it is private *until it is ready to be read* — not a place to park things that should not be published. Work plans, version plans, ledgers, internal reviews and distribution material are kept elsewhere and do not enter it, in any directory and at any revision.
+- **Change discipline**: a substantive change to a volume bumps that volume's version. A note describing what changed is written **only once the version it supersedes has been public** — before that, the iteration is not narrated. Editing and links may be committed on their own.
 - **Review cadence**: items left to the deploying parties, and any question a volume does not answer, are revisited when that volume is version-bumped.
 - **Reference deployment of the worked binding**: `https://compliancehub.cn`.
