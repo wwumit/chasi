@@ -4,7 +4,7 @@
 
 ---
 
-> 状态：草案 v2.17 ｜ 性质：**立场（vision）**
+> 状态：草案 v2.18 ｜ 性质：**立场（vision）**
 > **本件讲“为什么”与“走向哪里”，不规定任何人必须做什么。** 若本件与规范件冲突，以规范件为准。
 
 ---
@@ -446,15 +446,26 @@ CHA2A   Agent-to-Agent / Agent Society Architecture & Protocols
 
 ## 15. CHASI 与现有生态的关系
 
-- **A2A / AAIF**——Agent-to-Agent interoperability。
-- **OpenA2A**——开放 Agent interaction / protocol research。
-- **MCP**——Agent-to-tool / resource connectivity。
-- **DID / VC**——decentralized identity 与 verifiable credentials。
-- **OAuth / OIDC**——成熟的 authentication / authorization 基础。
-- **NANDA**——Agent Internet discovery、registry 与 infrastructure research。
-- **MIT / Stanford**——Agent Internet、human-agent interaction、memory、identity、society 等研究。
-- **CHA2A**——把这些能力组织进面向 Agent Society 的开放架构。
-- **CHASI**——在其之上提供 compliance、governance、evidence、accountability 与 federation 的 Hub。
+**本节的作用是给 §5 的“互补”与 §10 的“五种处置”提供可比对象。** 因此每条要写两件事：**对象是什么**，以及**本族与它的关系是哪一种处置**。
+
+**先说清体例：一条不写清证据的名字，不算一条。** 本族别处对引用要求**版本 · 日期 · 采纳证据**；框架分册的「生态矩阵」已把列定死——**对象 · 版本 · 日期 · 采纳证据 · 许可 · 状态（机构性 / 个人稿 / 社区项目）· 复查日期**。下表目前**只有对象与一句描述**，其余六列全部空缺。**因此本节现在还不能支撑“互补”的判定**，这正是 §5 说“互补尚无判据”的原因。
+
+| 对象 | 是什么 | 与它的关系（§10 的五种处置） |
+|---|---|---|
+| **A2A** | Agent-to-Agent interoperability | **采用**——§10 已写明不定义通信原语，A2A 已有 |
+| **MCP** | Agent-to-tool / resource connectivity | **采用**——同上 |
+| **DID / VC** | decentralized identity 与 verifiable credentials | **采用**——§10 已写明不定义密码学原语，也不定义 DID 方法本身 |
+| **AAIF** | 原表与 A2A 并列，未单独说明 | **未定**——需先给出它是机构还是规范 |
+| **OpenA2A** | 开放 Agent interaction / protocol research | **未定** |
+| **OAuth / OIDC** | authentication / authorization 基础 | **未定**——**§10 的四条否定没有涵盖认证／授权框架这一类** |
+| **NANDA** | Agent Internet discovery、registry 与 infrastructure research | **未定** |
+| **MIT / Stanford** | Agent Internet、human-agent interaction、memory、identity、society 等研究 | **未定**——研究机构不是可被“采用／映射”的规范对象 |
+
+**三处“采用”是从 §10 已写明的否定项直接读出的**：§10 说 CHASI 不定义通信原语（A2A、MCP 已有）、不定义密码学原语与 DID 方法本身（DID、VC 已有），那么对这些对象的关系就只能是“采用”。其余各条**未定**：不是不清楚对象是什么，而是**不清楚关系是哪一种**——要定它，需先按上表补齐六列证据。
+
+**CHA2A 与 CHASI 从本表移出。** 它们不是“现有生态”，是本族自身；两者的关系写在 §14。原表把它们列在末尾，既与本节标题不符，也与 §14 重复。
+
+**研究机构与标准组织不是同类对象。** MIT、Stanford 产出研究，不产出可被采用的规范；把它们与 A2A、DID 并列在同一列里，会让人以为“采用”也适用于它们。**未定：与研究机构之间用哪个词描述关系**——合作、借鉴，还是仅作来源引用。
 
 ## 16. 长期形态
 
@@ -493,4 +504,4 @@ CHA2A   Agent-to-Agent / Agent Society Architecture & Protocols
 
 从这个意义上说，Compliance 不是限制 Agent Society 的力量，而是使这种社会真正能够规模化存在的基础条件。
 
-—— CHASI Vision · v2.17
+—— CHASI Vision · v2.18
