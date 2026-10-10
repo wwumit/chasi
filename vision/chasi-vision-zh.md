@@ -4,7 +4,7 @@
 
 ---
 
-> 状态：草案 v2.16 ｜ 性质：**立场（vision）**
+> 状态：草案 v2.17 ｜ 性质：**立场（vision）**
 > **本件讲“为什么”与“走向哪里”，不规定任何人必须做什么。** 若本件与规范件冲突，以规范件为准。
 
 ---
@@ -421,21 +421,28 @@ Agent Memory 是个人记忆；Societal Memory 是共同记忆。**两者不是�
 
 ## 14. CHA2A 与 CHASI 的关系
 
-建议把 CHA2A 与 CHASI 分成两个层次。
+CHA2A 与 CHASI 是两个层次。本节给出划分，并说明它与 §10 那五层**不是同一种分层**。
 
 ```
 
 CHASI   Compliance Hub for Agent Society Infrastructure
+  │     立场 · 治理 · 合规框架 · 研究与生态连接
   │
-  │   Governance · Identity · Delegation · Federation
+  │     接口：Identity · Delegation · Federation · Governance
   ↓
 CHA2A   Agent-to-Agent / Agent Society Architecture & Protocols
 
 ```
 
-CHA2A 可以继续发展为具体的 architecture、protocol、profiles 和 extensions；CHASI 则承担更高层的 Vision、Governance、Compliance Framework、Research Hub 和生态连接。
+**两种「层」要分清。** §10 的五层是**架构的分层**（主体／身份与信任／治理／证据／互联），讲的是“一件事要靠哪些能力成立”；本节的层次是**归属的分层**，讲的是“哪份文档、哪套协议归谁维护”。两者正交——五层中的每一层都可能同时有 CHA2A 的产物与 CHASI 的产物。§10 末尾指向本节时，指的是后一种。
 
-这样既可以保持技术工作的独立性，又能够让 ComplianceHub.cn 成为一个长期的公共研究与生态入口。
+**中间那一行不是一层，是一组接口。** 图中间的 `Identity · Delegation · Federation · Governance` 是两侧**约定的接口名**：CHASI 的治理要求，在 CHA2A 一侧落到这四个对象上。它不构成独立的层。
+
+**归属的划分与既有事实有一处冲突，要处理。** 本节把 **architecture** 划给 CHA2A；而本仓的 L2 层就是架构（`governance-architecture`，见 README 的索引表），它讲“这一族为什么这样分层”，不规定任何人做什么。两者能并存的解释只有一种：**`governance-architecture` 是这一族立场侧的架构（原则与约束），CHA2A 的 architecture 是协议侧的架构（对象与消息）**。本节的措辞应据此写清，否则读者会以为本仓的 L2 放错了位置。**未定：这一区分是否成立**——若不成立，则本节与 README 索引表二者必有一处要改。
+
+**CHASI 与 ComplianceHub.cn 的关系要写明。** 本节末句提到 ComplianceHub.cn；§11 的标题是“Compliance Hub 的八项核心能力”；而 §5 把 CHASI 定义为“一个场所”。三处并未说明两者是同一个东西还是两个。**未定：CHASI 与 ComplianceHub.cn 的关系**（同一实体的两个名字，还是“场所”与“门户”两件东西）。在写明之前，本件不把 ComplianceHub.cn 的职责算作 CHASI 的职责。
+
+**保持技术工作独立，是本节的实质目标。** CHA2A 侧继续独立演进 architecture、protocol、profiles 与 extensions；CHASI 侧承担立场、治理、合规框架与研究连接。两侧各自版本化，互不阻塞。
 
 ## 15. CHASI 与现有生态的关系
 
@@ -486,4 +493,4 @@ CHA2A 可以继续发展为具体的 architecture、protocol、profiles 和 exte
 
 从这个意义上说，Compliance 不是限制 Agent Society 的力量，而是使这种社会真正能够规模化存在的基础条件。
 
-—— CHASI Vision · v2.16
+—— CHASI Vision · v2.17
