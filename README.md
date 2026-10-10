@@ -32,7 +32,7 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 
 ### A note on the Vision's two editions
 
-**They are not parallel editions, and they are not at the same stage.** The English is **v1.1** (15 sections); the Chinese is **v2.0** (18 sections plus a one-sentence prologue and a closing statement). They are **not translations of each other**, and their centres of gravity differ: **the Chinese leads with what makes an agent society liveable** — five kinds of members that are not on one level, seven conditions, and the two tensions those conditions create — and only then treats architecture, the accountability chain and societal memory; **the English is organised around the ecosystem** — compatibility, the social contract, the laboratory. Cite each by its own version.
+**They are not parallel editions, and they are not at the same stage.** The English is **v1.1** (15 sections); the Chinese is **v2.1** (19 sections, §0–§18, plus a closing statement). They are **not translations of each other**, and their centres of gravity differ: **the Chinese leads with what makes an agent society liveable** — five kinds of members that are not on one level, seven conditions, and the two tensions those conditions create — and only then treats architecture, the accountability chain and societal memory; **the English is organised around the ecosystem** — compatibility, the social contract, the laboratory. Cite each by its own version.
 
 **A vision carries no work plan.** Neither edition states dates, deliverables or assigned actions. A roadmap is a different document with a different audience and a different lifetime.
 
