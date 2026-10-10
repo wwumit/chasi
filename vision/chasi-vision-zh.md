@@ -7,17 +7,30 @@
 CHASI
 
 Vision & Research Architecture · 人与 Agent 和谐共存的 Agent Society
-v1.4 · 2026-10
+v1.5 · 2026-10
 
-## 1. Vision：一个人与 Agent 和谐共存的社会
-我们正在进入一个新的互联网阶段：Internet 不再只是 People-to-People、People-to-Machine 的网络，而逐步成为 People、Organizations 与 Agents 共同参与的网络。未来的 Agent 不只是软件工具，也可能成为个人助手、组织成员、商业伙伴、研究伙伴乃至社会协作者。
-CHASI 的长期 Vision，不是建立一个由 Agent 主导的世界，也不是把 Agent 纳入一个过度中心化的监管体系，而是构想一种能够让 Human、Agent 和 Organization 在共同规则之下长期共存、互信、协作和创造价值的社会基础设施。
-Human  ↔  Agent  ↔  Organization
+## 1. 一个人、Agent 与组织共处的社会
+
+**我们要走向的，是一个 Human、Organization 与 Agent 三者共处的互联网。** 关键变化不在于 Agent 变多了，而在于 Agent 从“被调用的工具”变成“有身份、能被授权、会留下记录、也应当被追责的参与者”——个人助手、组织成员、商业伙伴、研究伙伴，以及跨越这些身份的协作者。
+
+随之而来的问题，都超出了“通信”的范围：
+
+- 凭什么相信对面那个 Agent 确实是它声称的主体？
+- 它此刻代表谁、被授予了什么、范围到哪里为止？
+- 一次跨组织协作结束后，留下什么，由谁负责？
+- 两个组织的规则相冲突时，谁说了算？
+
+```
+Human  ←──→  Organization
         ↕
-Identity · Trust · Authority · Rules
-        ↕
-Governance · Evidence · Accountability
-可以把它理解为一个“Agent Society 的理想国”：不是乌托邦式的绝对自由，也不是中心化控制，而是在明确的身份、权利、责任、边界和共同规则基础上形成可持续的社会秩序。
+      Agent
+```
+
+三者之间的每一条关系，都立在**同一个底座**上——身份与信任回答“它是谁、还能不能信”，治理与证据回答“凭什么可以、出了事怎么办”。**这个底座不属于任何一方。**
+
+**这类问题需要一个共同的底座，而不是又多一份规则文件。** 规则文件可以写“应当可追溯”，但无法让第三方**独立核对**；可以写“应当负责任”，但无法指出责任断在哪一环。CHASI 要建的正是那个底座：一套让身份、授权、治理与证据在**跨域**时依然可被独立验证的基础设施。**“基础设施”与“规则文件”的分别只有一条：前者使第三方能够自己验证，后者要求第三方相信。**
+
+**它不是要建立由 Agent 主导的世界，也不是要把 Agent 关进一个中心化的监管体系**——两种极端都会让“社会”退化成单一意志。它要的是第三种可能：在明确的身份、权利、责任与边界之上，形成可以长期维持、也可以被检验的社会秩序。
 
 ## 2. CHASI 的定位
 CHASI = Compliance Hub for Agent Society Infrastructure。
@@ -272,4 +285,4 @@ A Sustainable Agent Society
 如果 CHA2A 是我们对于 Agent Internet / Agent Society 的技术探索，那么 CHASI 可以成为更大的 Vision：一个不属于任何单一公司、平台或 Agent Runtime 的开放治理枢纽。
 它不是为了控制 Agent，而是为了让自主性、信任、责任和自由能够同时存在。
 从这个意义上说，Compliance 不是限制 Agent Society 的力量，而是使这种社会真正能够规模化存在的基础条件。
-—— CHASI Vision · v1.4
+—— CHASI Vision · v1.5
