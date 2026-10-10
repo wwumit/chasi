@@ -11,8 +11,10 @@
 
 ## 0. 一句话
 
-> **人不需要读懂任何一个 agent，也不需要相信任何一家平台，就能与它们共同生活和工作——**
-> **并且在其间保有追问、退出与不受无限监控的权利。**
+> **人不需要读懂任何一个 agent 的内部，也不需要相信任何一家平台，就能与它们共同生活和工作——**
+> **并且在其间保有追问、退出与不被无边界监控的余地。**
+>
+> **这不只是人与 agent 之间的事。** 组织、群体与 agent 之间的每一条关系，都应当由**不属于任何一方**的第三方独立核对——而不是由其中一方记账。
 
 ---
 
@@ -176,20 +178,22 @@ Human Primacy：涉及人的根本权益时，应保留适当的人类控制机�
 
 ## 10. CHASI Architecture
 
+```
                     Human
                       │
               Consent / Authority
                       ↓
 Organization ──── CHASI Hub ──── Organization
-     │                │                │
-     ↓                ↓                ↓
-   Agents        Policy / Trust      Agents
-     │                │                │
-     └────── Federation / A2A ────────┘
+      │                │                │
+      ↓                ↓                ↓
+   Agents       Policy / Trust       Agents
+      │                │                │
+     └──────── Federation / A2A ───────┘
                       │
              Evidence / Audit
                       │
               Accountability
+```
 
 **架构分五层，每层回答一个问题。**
 
@@ -242,6 +246,7 @@ CHASI 的领域只有一处：**跨主体、跨域的那一段**。域内的事�
 ## 12. Causal Accountability Chain
 
 CHASI 最重要的原创研究方向之一，是把 Agent 行动从“黑盒执行”转变为可验证的因果责任链。
+```
 Human
   ↓ consent / mandate
 Organization
@@ -253,6 +258,7 @@ Agent B
 Tool / API / Transaction
   ↓
 Evidence → Outcome → Accountability
+```
 最终能够回答的不只是“发生了什么”，而是“为什么发生、谁授权、授权范围是什么、是否超越权限、谁承担责任”。
 
 **先要说清：“因果”比一份日志多了什么。** 三样东西常被混为一谈，差别却是决定性的：
@@ -311,13 +317,13 @@ Agent Memory 是个人记忆；Societal Memory 是共同记忆。**两者不是�
 ## 14. CHA2A 与 CHASI 的关系
 
 建议把 CHA2A 与 CHASI 分成两个层次。
-CHASI
-Compliance Hub for Agent Society Infrastructure
-        │
-Governance / Identity / Delegation / Federation
-        │
-CHA2A
-Agent-to-Agent / Agent Society Architecture & Protocols
+```
+CHASI   Compliance Hub for Agent Society Infrastructure
+  │
+  │   Governance · Identity · Delegation · Federation
+  ↓
+CHA2A   Agent-to-Agent / Agent Society Architecture & Protocols
+```
 CHA2A 可以继续发展为具体的 architecture、protocol、profiles 和 extensions；CHASI 则承担更高层的 Vision、Governance、Compliance Framework、Research Hub 和生态连接。
 这样既可以保持技术工作的独立性，又能够让 ComplianceHub.cn 成为一个长期的公共研究与生态入口。
 
@@ -368,4 +374,4 @@ CHASI：在其之上提供 compliance、governance、evidence、accountability �
 它不是为了控制 Agent，而是为了让自主性、信任、责任和自由能够同时存在。
 从这个意义上说，Compliance 不是限制 Agent Society 的力量，而是使这种社会真正能够规模化存在的基础条件。
 
-—— CHASI Vision · v2.0
+—— CHASI Vision · v2.1
