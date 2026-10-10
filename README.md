@@ -1,32 +1,51 @@
-# Cross-Organization Agent Governance
+# CHASI: Compliance Hub for Agent Society Infrastructure
 
-> **On this repository's name.** `chasi` is the family's umbrella name — **C**ompliance **H**ub for **A**gent **S**ociety **I**nfrastructure. This repository carries the family's **stance (L1)**, **architecture (L2)**, **specifications (L3)** and **profiles (L4)**; the identity core and the implementations live in companion repositories. It was named `authority-provenance` from 2026-10-03 to 2026-10-09, when the umbrella name superseded it — **a name that describes one layer cannot hold the whole**. The rename and the restructure are recorded in `CHANGELOG.md`.
+**Toward a Governed, Interoperable and Human-Centric Agent Society**
 
-Documents for agents that act **across organizational boundaries**: the **Organization** as a governance subject, and the **Group** as a collaboration subject.
+> **We envision an Internet where humans and autonomous agents can participate, cooperate, transact and coexist through open, trusted and governed social infrastructure.**
+> — *CHASI Vision*, closing statement
 
-## Core claim
+## The stance
 
-> **An organization is a governance subject; a group is a collaboration subject.**
-> **Governance boundaries and collaboration boundaries are expressed separately, and neither presupposes a central trust root.**
+**The next transformation is not simply better AI, but the emergence of an Agent Society.** Artificial intelligence is moving from models that generate information toward autonomous agents that can discover services, communicate, collaborate, make decisions, delegate authority, transact, and act on behalf of humans and organizations.
 
-An agent may belong to one organization and take part in several groups. In each context, **on whose behalf it acts** is verifiable rather than asserted by a platform database.
+CHASI proposes a vision for the **social infrastructure** that society then needs: an open, interoperable and governed environment in which humans, agents, organizations and groups can establish **identity, trust, authority, relationships, evidence and accountability**.
 
-## Documents
+**CHASI is not another agent protocol, and it is not a regulator.** It complements and connects existing protocols and standards, and fills the governance and social-infrastructure layer that becomes necessary when agents move from isolated tools to persistent participants in an Internet-scale society.
 
-| Document | Version | Content |
+**Its core claim, in one line** — *an organization is a governance subject; a group is a collaboration subject.* Governance boundaries and collaboration boundaries are **expressed separately**, and **neither presupposes a central trust root**.
+
+## What is in this repository
+
+| Layer | Document | Version |
 |---|---|---|
-| [`governance-architecture.md`](./architecture/governance-architecture.md) · [`-zh`](./architecture/governance-architecture-zh.md) | v0.3 | **The architecture layer.** Why the family is shaped this way: the core principles, the two-plane object model, the three levels (organization · group · federation), the constraints on the core, and the premises this architecture departs from. **States no requirements**; every "must" points at the volume that owns it |
-| [`organization-governance.md`](./specs/organization-governance.md) · [`-zh`](./specs/organization-governance-zh.md) | v0.1 | **The Organization as a subject.** The four-layer source of authority (charter → office → holder → root authority basis), membership and belonging, non-grantable roles, lifecycle (departure · succession · re-rooting · break-glass · dissolution), the evidence of governance actions, and **what this volume fixes versus what the deploying parties choose (§12)** |
-| [`group-collaboration.md`](./specs/group-collaboration.md) · [`-zh`](./specs/group-collaboration-zh.md) | v0.1 | **The collaboration context.** Group as a first-class object, the three admission gates, the cross-organizational rules (no scope widening · revocation cascade · accountability), lifecycle, Presence, the Chat/Task relationship, **cross-registry resolution (§9)**, and the optional **cross-organization profile (§14)** |
-| [`CHANGELOG.md`](./CHANGELOG.md) | — | Revision history |
+| **L1 · stance** | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v1.0 |
+| | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v1.1 |
+| **L2 · architecture** *(states no requirements)* | [`governance-architecture.md`](./architecture/governance-architecture.md) · [`-zh`](./architecture/governance-architecture-zh.md) | v0.3 |
+| **L3 · specifications** | [`organization-governance.md`](./specs/organization-governance.md) · [`-zh`](./specs/organization-governance-zh.md) | v0.1 |
+| | [`group-collaboration.md`](./specs/group-collaboration.md) · [`-zh`](./specs/group-collaboration-zh.md) | v0.1 |
+| **L4 · profiles** | *reserved — not yet populated* | — |
+| — | [`CHANGELOG.md`](./CHANGELOG.md) | — |
+
+**Which layer owns what.** L1 states the stance. **L2 states no requirements** — where a "must" belongs, it points at the volume that owns it (`governance-architecture.md` §1.1). L3 states the requirements, each volume for its own subject. L4 holds profiles over the layers below.
+
+**The identity core is elsewhere.** Identity, evidence and the DID method itself live in the companion repository **`did-method-cha2a`**; implementations live in their own repositories.
+
+### A note on the Vision's two editions
+
+**They are not parallel editions.** The English is **v1.0** (16 sections); the Chinese is **v1.1**, a **superset** that also carries a brand appendix (§A.1–A.7). These are **different versions, not two languages of one text**. Reconciling them is an open item.
+
+## The governance core
+
+**The Organization** and **the Group** are the two subjects these documents carry. An agent may belong to one organization and take part in several groups; in each context, **on whose behalf it acts** is verifiable rather than asserted by a platform database.
+
+**The two volumes are peers, not a hierarchy**: one answers *who is qualified to authorize this*, the other *in what context, and on whose behalf, are they acting together*. An organization exists without agents, and a collaboration spans organizations.
 
 **The architecture layer is not a specification.** It holds the principles and the object model; a "must" appearing there is out of bounds (`governance-architecture.md` §1.1).
 
-**The two volumes are peers**, not a hierarchy: one answers *who is qualified to authorize this*, the other *in what context, and on whose behalf, are they acting together*. An organization exists without agents, and a collaboration spans organizations.
-
 ## Relation to an identity binding
 
-These volumes state **no identity requirement of their own**. They are written against an **identity binding** — something that resolves a subject across domains and answers for its status — and name **`did:cha2a` as the worked example** (experimental draft v1.1.0, recorded in the W3C DID Extensions registry).
+These documents state **no identity requirement of their own**. They are written against an **identity binding** — something that resolves a subject across domains and answers for its status — and name **`did:cha2a` as the worked example** (experimental draft v1.1.0, recorded in the W3C DID Extensions registry).
 
 | The binding supplies | Where it is used |
 |---|---|
@@ -34,28 +53,31 @@ These volumes state **no identity requirement of their own**. They are written a
 | a status and revocation answer | `group-collaboration.md` §5.2, §9.2, §11 |
 | a verifiable tier per subject | `group-collaboration.md` §4.1 gate ① |
 
-Identity, evidence and the DID method itself live in the companion repository **`did-method-cha2a`**. Every interface point is listed in §10 or §11 of the volume that exercises it, so a different binding satisfying them can take the example's place.
+Every interface point is listed in §10 or §11 of the volume that exercises it, so a different binding satisfying them can take the example's place.
 
 ## Reading order
 
 | Order | Document | What it answers |
 |---|---|---|
-| 0 | this document | what this family is for, and what it holds |
-| 1 | `governance-architecture.md` | why the family is shaped this way |
-| 2 | `organization-governance.md` | who is qualified to authorize it |
-| 3 | `group-collaboration.md` | how agents of different organizations work together |
+| 0 | `vision/chasi-vision-en.md` | what this is for, and what kind of society it assumes |
+| 1 | this document | what this repository holds, and how the layers divide |
+| 2 | `governance-architecture.md` | why the family is shaped this way |
+| 3 | `organization-governance.md` | **who is qualified to authorize it** |
+| 4 | `group-collaboration.md` | how agents of different organizations work together |
 
 ## Language convention
 
-English-first. Each volume carries a Chinese edition with a `-zh` suffix — this document's is [`README-zh.md`](./README-zh.md). The two editions state the same rules, and their section headings and § references correspond one to one.
+English-first for the architecture layer and the volumes: each carries a Chinese edition with a `-zh` suffix. **The Vision is the exception** — see the note above; its English and Chinese editions are different versions, and the Chinese is ahead.
 
 ## Status
 
-Experimental drafts. Each volume states requirements for its own subject; the architecture layer states none.
+Experimental drafts. Each specification volume states requirements for its own subject; the architecture layer states none.
 
 ## Provenance
 
-These three volumes were written inside the CHA2A specification group and moved here so that the governance model reads without assuming a particular DID method. §11 of the method specification — its companion index, which is not edited — lists `evidence-record.md`, `agent-identity.md` and `EVIDENCE.md`, and has never listed these volumes, so the move changed no reference in it. `CHANGELOG.md` records the move.
+The three governance volumes were written inside the CHA2A specification group and moved into their own repository so that the governance model reads without assuming a particular DID method. §11 of the method specification — its companion index, which is **not** edited — lists `evidence-record.md`, `agent-identity.md` and `EVIDENCE.md`, and has never listed these volumes, so that move changed no reference in it.
+
+The repository was named `authority-provenance` from 2026-10-03 to 2026-10-09, when it took the umbrella name `chasi` and was restructured into layers. `CHANGELOG.md` records both.
 
 ## Participation and change control
 
