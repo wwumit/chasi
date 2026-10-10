@@ -25,10 +25,18 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 | **L3 · 规范** | [`organization-governance-zh.md`](./specs/organization-governance-zh.md) · [`en`](./specs/organization-governance.md) | v0.1 |
 | | [`group-collaboration-zh.md`](./specs/group-collaboration-zh.md) · [`en`](./specs/group-collaboration.md) | v0.1 |
 | **L4 · 剖面** | *预留——尚未填充* | — |
+| **L5 · 证据与一致性** | *不在本仓*——由 `did-method-cha2a` 承载 | — |
+| **L6 · 实现与运营** | *不在本仓*——各实现另在自己的仓 | — |
+| **L7 · 方法** | [`use-case-laboratory-zh.md`](./method/use-case-laboratory-zh.md) · [`en`](./method/use-case-laboratory.md) | v1.0 |
+| **L8 · 分发** | *不在本仓*——分发物按次 dated，不留存于此 | — |
 
-**哪一层归谁。** L1 陈述立场。**L2 不陈述任何要求**——凡出现「必须」，都指向拥有该条的分册（`governance-architecture.md` §1.1）。L3 陈述要求，每一册管自己的主题。L4 承载叠在其下各层之上的剖面。
+**哪一层归谁。** L1 陈述立场。**L2 不陈述任何要求**——凡出现「必须」，都指向拥有该条的分册（`governance-architecture.md` §1.1）。L3 陈述要求，每一册管自己的主题。L4 承载叠在其下各层之上的剖面。L5 承载一致性向量与核对器。L6 承载实现与运营。L7 承载方法——一次实验怎么设计、怎么跑、怎么记。L8 承载对外交付物。
+
+**每一层要么有，要么有交代。** L4 / L5 / L6 / L8 在**本仓**为空，是决定，不是遗漏：L5 由并列仓承载，L6 由各实现自己的仓承载，L8 按次 dated，L4 预留到出现至少两个独立真实验证方为止。
 
 **身份核心不在这里。** 身份、证据与 DID 方法本身，维护在并列仓 **`did-method-cha2a`**；各实现另在自己的仓。
+
+**台账不在这里。** 工作计划、版本计划、台账与分发材料一律另置仓外——见下文「本仓放什么」。
 
 ### 关于 Vision 的两个版本
 
@@ -65,6 +73,7 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 | 2 | `governance-architecture-zh.md` | 这一族为什么长成这样 |
 | 3 | `organization-governance-zh.md` | **谁有资格作出这项授权** |
 | 4 | `group-collaboration-zh.md` | 不同组织的智能体如何一起工作 |
+| 5 | `method/use-case-laboratory-zh.md` | **用哪些场景压测架构，一次实验必须产出什么** |
 
 ## 语言约定
 

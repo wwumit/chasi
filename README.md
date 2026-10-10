@@ -25,10 +25,18 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 | **L3 · specifications** | [`organization-governance.md`](./specs/organization-governance.md) · [`-zh`](./specs/organization-governance-zh.md) | v0.1 |
 | | [`group-collaboration.md`](./specs/group-collaboration.md) · [`-zh`](./specs/group-collaboration-zh.md) | v0.1 |
 | **L4 · profiles** | *reserved — not yet populated* | — |
+| **L5 · evidence and conformance** | *not in this repository* — it lives in `did-method-cha2a` | — |
+| **L6 · implementation and operation** | *not in this repository* — implementations live in their own repositories | — |
+| **L7 · method** | [`use-case-laboratory.md`](./method/use-case-laboratory.md) · [`-zh`](./method/use-case-laboratory-zh.md) | v1.0 |
+| **L8 · distribution** | *not in this repository* — distribution is dated per delivery and is not kept here | — |
 
-**Which layer owns what.** L1 states the stance. **L2 states no requirements** — where a "must" belongs, it points at the volume that owns it (`governance-architecture.md` §1.1). L3 states the requirements, each volume for its own subject. L4 holds profiles over the layers below.
+**Which layer owns what.** L1 states the stance. **L2 states no requirements** — where a "must" belongs, it points at the volume that owns it (`governance-architecture.md` §1.1). L3 states the requirements, each volume for its own subject. L4 holds profiles over the layers below. L5 holds conformance vectors and checkers. L6 holds implementations and operations. L7 holds the method — how an experiment is designed, run and recorded. L8 holds what is delivered outward.
+
+**Every layer is either present or accounted for.** L4, L5, L6 and L8 are empty *here* by decision, not by omission: L5 is held by the companion repository, L6 by the implementations' own repositories, L8 is dated per delivery, and L4 is reserved until at least two independent real verifiers exist.
 
 **The identity core is elsewhere.** Identity, evidence and the DID method itself live in the companion repository **`did-method-cha2a`**; implementations live in their own repositories.
+
+**The ledger is not here.** Internal work plans, version plans, ledgers and distribution material are kept outside this repository — see "What belongs in this repository" below.
 
 ### A note on the Vision's two editions
 
@@ -65,6 +73,7 @@ Every interface point is listed in §10 or §11 of the volume that exercises it,
 | 2 | `governance-architecture.md` | why the family is shaped this way |
 | 3 | `organization-governance.md` | **who is qualified to authorize it** |
 | 4 | `group-collaboration.md` | how agents of different organizations work together |
+| 5 | `method/use-case-laboratory.md` | **which scenarios stress the architecture, and what an experiment must produce** |
 
 ## Language convention
 
