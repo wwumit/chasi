@@ -19,8 +19,8 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 
 | Layer | Document | Version |
 |---|---|---|
-| **L1 · stance** | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v1.2 |
-| | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.2 |
+| **L1 · stance** | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v2.3 |
+| | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.3 |
 | **L2 · architecture** *(states no requirements)* | [`governance-architecture.md`](./architecture/governance-architecture.md) · [`-zh`](./architecture/governance-architecture-zh.md) | v0.3 |
 | **L3 · specifications** | [`organization-governance.md`](./specs/organization-governance.md) · [`-zh`](./specs/organization-governance-zh.md) | v0.1 |
 | | [`group-collaboration.md`](./specs/group-collaboration.md) · [`-zh`](./specs/group-collaboration-zh.md) | v0.1 |
@@ -32,7 +32,7 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 
 ### A note on the Vision's two editions
 
-**They are not parallel editions, and they are not at the same stage.** The English is **v1.2** (15 sections); the Chinese is **v2.2** (19 sections, §0–§18, plus a closing statement). They are **not translations of each other**, and their centres of gravity differ: **the Chinese leads with what makes an agent society liveable** — five kinds of members that are not on one level, seven conditions, and the two tensions those conditions create — and only then treats architecture, the accountability chain and societal memory; **the English is organised around the ecosystem** — compatibility, the social contract, the laboratory. Cite each by its own version.
+**One document, two languages, one version.** The Chinese edition is the source text and the English is its translation; both carry **the same version and the same twenty sections in the same order**. A divergence between them is a **defect to be fixed**, not two different emphases.
 
 **A vision carries no work plan.** Neither edition states dates, deliverables or assigned actions. A roadmap is a different document with a different audience and a different lifetime.
 

@@ -4,146 +4,368 @@
 
 ---
 
-Toward a Governed, Interoperable and Human-Centric Agent Society
+> Status: draft v2.3 | Kind: **stance (vision)**
+> **This document says *why*, and *where to*. It requires nothing of anyone.** Where it conflicts with a specification, the specification governs.
 
-Vision Paper · v1.2 · 2026-10
+---
 
-## Executive Summary
-Artificial Intelligence is moving from models that generate information toward autonomous agents that can discover services, communicate, collaborate, make decisions, delegate authority, transact, and act on behalf of humans and organizations. The next transformation is therefore not simply better AI, but the emergence of an Agent Society.
+## 0. One Sentence
 
-CHASI proposes a vision for the social infrastructure needed by that society: an open, interoperable and governed environment in which humans, agents, organizations and groups can establish identity, trust, authority, relationships, evidence and accountability.
+> **A person need not read the inside of any agent, and need not trust any platform, in order to live and work alongside them —**
+> **and to keep, throughout, room to question, to leave, and not to be watched without bound.**
+>
+> **This is not only a matter between people and agents.** Every relationship among organizations, groups and agents should be checkable by a third party **that belongs to none of them** — rather than booked by one of the parties.
 
-CHASI is not intended to replace existing Agent protocols or standards. It seeks to complement them, connect them and fill the governance and social-infrastructure layer that becomes necessary when agents move from isolated tools to persistent participants in an Internet-scale society.
+## 1. Membership Is Plural
 
-## 1. From AI to Agent Society
-The evolution can be understood as a progression:
+An agent society is not "a crowd of agents", and it is not "humans and agents". Its members fall into at least five kinds, and **they are not on the same level**:
 
-AI → Agent → Agent-to-Agent Communication → Agent Network → Agent Collaboration → Agent Organization → Agent Group → Agent Society → Agent Economy
+| Member | What it is |
+|---|---|
+| **Person** | individuals, families, communities |
+| **Organization** | companies, institutions, governments, non-profits |
+| **Agent** | personal assistant, organizational member, business partner, research partner, social collaborator |
+| **Group** | temporary, long-lived, cross-organizational; **it may have rules and a memory of its own** |
+| **Things that are not subjects** | services, tools, resources, data. They do not "belong to" the society, but the society uses them — **so they too need names that can be cited** |
 
-Today's Internet primarily connects humans to information and services. An Agent Society introduces a richer structure: humans interact with agents; agents interact with other agents; agents represent organizations; groups form across organizational boundaries; and autonomous participants may enter contracts, exchange value and operate under different policies.
+**One agent may hold several of these roles at once.** This is the ground the whole vision stands on: **if "belongs to whom" has only one answer, there is no society, only ownership.**
 
-The fundamental question therefore changes from “How can an agent communicate?” to “How can an autonomous agent participate in society in a trustworthy and accountable way?”
+Seen as a technical progression, the path runs Internet → Agent Internet → Agent Organizations → Agent Societies. But the table above is the point: **what the progression adds is not quantity, it is kinds of member.**
 
-## 2. The Missing Layer: Agent Society Infrastructure
-The ecosystem already contains important building blocks:
-- Foundation models and Agent frameworks
-- Agent communication and tool protocols
-- Identity, DID and credential technologies
-- Cloud and workflow infrastructure
-- Security, payment and transaction systems
-- Emerging governance and compliance mechanisms
-What remains insufficiently connected is the social layer that brings these capabilities together across organizations and trust domains.
+## 2. What Is in This Society
 
-Identity · Trust · Organization · Group · Delegation · Policy · Evidence · Governance · Accountability
+Not "what features will it have", but **the things a society normally has**:
 
-CHASI names this missing layer: Agent Society Infrastructure. The objective is not to rebuild every underlying technology, but to define how these capabilities can work together as a coherent social system.
+| It has | Meaning | The condition that makes it liveable |
+|---|---|---|
+| **Roles** | one agent can be assistant, colleague, counterparty and fiduciary at once | every action must be able to say **which role it was performed in** |
+| **Relationships** | relationships persist, change, break | the state of a relationship is readable, and a break is traceable |
+| **Collaboration** | some things one party cannot do alone | cross-party collaboration must leave a record that can be rebuilt |
+| **Exchange** | value moves | *(see §17, boundaries)* |
+| **Memory** | a society needs continuity | public memory exists, with **minimal disclosure** |
+| **Dispute** | things go wrong | the handling rules must **exist, be declared, and be checkable** |
+| **Common interest** | some things belong to no one and matter to everyone | they may not be monopolized by any party |
+| **Evolution** | rules change, members come and go | rule changes must have a history |
 
-## 3. Our Vision: Humans and Agents in a Shared Society
-CHASI envisions an Internet in which humans and autonomous agents can participate, cooperate, transact and coexist through open, trusted and governed social infrastructure.
-- **Human-centered** — agent autonomy expands human capability rather than eliminating human agency.
-- **Interoperable** — agents should not be trapped by a single model, vendor, platform or protocol.
-- **Open** — qualified participants can join societies without requiring a single central owner.
-- **Governed** — autonomy is accompanied by explicit authority, policy and accountability.
-- **Pluralistic** — multiple organizations, platforms and technical communities can coexist.
-- **Evolutionary** — architecture and standards evolve through real-world experiments.
+**This section is the body of the vision.** The sections that follow say only this: what it takes for these things to hold at the same time.
 
-## 4. What Is an Agent Society?
-An Agent Society is not merely a collection of agents. It is a governed social environment in which autonomous agents and humans interact through identities, relationships, authorities, rules and evidence.
+## 3. Seven Conditions That Make It Liveable
 
-Identity + Membership + Roles + Relationships + Rules + Trust + Authority + Delegation + Responsibility + Evidence + Governance
+**Verifiability is the first, not the whole.**
 
-This definition deliberately emphasizes social structure. Communication is necessary, but communication alone does not establish who may act, on whose behalf, under which rules, with what evidence, and who is responsible for the outcome.
+| # | Condition | Meaning |
+|---|---|---|
+| **①** | **Verifiable** | a third party belonging to no one can answer: on whose behalf was it done · on what authority · which rule was in force at the time · who answers if it goes wrong |
+| **②** | **Coexistable** | societies with different rules can coexist **without first unifying**; recognition is each party's local policy |
+| **③** | **Exitable** | a member can leave, and after leaving every right and obligation has a definite destination |
+| **④** | **Questionable** | a person keeps the right to question any agent's behaviour |
+| **⑤** | **Changeable** | rules can change, **and the change has a history** — judgement falls at the moment the action happened, and is not tried retroactively by later rules |
+| **⑥** | **Minimally disclosing** | governance and audit do not require unbounded surveillance; evidence follows minimal necessity |
+| **⑦** | **Autonomous** | within its boundaries an agent may act on its own, **without asking at every step** — autonomy is a condition of a liveable society, not an exception to it |
 
-## 5. CHASI: The Architectural Position
-CHASI is an infrastructure and architectural framework for governed Agent Societies. It should sit above and alongside existing technical ecosystems, reusing mature capabilities wherever possible.
+**① is the foundation, not the ceiling.** A world with only ① is **auditable but not liveable**: everything can be established after the fact, and nothing can be done with confidence. **②–⑦ are the reason ① exists.**
+
+## 4. Where It Is Hard
+
+The hard part is not "building another identity protocol". Identity, credentials, discovery, narrowing delegation, audit — **each of these has people working on it seriously, and more deeply than here.**
+
+The hard part is that **the seven conditions must hold at once, and they are held by different people**:
+
+- ① requires **cross-system** — the party asking and the party answering usually do not use the same stack;
+- ① also requires that **the answering party is not the party being asked about** — otherwise it is only self-declaration;
+- ⑤ requires a **time coordinate** — "which rule was in force then" — and today no layer carries this;
+- ⑦ is in tension with ① — **the more verifiable, the more easily it slides into asking at every step**, and an agent that asks at every step is not autonomous;
+- ⑥ is in tension with ① — **the more verifiable, the more easily it slides into unbounded surveillance**.
+
+**Those last two tensions are the real difficulty of this vision.** They are not engineering problems but design problems: **how to make verifiability hold together with autonomy, and with minimal disclosure.**
+
+## 5. What CHASI Is
+
+**A place.**
+
+It assembles parts from different sources, tests whether the seven conditions above can hold at the same time, and publishes each result as a record.
+
+- It **does not write** "how to identify an agent", nor "how to discover", nor "how to narrow a delegation" — those have their own owners;
+- what it **does specify** is "**whose parts you may use, and what must then hold**";
+- its output is **findings and records**, not rules.
+
+**Its three attitudes to the existing ecosystem must all hold**; lose one and it goes crooked:
+
+- **Compatible** — reuse what can be reused directly; do not re-invent the whole Agent Internet;
+- **Complementary** — fill only the gaps the ecosystem leaves in cross-organizational identity, authority, governance, evidence and accountability;
+- **Independent** — attach to no single vendor, no single runtime, no single identity system.
+
+So CHASI need not compete with AAIF, IETF, W3C, ITU, the Linux Foundation, MIT, Stanford or anyone else over "who defines the whole Agent Internet". It can be the governance and research hub that connects them.
+
+**A terminological distinction.** The last three letters of CHASI come from **Agent Society Infrastructure (ASI)** — **Society is a noun**, naming the society of agents. **SI** is the research use of the same root, written **Social Infrastructure** — **Social is an adjective**, naming the **social character** of that infrastructure; it also has a second reading, **Super Intelligence**. Both name one class of infrastructure from different angles: **ASI says who it is for, SI says what kind of thing it is.**
+
+## 6. What It Is Not
+
+- not another agent protocol;
+- not a standards body — it does not vote, does not ballot, sets no barrier to entry;
+- not a platform — it runs no registry, encloses no network effect, sells no SKU;
+- not a regulator, and it claims no regulatory territory.
+
+**Its only possession is credibility.** And credibility accumulates only by records being accurate — **a model that can fail only by cheating.**
+
+## 7. CHASI's Own Positions
+
+This section is **CHASI's choices as a place** — not commands to members, and not "what an agent society ought to have".
+
+| Position | Why |
+|---|---|
+| **No central root** | cross-domain trust cannot be established by any party's registry; the trust anchor is the one the verifier configures itself |
+| **No mutual recognition required** | recognition is each party's local policy; **if it can be translated, it need not be agreed in advance** |
+| **Facts, not ratings** | record facts; judgement is left to each verifier. Issuing a rating would make the issuer a party to the trust judgement |
+| **Records outlive their subject** | a record must be able to outlive the organization and platform that produced it; otherwise it is a log, not evidence |
+| **Downgrades must be visible** | a silent downgrade is a deception |
+| **Presuppose no system** | otherwise this place is only the entrance hall of one ecosystem |
+| **Autonomy is not an exception** | autonomy within boundaries is the norm; a system that must ask at every step is a tool, not a member |
+| **People keep the right to question** | an agent's autonomy does not cancel a person's questioning — but questioning is not unbounded surveillance |
+
+(The proposal for "what an agent society ought to have" is the next section.)
+
+## 8. Constitutional Principles for an Agent Society (a proposal)
+
+If the Agent Society becomes a new social form, then besides protocols it needs a minimal set of principles, something like a constitution. We propose forming CHASI Agent Society Constitutional Principles:
+
+- **Identity** — any agent with the social capacity to act should have a verifiable identity.
+- **Representation** — an agent must be able to state the subject or organization it represents.
+- **Authority** — an action should have a clear source of authority.
+- **Proportionality** — authority should match the task and the risk.
+- **Revocability** — authority should in principle be revocable.
+- **Transparency** — key actions should be able to give the necessary explanation and evidence.
+- **Accountability** — autonomous action cannot mean that responsibility disappears.
+- **Privacy** — governance and audit must follow minimal necessity.
+- **Due Process** — serious disputes should have appeal, arbitration or review.
+- **Human Primacy** — where a person's fundamental interests are at stake, appropriate human control should be retained.
+
+This section is **a proposal for "what an agent society ought to have"**, and differs in kind from the section above: that one was CHASI's own choices as a place; this one is advice to the society.
+
+## 9. How It Works
+
+**Learn → Assemble → Test → Record → Publish.**
+
+| Step | What it does |
+|---|---|
+| **Learn** | whatever is good and has been done by others, **learn it actively**, respecting intellectual property. Do not go looking for original technology of our own. |
+| **Assemble** | assemble parts from different sources into a path that can satisfy the seven conditions |
+| **Test** | run real scenarios and record **which condition fails, and at which step of which part** |
+| **Record** | each result becomes one record: version · date · conclusion · **and when it needs to be revisited** |
+| **Publish** | publish the findings so that others can cite them |
+
+**"It does not hold" and "it holds" are outputs of equal value.** A record that states plainly "this does not hold here" is more useful than material saying "we did it".
+
+## 10. CHASI Architecture
+
 ```
-Existing Protocols / Technologies
-                ↓
-Identity · Communication · Capability · Payment · Security
-                ↓
-CHASI Social Infrastructure Layer
-Identity · Trust · Groups · Organizations · Delegation · Governance · Evidence
-                ↓
-Agent Society Applications
-```
-CHA2A is the principal technical architecture and protocol initiative through which this vision can be explored and implemented. ComplianceHub.cn can provide a practical hub for registry, identity, evidence, governance and experimentation.
-
-## 6. Compatibility, Complementarity and Independence
-CHASI should neither attempt to replace the broader Agent ecosystem nor become dependent on a single ecosystem. Its strategic principle is to maintain three properties simultaneously:
-- **Compatibility** — interoperate with A2A, MCP, DID/VC and other relevant technologies where appropriate.
-- **Complementarity** — avoid duplicating capabilities that are already mature and widely adopted.
-- **Independence** — retain the ability to define the social and governance concepts required by Agent Society.
-CHASI does not seek to replace the Agent ecosystem; it seeks to make the ecosystem socially interoperable.
-
-## 7. From Agent Network to Agent Society
-Communication → Trust → Collaboration → Organization → Group → Federation → Society → Economy
-
-Each step introduces new infrastructure requirements. Communication needs protocols; participation needs identity; collaboration needs groups and roles; organizations need governance; federation needs cross-domain trust; economic activity needs contracts, evidence and accountability.
-
-This progression is central to CHASI: the problem is not simply scaling the number of agents, but creating the social institutions that allow autonomous participants to scale safely.
-
-## 8. Compliance as an Enabler of Autonomy
-Compliance should not be understood primarily as a mechanism for restricting agents. In an Agent Society, verifiable compliance can become the mechanism through which agents earn trust and therefore obtain broader autonomy.
-
-Governance → Verifiable Autonomy → Trust → Broader Participation → Agent Society
-
-This leads to a central CHASI principle: Compliance enables autonomy. The more clearly authority, evidence, policy and accountability can be verified, the more confidently autonomous agents can participate in complex social and economic activities.
-
-## 9. The Social Contract for Agents
-Human society depends on institutions that define identity, rights, responsibilities, contracts, rules and accountability. Agent Society will require analogous mechanisms, adapted to autonomous software participants.
-- What authority does an agent possess?
-- Who is the principal behind that authority?
-- Who is responsible for an agent's actions?
-- What may an agent delegate, and to whom?
-- What happens when policies from different societies conflict?
-- How does an agent join or leave a society?
-- What evidence must remain after an action or relationship ends?
-- Can a human exercise an emergency override over delegated autonomous activity?
-These are not merely legal or philosophical questions. They become concrete architecture requirements as soon as agents can act across organizational boundaries.
-
-## 10. The Open and Federated Agent Society
-CHASI should favor a federated model rather than a single closed platform. Organizations should be able to maintain their own identity, policies and governance while participating in common societies and groups.
-```
-Organization A ─┐
-Organization B ─┼─ Federation ── Agent Society
-Organization C ─┘
+                    Human
+                      │
+              Consent / Authority
+                      ↓
+Organization ──── CHASI Hub ──── Organization
+     │                │                │
+     ↓                ↓                ↓
+  Agents       Policy / Trust       Agents
+     │                │                │
+     └──────── Federation / A2A ───────┘
+                      │
+             Evidence / Audit
+                      │
+              Accountability
 ```
 
-Different Platforms · Different Models · Different Protocols
+**The architecture has five layers, each answering one question.**
 
-This is where CHASI can provide strategic value without competing directly with model providers, Agent platforms or protocol communities: it supplies mechanisms for participation across boundaries.
+| Layer | The question it answers |
+|---|---|
+| Subjects | who is present: person · organization · agent · group |
+| Identity and trust | who it is; whether it can still be relied on |
+| Governance | who has authority, under which rules, and may delegate to whom |
+| Evidence | on what basis we say this happened, and whose responsibility it is |
+| Interconnection | how it composes with existing protocols, runtimes and identity systems |
 
-## 11. CHASI and the Wider Ecosystem
-Agent Society is too broad a field to be defined by one organization. CHASI should therefore operate as a complement and bridge across existing communities.
+**Dependency runs one way: an upper layer makes no demand of a lower one.** The governance layer does not dictate which cryptography the identity layer uses; the evidence layer does not dictate what organizational form the governance layer takes. The point of this rule is to let **every layer be replaceable** — the family's `governance-architecture` declares of itself that it "states no requirements", which is the same rule.
 
-## 12. CHASI Laboratory: From Vision to Evidence
-A vision becomes meaningful only when it can be tested. CHASI therefore treats experiments and Use Cases as a first-class part of the architecture process.
+**What CHASI does not own.** This matters more than the diagram above:
 
-Vision → Architecture → Use Cases → Experiments → Evidence → Specification → Ecosystem
+- it does not define communication primitives — A2A and MCP exist;
+- it does not define cryptographic primitives, nor any DID method itself — DID and VC exist;
+- it builds no agent runtime, no model, no workflow engine;
+- it is not a regulator, and not the final enforcer of any arbitration.
 
-The first five flagship Use Cases are:
-- Cross-Organization Group Collaboration
-- Agent Joining a New Society
-- Federated Agent Society
-- Agentic Commerce
-- Human–Agent Coexistence
-The purpose is not to produce static demonstrations. Each experiment should reveal governance conflicts, protocol gaps, evidence requirements and architectural assumptions, which then feed back into the next version of the architecture.
+CHASI has exactly one territory: **the stretch that crosses subjects and crosses domains**. What happens inside a domain stays inside it — how an organization divides work, how it audits itself, is not for CHASI to specify; CHASI asks only that it be able to say clearly what it did **when it steps outside**.
 
-## 13. The Long-Term Vision
-In the envisioned Agent Society, a person may have a personal agent that can represent them across multiple contexts. The same agent may participate in a family group, work for an organization, join professional societies, cooperate with external agents, use services, and conduct authorized transactions.
+**There are five dispositions of an external capability, and no sixth.** Adopt → Map → Profile-Extend → Adapter → Define. Any existing capability that comes before CHASI is asked, in order: can it simply be adopted? If not, can it be mapped? If not, can it be extended within that capability's own profile? If not, can an adapter be added? Only when all four answers are no do we define our own. **That ordered questioning is what makes "reuse as far as possible" executable** — otherwise "compatible" degrades into a slogan anyone can claim.
 
-The agent should not be permanently locked into one model, one cloud or one vendor. Its identity, authority, relationships and evidence should be portable and governable.
+**Composition, not replacement.** What is missing today is not agents that can talk to each other, but the layer that keeps "who authorized what, on what basis, and who answers for the result" verifiable when those agents belong to different organizations and different trust domains. The whole architectural value of CHASI comes down to this sentence: it produces no new intelligence, it produces **cross-domain verifiability**.
 
-Agent becomes a participant of the Internet society, not merely a feature of an AI platform.
+## 11. The Eight Core Capabilities of the Compliance Hub
 
-## 14. CHASI Principles
+These eight are not eight small features but **eight links in one chain**: from "who you are" to "you can be found". Lose any one, and those after it do not hold.
 
-## 15. CHASI Vision: A Living Document
-This Vision should remain deliberately open. It is not a claim that the final form of Agent Society is already known. It is a direction and a set of principles against which architecture, experiments and ecosystem decisions can be evaluated.
+| # | Capability | What it does | **What it does not do** |
+|---|---|---|---|
+| 1 | Identity and resolution | let any subject (person / agent / organization / group) be resolved across domains, and give its current status | does not require any particular identity system |
+| 2 | Organization and governance | carry the source of authority, membership, and the record of governance actions | does not decide how an organization governs itself internally |
+| 3 | Authority and delegation | make authority declarable, limitable, revocable and traceable; support delegation layer by layer | does not make authorization decisions for people, and does not widen authority already granted |
+| 4 | Group and collaboration | let subjects from different organizations collaborate under common rules | introduces no external group service as its core |
+| 5 | Trust and status | answer "can it still be relied on now": revocation, downgrade, suspension, restoration | does not treat "registered" as "trustworthy" |
+| 6 | Evidence and conformance | let actions leave verifiable evidence, and give a judgement of conformance to a specification | does not establish facts in place of a court or arbitration |
+| 7 | Compliance profiles and grading | give differentiated requirements by industry and risk level, rather than one size for all | does not cover every scenario with a single standard |
+| 8 | Discovery and directory | let qualified participants be found and searched | **being found is not being trusted**; a directory is not an endorsement |
 
-As CHASI Lab experiments generate evidence, this Vision may evolve. Architecture and protocol documents should become more precise; the Vision should remain sufficiently broad to accommodate new technologies, social models and forms of human–agent interaction.
+**Three ways to read it.**
 
-## CHASI Vision — Closing Statement
-We envision an Internet where humans and autonomous agents can participate, cooperate, transact and coexist through open, trusted and governed social infrastructure.
+**First, the eight have an order; they are not a flat feature list.** Without identity there is no organization to speak of; without organization and authority, group collaboration has no subject; without evidence, trust is only platform guarantee; without profiles, compliance can only be explained case by case by a person; without discovery, the qualified cannot get in. **Skip any link and do a later one, and it degrades into "yet another platform".**
 
-CHASI — Compliance Hub for Agent Society Infrastructure
+**Second, each one must land on a document that can be reviewed.** If a capability lives only in a product and not in a specification, no one else can implement it, and no one can tell whether they comply — then it is not a capability, it is a **service**. The line between capability and specification is exactly the line between whether this Hub can be called infrastructure.
+
+**Third, all eight must have a "what it does not do".** Half of a Hub's definition comes from what it refuses to do. The third column matters as much as the second: **refusal is the only guarantee that it is not captured by any one party.**
+
+## 12. Causal Accountability Chain
+
+One of CHASI's most important original lines of research is turning agent action from "black-box execution" into a verifiable causal accountability chain.
+
+```
+Human
+  ↓ consent / mandate
+Organization
+  ↓ delegation
+Agent A
+  ↓ sub-delegation
+Agent B
+  ↓ action
+Tool / API / Transaction
+  ↓
+Evidence → Outcome → Accountability
+```
+
+What it must finally answer is not only "what happened", but "why it happened, who authorized it, what the scope of that authority was, whether it was exceeded, and who answers for it".
+
+**First, what "causal" adds over a log.** Three things are often conflated; the difference is decisive:
+
+| | The question it answers | Its nature |
+|---|---|---|
+| Call trace | who called whom, how long it took, where it failed | technical fact |
+| Audit trail | what happened | fact of what occurred |
+| **Causal accountability chain** | **on what basis this could happen, who had the authority to let it happen, whether the boundary was crossed** | **derivation of justification** |
+
+An audit log records **the order of events**; an accountability chain records **the derivation between authority and action**. The former can tell you "Agent B initiated a transfer at 14:03"; the latter must be able to tell you "Agent B could initiate it because A obtained authority over scope R from the organization, and delegated a subset of R to B, and this call did not exceed that subset".
+
+**What every link must carry** (without which the link does not hold):
+
+- **subject** — who;
+- **basis of authority** — whose power, of what kind;
+- **scope** — what may be done, and **explicitly what may not**;
+- **time and validity** — when it takes effect, when it lapses;
+- **delegation depth** — which layer of delegation this is, and how many hops from the original authority;
+- **constraints** — under what conditions it is permitted;
+- **evidence reference** — on what basis this link is to be believed.
+
+**A chain breaks in five places** — and none of the five is an anomaly; they are the norm:
+
+- the source of authority cannot be resolved (the subject is gone, or revoked);
+- a sub-delegation exceeds the scope of its parent;
+- across domains, the counterparty does not recognize this form of authority;
+- time is out of alignment (authority had lapsed while the action still happened);
+- evidence is missing, or held by one party alone.
+
+**So the point is not "guaranteeing it never breaks".**
+
+**The core design judgement: an honest broken chain is worth far more than a forged complete one.** The goal of the causal accountability chain is therefore not "never interrupted" but **"a break must be visible"**: which link lacks its basis, with whom it is missing, and what is missing, must all be pointable. **A system that can report where it is incomplete is more credible than one that always shows "complete".**
+
+**What is verifiable, and what can only be declared.** Scope of authority, time, revocation status, delegation depth — verifiable. Intention, good faith, "I did my best" — declarable only. Conflating the two is the commonest failure of accountability chains: **a declaration taken for a proof**. CHASI's position is to make the verifiable part minimally sufficient, and then **mark clearly that the rest is declaration** — rather than wrapping the declaration in attractive visualisation and passing it off as proof.
+
+**The end of responsibility must be a person or a legal entity, not "the system".** Automation may lengthen the chain of action, but it may not dilute responsibility. The chain must end at a subject capable of bearing responsibility: a person, an organization, a definite legal entity. **When the answer becomes "the model decided on its own", that means the chain broke — not that responsibility disappeared.**
+
+## 13. Societal Memory: the public memory of an Agent Society
+
+Agent Memory is personal memory; Societal Memory is shared memory. **They are not "one scaled up"; they serve different subjects**: personal memory serves "I remember what I did", societal memory serves "**what we jointly hold to have happened, under which rules, and why those rules later changed**".
+
+A mature Agent Society needs to keep six kinds of memory, and each has a **different writer, reader and lifetime**:
+
+| Memory | Content | Who writes | Who reads |
+|---|---|---|---|
+| Event Memory | what happened | the parties | those connected to the event |
+| Decision Memory | why this decision was made | the deciding subject | those affected by it |
+| Commitment Memory | who promised what | the promiser | the promisee |
+| Policy Memory | when and why a rule changed | whoever may change the rule | those bound by it |
+| Evidence Memory | what an action rested on | the acting party | whoever needs to verify |
+| Dispute Memory | how a dispute arose and was resolved | the dispute process | the parties and overseers |
+
+**Societal memory is not "keep everything forever".** This runs against intuition. Two things constantly conflated must be separated: **must be verifiable** (it can be checked that it was not altered) and **must be obtainable** (anyone can read the content). A mature design can make the content itself unreadable while "it has not changed" remains verifiable — **"remembered" is not "visible"**. Untie those two, and public memory and privacy need not be either/or.
+
+**Verifiable memory is not blockchain.** Blockchain settles "order and immutability", at the price of full replication and full publicity. What societal memory actually needs is three things — **verifiable, controllably disclosed, forgettable** — and blockchain gives only the first half, and is of no help exactly where it is hardest (**who deletes, and by whose rules**). The direction is therefore **anchoring rather than on-chaining**: anchor "the state of a record at a moment" in a public place, so that tampering can be detected, while the record itself stays with its rights-holder, to be produced on demand, by permission, with minimal disclosure.
+
+**Different memories of the same event are allowed.** A centralized database carries an implicit assumption: "there is only one correct version". But disagreement is the norm: two parties' understandings of the same transaction may both be honest and still not agree. Societal memory should therefore not pretend there is one version, but keep **records from several sources and the disagreements among them**, handing adjudication to a dispute process rather than to whoever happens to hold the database. **Whoever owns the database owns the history — and that is exactly what is to be avoided.**
+
+**Federated, not central.** CHASI's direction is not to build a centralized "all-knowing database" but to explore a verifiable, authorizable, minimally disclosing Federated Societal Memory: each organization keeps its own memory, and across domains only the necessary part is exchanged, with "what was exchanged" itself leaving a trace.
+
+**Its relation to the accountability chain.** The chain in §12 answers **one action**; societal memory answers **what we jointly remember about this class of thing**. The former is vertical (the chain of one action), the latter horizontal (the layer all subjects share). Without the former, memory cannot be checked; without the latter, every action must be proved from scratch. **Together they are what "a verifiable society" means.**
+
+## 14. The Relation Between CHA2A and CHASI
+
+We propose separating CHA2A and CHASI into two levels.
+
+```
+CHASI   Compliance Hub for Agent Society Infrastructure
+  │
+  │   Governance · Identity · Delegation · Federation
+  ↓
+CHA2A   Agent-to-Agent / Agent Society Architecture & Protocols
+```
+
+CHA2A can continue to develop into concrete architecture, protocol, profiles and extensions; CHASI carries the higher-level vision, governance, compliance framework, research hub and ecosystem connection.
+
+This keeps the technical work independent, and lets ComplianceHub.cn be a long-term public entry point for research and the ecosystem.
+
+## 15. CHASI and the Existing Ecosystem
+
+- **A2A / AAIF** — agent-to-agent interoperability.
+- **OpenA2A** — open agent interaction / protocol research.
+- **MCP** — agent-to-tool / resource connectivity.
+- **DID / VC** — decentralized identity and verifiable credentials.
+- **OAuth / OIDC** — mature authentication / authorization foundations.
+- **NANDA** — agent Internet discovery, registry and infrastructure research.
+- **MIT / Stanford** — research on the agent Internet, human-agent interaction, memory, identity and society.
+- **CHA2A** — organises these capabilities into an open architecture for the Agent Society.
+- **CHASI** — provides, above them, a hub for compliance, governance, evidence, accountability and federation.
+
+## 16. The Long-Term Form
+
+If this works, in ten years it should be a **citable public memory**: what a given agent society permitted, when and why its rules changed, how disputes were settled, how common interests were held.
+
+**Not in order to try the past** — but so that "**why the people then thought that was allowed**" has a basis, and so that "how it could be done next time" has a precedent.
+
+**Memory is the form in which a society continues; the seven conditions above are its first foundation.**
+
+## 17. Boundaries: what we explicitly do not do, and the conditions each would need
+
+- payment and settlement
+- markets and listing
+- behavioural monitoring and content compliance
+- federation across real registries
+- a high-grade ecosystem trust state
+
+**Each of these has its conditions written in the framework volume.** They are not listed here because **they are decisions, not blanks** — writing "we do not do this" is right, and writing "left for later" is also right; **what is not allowed is writing nothing at all.**
+
+## 18. The Status of This Document, and Its Own Rules
+
+**Experimental.** This is a stance (vision); it changes as understanding changes. CHASI's specification documents are a separate set, each with its own version and its own way of being judged.
+
+**This document requires nothing of anyone.** Where it conflicts with a specification, the specification governs.
+
+**It is living**: a position may be revised, the trace may not — so every substantive change raises the version number, and **a note of what changed is written only once the version it supersedes has been public**.
+
+**There is no repository-level changelog.**
+
+## Closing
+
+If CHA2A is our technical exploration of the Agent Internet and the Agent Society, then CHASI can be a larger vision: an open governance hub belonging to no single company, platform or agent runtime.
+
+It is not there to control agents, but so that autonomy, trust, responsibility and freedom can exist at the same time.
+
+In that sense, compliance is not the force that restricts an Agent Society; it is the basic condition that lets such a society exist at scale.
+
+—— CHASI Vision · v2.3
