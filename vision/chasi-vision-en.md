@@ -4,7 +4,7 @@
 
 ---
 
-> Status: draft v2.4 | Kind: **stance (vision)**
+> Status: draft v2.5 | Kind: **stance (vision)**
 > **This document says *why*, and *where to*. It requires nothing of anyone.** Where it conflicts with a specification, the specification governs.
 
 ---
@@ -30,24 +30,30 @@ An agent society is not "a crowd of agents", and it is not "humans and agents". 
 
 **One agent may belong to several organizations and groups at once**, and its role in each may differ. This is the ground the whole vision stands on: **if "belongs to whom" has only one answer, there is no society, only ownership.**
 
-**One kind that has no place here yet.** The four kinds of subject above are peers, but there will be entities that are **both an agent and an organization** — an autonomous entity that is itself a legal person, holding assets, concluding contracts, bearing responsibility and being held to it. This table has no place for it yet. **That is a question deliberately left open, not an omission**: when such a subject does appear, what it needs is a fresh answer to "which kind", not one more row.
+**One kind that has no place here yet.** The four kinds of subject above are peers, but there will be entities that are **both an agent and an organization** — an autonomous entity that is itself a legal person, holding assets, concluding contracts, bearing responsibility and being held to it. This table gives it no place yet. **Undecided: which kind it is** — to be settled by whether its capability set differs from both an organization's and an agent's.
 
 ## 2. What Is in This Society
 
-Not "what features will it have", but **the things a society normally has**:
+Not "what features will it have", but **the things a society normally has** — **this section is the body of the vision**. The third column gives the condition each one rests on; **the conditions themselves are in §3**, and are only pointed at and supplemented here:
 
-| It has | Meaning | The condition that makes it liveable |
+| It has | Meaning | The condition it rests on |
 |---|---|---|
-| **Roles** | one agent can be assistant, colleague, counterparty and fiduciary at once | every action must be able to say **which role it was performed in** |
-| **Relationships** | relationships persist, change, break | the state of a relationship is readable, and a break is traceable |
-| **Collaboration** | some things one party cannot do alone | cross-party collaboration must leave a record that can be rebuilt |
-| **Exchange** | value moves | *(see §17, boundaries)* |
-| **Memory** | a society needs continuity | public memory exists, with **minimal disclosure** |
-| **Dispute** | things go wrong | the handling rules must **exist, be declared, and be checkable** |
-| **Common interest** | some things belong to no one and matter to everyone | they may not be monopolized by any party |
-| **Evolution** | rules change, members come and go | rule changes must have a history |
+| **Roles** | one agent can be assistant, colleague, counterparty and fiduciary at once | **①** — an action must state which role it was performed in |
+| **Relationships** | relationships persist, change, break | **①** — the state of a relationship is readable, its termination traceable |
+| **Collaboration** | some things one party cannot do alone | **①** — cross-party collaboration leaves a record that can be rebuilt |
+| **Exchange** | value moves | **①** — authority and evidence are verifiable; **settlement itself is outside this family's scope, see §17** |
+| **Memory** | a society needs continuity | **⑥** — public memory exists, with minimal disclosure |
+| **Dispute** | things go wrong | **①④** — the handling rules exist, are declared and are checkable; a person may question |
+| **Common interest** | some things belong to no one and matter to everyone | **no condition in §3 yet, see below** |
+| **Evolution** | rules change, members come and go | **⑤** — rule changes leave a history |
 
-**This section is the body of the vision.** The sections that follow say only this: what it takes for these things to hold at the same time.
+**Two things are undecided.**
+
+**First, common interest has no condition.** None of the seven in §3 covers it. Settling it requires deciding three things first: who may hold such a thing, how the holding is made checkable, and how the holder is held responsible. The only role in this family that could carry it is **fiduciary**, and the duty of care that role implies is not specified anywhere yet.
+
+**Second, relationships have no object.** The condition requires the state of a relationship to be readable and its termination traceable, but the family has no relationship object: Organization and Group each have a volume, and membership is the closest thing to it, but neither covers a cross-organizational relationship itself. Settling it requires deciding the fields first: the parties, the type, when it takes effect, when it ends, and who may end it.
+
+**One boundary.** Exchange, payment, settlement and listing are outside this family's scope (§17); the authority and evidence an exchange rests on are inside it, and their condition is **①**.
 
 ## 3. Seven Conditions That Make It Liveable
 
@@ -185,7 +191,7 @@ Organization ──── CHASI Hub ──── Organization
 | Evidence | on what basis we say this happened, and whose responsibility it is |
 | Interconnection | how it composes with existing protocols, runtimes and identity systems |
 
-**Things that are not subjects have a place in the table too.** Services, tools, resources and data are not subjects, but they need to be referable; they are handled by the **identity and trust layer** as *named resources*, and **may not** be given the capacities only a subject has — acting on another's behalf, being granted authority, being held responsible. This is the same cut as the table in §1.
+**Things that are not subjects have a place in the table too.** Services, tools, resources and data are not subjects, but they need to be referable; they are handled by the **identity and trust layer** as *named resources*, and **may not** be given the capacities only a subject has — acting on another's behalf, being granted authority, being held responsible.
 
 **Dependency runs one way: an upper layer makes no demand of a lower one.** The governance layer does not dictate which cryptography the identity layer uses; the evidence layer does not dictate what organizational form the governance layer takes. The point of this rule is to let **every layer be replaceable** — the family's `governance-architecture` declares of itself that it "states no requirements", which is the same rule.
 
@@ -370,4 +376,4 @@ It is not there to control agents, but so that autonomy, trust, responsibility a
 
 In that sense, compliance is not the force that restricts an Agent Society; it is the basic condition that lets such a society exist at scale.
 
-—— CHASI Vision · v2.4
+—— CHASI Vision · v2.5
