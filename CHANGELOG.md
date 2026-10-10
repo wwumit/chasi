@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-10-09 — renamed to `chasi`, and restructured into layers
+
+**Renamed.** The repository was `authority-provenance` from 2026-10-03 (entry below) until it took the family's umbrella name, **`chasi` = Compliance Hub for Agent Society Infrastructure**. The reason is structural, not cosmetic: `authority-provenance` named **one layer** — where a subject's authority comes from — while this repository now carries the family's stance, architecture, specifications and profiles. **A name that describes one layer cannot hold the whole.** The GitHub repository was renamed in the same step.
+
+**Restructured.** The three volumes sat as peers in a flat root, but they belong to **two different layers** — which `governance-architecture.md` itself had already declared:
+
+| Was (root) | Is | Layer |
+|---|---|---|
+| `governance-architecture.md` · `-zh` | `architecture/` | **L2 architecture** |
+| `organization-governance.md` · `-zh` | `specs/` | **L3 specifications** |
+| `group-collaboration.md` · `-zh` | `specs/` | **L3 specifications** |
+
+Two layer directories are reserved and not yet populated: `vision/` (L1) and `profiles/` (L4).
+
+**Links.** Every relative link was rechecked after the move: **21 links, none broken.** The volumes reference one another by **document name in backticks**, not by path, so those references were unaffected — a property worth keeping.
+
+---
+
 ## 2026-10-03 — Chinese edition of this README
 
 `README-zh.md` added, so that the repository's own entry document follows the same language convention it states for the volumes. `README.md` links to it from its "Language convention" section, and it links back. The two editions carry the same eight sections and the same § references — checked heading by heading.

@@ -1,6 +1,6 @@
 # 跨组织 Agent 治理
 
-> **关于本仓的名字。** `authority-provenance` 命名的是本族所补那一层的主题：**主体的权威从哪里来，以及第三方如何独立回溯它。** 各分册承载使这一层可用的两个主体——**Organization** 作为治理主体、**Group** 作为协作主体（`governance-architecture.md` §0）。
+> **关于本仓的名字。** `chasi` 是本族的 umbrella 名——**C**ompliance **H**ub for **A**gent **S**ociety **I**nfrastructure。本仓承载本族的**立场（L1）**、**架构（L2）**、**规范（L3）**与**剖面（L4）**；身份核心与各实现另在并列仓。本仓自 2026-10-03 至 2026-10-09 名为 `authority-provenance`，umbrella 名取代了它——**一个只命名某一层的名字，装不下整族**。改名与重构记录在 `CHANGELOG.md`。
 
 本仓收录**跨组织边界**行动的 Agent 的文档：**Organization** 作为治理主体，**Group** 作为协作主体。
 
@@ -15,9 +15,9 @@
 
 | 文档 | 版本 | 内容 |
 |---|---|---|
-| [`governance-architecture-zh.md`](./governance-architecture-zh.md) · [`en`](./governance-architecture.md) | v0.3 | **架构层。** 为什么这一族是这样分层的：核心原则、双平面对象模型、三个层面（organization · group · federation）、对核心的约束，以及本架构去弃的前提。**不陈述任何要求**；凡出现「必须」，都指向拥有该条的分册 |
-| [`organization-governance-zh.md`](./organization-governance-zh.md) · [`en`](./organization-governance.md) | v0.1 | **Organization 作为主体。** 权威的四个来源层（设立依据 → 职位 → 任职者 → 根权威依据）、成员与归属、不可授予的角色、生命周期（退出 · 继任 · 重设根 · Break-Glass · 解散）、治理动作的证据，以及**本册已定与留给部署方的部分（§12）** |
-| [`group-collaboration-zh.md`](./group-collaboration-zh.md) · [`en`](./group-collaboration.md) | v0.1 | **协作上下文。** Group 作为一等对象、准入门三道、跨组织规则（不放大 · 撤销级联 · 责任归属）、生命周期、Presence、Chat 与 Task 的关系、**跨 Registry 的解析（§9）**，以及可选的**跨组织 profile（§14）** |
+| [`governance-architecture-zh.md`](./architecture/governance-architecture-zh.md) · [`en`](./architecture/governance-architecture.md) | v0.3 | **架构层。** 为什么这一族是这样分层的：核心原则、双平面对象模型、三个层面（organization · group · federation）、对核心的约束，以及本架构去弃的前提。**不陈述任何要求**；凡出现「必须」，都指向拥有该条的分册 |
+| [`organization-governance-zh.md`](./specs/organization-governance-zh.md) · [`en`](./specs/organization-governance.md) | v0.1 | **Organization 作为主体。** 权威的四个来源层（设立依据 → 职位 → 任职者 → 根权威依据）、成员与归属、不可授予的角色、生命周期（退出 · 继任 · 重设根 · Break-Glass · 解散）、治理动作的证据，以及**本册已定与留给部署方的部分（§12）** |
+| [`group-collaboration-zh.md`](./specs/group-collaboration-zh.md) · [`en`](./specs/group-collaboration.md) | v0.1 | **协作上下文。** Group 作为一等对象、准入门三道、跨组织规则（不放大 · 撤销级联 · 责任归属）、生命周期、Presence、Chat 与 Task 的关系、**跨 Registry 的解析（§9）**，以及可选的**跨组织 profile（§14）** |
 | [`CHANGELOG.md`](./CHANGELOG.md) | — | 变更记录 |
 
 **架构层不是规范。** 它承载原则与对象模型；在它里面出现「必须」即为越界（`governance-architecture.md` §1.1）。
