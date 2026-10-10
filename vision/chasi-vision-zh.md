@@ -4,7 +4,7 @@
 
 ---
 
-> 状态：草案 v2.1 ｜ 性质：**立场（vision）**
+> 状态：草案 v2.2 ｜ 性质：**立场（vision）**
 > **本件讲“为什么”与“走向哪里”，不规定任何人必须做什么。** 若本件与规范件冲突，以规范件为准。
 
 ---
@@ -147,16 +147,16 @@
 ## 8. 一个智能体社会的宪法原则（提案）
 
 如果未来 Agent Society 是一种新的社会形态，那么除了协议，还需要类似“宪法”的最小原则集合。建议形成 CHASI Agent Society Constitutional Principles：
-Identity：任何具有社会行动能力的 Agent 应有可验证身份。
-Representation：Agent 必须能够说明其代表的主体或组织。
-Authority：行动应有明确的授权来源。
-Proportionality：权限应与任务和风险相匹配。
-Revocability：授权原则上应可撤销。
-Transparency：关键行动应能够提供必要解释和证据。
-Accountability：自主行动不能意味着责任消失。
-Privacy：治理与审计必须遵循最小必要原则。
-Due Process：重大争议应具有申诉、仲裁或复核机制。
-Human Primacy：涉及人的根本权益时，应保留适当的人类控制机制。
+- **Identity**——任何具有社会行动能力的 Agent 应有可验证身份。
+- **Representation**——Agent 必须能够说明其代表的主体或组织。
+- **Authority**——行动应有明确的授权来源。
+- **Proportionality**——权限应与任务和风险相匹配。
+- **Revocability**——授权原则上应可撤销。
+- **Transparency**——关键行动应能够提供必要解释和证据。
+- **Accountability**——自主行动不能意味着责任消失。
+- **Privacy**——治理与审计必须遵循最小必要原则。
+- **Due Process**——重大争议应具有申诉、仲裁或复核机制。
+- **Human Primacy**——涉及人的根本权益时，应保留适当的人类控制机制。
 
 本节是**对“一个智能体社会应当有什么”的提案**，与上一节性质不同：上一节是 CHASI 作为场所自己的选择，本节是对社会的建议。
 
@@ -281,7 +281,15 @@ Evidence → Outcome → Accountability
 - **约束条件**——在什么条件下才允许；
 - **证据引用**——这一环凭什么被相信。
 
-**链会在五种地方断。** 授权来源不可解析（主体已消失或被撤销）；子委托超出了母授权的范围；跨域时对端不承认这种授权形式；时间错位（授权已过期而行动仍在发生）；证据缺失或被单方独占。**这五种不是异常，而是常态**——所以关键不在于“保证不断”。
+**链会在五种地方断**——而这五种都不是异常，是常态：
+
+- 授权来源不可解析（主体已消失或被撤销）；
+- 子委托超出了母授权的范围；
+- 跨域时对端不承认这种授权形式；
+- 时间错位（授权已过期而行动仍在发生）；
+- 证据缺失或被单方独占。
+
+**所以关键不在于“保证不断”。**
 
 **核心设计判断：一条诚实的断链，比一条伪造的完整链有价值得多。** 因此因果责任链的目标不是“永不中断”，而是**断了必须能被看见**：缺的是哪一环、缺在谁那里、缺的是什么，都要能被指出来。**一个能报告自己在哪里不完整的系统，比一个永远显示“完整”的系统可信。**
 
@@ -325,19 +333,20 @@ CHASI   Compliance Hub for Agent Society Infrastructure
 CHA2A   Agent-to-Agent / Agent Society Architecture & Protocols
 ```
 CHA2A 可以继续发展为具体的 architecture、protocol、profiles 和 extensions；CHASI 则承担更高层的 Vision、Governance、Compliance Framework、Research Hub 和生态连接。
+
 这样既可以保持技术工作的独立性，又能够让 ComplianceHub.cn 成为一个长期的公共研究与生态入口。
 
 ## 15. CHASI 与现有生态的关系
 
-A2A / AAIF：Agent-to-Agent interoperability。
-OpenA2A：开放 Agent interaction / protocol research。
-MCP：Agent-to-tool / resource connectivity。
-DID / VC：decentralized identity 与 verifiable credentials。
-OAuth / OIDC：成熟的 authentication / authorization 基础。
-NANDA：Agent Internet discovery、registry 与 infrastructure research。
-MIT / Stanford：Agent Internet、human-agent interaction、memory、identity、society 等研究。
-CHA2A：把这些能力组织进面向 Agent Society 的开放架构。
-CHASI：在其之上提供 compliance、governance、evidence、accountability 与 federation 的 Hub。
+- **A2A / AAIF**——Agent-to-Agent interoperability。
+- **OpenA2A**——开放 Agent interaction / protocol research。
+- **MCP**——Agent-to-tool / resource connectivity。
+- **DID / VC**——decentralized identity 与 verifiable credentials。
+- **OAuth / OIDC**——成熟的 authentication / authorization 基础。
+- **NANDA**——Agent Internet discovery、registry 与 infrastructure research。
+- **MIT / Stanford**——Agent Internet、human-agent interaction、memory、identity、society 等研究。
+- **CHA2A**——把这些能力组织进面向 Agent Society 的开放架构。
+- **CHASI**——在其之上提供 compliance、governance、evidence、accountability 与 federation 的 Hub。
 
 ## 16. 长期形态
 
@@ -351,7 +360,11 @@ CHASI：在其之上提供 compliance、governance、evidence、accountability �
 
 ## 17. 边界：明确不做，以及各自的条件
 
-支付与结算 · 市场与挂牌 · 行为监控与内容合规 · 跨真实注册表的联邦 · 高级别的生态信任态。
+- 支付与结算
+- 市场与挂牌
+- 行为监控与内容合规
+- 跨真实注册表的联邦
+- 高级别的生态信任态
 
 **每一项在框架分册里都写了它需要的条件。** 不列在这里，是因为**它们是决定，不是空白**——写成“不做”是对的，写成“留待将来”也是对的，**唯独不能什么都不写**。
 
@@ -371,7 +384,9 @@ CHASI：在其之上提供 compliance、governance、evidence、accountability �
 ## 结语
 
 如果 CHA2A 是我们对于 Agent Internet / Agent Society 的技术探索，那么 CHASI 可以成为更大的 Vision：一个不属于任何单一公司、平台或 Agent Runtime 的开放治理枢纽。
+
 它不是为了控制 Agent，而是为了让自主性、信任、责任和自由能够同时存在。
+
 从这个意义上说，Compliance 不是限制 Agent Society 的力量，而是使这种社会真正能够规模化存在的基础条件。
 
-—— CHASI Vision · v2.1
+—— CHASI Vision · v2.2

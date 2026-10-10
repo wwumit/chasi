@@ -19,8 +19,8 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 
 | 层 | 文档 | 版本 |
 |---|---|---|
-| **L1 · 立场** | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.1 |
-| | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v1.1 |
+| **L1 · 立场** | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.2 |
+| | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v1.2 |
 | **L2 · 架构**（*不陈述要求*） | [`governance-architecture-zh.md`](./architecture/governance-architecture-zh.md) · [`en`](./architecture/governance-architecture.md) | v0.3 |
 | **L3 · 规范** | [`organization-governance-zh.md`](./specs/organization-governance-zh.md) · [`en`](./specs/organization-governance.md) | v0.1 |
 | | [`group-collaboration-zh.md`](./specs/group-collaboration-zh.md) · [`en`](./specs/group-collaboration.md) | v0.1 |
@@ -32,7 +32,7 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 
 ### 关于 Vision 的两个版本
 
-**它们不是平行版本，也不在同一阶段。** 英文是 **v1.1**（15 节）；中文是 **v2.1**（19 节，§0–§18，另加结语）。两者**不是彼此的译本**，重心也不同：**中文先讲“一个智能体社会要怎样才能住得下去”**——五类不在同一层的成员、七个条件、以及这些条件造成的两处张力——然后才讲架构、责任链与社会记忆；**英文则围绕生态组织**——兼容性、社会契约、实验室。引用时各按自身版本号引用。
+**它们不是平行版本，也不在同一阶段。** 英文是 **v1.2**（15 节）；中文是 **v2.2**（19 节，§0–§18，另加结语）。两者**不是彼此的译本**，重心也不同：**中文先讲“一个智能体社会要怎样才能住得下去”**——五类不在同一层的成员、七个条件、以及这些条件造成的两处张力——然后才讲架构、责任链与社会记忆；**英文则围绕生态组织**——兼容性、社会契约、实验室。引用时各按自身版本号引用。
 
 **Vision 不承载工作计划。** 两版都不写时间、交付物和动作指派——路线图是另一种文件，读者不同、寿命也不同。
 
