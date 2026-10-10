@@ -55,11 +55,12 @@ Expanded: in any cross-trust-domain collaboration, the **authority and the evide
 
 **●** the class is required content of that slot; **○** it may be, but the object model is undecided.
 
-**Only S3 and "rule version" share a name**, and there the two do refer to the same things. **That coincidence is exactly what makes the two lists read as a contradiction.** The other three do not share names, because **a slot is named after what it must supply, not after the class that supplies it**:
+**Two names coincide: S3 with "rule version", S4 with "record"** — and in each case the two do refer to the same things. **Those two coincidences are exactly what makes the two lists read as a contradiction.** The other two do not share names (S1, S2), because **a slot is named after what it must supply, not after the class that supplies it**:
 
 - S1 is called "identifier", not "organization" — **an organization object that cannot be resolved does not fill this slot**;
-- S2 is called "authority chain", not "charter" or "commitment" — **one chain is built by several classes in relay**;
-- S4 is called "record", not "the end of responsibility" — **the end is only one field a record must carry**.
+- S2 is called "authority chain", not "charter" or "commitment" — **one chain is built by several classes in relay**.
+
+**S3 and S4 share names because what those two slots must supply *is* an object of that class** (a version of a rule, a record), whereas S1 and S2 must supply **a property or a derivation**, not an object of some class. **That difference also shows why the two cuts are orthogonal**: sharing a name is not sharing a classification — S3 with "rule version" and S4 with "record" are **one thing occupying one cell under each cut**, while the other objects appear under only one of the two.
 
 **The division of labour is therefore clear**: this document says what a slot may hold and what an assembly must then satisfy; `naming.md` says how what goes in is referred to, and what a reference must carry. **One set of objects, one face per volume — neither duplicated nor in conflict.**
 

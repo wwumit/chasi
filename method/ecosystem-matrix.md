@@ -76,7 +76,7 @@ Vision §5 says "**complementary** — fill only the gaps the ecosystem leaves i
 
 **This document can now support the judgement of "complementary", with three qualifications.**
 
-1. **Only 2 of the 13 licence entries were taken first-hand** (A2A and MCP, from each repository's LICENSE on 2026-10-10). The rest read "unchecked" — **and "unchecked" is not an omission; it means the entry itself is still incomplete.** Closing it requires obtaining a first-hand licence file for each.
+1. **Only 2 of the 16 licence entries were taken first-hand** (A2A and MCP, from each repository's LICENSE on 2026-10-10); **12 read "unchecked"** (2 of them "self-stated, unchecked") and **2 are individual drafts, marked "individual draft"** — **and "unchecked" is not an omission; it means the entry itself is still incomplete.** Closing it requires obtaining a first-hand licence file for each.
 2. **Two statuses are undecided**: AAIF (it is not even clear whether it is a body or a specification) and NANDA (which has taken no definite form). **Those two are names only, and do not yet constitute entries.**
 3. **One source disagreement**: OpenA2A's `did:opena2a` version number (0.1 and 0.2 are both stated).
 
