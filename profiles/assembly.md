@@ -1,6 +1,6 @@
 # Assembly Profile — the Composition Volume
 
-> Status: draft (v0.1)
+> Status: draft (v0.2)
 > Date: 2026-10-10
 > Position: this family's **first profile**, and the only document that specifies **how to use other people's parts**
 > Principle: **if an existing standard can be used, do not invent one** — this document defines no primitive; it specifies only what each of four slots may hold, and what an assembly must then satisfy
@@ -36,6 +36,34 @@ Expanded: in any cross-trust-domain collaboration, the **authority and the evide
 | **S4 Record** | the evidence the action left, and the end of responsibility | Q4 what it has done | `evidence-record.md` |
 
 **Slot three holds "the context"; this document names it after the part of that context which is verifiable.** The context also includes roles and groups (see `question.md` Q3); what this document requires is that **something in the context be verifiable, namely the rule in force at the time** — otherwise Q3 cannot be judged.
+
+### 2.1 How these four slots relate to `naming.md`'s four object classes
+
+`naming.md` §2 also lists four — **organization · group, rule version, commitment, record**. The count matches this section's four slots, which invites reading them as two rival classifications. **They cut two different things:**
+
+- **The four slots here cut by function**: in one assembly, **whichever item is missing is the question that cannot be answered**. A slot's name says **what it must supply**;
+- **`naming.md`'s four cut by kind**: what needs to be referred to, and where its name comes from.
+
+**The two cuts are orthogonal: one slot may hold several object classes, and one class may appear in several slots.**
+
+| Object class ↓ / slot → | S1 Identifier | S2 Authority chain | S3 Rule version | S4 Record |
+|---|---|---|---|---|
+| **Organization · group** | ● the subject's identifier | ● the **subject end** of the chain (`controllers`, holders of the charter) | — | ● the **end of responsibility** (must be a person or a legal person) |
+| **Rule version** | — | ● the **content** of each basis (`charter_ref` is itself a version of a rule) | ● this slot's substance: **the version in force at the time** | — |
+| **Commitment** | — | ● the **authority basis** of each link (object model undecided, see `naming.md` §2.3) | — | ○ performance state, if recorded at all, lands here (undecided) |
+| **Record** | — | — | — | ● this slot's substance |
+
+**●** the class is required content of that slot; **○** it may be, but the object model is undecided.
+
+**Only S3 and "rule version" share a name**, and there the two do refer to the same things. **That coincidence is exactly what makes the two lists read as a contradiction.** The other three do not share names, because **a slot is named after what it must supply, not after the class that supplies it**:
+
+- S1 is called "identifier", not "organization" — **an organization object that cannot be resolved does not fill this slot**;
+- S2 is called "authority chain", not "charter" or "commitment" — **one chain is built by several classes in relay**;
+- S4 is called "record", not "the end of responsibility" — **the end is only one field a record must carry**.
+
+**The division of labour is therefore clear**: this document says what a slot may hold and what an assembly must then satisfy; `naming.md` says how what goes in is referred to, and what a reference must carry. **One set of objects, one face per volume — neither duplicated nor in conflict.**
+
+**Undecided: which class actually supplies S1.** The slot requires the **subject's** resolvable identifier, yet `naming.md` §2's identity-bound class **names only organizations and groups** (its note reads "social subjects and the like" — **the class name and the note disagree**); and `did-method-cha2a.md`'s resource types include `agent`, `org`, `provider`, `authority` and `verifier`, but **not `person`**. **To settle it, one must first settle** whether that binding issues identifiers for `person` and `agent` separately — and that file is frozen at v1.1.0 (on record in the W3C DID Extensions registry), so **changing it is outside this repository's scope.**
 
 ---
 
@@ -110,4 +138,4 @@ An assembly holds not when "all four slots are filled" but when **all four verdi
 - it does not require **anyone to use this profile** — those who do not are not bound (Vision §5, "conditions, not obligations");
 - it makes no **conformance judgement** — the vectors here judge an assembly, not compliance (Vision §11, capabilities 6, 7 and 8).
 
-—— Assembly Profile · v0.1
+—— Assembly Profile · v0.2

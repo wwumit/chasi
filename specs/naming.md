@@ -1,6 +1,6 @@
 # Naming, Reference and Versioning — the Addressing Volume
 
-> Status: draft (v0.1)
+> Status: draft (v0.2)
 > Date: 2026-10-10
 > Position: this family's volume on **how objects are referred to** — where the names of the four classes come from, how versions are marked, and why a reference must be independently checkable
 > Principle: **if an existing standard can be used, do not invent one** — organizations and groups cite an identity binding rather than inventing one; everything else is content-addressed
@@ -29,6 +29,8 @@ This rule is already fixed in `organization-governance.md` §4① — in `charte
 | **Rule version** | charters, policies, group rules — anything **with an effective time** | **content-addressed** (hash) plus `effective_from` |
 | **Commitment** | something one party commits to another, referable by others | **content-addressed** (hash) |
 | **Record** | evidence and facts that have been checked | **content-addressed** (hash); the content stays off-chain |
+
+**These four are classes of objects, not the four slots of an assembly.** For the relation — which class supplies which slot — see `assembly.md` §2.1.
 
 ### 2.1 Organization · group
 
@@ -79,4 +81,4 @@ This rule is already fixed in `organization-governance.md` §4① — in `charte
 - it does not define the **commitment object model** (see §2.3, undecided);
 - it does not do **name registration** — this family runs no registry (Vision §6); name resolution is carried by each party's identity binding.
 
-—— Naming, Reference and Versioning · v0.1
+—— Naming, Reference and Versioning · v0.2
