@@ -60,7 +60,7 @@ Not "what features will it have", but **the things a society normally has** — 
 
 | # | Condition | Meaning |
 |---|---|---|
-| **①** | **Verifiable** | a third party belonging to no one can answer: on whose behalf was it done · on what authority · **how far the scope reached** · which rule was in force at the time · who bears responsibility if it goes wrong |
+| **①** | **Verifiable** | a third party belonging to no one can answer four questions **independently**: **who it is · who authorized it · in what context it is acting · what it has done** |
 | **②** | **Coexistable** | societies with different rules can coexist **without first unifying**; recognition is each party's local policy |
 | **③** | **Exitable** | a member can leave, and after leaving every right and obligation has a definite destination |
 | **④** | **Questionable** | a person keeps the room to question any agent's behaviour |
@@ -74,7 +74,16 @@ Not "what features will it have", but **the things a society normally has** — 
 |---|---|
 | ① verifiable · ⑤ changeable · ⑥ minimally disclosing | ② coexistable · ③ exitable · ④ questionable · ⑦ autonomous |
 
-**① must ask about scope.** §12 requires every link of the accountability chain to state "what may be done, and explicitly what may not". "On what authority" alone is not enough to detect an excess — an action that exceeds its scope can answer that question perfectly well.
+**Where the four questions come from, and what each answer must contain.** Their normative statement is in the family entry, `overview.md` §1. **The four questions are not by themselves enough to judge** — an answer can exist in form and be useless in fact, so each question also has to say what its answer must contain:
+
+| Question | Its answer must contain | Carried by |
+|---|---|---|
+| **Who it is** | a resolvable identifier, with a portable trust root — **not established by the party being asked about** | the identity binding; §7, "no central root" |
+| **Who authorized it** | the basis of authority, **and the scope** (what may be done, and explicitly what may not) | §12's seven per-link items |
+| **In what context it is acting** | **the rule in force at the time** | §4, "time coordinate" |
+| **What it has done** | evidence, **and the end of responsibility** (a person or a legal entity) | §12 |
+
+**Two items that used to be listed as separate questions are folded in above.** "How far the scope reached" is part of the answer to the second question; "who bears responsibility" is part of the answer to the fourth. They are not fifth and sixth questions — **treating them as separate questions means judging the same thing twice in two places.**
 
 **① makes actions checkable; ②–⑦ make actions safe to take.** A world with only ① is **auditable but not liveable**: everything can be established after the fact, and nothing can be done with confidence.
 
@@ -191,11 +200,11 @@ If the Agent Society becomes a new social form, then besides protocols it needs 
 
 | Clause | Content | Where it lands |
 |---|---|---|
-| **Identity** | any **subject** (person, organization, agent, group) should have a verifiable identity | same source as §3①; §11 capability 1 |
-| **Representation** | a subject must be able to state whom it represents | that is §3①'s first question |
+| **Identity** | any **subject** (person, organization, agent, group) should have a verifiable identity | that is §3①'s first question, "who it is"; §11 capability 1 |
+| **Representation** | a subject must be able to state whom it represents | falls under §3①'s second question, "who authorized it" |
 | **Authority** | an action should have a clear source of authority | that is §3①'s second question |
-| **Transparency** | key actions should be able to give the necessary explanation and evidence | that is §3①'s fourth question, plus an evidence requirement |
-| **Accountability** | autonomous action does not mean that responsibility disappears | that is §3①'s fifth question; see §12 |
+| **Transparency** | key actions should be able to give the necessary explanation and evidence | falls under §3①'s fourth question, "what it has done" |
+| **Accountability** | autonomous action does not mean that responsibility disappears | part of the answer to §3①'s fourth question (the end of responsibility); see §12 |
 | **Privacy** | governance and audit follow minimal necessity | that is §3⑥, minimally disclosing |
 | **Revocability** | authority should be revocable | §11 capability 5; §12 has each link carry revocation status |
 | **Proportionality** | authority should match the task and the risk | no counterpart among §3's seven. **Undecided**: who judges the match, and on what scale |

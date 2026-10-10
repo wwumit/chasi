@@ -24,6 +24,8 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 | **L2 · architecture** *(states no requirements)* | [`governance-architecture.md`](./architecture/governance-architecture.md) · [`-zh`](./architecture/governance-architecture-zh.md) | v0.3 |
 | **L3 · specifications** | [`organization-governance.md`](./specs/organization-governance.md) · [`-zh`](./specs/organization-governance-zh.md) | v0.1 |
 | | [`group-collaboration.md`](./specs/group-collaboration.md) · [`-zh`](./specs/group-collaboration-zh.md) | v0.1 |
+| | [`question.md`](./specs/question.md) · [`-zh`](./specs/question-zh.md) | v0.1 |
+| | [`naming.md`](./specs/naming.md) · [`-zh`](./specs/naming-zh.md) | v0.1 |
 | **L4 · profiles** | *reserved — not yet populated* | — |
 | **L5 · evidence and conformance** | *not in this repository* — it lives in `did-method-cha2a` | — |
 | **L6 · implementation and operation** | *not in this repository* — implementations live in their own repositories | — |
@@ -73,7 +75,9 @@ Every interface point is listed in §10 or §11 of the volume that exercises it,
 | 2 | `governance-architecture.md` | why the family is shaped this way |
 | 3 | `organization-governance.md` | **who is qualified to authorize it** |
 | 4 | `group-collaboration.md` | how agents of different organizations work together |
-| 5 | `method/use-case-laboratory.md` | **which scenarios stress the architecture, and what an experiment must produce** |
+| 5 | `naming.md` | where names come from, and why a reference must carry a verifier |
+| 6 | `question.md` | **what counts as having answered the four questions, and who judges** |
+| 7 | `method/use-case-laboratory.md` | **which scenarios stress the architecture, and what an experiment must produce** |
 
 ## Language convention
 

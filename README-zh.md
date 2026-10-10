@@ -24,6 +24,8 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 | **L2 · 架构**（*不陈述要求*） | [`governance-architecture-zh.md`](./architecture/governance-architecture-zh.md) · [`en`](./architecture/governance-architecture.md) | v0.3 |
 | **L3 · 规范** | [`organization-governance-zh.md`](./specs/organization-governance-zh.md) · [`en`](./specs/organization-governance.md) | v0.1 |
 | | [`group-collaboration-zh.md`](./specs/group-collaboration-zh.md) · [`en`](./specs/group-collaboration.md) | v0.1 |
+| | [`question-zh.md`](./specs/question-zh.md) · [`en`](./specs/question.md) | v0.1 |
+| | [`naming-zh.md`](./specs/naming-zh.md) · [`en`](./specs/naming.md) | v0.1 |
 | **L4 · 剖面** | *预留——尚未填充* | — |
 | **L5 · 证据与一致性** | *不在本仓*——由 `did-method-cha2a` 承载 | — |
 | **L6 · 实现与运营** | *不在本仓*——各实现另在自己的仓 | — |
@@ -73,7 +75,9 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 | 2 | `governance-architecture-zh.md` | 这一族为什么长成这样 |
 | 3 | `organization-governance-zh.md` | **谁有资格作出这项授权** |
 | 4 | `group-collaboration-zh.md` | 不同组织的智能体如何一起工作 |
-| 5 | `method/use-case-laboratory-zh.md` | **用哪些场景压测架构，一次实验必须产出什么** |
+| 5 | `naming-zh.md` | 名字从哪来，以及引用为什么必须携带验证者 |
+| 6 | `question-zh.md` | **四问答成什么样算答出，以及谁判定** |
+| 7 | `method/use-case-laboratory-zh.md` | **用哪些场景压测架构，一次实验必须产出什么** |
 
 ## 语言约定
 
