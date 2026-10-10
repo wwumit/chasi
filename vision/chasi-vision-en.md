@@ -507,7 +507,7 @@ The items below are **outside this family's scope**. Each is given with the **co
 | **Markets / storefronts / listing** | a distribution layer that "leaves recognition in each party's hands" |
 | **Behavioural monitoring · content audit · content compliance** | a disclosure layer that can be assessed without this family taking a position on content |
 | **Federation across real registries** | a second real deployment (the online participant list is empty) |
-| **A high-grade ecosystem trust state** (i.e. the **L4 profile** in the index table) | ≥2 independent real verifiers, with auditable re-verification (the online L4 instance count is 0) |
+| **A high-grade ecosystem trust state** (one L4 profile, **not** the assembly profile) | ≥2 independent real verifiers, with auditable re-verification (the online L4 instance count is 0) |
 | **A run-time proof vocabulary** | the vocabulary slot is reserved, the behaviour undefined — this item differs from the five above: **it is undefined, not undone** |
 
 **These conditions are written inside this section and point outward to nothing.** This family's discipline for the public surface is "the public surface states a document's name and status only"; **a name readers cannot obtain is as good as unwritten.**

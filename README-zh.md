@@ -26,7 +26,7 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 | | [`group-collaboration-zh.md`](./specs/group-collaboration-zh.md) · [`en`](./specs/group-collaboration.md) | v0.1 |
 | | [`question-zh.md`](./specs/question-zh.md) · [`en`](./specs/question.md) | v0.1 |
 | | [`naming-zh.md`](./specs/naming-zh.md) · [`en`](./specs/naming.md) | v0.1 |
-| **L4 · 剖面** | *预留——尚未填充* | — |
+| **L4 · 剖面** | [`assembly-zh.md`](./profiles/assembly-zh.md) · [`en`](./profiles/assembly.md) | v0.1 |
 | **L5 · 证据与一致性** | *不在本仓*——由 `did-method-cha2a` 承载 | — |
 | **L6 · 实现与运营** | *不在本仓*——各实现另在自己的仓 | — |
 | **L7 · 方法** | [`use-case-laboratory-zh.md`](./method/use-case-laboratory-zh.md) · [`en`](./method/use-case-laboratory.md) | v1.0 |
@@ -34,7 +34,7 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 
 **哪一层归谁。** L1 陈述立场。**L2 不陈述任何要求**——凡出现「必须」，都指向拥有该条的分册（`governance-architecture.md` §1.1）。L3 陈述要求，每一册管自己的主题。L4 承载叠在其下各层之上的剖面。L5 承载一致性向量与核对器。L6 承载实现与运营。L7 承载方法——一次实验怎么设计、怎么跑、怎么记。L8 承载对外交付物。
 
-**每一层要么有，要么有交代。** L4 / L5 / L6 / L8 在**本仓**为空，是决定，不是遗漏：L5 由并列仓承载，L6 由各实现自己的仓承载，L8 按次 dated，L4 预留到出现至少两个独立真实验证方为止。
+**每一层要么有，要么有交代。** L5 / L6 / L8 在**本仓**为空，是决定，不是遗漏：L5 由并列仓承载，L6 由各实现自己的仓承载，L8 按次 dated。**L4 有一份、留一份**：组装剖面已写；「高级别的生态信任态」仍预留，直到出现至少两个独立真实验证方。
 
 **身份核心不在这里。** 身份、证据与 DID 方法本身，维护在并列仓 **`did-method-cha2a`**；各实现另在自己的仓。
 

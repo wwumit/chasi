@@ -26,7 +26,7 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 | | [`group-collaboration.md`](./specs/group-collaboration.md) · [`-zh`](./specs/group-collaboration-zh.md) | v0.1 |
 | | [`question.md`](./specs/question.md) · [`-zh`](./specs/question-zh.md) | v0.1 |
 | | [`naming.md`](./specs/naming.md) · [`-zh`](./specs/naming-zh.md) | v0.1 |
-| **L4 · profiles** | *reserved — not yet populated* | — |
+| **L4 · profiles** | [`assembly.md`](./profiles/assembly.md) · [`-zh`](./profiles/assembly-zh.md) | v0.1 |
 | **L5 · evidence and conformance** | *not in this repository* — it lives in `did-method-cha2a` | — |
 | **L6 · implementation and operation** | *not in this repository* — implementations live in their own repositories | — |
 | **L7 · method** | [`use-case-laboratory.md`](./method/use-case-laboratory.md) · [`-zh`](./method/use-case-laboratory-zh.md) | v1.0 |
@@ -34,7 +34,7 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 
 **Which layer owns what.** L1 states the stance. **L2 states no requirements** — where a "must" belongs, it points at the volume that owns it (`governance-architecture.md` §1.1). L3 states the requirements, each volume for its own subject. L4 holds profiles over the layers below. L5 holds conformance vectors and checkers. L6 holds implementations and operations. L7 holds the method — how an experiment is designed, run and recorded. L8 holds what is delivered outward.
 
-**Every layer is either present or accounted for.** L4, L5, L6 and L8 are empty *here* by decision, not by omission: L5 is held by the companion repository, L6 by the implementations' own repositories, L8 is dated per delivery, and L4 is reserved until at least two independent real verifiers exist.
+**Every layer is either present or accounted for.** L5, L6 and L8 are empty *here* by decision, not by omission: L5 is held by the companion repository, L6 by the implementations' own repositories, L8 is dated per delivery. **L4 holds one profile and reserves another**: the assembly profile is written; the high-grade ecosystem trust state stays reserved until at least two independent real verifiers exist.
 
 **The identity core is elsewhere.** Identity, evidence and the DID method itself live in the companion repository **`did-method-cha2a`**; implementations live in their own repositories.
 
