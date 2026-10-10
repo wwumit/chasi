@@ -32,6 +32,7 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 | **L5 · evidence and conformance** | *not in this repository* — it lives in `did-method-cha2a` | — |
 | **L6 · implementation and operation** | *not in this repository* — implementations live in their own repositories | — |
 | **L7 · method** | [`use-case-laboratory.md`](./method/use-case-laboratory.md) · [`-zh`](./method/use-case-laboratory-zh.md) | v1.0 |
+| | [`ecosystem-matrix.md`](./method/ecosystem-matrix.md) · [`-zh`](./method/ecosystem-matrix-zh.md) | v0.1 |
 | **L8 · distribution** | *not in this repository* — distribution is dated per delivery and is not kept here | — |
 
 **Which layer owns what.** L1 states the stance. **L2 states no requirements** — where a "must" belongs, it points at the volume that owns it (`governance-architecture.md` §1.1). L3 states the requirements, each volume for its own subject. L4 holds profiles over the layers below. L5 holds conformance vectors and checkers. L6 holds implementations and operations. L7 holds the method — how an experiment is designed, run and recorded. L8 holds what is delivered outward.

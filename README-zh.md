@@ -32,6 +32,7 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 | **L5 · 证据与一致性** | *不在本仓*——由 `did-method-cha2a` 承载 | — |
 | **L6 · 实现与运营** | *不在本仓*——各实现另在自己的仓 | — |
 | **L7 · 方法** | [`use-case-laboratory-zh.md`](./method/use-case-laboratory-zh.md) · [`en`](./method/use-case-laboratory.md) | v1.0 |
+| | [`ecosystem-matrix-zh.md`](./method/ecosystem-matrix-zh.md) · [`en`](./method/ecosystem-matrix.md) | v0.1 |
 | **L8 · 分发** | *不在本仓*——分发物按次 dated，不留存于此 | — |
 
 **哪一层归谁。** L1 陈述立场。**L2 不陈述任何要求**——凡出现「必须」，都指向拥有该条的分册（`governance-architecture.md` §1.1）。L3 陈述要求，每一册管自己的主题。L4 承载叠在其下各层之上的剖面。L5 承载一致性向量与核对器。L6 承载实现与运营。L7 承载方法——一次实验怎么设计、怎么跑、怎么记。L8 承载对外交付物。

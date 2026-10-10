@@ -129,7 +129,7 @@ These three are **gaps**: not that nobody is working on them, but that nobody is
 **Its three attitudes to the existing ecosystem must all hold.** Each has a different degree of checkability; stated one by one:
 
 - **Compatible** — reuse what can be reused directly; do not re-invent the whole Agent Internet. **Its checkable form is in §10**: for any external capability, ask in order — Adopt → Map → Profile-Extend → Adapter → Define; only when all four answers are no may we define our own.
-- **Complementary** — fill only the gaps the ecosystem leaves in cross-organizational identity, authority, governance, evidence and accountability. **No criterion yet**: settling it requires being able to list which capabilities are already mature — the list in §15 currently has only names, with no version, date or adoption evidence.
+- **Complementary** — fill only the gaps the ecosystem leaves in cross-organizational identity, authority, governance, evidence and accountability. **Its criterion is in `method/ecosystem-matrix.md`**: for each external object, this family does only what that object's **adoption-evidence column does not already cover**.
 - **Independent** — attach to no single vendor, no single runtime, no single identity system. **No criterion yet**: settling it requires deciding how "attachment" is judged (for example, whether the family's specifications remain readable and implementable after any one party is swapped out).
 
 When all three hold, CHASI need not compete with anyone over "who defines the whole Agent Internet". But this is **not a deduction from the three**: the non-competition follows from **complementary** (filling only gaps) and **independent** (attaching to nothing), not from **compatible**; and standards bodies, open-source foundations and research institutions are not the same kind of object in that sentence — the first two define specifications that can be adopted, the third produces research, and their competitive relation to CHASI differs.
@@ -459,7 +459,7 @@ CHA2A   Agent-to-Agent / Agent Society Architecture & Protocols
 
 **The purpose of this section is to give §5's "complementary" and §10's "five dispositions" objects to compare against.** Each entry therefore has to state two things: **what the object is**, and **which disposition describes this family's relation to it**.
 
-**First, the format: a name without its evidence is not an entry.** Elsewhere this family requires **version · date · adoption evidence** for a citation; this family's "ecosystem matrix" has fixed the columns — **object · version · date · adoption evidence · licence · status (institutional / individual draft / community project) · review date**. The table below currently has **only the object and a one-line description**; the other six columns are all empty. **So this section cannot yet support the judgement of "complementary"**, which is exactly why §5 says "no criterion yet".
+**The evidence is not here; it is in `method/ecosystem-matrix.md`.** This section gives only **what the object is** and **this family's relation to it**; version, date, adoption evidence, licence, status and review condition are the six columns in that matrix. The format is: **a name without its evidence is not an entry.**
 
 | Object | What it is | Relation to it (§10's five dispositions) |
 |---|---|---|
@@ -472,7 +472,7 @@ CHA2A   Agent-to-Agent / Agent Society Architecture & Protocols
 | **NANDA** | agent Internet discovery, registry and infrastructure research | **Undecided** |
 | **MIT / Stanford** | research on the agent Internet, human-agent interaction, memory, identity and society | **Undecided** — a research institution is not an object that can be "adopted" or "mapped" |
 
-**The three "adopt" entries are read directly off the denials already written in §10**: §10 says CHASI defines no communication primitives (A2A, MCP exist) and no cryptographic primitives or DID method itself (DID, VC exist), so the relation to those objects can only be "adopt". The rest are **undecided**: not because the object is unclear, but because **which disposition applies is unclear** — settling it requires filling in the six evidence columns above.
+**The three "adopt" entries are read directly off the denials already written in §10**: §10 says CHASI defines no communication primitives (A2A, MCP exist) and no cryptographic primitives or DID method itself (DID, VC exist), so the relation to those objects can only be "adopt". The rest are **undecided**: not because the object is unclear, but because **which disposition applies is unclear**. The evidence for those three is now in `method/ecosystem-matrix.md`; **the disposition itself remains undecided** — for OAuth / OIDC because §10's list of denials does not cover authentication / authorization frameworks as a class, and for AAIF and NANDA because the object has no definite form yet.
 
 **CHA2A and CHASI have been moved out of this table.** They are not "the existing ecosystem", they are this family itself, and the relation between them is written in §14. The earlier table listed them at the end, which matched neither this section's title nor §14.
 
