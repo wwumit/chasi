@@ -163,7 +163,7 @@ This section is **CHASI's choices as a place** — not commands to members, and 
 | **Autonomy is not an exception** | autonomy within boundaries is the norm; a system that must ask at every step is a tool, not a member | **"asking at every step" may not be used as the means of satisfying verifiability**; verification defaults to after the fact or to sampling, and departing from that default must be justified by the declaring party (§4) |
 | **People keep room to question** | an agent's autonomy does not cancel a person's questioning; but questioning is not unbounded surveillance | **a record published by this family must let a third party belonging to none of the parties answer "who did it, on what authority"**; a record may not be visible only to the parties |
 
-**The last two restate the conditions in §3; they are not repeated here — only what they require of this family.** §3④ and §3⑦ say what a society needs in order to be liveable; this table says what CHASI must therefore do. The "therefore" column for the first six did not exist before and was added in this revision; with it, each position has a checkable landing point.
+**The last two restate the conditions in §3; they are not repeated here — only what they require of this family.** §3④ and §3⑦ say what a society needs in order to be liveable; this table says what CHASI must therefore do. **Each "therefore" entry gives a checkable landing point.**
 
 **One unresolved tension: records outlive their subject × each organization keeps its own memory.**
 
@@ -204,7 +204,7 @@ If the Agent Society becomes a new social form, then besides protocols it needs 
 
 **Only three of these are genuinely new** — Proportionality, Due Process, Human Primacy. The other seven are already covered by §3, §7 or §11. The value of this section lies in putting forward those three, not in restating the seven.
 
-**"Minimal" needs care.** The original sentence said "a **minimal** set of principles, something like a constitution". On the table above, removing the seven repeats leaves three; but "minimal" needs a criterion to hold — **undecided: which clause cannot be removed next, and on what basis that is judged**. Until then this section should not call itself minimal.
+**"Minimal" needs care.** On the table above, removing the seven repeats leaves three; but "minimal" needs a criterion to hold — **undecided: which clause cannot be removed next, and on what basis that is judged**. Until then this section should not call itself minimal.
 
 **The wording throughout is "subject", not "Agent".** §1 distinguishes four kinds of subject — person, organization, agent, group; if these clauses bound only agents, then organizations — equally capable of being authorized and of being held responsible — would fall outside the constitution.
 
@@ -244,7 +244,7 @@ When §6 says "credibility accumulates only by records being accurate", it means
 - **a licence** — how far others may cite it;
 - **a survival arrangement** — §7's "records outlive their subject" requires a record to outlive the organization and platform that produced it, while §13 is Federated; this is unresolved (see §7).
 
-**"A conclusion that does not hold must be published too."** The original sentence said "not-holding and holding are outputs of equal value", but nothing in the document required it. Reduced to a checkable rule, it is the sentence above: **a failure to satisfy every condition is not a reason to withhold publication**; the record must state **which condition failed, and at which step of which part**.
+**"A conclusion that does not hold must be published too."** That is: **a failure to satisfy every condition is not a reason to withhold publication**; the record must state **which condition failed, and at which step of which part**.
 
 ## 10. CHASI Architecture
 
@@ -312,9 +312,9 @@ These eight are not eight small features but **eight links in one chain**: from 
 
 **Three ways to read it.**
 
-**First, the eight have dependencies, but not every one depends on the one before.** The real dependencies are in the first four: without identity there is no organization to speak of; without organization and authority, group collaboration has no subject. **The last four are not like that** — a profile does not need evidence in order to exist, and a directory does not need profiles. The earlier wording, "there is an order", made the eight into a straight line and also read confusingly against §6's "no entry threshold" ("only the qualified get in"). Revised: **the first four are preconditions of the last four, and the last four do not precede one another.**
+**First, the eight have dependencies, but not every one depends on the one before.** The real dependencies are in the first four: without identity there is no organization to speak of; without organization and authority, group collaboration has no subject. **The last four are not like that** — a profile does not need evidence in order to exist, and a directory does not need profiles. **The first four are preconditions of the last four, and the last four do not precede one another**; reading the eight as a straight line also reads confusingly against §6's "no entry threshold".
 
-**Second, each one must land on a document that can be reviewed.** If a capability lives only in a product and not in a specification, no one else can implement it, and no one can tell whether they comply — then it is not a capability, it is a **service**. The line between capability and specification is exactly the line between whether this Hub can be called infrastructure. **This also gives capability 6 its landing point**: the conformance vectors and checkers are in L5 (the framework volume's `cha2a-conformance`, 68 vectors, dual-verifier interlock); the table says the Hub can produce results, not that this family defines conformance here.
+**Second, each one must land on a document that can be reviewed.** If a capability lives only in a product and not in a specification, no one else can implement it, and no one can tell whether they comply — then it is not a capability, it is a **service**. The line between capability and specification is exactly the line between whether this Hub can be called infrastructure. **This also gives capability 6 its landing point**: the conformance vectors and checkers are in L5 (`cha2a-conformance`, 68 vectors, dual-verifier interlock; L5 lives in the companion repository, see the README index table); the table says the Hub can produce results, not that this family defines conformance here.
 
 **Third, all eight must have a "what it does not do".** The third column matters as much as the second: **half of a Hub's definition comes from what it refuses to do.** The most important entries in that column are capabilities 6, 7 and 8 — they block "judging compliance", "judging attainment" and "judging qualification" respectively; do those three and this family becomes a regulator, which §6 has stated it is not.
 
@@ -362,7 +362,7 @@ An audit log records **the order of events**; an accountability chain records **
 - **constraints** — under what conditions it is permitted;
 - **evidence reference** — on what basis this link is to be believed.
 
-**An accountability chain fails, and failure comes in two kinds with different handling.** The earlier text called both "breaks"; they have to be separated:
+**An accountability chain fails, and failure comes in two kinds, with different handling:**
 
 | Failure | What it is | How it is seen |
 |---|---|---|
@@ -395,7 +395,7 @@ A mature Agent Society needs to keep six kinds of memory, and the **writer and r
 | Evidence Memory | what an action rested on | the acting party | whoever needs to verify |
 | Dispute Memory | how a dispute arose and was resolved | **the dispute process** (provider undecided, see §8) | the parties and overseers |
 
-**Retention is not specified.** The earlier text said the six have "different lifetimes", but the document gives no retention period anywhere. This is not a matter of wording: §7's "records outlive their subject" requires a record to outlive its subject, and "how long" is exactly the step where that requirement has to become a number. **Undecided: the retention period of each of the six, and who decides what happens at expiry** (delete, archive, or withdraw obtainability while keeping verifiability).
+**Retention is not specified.** The document gives no retention period anywhere. This is not a matter of wording: §7's "records outlive their subject" requires a record to outlive its subject, and "how long" is exactly the step where that requirement has to become a number. **Undecided: the retention period of each of the six, and who decides what happens at expiry** (delete, archive, or withdraw obtainability while keeping verifiability).
 
 **"Verifiable" and "obtainable" are two things, and must be specified separately.**
 
@@ -450,7 +450,7 @@ CHA2A   Agent-to-Agent / Agent Society Architecture & Protocols
 
 **The purpose of this section is to give §5's "complementary" and §10's "five dispositions" objects to compare against.** Each entry therefore has to state two things: **what the object is**, and **which disposition describes this family's relation to it**.
 
-**First, the format: a name without its evidence is not an entry.** Elsewhere this family requires **version · date · adoption evidence** for a citation; the framework volume's "ecosystem matrix" has fixed the columns — **object · version · date · adoption evidence · licence · status (institutional / individual draft / community project) · review date**. The table below currently has **only the object and a one-line description**; the other six columns are all empty. **So this section cannot yet support the judgement of "complementary"**, which is exactly why §5 says "no criterion yet".
+**First, the format: a name without its evidence is not an entry.** Elsewhere this family requires **version · date · adoption evidence** for a citation; this family's "ecosystem matrix" has fixed the columns — **object · version · date · adoption evidence · licence · status (institutional / individual draft / community project) · review date**. The table below currently has **only the object and a one-line description**; the other six columns are all empty. **So this section cannot yet support the judgement of "complementary"**, which is exactly why §5 says "no criterion yet".
 
 | Object | What it is | Relation to it (§10's five dispositions) |
 |---|---|---|
@@ -486,7 +486,7 @@ If this works, in ten years it should be a **citable public memory**. This is th
 
 **Memory is the form in which a society continues.** The content of that sentence is a checkable causal claim: if a society cannot keep its common events, rule changes and dispute outcomes, its next round of decisions has nothing to cite from the last (§13 already states that without it, "every action must be proved from scratch").
 
-**This memory rests on three of §3's conditions — ①, ⑤ and ⑥ — not all seven.** ① supplies verifiability, ⑤ supplies "the change has a history", ⑥ supplies minimal disclosure; those are the three that §13 actually invokes throughout. The earlier sentence, "the seven conditions above are its first foundation", overstated the scope: ③ exitable, ④ questionable and ⑦ autonomous are conditions for a society to be liveable, and this section has no basis for saying they are also preconditions of memory.
+**This memory rests on three of §3's conditions — ①, ⑤ and ⑥ — not all seven.** ① supplies verifiability, ⑤ supplies "the change has a history", ⑥ supplies minimal disclosure; those are the three that §13 actually invokes throughout. **And ③ exitable, ④ questionable and ⑦ autonomous are conditions for a society to be liveable; this section has no basis for saying they are also preconditions of memory.**
 
 ## 17. Boundaries: what this family does not do, and the conditions each would need
 
@@ -501,7 +501,7 @@ The items below are **outside this family's scope**. Each is given with the **co
 | **A high-grade ecosystem trust state** (i.e. the **L4 profile** in the index table) | ≥2 independent real verifiers, with auditable re-verification (the online L4 instance count is 0) |
 | **A run-time proof vocabulary** | the vocabulary slot is reserved, the behaviour undefined — this item differs from the five above: **it is undefined, not undone** |
 
-**These conditions were previously written in a non-public framework document that readers cannot obtain; this section moves them here.** This family's discipline for the public surface is "the public surface states a document's name and status only", and the earlier sentence gave only the generic term "the framework volume", which is not in this repository — **if readers cannot obtain it, it is as good as unwritten**. This section carries the conditions itself and no longer points outward (the `overview.md §4.3` cited in the framework volume is dropped for the same reason).
+**These conditions are written inside this section and point outward to nothing.** This family's discipline for the public surface is "the public surface states a document's name and status only"; **a name readers cannot obtain is as good as unwritten.**
 
 **The six fall into two classes, and the title is revised accordingly.**
 
@@ -521,7 +521,7 @@ The items below are **outside this family's scope**. Each is given with the **co
 
 **Experimental.** This is a stance (vision); it changes as understanding changes. CHASI's specification documents are a separate set, each with its own version and its own way of being judged.
 
-**This document makes no demand on the reader.** This has to be stated precisely, because the document contains many "must" and "must not" (the Chinese edition has 30 instances of `必须` and 11 of `不得`). They fall into three classes, **none of which is a demand on the reader**:
+**This document makes no demand on the reader.** This has to be stated precisely, because the document contains many "must" and "must not" (`必须` appears 30 times, `不得` 11 times). They fall into three classes, **none of which is a demand on the reader**:
 
 | Where it appears | Who it binds |
 |---|---|
