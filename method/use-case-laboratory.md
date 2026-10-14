@@ -164,7 +164,7 @@ The five use cases should not become five separate models. **The point of the ex
 - **Architecture change** — what architectural change the experiment led to.
 - **Specification change** — what specification change finally results.
 
-**The point of the template is in its last four entries.** The first nine are what a scenario has to state; the last five are what an experiment has to produce — **a scenario with the former and not the latter reads well and changes nothing.**
+**The point of the template is in its last five entries.** The first nine are what a scenario has to state; the last five are what an experiment has to produce — **a scenario with the former and not the latter reads well and changes nothing.**
 
 ## 11. Its Relation to the ITU-T Focus Group TIDA
 

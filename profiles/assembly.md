@@ -1,6 +1,6 @@
 # Assembly Profile — the Composition Volume
 
-> Status: draft (v0.2)
+> Status: draft (v0.3)
 > Date: 2026-10-10
 > Position: this family's **first profile**, and the only document that specifies **how to use other people's parts**
 > Principle: **if an existing standard can be used, do not invent one** — this document defines no primitive; it specifies only what each of four slots may hold, and what an assembly must then satisfy
@@ -70,13 +70,13 @@ Expanded: in any cross-trust-domain collaboration, the **authority and the evide
 
 ## 3. What each slot may hold
 
-**"May hold" is expressed in the five dispositions** (suite architecture §5): Adopt → Map → Profile-Extend → Adapter → Define. **Ask in order; only when all four answers are no may we define our own.** Wherever anything lands on Define, it must state which half of the core claim it serves.
+**"May hold" is expressed in the five dispositions** (suite architecture §5): Adopt → Map → Profile-Extend → Adapter → Define. **Ask in order; only when the first four all answer no may we define our own.** Wherever anything lands on Define, it must state which half of the core claim it serves.
 
 | Slot | The interface it must satisfy | Dispositions allowed |
 |---|---|---|
 | **S1 Identifier** | ① resolvable by a resolver **belonging to no party**; ② the **anchor used is configured by the verifier itself**; ③ for cross-domain use, the binding's cross-domain form | Adopt (an existing DID method) · Map (external identifier → binding identifier) · **may not Define a new identifier scheme** |
 | **S2 Authority chain** | ① each basis traces back to its origin; ② each link states its **scope** (what may be done, and explicitly what may not); ③ revocation status is readable | Adopt (an existing governance model) · Map · Profile-Extend (role differences) · **may not Define** |
-| **S3 Rule version** | ① each version carries a **hash** and an **effective time**; ② amendments **append**, never rewrite; ③ a reference points at **the version in force when it was made** | Adopt (an existing versioning mechanism) · Profile-Extend |
+| **S3 Rule version** | ① each version carries a **hash** and an **effective time**; ② amendments **append**, never rewrite; ③ a reference points at **the version in force when it was made** | Adopt (content addressing from `evidence-record.md`) · Profile-Extend (the versioning discipline is fixed in `naming.md` §2.2) |
 | **S4 Record** | ① **content-addressed**; ② independently checkable by a third party; ③ the end of responsibility lands on **a person or a legal entity** | Adopt (`evidence-record.md`'s existing format) · Map |
 
 **The three "may not Define" entries are direct consequences of the core claim.**
@@ -124,7 +124,7 @@ An assembly holds not when "all four slots are filled" but when **all four verdi
 | **A5** | S3's rule is rewritten in place, version unchanged | Q3 **not answered** | §3 S3, interface requirements ②③; `naming.md` §3, requirement 2 |
 | **A6** | S4 stores only a uri, no hash | Q4 **partially answered** (content unobtainable, so it cannot be checked) | `naming.md` §3, requirements 1 and 3 |
 | **A7** | S4's evidence is complete, but the end of responsibility is written as "the system" | Q4 **partially answered** (the end is not a person or legal entity) | §3 S4, interface requirement ③ |
-| **A8** | S1–S4 are **all** connected through **Map**, with no Define anywhere | Q1–Q4 **all answered** | see below |
+| **A8** | S1–S4 are **all** connected through **Adopt or Map**, with no Define anywhere | Q1–Q4 **all answered** | see below |
 
 **A8 is the most important one in this set.** It tests whether "this family can do composition only, and invent nothing". **If A8 comes out partially answered, the core claim does not land** — because it requires that both recognition and checking hold without inventing any primitive.
 
@@ -139,4 +139,4 @@ An assembly holds not when "all four slots are filled" but when **all four verdi
 - it does not require **anyone to use this profile** — those who do not are not bound (Vision §5, "conditions, not obligations");
 - it makes no **conformance judgement** — the vectors here judge an assembly, not compliance (Vision §11, capabilities 6, 7 and 8).
 
-—— Assembly Profile · v0.2
+—— Assembly Profile · v0.3

@@ -1,6 +1,6 @@
 # Group & Collaboration — the Cross-Organizational Collaboration Volume
 
-> Status: draft (v0.1)
+> Status: draft (v0.2)
 > Date: 2026-10-01
 > Position: this family's volume on the **cross-organizational collaboration context** — **a peer of** `organization-governance.md` (this repository) and of `agent-identity.md` and `evidence-record.md` (the identity core, a companion repository). It defines the objects and rules of that context
 > Principle: **if an existing standard can be used, do not invent one** — the task state machine aligns to A2A Task; the evidence format cites `evidence-record.md`; **the skeleton is this volume's own**, because every external group service carries a trust model this volume rejects (§2).
@@ -38,7 +38,7 @@
 
 **Why the skeleton is this volume's own**: the group services that exist — carrier messaging, federated chat — each carry their own identity and account model (a phone number, an operator account, a homeserver account), and **adopting any one of them as the skeleton would import precisely the platform assertion this family exists to remove**. They are **interoperation targets** (§11), not foundations.
 
-**On ordering**: this is where the chain of §1 lands at the collaboration layer — identity resolution (who) → `agent-identity.md` (authorized to do what) → `organization-governance.md` (who was qualified to authorize it) → this volume (in which context they do it together). **Four links**: a Group admits a member whose authority traces back through its organization, and that step belongs to `organization-governance.md` — §4.3's admission gates read both.
+**On ordering**: this is where the chain of §1 lands at the collaboration layer — identity resolution (who) → `agent-identity.md` (authorized to do what) → `organization-governance.md` (who was qualified to authorize it) → this volume (in which context they do it together). **Four links**: a Group admits a member whose authority traces back through its organization, and that step belongs to `organization-governance.md` §4 (the four-layer chain) — this volume's §4.1 admission gates each read it.
 
 ---
 
@@ -52,9 +52,9 @@
 | `group_did` | did | no | extensible; **optional** |
 | `controller` | id, **or a set under §14.3** | yes | who is accountable for this Group's governance — may be an Organization, or the task initiator. **Several parties may hold it only under §14.3's conditions**, because §5.3 item ② must stay determinable |
 | `created_by` | id | yes | the initiator (may differ from `controller`) |
-| `members[]` | list | yes | each: `member_id` · `did` · `home_org` · `joined_at` · `status` |
+| `members[]` | list | yes | each: `member_id` · `did?` (a participant admitted under §4.4 may have none) · `home_org?` · **`guarantor?`** (the guarantor's identifier, scope and term, see §4.4) · `joined_at` · `status` |
 | `roles[]` | list | yes | a role is **expressed separately from** Organization membership |
-| `policies` | object | yes | at minimum: admission tier · **who must consent to admission (§4.3)** · **visibility (§5.3 item ④)** · who may dissolve · **ledger location and the disagreement rule (§5.3)** |
+| `policies` | inline object, **or a reference to a rule version carrying a `hash` and an `effective_from`** (`naming.md` §2.2) | yes | at minimum: admission tier · **who must consent to admission (§4.3)** · **who can see the full audit (§5.3 item ③)** · **visibility (§5.3 item ④)** · who may dissolve · **ledger location and the disagreement rule (§5.3)**. Group rules are **rule versions**, so a reference must point at **the version in force when it was made** |
 | `capabilities[]` | list | no | may be combined with Presence (§7) |
 | `endpoints[]` | list | no | discovery entry points |
 | `status` | enum | yes | see the nine states in §6 |

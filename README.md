@@ -19,26 +19,26 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 
 | Layer | Document | Version |
 |---|---|---|
-| **L1 · stance** | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v2.22 |
-| | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.22 |
+| **L1 · stance** | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v2.23 |
+| | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.23 |
 | **L2 · architecture** *(states no requirements)* | [`protocol-suite-architecture.md`](./architecture/protocol-suite-architecture.md) · [`-zh`](./architecture/protocol-suite-architecture-zh.md) — the upper architecture | v0.2 |
 | | [`governance-architecture.md`](./architecture/governance-architecture.md) · [`-zh`](./architecture/governance-architecture-zh.md) | v0.3 |
-| **L3 · specifications** | [`overview.md`](./specs/overview.md) · [`-zh`](./specs/overview-zh.md) — **the entry to this layer, and to the family** | v0.1 |
-| | [`organization-governance.md`](./specs/organization-governance.md) · [`-zh`](./specs/organization-governance-zh.md) | v0.1 |
-| | [`group-collaboration.md`](./specs/group-collaboration.md) · [`-zh`](./specs/group-collaboration-zh.md) | v0.1 |
+| **L3 · specifications** | [`overview.md`](./specs/overview.md) · [`-zh`](./specs/overview-zh.md) — **the entry to this layer, and to the family** | v0.2 |
+| | [`organization-governance.md`](./specs/organization-governance.md) · [`-zh`](./specs/organization-governance-zh.md) | v0.2 |
+| | [`group-collaboration.md`](./specs/group-collaboration.md) · [`-zh`](./specs/group-collaboration-zh.md) | v0.2 |
 | | [`question.md`](./specs/question.md) · [`-zh`](./specs/question-zh.md) | v0.1 |
-| | [`naming.md`](./specs/naming.md) · [`-zh`](./specs/naming-zh.md) | v0.2 |
-| **L4 · profiles** | [`assembly.md`](./profiles/assembly.md) · [`-zh`](./profiles/assembly-zh.md) | v0.2 |
-| | [`lexicon.md`](./profiles/lexicon.md) · [`-zh`](./profiles/lexicon-zh.md) | v0.1 |
-| **L5 · evidence and conformance** | *not in this repository* — it lives in `did-method-cha2a` | — |
+| | [`naming.md`](./specs/naming.md) · [`-zh`](./specs/naming-zh.md) | v0.3 |
+| **L4 · profiles** | [`assembly.md`](./profiles/assembly.md) · [`-zh`](./profiles/assembly-zh.md) | v0.3 |
+| | [`lexicon.md`](./profiles/lexicon.md) · [`-zh`](./profiles/lexicon-zh.md) | v0.2 |
+| **L5 · evidence and conformance** | *not in this repository* — evidence lives in `did-method-cha2a`; conformance vectors and checkers in `cha2a-conformance` | — |
 | **L6 · implementation and operation** | *not in this repository* — implementations live in their own repositories | — |
 | **L7 · method** | [`use-case-laboratory.md`](./method/use-case-laboratory.md) · [`-zh`](./method/use-case-laboratory-zh.md) | v1.0 |
 | | [`ecosystem-matrix.md`](./method/ecosystem-matrix.md) · [`-zh`](./method/ecosystem-matrix-zh.md) | v0.1 |
 | **L8 · distribution** | *not in this repository* — distribution is dated per delivery and is not kept here | — |
 
-**Which layer owns what.** L1 states the stance. **L2 states no requirements** — where a "must" belongs, it points at the volume that owns it (`governance-architecture.md` §1.1). L3 states the requirements, each volume for its own subject. L4 holds profiles over the layers below. L5 holds conformance vectors and checkers. L6 holds implementations and operations. L7 holds the method — how an experiment is designed, run and recorded. L8 holds what is delivered outward. **`specs/overview.md` is the family's entry document**; the table above is **this repository's** layer index. They are not alternatives: the entry says what the family is, the index says what this repository holds.
+**Which layer owns what.** L1 states the stance. **L2 states no requirements** — where a "must" belongs, it points at the volume that owns it (`governance-architecture.md` §1.1). L3 states the requirements, each volume for its own subject. L4 holds profiles over the layers below. L5 holds conformance vectors and checkers. L6 holds implementations and operations. L7 holds the method — how an experiment is designed, run and recorded. L8 holds what is delivered outward. **`specs/overview.md` is the family's entry document**; the table above is **this repository's** layer index. They are not alternatives: the entry says what the family is, the index says what this repository holds. **The "eight layers" above are not the same set as the upper architecture's "eight layers"**: the upper architecture (`protocol-suite-architecture.md` §4) splits the **protocol suite's functional layers** (CHA2A Core · Governance · Passport & Interoperability · Group & Collaboration · Federation · Evidence & Trust · Marketplace / Commerce · Workflow / Task); the table above is **this repository's layer index**. Same name, different things.
 
-**Every layer is either present or accounted for.** L5, L6 and L8 are empty *here* by decision, not by omission: L5 is held by the companion repository, L6 by the implementations' own repositories, L8 is dated per delivery. **L4 holds one profile and reserves another**: the assembly profile is written; the high-grade ecosystem trust state stays reserved until at least two independent real verifiers exist.
+**Every layer is either present or accounted for.** L5, L6 and L8 are empty *here* by decision, not by omission: L5 is held by **two** companion repositories (evidence in `did-method-cha2a`, conformance in `cha2a-conformance`), L6 by the implementations' own repositories, L8 is dated per delivery. **L4 holds one profile and reserves another**: the assembly profile is written; the high-grade ecosystem trust state stays reserved until at least two independent real verifiers exist.
 
 **The identity core is elsewhere.** Identity, evidence and the DID method itself live in the companion repository **`did-method-cha2a`**; implementations live in their own repositories.
 
@@ -79,7 +79,7 @@ Every interface point is listed in §10 or §11 of the volume that exercises it,
 | 2 | `governance-architecture.md` | why the family is shaped this way |
 | 3 | `organization-governance.md` | **who is qualified to authorize it** |
 | 4 | `group-collaboration.md` | how agents of different organizations work together |
-| 5 | `naming.md` | where names come from, and why a reference must carry a verifier |
+| 5 | `naming.md` | where names come from, and why a reference must carry a check basis |
 | 6 | `question.md` | **what counts as having answered the four questions, and who judges** |
 | 7 | `method/use-case-laboratory.md` | **which scenarios stress the architecture, and what an experiment must produce** |
 

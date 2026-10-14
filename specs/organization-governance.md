@@ -1,9 +1,9 @@
 # Organization Governance — the Governance Volume
 
-> Status: draft (v0.1)
+> Status: draft (v0.2)
 > Date: 2026-10-01
 > Position: this family's volume on the **Organization as a subject** — **a peer of** `group-collaboration.md` (this repository) and of `agent-identity.md` and `evidence-record.md` (the identity core, a companion repository). It defines the **source of authority**, membership and belonging, and the evidentiary record of governance actions
-> Principle: **if an existing standard can be used, do not invent one** — authority decomposes into four verifiable layers (charter → office → holder → root authority basis), stated in §2 as this volume's own answer; evidence of governance actions cites `evidence-record.md`.
+> Principle: **if an existing standard can be used, do not invent one** — authority decomposes into four verifiable layers (charter → office → holder → root authority basis), stated in §4 as this volume's own answer; evidence of governance actions cites `evidence-record.md`.
 > **Relation to an identity binding.** The rules below are written against an **identity binding that can name a subject across domains**; **`did:cha2a` is the worked example** (experimental draft v1.1.0, recorded in the W3C DID Extensions registry), and every field is stated so that another binding satisfying §10's interface points can take its place.
 > Related: `group-collaboration.md` (this repository) · `agent-identity.md` §7 (delegation and authorization scope) · `evidence-record.md` (evidence format) · `overview.md` (family entry) · `did-method-cha2a.md` (the worked identity binding)
 
@@ -32,16 +32,7 @@ An organization can register a DID, revoke a member, amend a policy, approve cro
 
 ## 2. The four-layer chain
 
-**This volume's answer to its own question.** "Where does an institution's authority come from" decomposes into four layers that must each be verifiable, and the chain breaks at the first one that is not:
-
-| Layer | What it requires |
-|---|---|
-| **Charter** | what this Organization exists by virtue of |
-| **Office** | which roles exist, and what each may do |
-| **Holder** | who holds the office, and from when to when |
-| **Root authority basis** | **where that first authority came from** (who authorized the first administrator) |
-
-The layer names are the conventional ones.
+**This volume's answer to its own question.** "Where does an institution's authority come from" decomposes into four layers that must each be verifiable, and the chain breaks at the first one that is not. **The four layers themselves, and what each requires, are in §4** — this section fixes only what §4 does not cover: the two premises on which this volume parts ways with an authority-issuer model.
 
 | | Adopted | Not adopted |
 |---|---|---|
@@ -58,8 +49,9 @@ The premise row is where this volume departs from an authority-issuer model: tha
 |---|---|---|---|
 | `org_id` | string | yes | stable identifier |
 | `org_did` | did | **when reachable across domains** | the **cross-domain escalation** of `org_id`, written `did:cha2a:org:<id>` under the worked identity binding. An organization addressed only from inside its own domain needs none; how a counterparty resolves and verifies it is `group-collaboration.md` §4.5 |
-| `charter_ref` | list of `{hash, uri?, effective_from}` | yes | the **charter basis, versioned** (see §4 layer ①). At least one entry; each entry's `hash` is the verifier and `uri` is a locator only. An amendment **appends** an entry — it never rewrites one |
+| `charter_ref` | list of `{hash, uri?, effective_from}` | yes | the **charter basis, versioned** (see §4 layer ①). At least one entry; each entry's `hash` is the check basis and `uri` is a locator only. An amendment **appends** an entry — it never rewrites one |
 | `controllers[]` | list | yes | who holds root authority. **At least one**; where there is more than one, the combination rule must be stated |
+| `root_authority_ref` | list of `{hash, uri?, effective_from}` | yes | **the carrier of layer ④, "root authority basis"** — where that first authority came from. Same shape as `charter_ref`: each version carries a `hash` (the check basis) and an `effective_from`; **a platform default is not allowed** (§4 layer ④) |
 | `roles[]` | list | yes | role definitions: `role_id` · `scope` · `assignable` (see §6) |
 | `members[]` | list | yes | each: `member_id` · `did` · `kind` · `role_refs[]` · `joined_at` · `status` |
 | `policies_ref` | uri \| hash | no | reference to the policy file |
@@ -76,10 +68,12 @@ Four layers; **every layer must be verifiable**, and a break at any layer invali
 
 | # | Layer | The question it answers | Requirement |
 |---|---|---|---|
-| **①** | **Charter** | what this Organization exists by virtue of | must point to a **verifiable, versioned basis**: each version carries a **hash** (the verifier) and an **`effective_from`** date, with a `uri` optionally alongside as a locator only. An appointment records **which version it was made under**, so a verifier can answer *"was that version in force at the time?"* — a single hash proves *which document*, not *which basis was in force*. **The content of a charter is the organization's own affair**; the requirement is that the basis exists, is verifiable, and is versioned |
+| **①** | **Charter** | what this Organization exists by virtue of | must point to a **verifiable, versioned basis**: each version carries a **hash** (the check basis) and an **`effective_from`** date, with a `uri` optionally alongside as a locator only. An appointment records **which version it was made under**, so a verifier can answer *"was that version in force at the time?"* — a single hash proves *which document*, not *which basis was in force*. **The content of a charter is the organization's own affair**; the requirement is that the basis exists, is verifiable, and is versioned |
 | **②** | **Office** | which roles exist, and what each may do | role and permission context are **expressed separately**; **an office is a post that holders fill for a bounded period** |
 | **③** | **Holder** | who holds it, and from when to when | holding office is a **time-bounded relationship**, not a permanent attribute; appointment and removal must be recorded as evidence |
 | **④** | **Root authority basis** | where that first authority came from | must point to a **verifiable origin**. **It may not be "the platform's default"** — a platform default is not verifiable, which is the same as having no origin |
+
+The layer names are the conventional ones.
 
 **Sufficiency criterion (carrying §3 forward)**: the verifier can trace back through the four layers **to the origin independently**, **without contacting any platform**.
 
@@ -181,7 +175,7 @@ Only **time-bounded, scope-bounded, and subject to mandatory post-hoc review** o
 
 Three clarifications, because a directly stated version of this rule fails exactly where the rule is needed most:
 
-1. **The reviewer's qualification is not "external" but "not the beneficiary, and entitled to see the evidence".** Where no such person exists inside the organization — three people, one controller — **a counterparty in the Group is a lawful reviewer**: §5.3 item ③ of `group-collaboration.md` already gives them audit visibility. Requiring an *external* reviewer would make break-glass unavailable in precisely the organizations that need it.
+1. **The reviewer's qualification is not "external" but "not the beneficiary, and entitled to see the evidence".** Where no such person exists inside the organization — three people, one controller — **a counterparty in the Group may serve as a lawful reviewer**: but the visibility is not granted automatically — item ③ of §5.3 in `group-collaboration.md` (**who can see the full audit**) is a **declaration item** for the Group, and absent a declaration that volume's conservative default applies (missing means not allowed). **For an organization to use this path, the Group must declare item ③.** Requiring an *external* reviewer would make break-glass unavailable in precisely the organizations that need it.
 2. **"Unreviewed" is an absence read off the chain**, rather than an entry somebody writes. A verifier that finds a break-glass with no corresponding review record has found an unreviewed one. Nothing needs to be written for this to be true, which is why the rule does not depend on an actor who may not exist.
 3. **Authorizations granted under break-glass lapse at their own time limit**, whether or not a review happened; renewal goes through the ordinary authorization path.
 
@@ -259,9 +253,9 @@ This volume leaves **every requirement decided**. It draws one line: between wha
 
 | # | Item | Fixed by this volume | Derived from |
 |---|---|---|---|
-| 1 | The verifiable form of a charter | `charter_ref` is a **versioned basis**: each entry carries a **hash** (the verifier) and an **`effective_from`** date, optionally a `uri` (locator only), and every appointment records the version it was made under. A single hash would prove *which document*, not *which basis was in force* when the appointment was made | §4 layer ① + layer ④ "a platform default is not an origin" |
+| 1 | The verifiable form of a charter | `charter_ref` is a **versioned basis**: each entry carries a **hash** (the check basis) and an **`effective_from`** date, optionally a `uri` (locator only), and every appointment records the version it was made under. A single hash would prove *which document*, not *which basis was in force* when the appointment was made | §4 layer ① + layer ④ "a platform default is not an origin" |
 | 2 | Combination rule for several controllers | The threshold for root-level actions is a **charter-declared** parameter. **L4 governs chains from different roots**; co-controllers of one root are one root, and a k-of-n threshold does not merge independent chains. Three things are fixed: it must be declared, it must not be satisfiable by **any single controller**, and an unavailable controller **never lowers it** | L4 (scope stated in §7.1) + §7.4 + §12.2 |
-| 3 | Who reviews a break-glass action | The reviewer must be **not the beneficiary** and **entitled to see the evidence**; where no such person exists inside the organization, **a counterparty in the Group qualifies**, its audit visibility coming from `group-collaboration.md` §5.3 item ③. Authorizations lapse at their own time limit and do not renew automatically, regardless of review. An unreviewed break-glass is an **absence read off the chain**, not an entry, and must be **visible in the status query** — with no score and no rating attached | §7.5 + `group-collaboration.md` §11 |
+| 3 | Who reviews a break-glass action | The reviewer must be **not the beneficiary** and **entitled to see the evidence**; where no such person exists inside the organization, **a counterparty in the Group may serve** — but only if that Group has **declared** its audit visibility under `group-collaboration.md` §5.3 item ③ (that volume's default is "missing means not allowed", so it is not granted automatically). Authorizations lapse at their own time limit and do not renew automatically, regardless of review. An unreviewed break-glass is an **absence read off the chain**, not an entry, and must be **visible in the status query** — with no score and no rating attached | §7.5 + `group-collaboration.md` §5.3 item ③ and §11 |
 | 4 | Disposal of credentials and evidence on dissolution | Credentials are **revoked, not deleted**; historical evidence is **retained**. The DID **stays resolvable and returns `dissolved`** — a 404 is indistinguishable from a DID that never existed, and a verifier's fail-closed behaviour depends on that distinction | §7.2 + §7.6 + §8 |
 | 5 | Mutual recognition of an organizational representative | **Recognition is the four-layer traceback of §4.** The four-layer traceback of §4 is the technical answer; **whether the organizations are contractually bound is outside this family**. What the volume requires is that **one party's acceptance of another's representative is recorded as evidence** | §4 sufficiency criterion + §8 |
 | 6 | Minimum role set | **Roles are custom.** Only the two non-grantable classes in §6.2 are fixed | §6.2 structural prohibitions + §4 layer ④ |

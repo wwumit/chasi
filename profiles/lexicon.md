@@ -1,6 +1,6 @@
 # Lexicon — the Terminology Volume
 
-> Status: draft (v0.1)
+> Status: draft (v0.2)
 > Date: 2026-10-10
 > Position: the **single source for this family's terminology**. Where any document conflicts with it, this volume governs
 > Principle: **one concept, one word** — the same thing written two ways in two places means it may be judged twice
@@ -65,6 +65,8 @@ The four below were **measured**, not imagined; this volume **also fixed the non
 | **声明** (declaration) | `断言` (assertion) · `自证` used interchangeably | `声明` is made by a party and **can be checked**; `自证` is made about oneself (the form `assembly.md` requires, with the verifier deciding whether it holds); `断言` is a claim with nothing to check against, and is what this family exists to remove (Vision §12, "a declaration taken for a proof") |
 | **承诺** (commitment) | `承诺书` | one of `naming.md`'s four object classes; **its object model is undecided**, and this volume fixes only how it is addressed |
 | **规则版本** (rule version) | `政策版本` | one of `naming.md`'s four classes; a policy is one kind of rule |
+| **验证器** (an implementation) | `验证方` when it means the party that judges | a piece of **implementation or tooling** (as in "dual-verifier interlock"), **not a party**. The party that reaches the verdict is `验证方` |
+| **分级 · 等级 · 档位** (grading / level / tier) | `评级` (rating) when used as a synonym | §11 capability 7 is "compliance profiles and **grading**" — it **declares what must be met**, and does not judge who has met it; `等级` is a cumulative value (L0–L4), `档位` is an admission tier. None of the three names a "rating" — see the 判定 entry |
 | **第三方** (third party) | — | not the same as `验证方`: `第三方` stresses **belonging to no party** (the wording of §3①); `验证方` stresses **reaching the verdict**. One subject can be both |
 
 ---
@@ -76,4 +78,4 @@ The four below were **measured**, not imagined; this volume **also fixed the non
 - it does no **automatic substitution** of synonyms — every conflict it lists has been fixed in place (§2);
 - it does not fix **English** usage, except the few points noted here (proper names capital, `agent` lower-case); English has its own conventions in each volume.
 
-—— Lexicon · v0.1
+—— Lexicon · v0.2

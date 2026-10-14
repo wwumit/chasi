@@ -1,6 +1,6 @@
 # Naming, Reference and Versioning — the Addressing Volume
 
-> Status: draft (v0.2)
+> Status: draft (v0.3)
 > Date: 2026-10-10
 > Position: this family's volume on **how objects are referred to** — where the names of the four classes come from, how versions are marked, and why a reference must be independently checkable
 > Principle: **if an existing standard can be used, do not invent one** — organizations and groups cite an identity binding rather than inventing one; everything else is content-addressed
@@ -12,7 +12,7 @@
 
 > **The hash is the check basis; names, uris, repository names and version numbers are all just locators.**
 
-This rule is already fixed in `organization-governance.md` §4① — in `charter_ref`, the `hash` is the check basis and the `uri` is only a locator. This volume **generalizes it to the four classes**.
+This rule is already fixed in `organization-governance.md` §4① — in `charter_ref`, the `hash` is the check basis and the `uri` is only a locator. This volume **generalizes it to the three of the four classes that need content addressing** (rule version, commitment, record). The fourth (organization · group) does not apply: their names come from the identity binding, not from content addressing.
 
 **Two things follow:**
 
@@ -38,6 +38,8 @@ This rule is already fixed in `organization-governance.md` §4① — in `charte
 
 - **Positive example**: `did:cha2a:org:<id>` — the binding's cross-domain form; the counterparty resolves it against **a resolver it configured itself**.
 - **Counter-example**: inventing an `org://acme` scheme. It works inside its own domain, but **a counterparty across domains does not recognize it**, and so Q1 (who it is) cannot be answered.
+
+**Non-subject resources (services · tools · resources · data) take the same path.** Vision §1 requires them to have **names that can be referenced** and **not to be mistaken for subjects** — this family invents no naming scheme for them; it uses the binding's existing **resource types** (in the worked example, `skill` · `mcp_server` · `ai_tool` · `llm` · `package` and so on), distinguished from subjects by a **type label**.
 
 ### 2.2 Rule version
 
@@ -81,4 +83,4 @@ This rule is already fixed in `organization-governance.md` §4① — in `charte
 - it does not define the **commitment object model** (see §2.3, undecided);
 - it does not do **name registration** — this family runs no registry (Vision §6); name resolution is carried by each party's identity binding.
 
-—— Naming, Reference and Versioning · v0.2
+—— Naming, Reference and Versioning · v0.3

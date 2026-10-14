@@ -13,7 +13,7 @@
 
 > **互认不改信任根；证据不靠运营方。**
 
-**展开表述**：任何跨信任域的 Agent 协作，其**授权与证据**都应能被**不属于任何一方**的第三方独立验证。
+**展开表述**：任何跨信任域的 agent 协作，其**授权与证据**都应能被**不属于任何一方**的第三方独立验证。
 
 **为什么必须有这一句**：它是本族内部一切取舍的判据。§10「需要 Define 的区域」、§4 的分层结构、以及各分册的取舍顺序，都要由它裁定——**没有它，每一条都会被保留，结果是写不完。**
 
@@ -36,7 +36,7 @@
 - **复用优先**——已有标准能够满足需求时优先采用，而不是另造协议。
 - **组合优先**——CHA2A 的核心价值是把 Identity、Governance、Interoperability、Group、Federation、Marketplace 等能力**组织起来**。
 - **协议与实现分离**——实验实现不能反向绑架长期架构；实现不足应记录为 **Implementation Gap**。
-- **开放互操作**——允许不同 DID Method、Passport、Credential、Registry 和 Agent Protocol 共存。
+- **开放互操作**——允许不同 DID Method、Passport、Credential、Registry 和 agent Protocol 共存。
 - **Federation-first**——大型伙伴可以保留自己的 Registry / Trust Domain，通过 Federation 接入 Agent Cloud。
 - **可演进**——标准尚未稳定的区域采用 Profile、Extension、Versioning 和 Capability Negotiation 保留变化空间。
 - **够用即止**——每一份分册必须写明**够用判据**：满足什么条件即视为完备，不再扩写。**没有这条纪律，规范族会持续膨胀。**
@@ -67,13 +67,13 @@ CHA2A Protocol Suite
 
 | 层 | 职责 | 够用判据 |
 |---|---|---|
-| **CHA2A Core** | Agent、Organization、Registry、基本对象模型、版本／能力协商、基础消息和错误模型 | 任何两个按本族实现的系统，能就「对象是什么」达成一致 |
-| **Governance** | Organization、Admin、Agent ownership、Delegation、Role、Policy、Trust Domain、跨主体治理 | 能说清「谁签发、谁撤销、谁担责」；且与 APS §10 对齐，不重复定义其已覆盖部分 |
-| **Passport & Interoperability** | Passport Profile、DID/VC binding、Agent Card mapping、A2A/MCP 等协议映射、多 DID Method 兼容 | 一份凭证，能被两种体系的验证器各自验证通过 |
-| **Group & Collaboration** | Group、Membership、Presence、Invitation、跨 Organization Group、协同任务和群聊 | 两个互不隶属的 Organization 的 Agent，可加入同一 Group 并完成一次任务 |
+| **CHA2A Core** | agent、Organization、Registry、基本对象模型、版本／能力协商、基础消息和错误模型 | 任何两个按本族实现的系统，能就「对象是什么」达成一致 |
+| **Governance** | Organization、Admin、agent ownership、Delegation、Role、Policy、Trust Domain、跨主体治理 | 能说清「谁签发、谁撤销、谁担责」；且与 APS §10 对齐，不重复定义其已覆盖部分 |
+| **Passport & Interoperability** | Passport Profile、DID/VC binding、Agent Card mapping、A2A/MCP 等协议映射、多 DID Method 兼容 | 一份凭证，能被两种体系的**验证方**各自验证通过 |
+| **Group & Collaboration** | Group、Membership、Presence、Invitation、跨 Organization Group、协同任务和群聊 | 两个互不隶属的 Organization 的 agent，可加入同一 Group 并完成一次任务 |
 | **Federation** | Global Registry、Partner Registry、Trust Domain、跨 Registry Discovery、Resolution、Federation Policy | 任一参与方都不需要改自己的系统，就能被对方承认 |
 | **Evidence & Trust** | Signed evidence、action／result records、verification、status、revocation、审计接口 | 第三方不依赖任一方的系统可用性，即可判定一条证据的真伪与时效 |
-| **Marketplace / Commerce** | Agent offering、Provider、Discovery、Invocation、Rental、Settlement interface；**支付本身不重新定义** | 身份与治理信息足以支撑一次调用，且不需要重新定义支付 |
+| **Marketplace / Commerce** | agent offering、Provider、Discovery、Invocation、Rental、Settlement interface；**支付本身不重新定义** | 身份与治理信息足以支撑一次调用，且不需要重新定义支付 |
 | **Workflow / Task** | 任务生命周期、Delegation chain、异步任务、Artifact、Review 和协作状态；与 A2A Task model 做映射 | 与 A2A Task model 的映射无信息损失 |
 
 ---
@@ -83,7 +83,7 @@ CHA2A Protocol Suite
 | 关系 | 含义 |
 |---|---|
 | **Adopt** | 直接采用已有规范作为 CHA2A 的依赖或兼容基础 |
-| **Map** | 定义 CHA2A 对象与外部协议对象之间的语义映射，例如 CHA2A Agent 与 A2A Agent Card、Credential 与 Passport artifact |
+| **Map** | 定义 CHA2A 对象与外部协议对象之间的语义映射，例如 CHA2A agent 与 A2A Agent Card、Credential 与 Passport artifact |
 | **Profile / Extend** | 已有协议基本满足需求，但 Agent Cloud 场景需要约束、配置或扩展 |
 | **Adapter** | 已有协议不能直接互操作时定义适配层，而不是强行修改外部协议 |
 | **Define** | 仅在 Agent Cloud 核心能力缺少现有规范且需要统一语义时，由 CHA2A 自己定义 |
@@ -96,13 +96,13 @@ CHA2A Protocol Suite
 
 | 对象 | 主要解决的问题 | 本族策略 | 版本 / 日期 / 状态 |
 |---|---|---|---|
-| **OpenA2A** | DID、Agent Identity、Trust、Authorization、Transparency | Adopt ＋ Map ＋ Adapter | `did:opena2a` 0.1–0.2 draft；PR #717 merged 2026-07-04（两处版本号在来源之间不一致，未定） |
+| **OpenA2A** | DID、agent Identity、Trust、Authorization、Transparency | Adopt ＋ Map ＋ Adapter | `did:opena2a` 0.1–0.2 draft；PR #717 merged 2026-07-04（两处版本号在来源之间不一致，未定） |
 | **A2A** | Agent-to-Agent communication、Task、Agent Card、Discovery | Adopt ＋ Profile ＋ Map | Google 发起，已进入 Linux Foundation 项目 |
-| **MCP** | Agent／应用与工具／资源的连接 | Adopt ＋ Adapter | CHA2A 不重新定义 Tool Protocol |
+| **MCP** | agent／应用与工具／资源的连接 | Adopt ＋ Adapter | CHA2A 不重新定义 Tool Protocol |
 | **APS** | Agent Passport、Delegation、Authority、Evidence | Study ＋ Map ＋ Profile／Adapter | `draft-pidlisnyi-aps-04`，2026-09-28，IETF Individual Draft——**不是已定标准，须标记 work in progress** |
-| **ARIA / TrustLayer Foundation / W3C CG** | 跨组织 Agent 身份与信任：DNS 锚定 DID ＋ VC ＋ trust ledger ＋ 三阶段准入策略 | Study ＋ Map ＋ Adapter | 注册表已上线；规范 CC-BY-4.0／SDK Apache-2.0；chair 一个 W3C CG（`public-agent-identity`） |
+| **ARIA / TrustLayer Foundation / W3C CG** | 跨组织 agent 身份与信任：DNS 锚定 DID ＋ VC ＋ trust ledger ＋ 三阶段准入策略 | Study ＋ Map ＋ Adapter | 注册表已上线；规范 CC-BY-4.0／SDK Apache-2.0；chair 一个 W3C CG（`public-agent-identity`） |
 | **蚂蚁 ACT 2.1 / APASS / Alipay+ AMP** | 身份 ＋ 授权 ＋ 支付 ＋ 存证 | Study ＋ Map（**不 Adopt**） | ACT 2.1 已定版开源（文档 CC-BY-4.0／代码 Apache-2.0）；AMP 2026-08-17 建仓 |
-| **GB/Z 185-2026 ＋ AIP ＋ 智能体身份码** | 境内 Agent 互联的身份、描述、发现、交互、工具调用 | Track ＋ Map | GB/Z 185-2026 于 2026-06-26 发布；AIP 已开源；身份码节点已发证 |
+| **GB/Z 185-2026 ＋ AIP ＋ 智能体身份码** | 境内 agent 互联的身份、描述、发现、交互、工具调用 | Track ＋ Map | GB/Z 185-2026 于 2026-06-26 发布；AIP 已开源；身份码节点已发证 |
 | **银联 APOP《智能体支付开放协议框架》** | 智能体身份管理／意图管理／用户身份管理／支付授权管理 | Track | 2026-04-02 发布；已上架开放平台含沙箱；受邀制 |
 
 **⚠️ 措辞须准确**：GB/Z 是**国家标准化指导性技术文件**，不是标准——**不宜被引用产生强制力**，封面不是「国家标准」，三年内必须复审（可能转国标或撤销）。
@@ -141,7 +141,7 @@ APS 是当前公开的 IETF Individual Internet-Draft，最新公开版本为 `d
 
 ## 9. Passport 的重新定位
 
-CHA2A Passport 的长期定位应从「发明一种新的 Agent 身份证件」升级为「**Agent Cloud 可互操作的身份与治理组合层**」。
+CHA2A Passport 的长期定位应从「发明一种新的 agent 身份证件」升级为「**Agent Cloud 可互操作的身份与治理组合层**」。
 
 **下列件中，绝大多数已由外部规范定义。本族对该层的贡献只在两处**：① 规定这些件**如何组合**成一个可被验证的整体；② 规定当件来自不同信任根时的**互认语义**。凡超出这两处的字段定义，一律不做。
 
@@ -166,7 +166,7 @@ CHA2A Passport 的长期定位应从「发明一种新的 Agent 身份证件」�
 
 | 原创项 | 内容 | 够用判据 |
 |---|---|---|
-| **① Cross-Organization Group** | 跨 Organization 的 Group 成员资格、邀请、授权与协作规则 | 两个互不隶属的 Organization 的 Agent 可加入同一 Group 并完成一次任务 |
+| **① Cross-Organization Group** | 跨 Organization 的 Group 成员资格、邀请、授权与协作规则 | 两个互不隶属的 Organization 的 agent 可加入同一 Group 并完成一次任务 |
 | **② Registry Federation 与 Trust Domain Federation 的统一语义** | 联邦的**语义模型**，而不只是发现 | 任一参与方不需改自己的系统即可被承认 |
 | **③ 不同 Passport / DID / Credential 体系进入同一 Agent Cloud 的 Federation Profile**（即「互认」） | 互认：等价关系由谁建立、由谁签发、范围如何限定、失效如何级联 | **互认不改变任何一方的信任根** |
 | **④ 互认之后：证据的第三方独立验证** | 一条证据如何被不属于任何一方的第三方验证；验证不依赖任一方的系统可用性 | 第三方**仅凭公开信息与证据本身**，即可判定其真伪与时效 |
@@ -179,9 +179,9 @@ CHA2A Passport 的长期定位应从「发明一种新的 Agent 身份证件」�
 |---|---|---|
 | Organization 作为 Governance Domain 的标准模型 | 对齐 | APS §10（Charter / Office / Holder / Root Authority Basis / 单调投影 / 离职继任 / Break-Glass / Re-Rooting）已覆盖，且更深 |
 | Organization Admin / Super-user / Coordinator 的身份与授权模型 | 对齐 ＋ Profile 差异 | 同上；其中 **Coordinator 为本族特有角色**，可作为 Profile 差异保留 |
-| Agent membership 与 Organization relationship | 对齐 ＋ 差异说明 | APS 的身份与治理模型已提供框架 |
+| agent membership 与 Organization relationship | 对齐 ＋ 差异说明 | APS 的身份与治理模型已提供框架 |
 | Project／Task Delegation、Evidence、Artifact 与治理记录之间的统一关联 | 对齐 | APS §7 ＋ §9 已覆盖（ReceiptV1、DecisionRefV1、Evidence Resolution、三类核心收据） |
-| Marketplace 中 Provider、Agent offering、租用／调用关系与身份治理的连接方式 | **后置**（依赖 ①②③） | 方向保留，但优先级最低；且 §11 已定不重新定义支付清算 |
+| Marketplace 中 Provider、agent offering、租用／调用关系与身份治理的连接方式 | **后置**（依赖 ①②③） | 方向保留，但优先级最低；且 §11 已定不重新定义支付清算 |
 
 ---
 
@@ -223,7 +223,7 @@ Global Registry **不要求成为唯一注册中心**。长期目标是形成可
 - **OpenA2A `did:opena2a`**：公开版本 0.2 draft；当前公开资料显示其已登记 W3C DID Extensions Registry。其 Passport 页面把 Passport 描述为**由 did:opena2a、AIP、ATX、ATP 等 artifacts 组合而成**。
 - **A2A**：官方文档将其定位为开放的 Agent-to-Agent interoperability standard；项目由 Google 发起并进入 Linux Foundation。
 - **APS**：最新公开 `draft-pidlisnyi-aps-04`，2026-09-28；IETF Individual Submission，仍属 Internet-Draft／work in progress。
-- **ARIA / TrustLayer Foundation**：注册表已上线（`registry.aria.bar`）；规范 CC-BY-4.0、SDK Apache-2.0；W3C Community Group 为 Agent Identity Registry Protocol（`public-agent-identity`）。
+- **ARIA / TrustLayer Foundation**：注册表已上线（`registry.aria.bar`）；规范 CC-BY-4.0、SDK Apache-2.0；W3C Community Group 为 agent Identity Registry Protocol（`public-agent-identity`）。
 - **蚂蚁 ACT 2.1**：已定版开源，文档 CC-BY-4.0、代码 Apache-2.0；APASS 提供商家工作台／Skill／CLI／SDK／OpenAPI；Alipay+ AMP 建仓于 2026-08-17，Apache-2.0。
 - **GB/Z 185-2026《人工智能 智能体互联》**（7 部分）：2026-06-26 发布。**性质为国家标准化指导性技术文件，不是标准**；依据《国家标准化指导性技术文件管理规定》第四条，不宜由标准引用使其具有强制性或行政约束力；第十条，发布后三年内必须复审。
 - **银联 APOP《智能体支付开放协议框架》**：2026-04-02 发布，含智能体身份管理／意图管理／用户身份管理／支付授权管理四项能力；已上架银联开放平台（含沙箱），受邀制。
