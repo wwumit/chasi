@@ -1,7 +1,7 @@
 # Naming, Reference and Versioning — the Addressing Volume
 
-> Status: draft (v0.3)
-> Date: 2026-10-10
+> Status: draft (v0.4)
+> Date: 2026-10-19
 > Position: this family's volume on **how objects are referred to** — where the names of the four classes come from, how versions are marked, and why a reference must be independently checkable
 > Principle: **if an existing standard can be used, do not invent one** — organizations and groups cite an identity binding rather than inventing one; everything else is content-addressed
 > Related: `organization-governance.md` (versioning of charters and rules) · `evidence-record.md` (content identity for records) · `did-method-cha2a.md` (the worked identity binding)
@@ -69,10 +69,12 @@ This rule is already fixed in `organization-governance.md` §4① — in `charte
 ## 3. Three hard requirements on a reference
 
 1. **A reference must carry the check basis.** Any reference to a rule version, a commitment or a record carries a hash (or its equivalent);
-2. **A reference must point at "the version in force when it was made".** "Latest version" may not be substituted;
+2. **A reference to a rule version must point at "the version in force when it was made".** "Latest version" may not be substituted; a commitment or a record has no version, and its reference points at **that one piece of content**;
 3. **A locator failing must not affect verification.** Not being able to obtain the content is one thing; **not being able to prove it is the same content** is another — the second rests on the hash alone.
 
-**All three are checkable**: take a reference; if swapping its uri leaves it unable to say what it refers to, requirement 1 fails; if it drifts with "the latest version", requirement 2 fails; if not obtaining the content means it can neither be checked nor reported, requirement 3 fails.
+**All three are checkable**: take a reference; if swapping its uri leaves it unable to say what it refers to, requirement 1 fails; if it is **a reference to a rule version** and drifts with "the latest version", requirement 2 fails; if not obtaining the content means it can neither be checked nor reported, requirement 3 fails.
+
+**Sufficiency criterion**: a verifier belonging to no party can, from the naming rules for the four classes and the three requirements above, decide whether any given reference is usable for third-party checking — without knowing any party's implementation. That is the point to stop; do not extend.
 
 ---
 
@@ -83,4 +85,4 @@ This rule is already fixed in `organization-governance.md` §4① — in `charte
 - it does not define the **commitment object model** (see §2.3, undecided);
 - it does not do **name registration** — this family runs no registry (Vision §6); name resolution is carried by each party's identity binding.
 
-—— Naming, Reference and Versioning · v0.3
+—— Naming, Reference and Versioning · v0.4

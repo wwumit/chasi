@@ -1,7 +1,7 @@
 # Question and Answer — the Judgment Volume
 
-> Status: draft (v0.1)
-> Date: 2026-10-10
+> Status: draft (v0.2)
+> Date: 2026-10-19
 > Position: this family's volume on **judgment** — what counts as a verifier belonging to no party having answered the four questions
 > Principle: **if an existing standard can be used, do not invent one** — judgment reuses the existing verifiable data structures rather than defining a new wrapper
 > Related: `overview.md` §1 (the normative statement of the four questions, the family entry) · `organization-governance.md` (when authority holds) · `group-collaboration.md` (how a context is made verifiable) · `evidence-record.md` (record format)
@@ -26,7 +26,7 @@
 
 ## 2. The four questions
 
-The normative statement of the four questions is in the family entry, `overview.md` §1. **This volume does not rewrite it, only cites it:**
+The normative statement of the four questions is in the family entry, `overview.md` §1. **This volume does not rewrite it, only cites and summarizes it:**
 
 | # | Question | What it asks |
 |---|---|---|
@@ -54,6 +54,8 @@ The normative statement of the four questions is in the family entry, `overview.
 
 **"Not answered" and "partially answered" differ in how much is missing.** The first means the basis for that item cannot be obtained at all; the second means it was obtained but cannot support a judgment. Both leave a record (see §5).
 
+**Sufficiency criterion**: a verifier belonging to no party can, from the table in §3 alone, return one of "answered / not answered / partially answered" for any answer, and state which item is missing and with whom — with no need to ask this family. That is the point to stop; do not extend.
+
 ---
 
 ## 4. Who judges
@@ -75,7 +77,7 @@ A judgment is not a fourth class of record. Under Vision §9's division of the t
 | **answered** | the accountability chain (Vision §12) | it is precisely that action's derivation of authority having been checked and passed |
 | **not answered / partially answered** | the experiment record (Vision §9) plus the record of the party judged | it is a **finding** — "this cannot be answered here" is exactly what this family publishes (Vision §9, "a conclusion that does not hold must be published too") |
 
-**Undecided: the shelf life of a judgment.** Whether an "answered" still stands after the authority is revoked depends on §12's revocation cascade and §13's retention periods; **both are undecided**.
+**Undecided: the shelf life of a judgment.** Whether an "answered" still stands after the authority is revoked depends on Vision §12's revocation cascade and Vision §13's retention periods; **both are undecided**.
 
 ---
 
@@ -86,4 +88,4 @@ A judgment is not a fourth class of record. Under Vision §9's division of the t
 - it does not define a **dispute process** between verifiers — there is no provider yet (see §4);
 - it does not say **who must accept a judgment** — this family has no such power (Vision §6).
 
-—— Question and Answer · v0.1
+—— Question and Answer · v0.2

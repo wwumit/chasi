@@ -1,7 +1,7 @@
 # CHA2A Specification Group — Overview
 
-> Status: draft (v0.2)
-> Date: 2026-10-01
+> Status: draft (v0.3)
+> Date: 2026-10-19
 > Position: **the entry document of this family** — read this first, then follow the order in §3
 > Layer: **L3 · specifications** — the entry and index of that layer; this repository's eight-layer index is `README.md`
 > Principle: this family adds only the layer that existing standards lack — **judgement across trust domains**; identity, evidence, collaboration and transport keep the standards they already have
@@ -23,7 +23,7 @@
 
 | Condition | Carried by |
 |---|---|
-| The identity resolves, and the trust root is portable | `did-method-cha2a.md` |
+| The identity resolves, and the trust root is portable | resolution: `did-method-cha2a.md`; portability: `governance-architecture.md` principle 9 + `registry_authority` in `organization-governance.md` |
 | The authorizer's own qualification is traceable | `organization-governance.md` |
 | The cross-trust-domain collaboration context is verifiable | `group-collaboration.md` |
 | What was done can be independently verified by a third party | `evidence-record.md` |
@@ -50,22 +50,29 @@ Concretely:
 ## 3. Documents in this family
 
 ```
-The identity-core repository (`did-method-cha2a`):
+The identity-core repository (`did-method-cha2a`) — the normative core of identity and evidence:
 
   did-method-cha2a.md          the method · the only normative document
   agent-identity.md            the agent as subject
   evidence-record.md           the record of what was done
 
-This repository — the governance layer:
+This repository — the architecture layer (principles and constraints only; states no requirements):
 
-  governance-architecture.md   why the family is shaped this way · states no requirements
+  governance-architecture.md   why the family is shaped this way
+
+This repository — the specification layer (each volume states the requirements for its own subject):
+
   organization-governance.md   the organization as subject
   group-collaboration.md       collaboration across domains
+  question.md                  the verdict format: what counts as answering the four questions
+  naming.md                    naming, reference and versioning
 ```
+
+Layer L4 holds two further profiles, `assembly.md` and `lexicon.md`, laid over the layers below; this entry does not index them one by one — see the layer index in `README.md`.
 
 **The companion volumes are peers of each other**, and the method specification has a **different** status: normative rather than informative. `governance-architecture.md` sits at the layer above them all: it explains why the family is shaped this way and **holds principles and constraints**; where a "must" belongs, it points at the volume that owns it (`governance-architecture.md` §1.1). Each answers a different question about a different subject: an organization exists without agents; an agent can act without belonging to an organization; a collaboration spans organizations; and a record outlives all of them.
 
-**The three governance volumes are maintained in this repository**, because their subject matter is not coupled to a DID method — `governance-architecture.md` carries no `did:cha2a` reference at all, and the other two carry the identity form and named interface points. They are written against an **identity binding**, of which this family's method is the worked example.
+**The two governance volumes (`organization-governance.md`, `group-collaboration.md`) and the architecture layer are maintained in this repository**, because their subject matter is not coupled to a DID method — `governance-architecture.md` carries no `did:cha2a` reference at all, and the other two carry the identity form and named interface points. They are written against an **identity binding**, of which this family's method is the worked example.
 
 | Volume | Its subject | The question it answers | Reads from |
 |---|---|---|---|
@@ -73,16 +80,18 @@ This repository — the governance layer:
 | `organization-governance.md` | the **organization** | who is qualified to authorize it | `agent-identity.md` §7 — to name *what* is being authorized |
 | `group-collaboration.md` | the **collaboration** | how agents of different organizations work together | both of the above |
 | `evidence-record.md` | the **record** | how what was done is verified by a third party | `did:cha2a` — to name the signer |
+| `question.md` | the **verdict** | what counts as answering the four questions, and who judges | the four above — cited, not restated |
+| `naming.md` | **naming** | where names come from, and why a reference must carry a check basis | `organization-governance.md` (versioning) · `evidence-record.md` (content identity) |
 
 **"Reads from" expresses dependency only.** `organization-governance.md` and `agent-identity.md` reference each other, which a tree cannot express; and a tree would have to place `group-collaboration.md` under one of them arbitrarily, when it needs both. **The four conditions in §1 are parallel for the same reason.**
 
 `EVIDENCE.md` and `EVIDENCE_MIN_LOOP.md` are artefacts of the evidence volume, not volumes themselves.
 
-**Note**: within this repository, apart from the method specification, every volume is an **informative companion document** (see §11 of the method specification) — normative requirements live only in the method specification. The governance volumes in this repository state the requirements for their own subject and are not companions of the method. **Being informative changes a volume's status rather than its standing.**
+**Note**: within this repository, apart from the method specification, every volume is an **informative companion document** (see §11 of the method specification) — normative requirements live only in the method specification. **Of these, `organization-governance.md` and `group-collaboration.md` state the requirements for their own subject; `governance-architecture.md` states none** (its §1.1). None of the three is a companion of the method. **Being informative changes a volume's status rather than its standing.**
 
 **Conformance** is not a volume of this family: it lives in the `cha2a-conformance` repository, and §9.2 of the method specification exercises its contract.
 
-**Language**: `overview.md` is English-first, its Chinese edition carrying `-zh`. The two earlier companions (`agent-identity`, `evidence-record`) are Chinese, their English editions carrying `-en`. The governance volumes in this repository follow the same convention — English-first, each with a `-zh` edition.
+**Language**: `overview.md` is English-first, its Chinese edition carrying `-zh`. The two companions in the identity core (`agent-identity`, `evidence-record`) are Chinese-first, their English editions carrying `-en`. Volumes in this repository are English-first, each with a `-zh` edition.
 
 ### Reading order (recommended)
 
@@ -96,8 +105,12 @@ This repository — the governance layer:
 | 3 | `organization-governance.md` | **who is qualified to authorize it** |
 | 4 | `group-collaboration.md` | how agents of different organizations work together |
 | 5 | `evidence-record.md` | how what was done is independently verified |
+| 6 | `question.md` | what counts as answering the four questions, and who judges |
+| 7 | `naming.md` | where names come from, and why a reference must carry a check basis |
 
-**Orders 1, 2 and 5 are in the identity-core repository `did-method-cha2a`; orders 0, 3 and 4 are in this repository.**
+**Orders 1, 2 and 5 are in the identity-core repository `did-method-cha2a`; orders 0, 3, 4, 6 and 7 are in this repository.**
+
+**Sufficiency criterion**: a party coming to this family for the first time can, from this volume alone, say what the family is for, where its boundary lies, which volumes to read in what order, and which capabilities are outside it — with no oral supplement. That is the point to stop; do not extend.
 
 ---
 
@@ -165,7 +178,7 @@ This repository — the governance layer:
 | Evidence Record | — | produced by its author |
 | Break-glass · dissolution · re-rooting | — | performed subject-side, recorded as evidence |
 
-These rules are informative — they describe the division a conforming deployment must end up with, and the requirements themselves live in the volumes cited. They are stated here because "which component holds this" is the first question a reader of this family asks, and answering it late is how a registry quietly becomes the platform.
+These rules are informative — they describe the division a conforming deployment must end up with, and the requirements themselves live in the volumes cited. They are stated here because "which component holds this" is the first question asked of this family, and answering it late is how a registry quietly becomes the platform.
 
 **One existing endpoint needs this said explicitly.** The reference registry exposes `GET /api/v1/evidence/query?did=<did>`. Under R2 and R4 that is an **index and pointer service**: its answer is a location and a status. **Verification of a record is done against its author's signature, and that is the only thing that establishes it.** A Registry that both indexed evidence and vouched for it would be the assertion-by-one-party §1 rules out.
 
@@ -176,11 +189,11 @@ These rules are informative — they describe the division a conforming deployme
 **Four reading conventions**:
 
 1. **Normative requirements live only in `did-method-cha2a.md`.** Informative content in the other volumes must not be cited as a requirement.
-2. **Every item is either decided, marked as a deployment parameter, or marked as not-in-this-version.** The family does not use blank space as a conclusion, and it does not use a placeholder number as one either. A decided item **states the principle it is derived from**, so a reader can challenge the derivation rather than the conclusion; a deployment parameter fixes the semantics and leaves only the value to the deploying parties. **A rule is stated as what holds and why it holds** — never as a verdict on what is wrong, and never as commentary on the state of the field. Where something has to be excluded, the volume states the **condition** and the **consequence** of violating it, so that a reader can test the claim rather than accept it.
+2. **Every item is either decided, marked as a deployment parameter, or marked as not-in-this-version.** The family does not use blank space as a conclusion, and it does not use a placeholder number as one either. A decided item **states the principle it is derived from**, so that the derivation can be challenged, not only the conclusion; a deployment parameter fixes the semantics and leaves only the value to the deploying parties. **A rule is stated as what holds and why it holds** — never as a verdict on what is wrong, and never as commentary on the state of the field. Where something has to be excluded, the volume states the **condition** and the **consequence** of violating it, so that the claim can be tested rather than accepted.
 3. **Implementation status must be recorded**: where a document describes a capability the implementation does not yet provide, the gap is stated item by item with a date, not omitted.
 4. **The family has exactly two relations to an external object.** **Reuse** — the family depends on it — which produces a mapping table and a conformance test. **Not-defining** — the family declines it — which produces a scope statement and a counter-example test: *build the minimum loop without it*. There is **no third relation called "alignment"**: it produces no artefact and cannot be falsified, and the claim that some external document "already covers" something is a claim about someone else's document, which can be wrong. **Every external object this family names is recorded with its status** — version, date, and adoption evidence. **A draft published by one project and adopted by nobody is a peer draft, not an authority**: citing it does not transfer its weight here, and its immaturity does not discredit this family either. **This is not the same axis as the five relations in the upper architecture §5.** This item classifies by **artefact** (reuse → a mapping table and a conformance test; not-defining → a scope statement and a counter-example test); §5 classifies by **decision ladder** (Adopt → Map → Profile-Extend → Adapter → Define). **The two are not mutually exclusive**: an object is first given a disposition on the ladder, then classified by what this item requires as its artefact. **Undecided: the full mapping from the five levels to the two classes.**
 
-**One exception, stated openly**: the documents of this family that are not registered in the companion index in §11 of the method specification are `overview.md`, its Chinese edition, and the English editions of the two companions — §11 lists the specification group as `evidence-record.md`, `agent-identity.md` and `EVIDENCE.md`. **The three governance volumes were never in that list**, and since 2026-10-03 they have been maintained separately from the identity core — now in this repository, alongside this document. For what remains, the reason is that editing the method specification would change the file cited by the W3C DID Extensions registry entry and could invite a further editor review; registration will ride along with the next substantive change to the method specification. **This document's status is therefore explicit**: it is the **family entry and index**, and it is **informative**; its four reading conventions are **house discipline** shared by the volumes, carried here for the reader, and **do not constitute normative requirements issuing from this document** — normative requirements live only in `did-method-cha2a.md` (item 1 of §5 above).
+**This document's standing**: it is the **family entry and index**, and it is **informative**; it **states no normative requirement**. The four reading conventions are **house discipline** shared by the volumes, carried here for reference. Normative requirements live only in `did-method-cha2a.md` (item 1 above).
 
 ---
 

@@ -31,7 +31,7 @@ Vision §5 says "**complementary** — fill only the gaps the ecosystem leaves i
 | **Status** | institutional · individual draft · community project |
 | **Review condition** | **not "when to review" but "what condition, once it occurs, requires a review"** — the same form Vision §9 requires of a "record" |
 
-**Why a review *condition* rather than a review *date*:** a date goes stale unnoticed; a condition does not — once it holds, the reader knows for themselves that the entry is out of date.
+**Why a review *condition* rather than a review *date*:** a date goes stale unnoticed; a condition does not — once it holds, the entry's staleness is evident.
 
 ---
 

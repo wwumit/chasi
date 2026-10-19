@@ -45,7 +45,7 @@ This is the rule that keeps one governance model from having two descriptions:
 
 ### 1.2 够用判据 for this layer
 
-**This document is complete when a reader can answer all four from this document alone:**
+**This document is complete when all four can be answered from this document alone:**
 
 1. why the organization and the group are separate subjects rather than one hierarchy;
 2. why no central trust root is presupposed, and what follows from that;
@@ -199,7 +199,7 @@ Governance actions — registration, authorization, joining and leaving an organ
 
 ## 9. Premises this architecture departs from
 
-**Why this section exists**: writing while knowing that related work exists obliges this architecture to name the premises it **departs from**. **Naming premises rather than documents is deliberate** — a premise is a claim about an *approach*, which any reader can check against whatever systems they know, while a document citation dates. Recording *which* documents hold *which* premise, at what version and what status, is a **survey**, and it belongs to the ecosystem matrix of the protocol-suite architecture rather than to this layer. Naming no object is also why the status-recording obligation of the family's reading conventions (`overview.md` §5) is not triggered here.
+**Why this section exists**: writing while knowing that related work exists obliges this architecture to name the premises it **departs from**. **Naming premises rather than documents is deliberate** — a premise is a claim about an *approach*, which anyone can check against whatever systems they know, while a document citation dates. Recording *which* documents hold *which* premise, at what version and what status, is a **survey**, and it belongs to the ecosystem matrix of the protocol-suite architecture rather than to this layer. Naming no object is also why the status-recording obligation of the family's reading conventions (`overview.md` §5) is not triggered here.
 
 | # | The premise | Where it is common | What importing it would break |
 |---|---|---|---|

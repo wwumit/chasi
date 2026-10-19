@@ -4,15 +4,15 @@
 
 ---
 
-> Status: draft v2.23 | Kind: **stance (vision)**
-> **This document says *why*, and *where to*. It makes no demand on the reader.** Where it conflicts with a specification, the specification governs.
+> Status: draft v2.25 | Kind: **vision**
+> **This document says *why*, and *where to*. It creates no obligation for any party.** Where it conflicts with a specification, the specification governs.
 
 ---
 
 ## 0. One Sentence
 
 > **A person need not read the inside of any agent, and need not trust any platform, in order to live and work alongside them —**
-> **and to keep, throughout, room to question, to leave, and not to be watched without bound.**
+> **and to keep the room to question, to hold others to account, to leave, and not to be watched without bound.**
 >
 > **This is not only a matter between people and agents.** Every relationship among organizations, groups and agents should be checkable by a third party **that belongs to none of them** — rather than booked by one of the parties.
 ## 1. Membership Is Plural
@@ -63,7 +63,7 @@ Not "what features will it have", but **the things a society normally has** — 
 | **①** | **Verifiable** | a third party belonging to no one can answer four questions **independently**: **who it is · who authorized it · in what context it is acting · what it has done** |
 | **②** | **Coexistable** | societies with different rules can coexist **without first unifying**; recognition is each party's local policy |
 | **③** | **Exitable** | a member can leave, and after leaving every right and obligation has a definite destination |
-| **④** | **Questionable** | a person keeps the room to question any agent's behaviour |
+| **④** | **Accountable** | every action can be held to a specific person or legal entity, and cannot stop at "the system" |
 | **⑤** | **Changeable** | rules can change, **and the change has a history** — judgement falls at the moment the action happened, and is not tried retroactively by later rules |
 | **⑥** | **Minimally disclosing** | governance and audit do not require unbounded surveillance; evidence follows minimal necessity |
 | **⑦** | **Autonomous** | within its boundaries an agent may act on its own, **without asking at every step** |
@@ -72,7 +72,7 @@ Not "what features will it have", but **the things a society normally has** — 
 
 | Checkable of the system | To be preserved for participants |
 |---|---|
-| ① verifiable · ⑤ changeable · ⑥ minimally disclosing | ② coexistable · ③ exitable · ④ questionable · ⑦ autonomous |
+| ① verifiable · ⑤ changeable · ⑥ minimally disclosing | ② coexistable · ③ exitable · ④ accountable · ⑦ autonomous |
 
 **Where the four questions come from, and what each answer must contain.** Their normative statement is in the family entry, `overview.md` §1. **The four questions are not by themselves enough to judge** — an answer can exist in form and be useless in fact, so each question also has to say what its answer must contain:
 
@@ -87,81 +87,111 @@ Not "what features will it have", but **the things a society normally has** — 
 
 **① makes actions checkable; ②–⑦ make actions safe to take.** A world with only ① is **auditable but not liveable**: everything can be established after the fact, and nothing can be done with confidence.
 
-## 4. Where It Is Hard
+## 4. From here to there
 
-The hard part is not "building another identity protocol": identity, credentials, discovery, narrowing delegation, audit — each of these has people working on it seriously. The hard part is two things.
+§1–§3 describe a habitable agent society.
 
-**First, the seven conditions sit with different people, and no single place is responsible for their holding at once.**
+**What these capabilities are for, in the end, is one thing: tracing responsibility to its source.** Starting from an action, one can find who did it, under whose authority, under which version of the rules, on what evidence, and who finally answers for it — without a break in the chain.
 
-- ① requires **cross-system** — the party asking and the party answering usually do not use the same stack;
-- ① requires the answer to come from **a party that belongs to none of them** — while the records that count today are mostly held by the parties themselves;
-- ⑤ requires a **time coordinate** — "which rule was in force then" — and today no layer carries this.
+Getting there does not need another identity protocol — identity, credentials, discovery, scope narrowing and audit each have people working on them. What is missing is two positions, and two defaults that will be picked unless they are named.
 
-These three are **gaps**: not that nobody is working on them, but that nobody is working on them in the same place.
+**One. The seven conditions are spread across different parties, and no single place carries them together.**
 
-**Second, two imbalances — but they are not a logical conflict between ① and ⑥⑦.**
-
-① asks only that an answer be **possible** — **it contains no timing requirement and does not require recording everything**. The imbalance comes from two default choices at implementation time:
-
-| Which way the default falls | What it becomes in implementation | Which condition it breaks |
+| Condition | Today | To hold |
 |---|---|---|
-| Verification placed **before action** | every step asks permission first | ⑦ autonomous |
-| Verifiability implemented as **recording everything** | governance degrades into total surveillance | ⑥ minimally disclosing |
+| ① Verifiable | the asking side and the answering side usually sit in different systems | checking does not depend on either party being present |
+| ① Third-party answer | the records that count are mostly held by the parties themselves | a third party belonging to no one can answer |
+| ⑤ Time coordinate | no layer carries "which rule was in force then" | a rule change is itself citable |
 
-**So the form of the criterion here is "a default, plus a declaration when departing from it", not "choose one of the two":** first set the default position of verification and the default extent of recording; departing from the default must be justified by the party that declares it. The specific defaults are undecided.
+Each of the three has someone working on it; none has a single place carrying all three. **What is missing is a position, not a capability.**
 
-**It has to be checkable.** Each imbalance needs a checkable form of "both hold at once", or there is no way to tell whether it has been resolved. §12 supplies one form for ①×⑦ — **an incomplete chain must be reportable** (verification need not intercept before the action, but must be able to point out afterwards which link is missing). There is no corresponding form for ①×⑥ yet.
+**Two. Two defaults push the society toward the uninhabitable side.**
 
-**One unlisted relation (undecided).** ② (societies with different rules coexist, without first unifying) together with ⑤ (rules change, judgement falls at the moment the action happened) produces a **cross-society time skew**: which party's then-effective rule governs depends on whom you ask. Settling it requires deciding how cross-society rule changes take effect and are registered.
+| Default | What the world becomes | What is lost |
+|---|---|---|
+| verification before the action | every step asks first | ⑦ autonomy |
+| verifiability as total logging | governance becomes surveillance | ⑥ minimal disclosure |
 
-## 5. What CHASI Is
+The second does not follow from ① itself. ① asks only that a question be answerable: it neither requires time nor requires recording everything. The imbalance comes from reading verification as "approve first" or "log everything".
 
-**A place.** It assembles parts from different sources, uses **experiments it designs and runs itself** to test whether those seven conditions can hold at the same time, and publishes each result as a record.
+**The criterion is therefore "a default plus a declaration when departing from it"**: verification by default happens after the fact or by sampling, and logging takes the minimum necessary; a party departing from the default states why. The default values themselves are not yet fixed.
 
-**What "test" means has to be said precisely: CHASI runs its own experiments; it does not pass judgement on anyone else's system.** What it records is "under this combination, which condition failed, and at which step of which part". Whether a given party is compliant, **judgement is left to each verifier** (§7) — hence it issues no certification, gives no ratings, sets no entry threshold (§6), and is not the final enforcer of any arbitration (§10).
+**Each imbalance needs a checkable form in which both sides hold at once**, or there is no way to tell whether it has been solved. §12 gives one for ①×⑦: **an incomplete chain must be reportable** — verification does not intercept before the action, but it can point to the missing link afterwards. For ①×⑥ there is no such form yet.
 
-- It **does not define mechanisms** — "how to identify an agent", "how to discover", "how to narrow a delegation" each have their own owners;
-- what it **does specify** are **the conditions of a composition** — whose parts are used, and what that composition must satisfy. **Anyone who does not adopt that composition is not bound by it**;
-- its output is **findings and records**.
+**One unanswered time mismatch.** ② (societies with different rules can coexist) and ⑤ (rules change, and judgment attaches to the moment of action) together produce a cross-society time mismatch: which side's rule applies depends on whom you ask. Answering it requires first fixing how a cross-society rule change takes effect and is recorded.
 
-**The first two items above once looked contradictory; here is their relation.** "Specifies" and "is not rules" do not conflict, because what CHASI puts forward are **conditions**, not **obligations**: it sets conditions on "a path assembled from these parts", and makes no demand of anyone who does not adopt that composition. The two capabilities in §11, "identity and resolution" and "discovery and directory", stand in the same place — **CHASI does not specify how to do it, only what the result must satisfy**.
+## 5. A governable agent internet
 
-**Its three attitudes to the existing ecosystem must all hold.** Each has a different degree of checkability; stated one by one:
+A governable agent internet is not one where every agent is plugged into a single platform. It is one where agents carry their own identity, authority and evidence across each other's boundaries — and no party has to be persuaded first to trust a centre.
 
-- **Compatible** — reuse what can be reused directly; do not re-invent the whole Agent Internet. **Its checkable form is in §10**: for any external capability, ask in order — Adopt → Map → Profile-Extend → Adapter → Define; only when the first four all answer no may we define our own.
-- **Complementary** — fill only the gaps the ecosystem leaves in cross-organizational identity, authority, governance, evidence and accountability. **Its criterion is in `method/ecosystem-matrix.md`**: for each external object, this family does only what that object's **adoption-evidence column does not already cover**.
-- **Independent** — attach to no single vendor, no single runtime, no single identity system. **No criterion yet**: settling it requires deciding how "attachment" is judged (for example, whether the family's specifications remain readable and implementable after any one party is swapped out).
+What we have in mind:
 
-When all three hold, CHASI need not compete with anyone over "who defines the whole Agent Internet". But this is **not a deduction from the three**: the non-competition follows from **complementary** (filling only gaps) and **independent** (attaching to nothing), not from **compatible**; and standards bodies, open-source foundations and research institutions are not the same kind of object in that sentence — the first two define specifications that can be adopted, the third produces research, and their competitive relation to CHASI differs.
+1. **Every member has an identity that can be stated.** People, organisations, agents and groups each have a resolvable identifier; one agent may belong to several organisations and groups at once, with a different role in each.
+2. **Identification does not route through any single platform.** To find out who a subject is and whether it is currently valid, there is no need to ask it, and no need to ask the platform it belongs to.
+3. **Authority traces back to an origin.** Every action can be followed along the authority chain to a person or a legal entity; a missing link is a missing link, and is not reported as "the system decided".
+4. **Autonomy inside the scope; no authority outside it.** A delegation states what may be done and, explicitly, what may not; inside that scope an agent does not ask step by step.
+5. **Judgment has a time coordinate.** The basis is the rule in force when the action happened, not the version revised afterwards.
+6. **Records can be checked by a third party.** A record can be judged to have happened, and judged not to have been altered, without depending on any party's system.
+7. **Memory is federated.** Each party keeps its own memory; only what is necessary crosses a boundary; disagreement about the same event is itself kept.
+8. **A group can exist across organisations.** Membership and roles can be verified without a common superior and without one party's database deciding.
+9. **Exit is normal, not an incident.** A member can leave; rights and obligations each have a destination; records do not disappear because someone left.
+10. **People are not monitored wholesale, but can question and hold others to account.** Governance and audit take the minimum necessary; any agent's action can be traced to a party answerable for it; a person can question that party and seek accountability under law or agreement.
 
-**The formal reading of the name.** CHASI = Compliance Hub for Agent **Society** Infrastructure; the last three letters come from **Society** (a noun, naming the society of agents) and **Infrastructure**. **Other readings (such as reading SI as Social Infrastructure, or as Super Intelligence) appear in no judgement this family makes**, and are not developed here.
+**Together: governance is not concentrated anywhere; it is distributed across the members, and there is always a third party belonging to no one that can check it.**
 
-**What "Compliance" means in this document has to be said precisely.** This family makes no compliance judgements — capabilities 6, 7 and 8 in §11 respectively block "judging compliance", "judging attainment" and "judging qualification". So Compliance in the name **does not mean "checking whether someone else complies", but "the conditions required for verifiability to hold"** (§3①): records that are complete and can be checked by a third party belonging to none of the parties. **Undecided: whether the word should be replaced with one free of the "inspection" ambiguity** — as it stands the name is easily read as a regulator.
+### 5.1 Where CHASI sits in this picture
 
-## 6. What It Is Not
+**A venue.** It assembles parts from different sources, uses experiments it designs and runs itself to test whether these ten can hold at once, and publishes the result of every experiment as a record.
 
-- not another agent protocol — it defines no mechanism for communication, identity, discovery or narrowing delegation; those have their own owners (§5);
-- not a standards body — it does not vote, does not ballot, sets no entry threshold;
-- not a platform — it runs no registry, encloses no network effect, sells no SKU;
-- not a regulator, and it claims no regulatory territory; not the final enforcer of any arbitration (§10).
+- it **defines no mechanism** — how to identify an agent, how to discover, how to narrow a delegation, each has its own owner;
+- **a condition is not an obligation** — it states conditions for a path assembled from these parts, and makes no demand on those who do not use it;
+- what it produces is **findings and records**, not rules.
 
-**Three of these four denials need their boundary stated, or they collide with §11.**
+**Three attitudes to the existing ecosystem**: **compatible** (reuse what can be reused; ask in order — adopt, map, profile-extend, adapt, define — and only define when the first four all answer no), **complementary** (fill only the gaps the ecosystem leaves in cross-organisational identity, authority, governance, evidence and accountability), **independent** (attached to no single vendor, runtime or identity system). With all three holding, there is no need to compete over "who defines the whole Agent Internet".
+
+### 5.2 The name
+
+CHASI = Compliance Hub for agent **Society** Infrastructure. Compliance here **does not mean "checking whether others comply"**; it means **the conditions under which verifiability can hold** (§3①): records are complete and can be checked by a third party belonging to no one.
+
+**Undecided: whether the word should be replaced by one without the "inspection" reading** — the current name is easily read as a regulator.
+
+### 5.3 Expectations of regulation
+
+CHASI is not a regulator and will not become one. But a vision can hold expectations of regulation:
+
+1. **A regulator can have its own resolver.** It does not need to own the infrastructure to read the status and evidence it needs.
+2. **Regulation rests on verifiable facts, not on a platform's own account.** A platform saying "reviewed" is not the same as the fact having been checked.
+3. **Regulation closes only at the boundary.** How a domain governs itself belongs to its members; the stretch that crosses out is what needs to be publicly checkable.
+4. **Regulation does not buy itself with total logging.** Minimal necessity binds regulators too.
+5. **A regulatory judgment can be recomputed, and leaves a record.** A regulator can itself be questioned and held to account.
+6. **Responsibility lands on a person.** Every action can be traced to a specific person or legal entity; it cannot stop at "the system".
+
+---
+
+## 6. What this picture does not include
+
+- **Not another agent protocol.** Communication, identity, discovery and narrowing delegation each have their own owners (§5);
+- **Not a standards body.** It does not vote, does not ballot, sets no entry threshold;
+- **Not a platform.** It **runs no registry**, encloses no network effect, sells no SKU;
+- **Not a regulator.** It claims no regulatory territory and is not the final enforcer of any arbitration (§10).
+
+**Each of the four has one boundary, next to the capabilities in §11.**
 
 **First, it carries state, and therefore necessarily holds a directory.** Capabilities 1, 5 and 8 in §11 require it to resolve subjects, answer current status, and let entries be found — the vehicle for all three is a directory. **Directory and registry must be kept apart: a directory holds declarations, a registry settles facts. CHASI does only the former**; what this section denies is the latter.
 
-**Second, "no entry threshold" and "let entries be found" do not conflict, because their subjects differ.** CHASI does not judge who qualifies (judgement is left to the verifier, §7); it only lets entries that **declare against a profile and attest to themselves** be found, and the verifier judges for itself whether an entry meets its own requirements. **So there is no threshold, but there are profiles** — the threshold is set by the verifier, not by CHASI.
+**Second, "no entry threshold" and "let entries be found" have different subjects.** CHASI does not judge who qualifies (judgement is left to the verifier, §7); it only lets entries that **declare against a profile and attest to themselves** be found, and the verifier judges for itself whether an entry meets its own requirements. **So there is no threshold, but there are profiles** — the threshold is set by the verifier, not by CHASI.
 
 **Third, a profile is a condition, not a licence.** The same distinction as in §5: a profile constrains "a path assembled from these parts", and does not constrain anyone who does not adopt it.
 
-**Its only possession is credibility**, and credibility accumulates only by records being accurate. For that sentence to be checkable, at least one more thing must be specified: **when a published record is found to be wrong, how it is corrected, by whom, and how the correction itself is recorded.** There is currently no correction mechanism anywhere — §7's "downgrades must be visible" concerns the status of a subject, not a published record. **Undecided: the correction rule; settling it requires deciding who has standing to challenge a published conclusion.**
+**Its only possession is credibility**, and credibility accumulates only by records being accurate. For credibility to be checkable, one more thing must be specified: **when a published record is found to be wrong, how it is corrected, by whom, and how the correction itself is recorded.** §7's "downgrades must be visible" concerns the status of a subject and does not cover published records. **Undecided: the correction rule; settling it requires deciding who has standing to challenge a published conclusion.**
 
 **This family's own responsible entity is not yet written down.** §12 requires the end of responsibility to be a person or a legal entity; this section and the document as a whole impose that requirement on every subject, but **do not say which legal entity is responsible for the records CHASI itself publishes**. A record published by CHASI and later shown to be wrong needs a party that can be held to account. **Undecided: this family's own responsible entity.**
 
-## 7. CHASI's Own Positions
+## 7. What CHASI Gives Up for This Picture
 
-This section is **CHASI's choices as a place** — not commands to members, and not "what an agent society ought to have".
+For this picture to hold, CHASI has to give up several things that would be easier to do. Each row is a trade-off and what it binds this family to.
 
-| Position | Why | Therefore CHASI must |
+| Given up | Why | Therefore CHASI must |
 |---|---|---|
 | **No central root** | cross-domain trust cannot be established by any party's registry; the trust anchor is the one the verifier configures itself | **this family's own directory is not a trust root either** — the status it provides is an input, not an anchor; replacing this family's directory, a verifier should still be able to judge by the anchor it configured itself (§11 capability 5) |
 | **No mutual recognition required** | recognition is each party's local policy; if it can be translated, it need not be agreed in advance | supply the **mapping** (§10's Map), and state **who maintains it and how its version is marked**; otherwise "can be translated" never lands |
@@ -170,7 +200,7 @@ This section is **CHASI's choices as a place** — not commands to members, and 
 | **Downgrades must be visible** | a silent downgrade is a deception | a status transition must leave a trace, and be **visible to every party that relies on that status**; "visible" needs defining: who, within what time, by what route |
 | **Presuppose no system** | otherwise this place is only the entrance hall of one ecosystem | no identity system or runtime may be made a precondition of taking part |
 | **Autonomy is not an exception** | autonomy within boundaries is the norm; a system that must ask at every step is a tool, not a member | **"asking at every step" may not be used as the means of satisfying verifiability**; verification defaults to after the fact or to sampling, and departing from that default must be justified by the declaring party (§4) |
-| **People keep room to question** | an agent's autonomy does not cancel a person's questioning; but questioning is not unbounded surveillance | **a record published by this family must let a third party belonging to none of the parties answer "who did it, on what authority"**; a record may not be visible only to the parties |
+| **Questioning and accountability replace surveillance** | questioning and holding to account do not require seeing everything; unbounded surveillance is not a precondition of accountability | **a record published by this family must let a third party belonging to none of the parties answer "who did it, on what authority"**; a record may not be visible only to the parties |
 
 **The last two restate the conditions in §3; they are not repeated here — only what they require of this family.** §3④ and §3⑦ say what a society needs in order to be liveable; this table says what CHASI must therefore do. **Each "therefore" entry gives a checkable landing point.**
 
@@ -186,17 +216,17 @@ The fourth row above requires that "a record be able to outlive the organization
 
 If the Agent Society becomes a new social form, then besides protocols it needs a set of clauses something like a constitution. This section puts forward one, provisionally called the **CHASI Agent Society Constitutional Principles**.
 
-**First, the relation of this section to §3 and §7, or the three tables will be read as three sets of requirements.**
+The three tables bind different parties:
 
 | Section | What it is | Who it binds |
 |---|---|---|
 | §3, the seven conditions | the properties a society needs in order to be liveable | descriptive — not met, and it is not liveable |
-| §7, CHASI's own positions | this place's own choices | binds this family only |
+| §7, CHASI's own choices | constraints this place accepts for itself | binds this family only |
 | **§8, this section** | which clauses a constitution would at least have to contain | **binds no one** — whether to adopt them is the society's own decision |
 
-**Hence this section is written in conditional form, not in commands.** §6 has stated that CHASI is not a standards body and sets no entry threshold; this section has neither the power nor the intention to impose it on anyone. The clauses below may be used as they stand, rewritten, or used only in part.
+§6 has stated that CHASI is not a standards body and sets no entry threshold. The clauses below may be used as they stand, rewritten, or used only in part; whether to adopt them is for each party to decide.
 
-**Of the ten clauses, those that repeat existing sections are pointed at, not restated:**
+Of the ten clauses, seven already have a landing point and three are new:
 
 | Clause | Content | Where it lands |
 |---|---|---|
@@ -209,13 +239,13 @@ If the Agent Society becomes a new social form, then besides protocols it needs 
 | **Revocability** | authority should be revocable | §11 capability 5; §12 has each link carry revocation status |
 | **Proportionality** | authority should match the task and the risk | no counterpart among §3's seven. **Undecided**: who judges the match, and on what scale |
 | **Due Process** | serious disputes should have appeal, arbitration or review | §13's dispute memory already assumes a "dispute process" exists, but **the document nowhere says who provides it**. **Undecided**: the provider |
-| **Human Primacy** | where a person's fundamental interests are at stake, human control is retained | §7, "people keep room to question". **Undecided**: which interests count as "fundamental", and who judges |
+| **Human Primacy** | where a person's fundamental interests are at stake, human control is retained | §7, "questioning and accountability replace surveillance". **Undecided**: which interests count as "fundamental", and who judges |
 
-**Only three of these are genuinely new** — Proportionality, Due Process, Human Primacy. The other seven are already covered by §3, §7 or §11. The value of this section lies in putting forward those three, not in restating the seven.
+The new content is concentrated in Proportionality, Due Process and Human Primacy; the other seven are covered by §3, §7 or §11.
 
-**"Minimal" needs care.** On the table above, removing the seven repeats leaves three; but "minimal" needs a criterion to hold — **undecided: which clause cannot be removed next, and on what basis that is judged**. Until then this section should not call itself minimal.
+These clauses cannot yet be called "minimal". Removing the seven with existing landing points leaves three, but there is no criterion for which of those three cannot be removed. **Undecided: the basis for judging minimality.**
 
-**The wording throughout is "subject", not "Agent".** §1 distinguishes four kinds of subject — person, organization, agent, group; if these clauses bound only agents, then organizations — equally capable of being authorized and of being held responsible — would fall outside the constitution.
+The clauses use "subject", covering person, organization, agent and group. If they bound only agents, organizations — equally capable of being authorized and held responsible — would fall outside the constitution.
 
 ## 9. How It Works
 
@@ -229,24 +259,24 @@ If the Agent Society becomes a new social form, then besides protocols it needs 
 | **Record** | each result becomes one record (content below) |
 | **Publish** | publish the findings so that others can cite them (requirements below) |
 
-**This section is only a summary; the method is a separate document.** The six stages of an experiment — Scenario → Experiment → Observation → Architecture → Specification → **Re-test** — are written in `method/use-case-laboratory.md` §2. The five steps above contain **no Re-test**: the table says "how one piece of work proceeds", that document describes **a loop**. The two descriptions are meant to be read together, and its six stages are not repeated here.
+The six stages of an experiment — Scenario → Experiment → Observation → Architecture → Specification → **Re-test** — are in `method/use-case-laboratory.md` §2. The table describes how one piece of work proceeds; the six stages describe the loop. The difference is Re-test.
 
-**"Record" means at least three different things across this document; this section defines only the first.**
+"Record" has three uses in this document. The four items below govern the first: the finding of one experiment.
 
 | Where | What is recorded | Who writes | What governs the content |
 |---|---|---|---|
-| **§9, this section's "Record"** | the finding of one experiment | this family | the four items below |
+| **§9, "Record"** | the finding of one experiment | this family | the four items below |
 | §12, the accountability chain | the derivation of authority for one action | the acting party | §12's seven per-link items |
 | §13, societal memory | facts the society jointly holds | varies by memory class | §13's six classes |
 
-When §6 says "credibility accumulates only by records being accurate", it means **the first**. Four items:
+When §6 says "credibility accumulates only by records being accurate", it means the first. An experiment record contains four items:
 
 - **version** — state **which part, at which version**, not just "version";
 - **date**;
 - **conclusion** — which conditions held, which did not;
 - **review condition** — not "when to review", but **what condition, once it occurs, requires a review** (for example, a part it rests on being version-bumped).
 
-**"Publish" must state what is needed for a record to be citable**, or §16's "a citable public memory" cannot hold:
+A record must carry four items to be citable; otherwise §16's "a citable public memory" cannot hold:
 
 - **an identifier for the record** — a record needs a name that can be cited (the same requirement §1 places on non-subjects, "they too need names that can be cited");
 - **where it is published** — where, and who can obtain it;
@@ -271,7 +301,7 @@ When §6 says "credibility accumulates only by records being accurate", it means
 
 ```
 
-**The architecture has five layers, each answering one question.** (The figure and the table are the same thing: the figure arranges them by layer, the table adds what else each layer contains.)
+**The architecture has five layers, each answering one question:**
 
 | Layer | The question it answers | What else is in it |
 |---|---|---|
@@ -281,7 +311,7 @@ When §6 says "credibility accumulates only by records being accurate", it means
 | Evidence | on what basis this happened, and whose responsibility it is | |
 | Interconnection | how it composes with existing protocols, runtimes and identity systems | A2A · MCP · DID/VC · OAuth |
 
-**Dependency runs one way, but this has to be stated precisely.** An upper layer **may** require a lower one to provide some capability — the governance layer requires the identity layer to resolve subjects; an upper layer **may not** dictate how a lower one is implemented — the governance layer does not dictate which cryptography the identity layer uses, and the evidence layer does not dictate what organizational form the governance layer takes. The purpose is to let **every layer be replaceable**; the family's `governance-architecture`, declaring of itself that it "states no requirements", is the strict version of the same thing.
+**Dependency runs one way.** An upper layer **may** require a lower one to provide some capability — the governance layer requires the identity layer to resolve subjects; an upper layer **may not** dictate how a lower one is implemented — the governance layer does not dictate which cryptography the identity layer uses, and the evidence layer does not dictate what organizational form the governance layer takes. The purpose is to let **every layer be replaceable**; the family's `governance-architecture`, declaring of itself that it "states no requirements", is the strict version of the same thing.
 
 **Persons are not the only origin of authority.** The figure draws authority downward from the subject layer, but a subject's authority may come from its own founding instrument rather than from anyone's consent: §12 states that the chain ends at "**a person, an organization, a definite legal entity**"; L3's `organization-governance` decomposes authority into four layers — "charter → office → holder → root authority basis". The figure does not mean "all authority originates from persons".
 
@@ -292,21 +322,21 @@ When §6 says "credibility accumulates only by records being accurate", it means
 - it builds no agent runtime, no model, no workflow engine;
 - it is not a regulator, and not the final enforcer of any arbitration.
 
-**"Does not define a DID method" has to say who does not define it.** This family has a DID method (`did-method-cha2a`); it is a product of **CHA2A**, not of the CHASI architecture layer (§14 gives the two levels). What this section says is that **the architecture layer does not define it** — not that this family does not build one.
+This family has a DID method (`did-method-cha2a`). It belongs to **CHA2A**, not to the CHASI architecture layer (see §14). **The architecture layer therefore does not define a DID method**; this family does not lack one.
 
-**Scope boundary: "domain" must be defined first, or this boundary cannot be judged.** CHASI has exactly one territory — **the stretch that crosses subjects and crosses domains**; what happens inside a domain stays inside it, and how an organization divides work or audits itself is not for CHASI to specify — CHASI asks only that it be able to say clearly what it did **when it steps outside**. But the document nowhere defines "domain". This matters, because **the domain is the criterion for whether CHASI applies at all** — a subject that can simply declare "this is a domain" could sidestep the requirements of this section. **Undecided: the basis for judging a domain** (who declares it, whether the declaration needs to be recognized by others, whether different subjects are by themselves sufficient for "cross-domain").
+CHASI has exactly one boundary — **the stretch that crosses subjects and crosses domains**. What happens inside a domain stays inside it; how an organization divides work or audits itself is not for CHASI to specify. CHASI asks only that it be able to say clearly what it did **when it steps outside**. This document has not yet defined "domain". **The domain is the criterion for whether CHASI applies at all**: if any subject can simply declare "this is a domain", the boundary can be sidestepped. **Undecided: the basis for judging a domain** (who declares it, whether the declaration needs to be recognized by others, whether different subjects are by themselves sufficient for "cross-domain").
 
-**There are five dispositions of an external capability, and no sixth.** Adopt → Map → Profile-Extend → Adapter → Define. Any existing capability that comes before CHASI is asked, in order: can it simply be adopted? If not, can it be mapped? If not, can it be extended within that capability's own profile? If not, can an adapter be added? Only when the first four all answer no do we define our own. **That ordered questioning is what makes "reuse as far as possible" executable** — otherwise "compatible" degrades into a slogan anyone can claim.
+**There are five dispositions of an external capability, and no sixth.** Adopt → Map → Profile-Extend → Adapter → Define. Any existing capability is judged in that order: can it be adopted, mapped, extended within its own profile, or reached through an adapter? Only when the first four all answer no do we define our own. The ordered test makes "reuse as far as possible" executable; otherwise "compatible" degrades into a slogan anyone can claim.
 
-**These five dispositions are a decision procedure, and therefore need a decision record.** Which of the five dispositions was reached, and where the conclusion landed, should be checkable; otherwise there is no telling whether "define our own" was necessary or merely convenient. **Undecided: who makes the decision, and where it is recorded** — and which of §9's three record classes it belongs with.
+The five dispositions form a decision procedure and therefore need a decision record. Which dispositions were tested, and where the conclusion landed, should be checkable; otherwise there is no telling whether "define our own" was necessary or merely convenient. **Undecided: who makes the decision, where it is recorded, and which of §9's record classes it belongs to.**
 
-**Composition, not replacement.** What is missing today is not agents that can talk to each other, but the layer that keeps "who authorized what, on what basis, and who answers for the result" verifiable when those agents belong to different organizations and different trust domains. The whole architectural value of CHASI comes down to this sentence: it produces no new intelligence, it produces **cross-domain verifiability**.
+**Composition, not replacement.** What is missing today is not agents that can talk to each other, but the layer that keeps "who authorized what, on what basis, and who answers for the result" verifiable when those agents belong to different organizations and different trust domains. CHASI produces no new intelligence; it produces **cross-domain verifiability**.
 
 ## 11. The Eight Core Capabilities of the Compliance Hub
 
 These eight are not eight small features but **eight links in one chain**: from "who you are" to "you can be found".
 
-**First, what kind of thing these eight are.** They are **conditions of a composition**, not mechanism definitions (§5): this family does not specify "how to identify an agent" or "how to discover"; it specifies **what a path assembled from these parts must satisfy**. Each row below therefore gives both "what it does" and "what it does not do".
+The eight are **conditions of a composition**, not mechanism definitions (§5): this family does not specify "how to identify an agent" or "how to discover"; it specifies **what a path assembled from these parts must satisfy**. Each row below therefore gives both "what it does" and "what it does not do".
 
 | # | Capability | What it does | **What it does not do** |
 |---|---|---|---|
@@ -319,17 +349,17 @@ These eight are not eight small features but **eight links in one chain**: from 
 | 7 | Compliance profiles and grading | by industry and risk level, **declare what must be met**, rather than one size for all | **does not judge who has met it** (§7); does not cover every scenario with a single standard |
 | 8 | Discovery and directory | let entries that **declare against a profile and attest to themselves** be found and searched | **this family does not judge who qualifies** (§6); being found is not being trusted, and a directory is not an endorsement |
 
-**Three ways to read it.**
+**Three points.**
 
 **First, the eight have dependencies, but not every one depends on the one before.** The real dependencies are in the first four: without identity there is no organization to speak of; without organization and authority, group collaboration has no subject. **The last four are not like that** — a profile does not need evidence in order to exist, and a directory does not need profiles. **The first four are preconditions of the last four, and the last four do not precede one another**; reading the eight as a straight line also reads confusingly against §6's "no entry threshold".
 
-**Second, each one must land on a document that can be reviewed.** If a capability lives only in a product and not in a specification, no one else can implement it, and no one can tell whether they comply — then it is not a capability, it is a **service**. The line between capability and specification is exactly the line between whether this Hub can be called infrastructure. **This also gives capability 6 its landing point**: the conformance vectors and checkers are in L5 (`cha2a-conformance`, 68 vectors, dual-verifier interlock; L5 spans two companion repositories — evidence in `did-method-cha2a`, conformance in `cha2a-conformance`, see the README index table); the table says the Hub can produce results, not that this family defines conformance here.
+**Second, each one must land on a document that can be reviewed.** If a capability lives only in a product and not in a specification, no one else can implement it, and no one can tell whether they comply — then it is not a capability, it is a **service**. The line between capability and specification is exactly the line between whether this Hub can be called infrastructure. Capability 6 lands in L5: the conformance vectors and checkers are in `cha2a-conformance` (68 vectors, dual-verifier interlock); L5 spans two companion repositories — evidence in `did-method-cha2a`, conformance in `cha2a-conformance`, see the README index table. The Hub can produce conformance results; conformance itself is not defined here.
 
 **Third, all eight must have a "what it does not do".** The third column matters as much as the second: **half of a Hub's definition comes from what it refuses to do.** The most important entries in that column are capabilities 6, 7 and 8 — they block "judging compliance", "judging attainment" and "judging qualification" respectively; do those three and this family becomes a regulator, which §6 has stated it is not.
 
 ## 12. Causal Accountability Chain
 
-One of CHASI's most important original lines of research is turning **action by a subject** from "black-box execution" into a verifiable causal accountability chain.
+One of CHASI's key lines of research is turning **action by a subject** from "black-box execution" into a verifiable causal accountability chain.
 
 ```
 
@@ -347,11 +377,11 @@ Evidence → Outcome → Accountability
 
 ```
 
-Each arrow in the figure is a kind of **delegation**; the seven items below are what **each link** must carry — two views of one thing: the figure gives the shape of the chain, the fields give its checkable conditions.
+Each arrow in the figure is a kind of **delegation**; each link carries the seven items below, which make the chain checkable.
 
 What it must finally answer is not only "what happened", but "why it happened, who authorized it, what the scope of that authority was, whether it was exceeded, and who bears responsibility".
 
-**First, what "causal" adds over a log.** Three things are often conflated; the difference is decisive:
+**"Causal" adds a derivation of justification beyond an audit log.** The three differ as follows:
 
 | | The question it answers | Its nature |
 |---|---|---|
@@ -383,9 +413,9 @@ Neither kind is an anomaly; both are the norm. **So the point is not "guaranteei
 - **a missing link must be identifiable**: the record must be able to point out which link is missing, with whom, and what is missing;
 - **an excess of scope must be comparable**: each link's scope must be written to a degree that **can be compared against the action**; declaring "there was authority" is not enough.
 
-**How autonomy and responsibility are reconciled is precisely through the scope item.** §3⑦ allows an agent to act autonomously within its boundaries, **without asking at every step**; this section requires the end of responsibility to fall on a person or legal entity. The condition under which both hold is: **scope is given by the principal, within scope the agent is autonomous, and outside scope there is no authority** — so what the principal bears is "the scope it drew", not "the actions it approved one by one". **Undecided: the default when a link does not state its scope** — treated as "no authority" (conservative) or as "the same as the parent" (permissive). This family's practice elsewhere is conservative (§6, "does not treat registered as trustworthy", and §12's scope comparison both depend on it), but this section does not state it.
+**Scope is the boundary between autonomy and responsibility.** §3⑦ allows an agent to act autonomously within its boundaries, **without asking at every step**; this section requires the end of responsibility to fall on a person or legal entity. The condition under which both hold is: **scope is given by the principal, within scope the agent is autonomous, and outside scope there is no authority**. The principal bears "the scope it drew", not "the actions it approved one by one". **Undecided: when a link does not state its scope, whether the default is "no authority" or "the same as the parent".** The family's practice elsewhere is conservative (§6, "does not treat registered as trustworthy", and the scope comparison both depend on it), but this section does not state it.
 
-**What is verifiable, and what can only be declared.** Scope of authority, time, revocation status, delegation depth — verifiable. Intention, good faith, "I did my best" — declarable only. Conflating the two is the commonest failure of accountability chains: **a declaration taken for a proof**. This family's approach is to **list the verifiable part and give a checking method for each item**, and to **mark the rest explicitly as declaration** — never to dress a declaration up as proof through visualisation. **Undecided: the criterion for "minimally sufficient"** — how small the verifiable part can be, and what it must still cover, so as neither to over-record (§3⑥) nor to under-support judgement.
+**What is verifiable, and what can only be declared.** Scope of authority, time, revocation status, delegation depth — verifiable. Intention, good faith, "I did my best" — declarable only. Conflating the two causes the commonest failure of accountability chains: **a declaration taken for a proof**. The verifiable part should be listed with a checking method for each item; the rest should be marked explicitly as declaration. A declaration may not be dressed up as proof through visualisation. **Undecided: the criterion for "minimally sufficient"** — how small the verifiable part can be, and what it must still cover, so as neither to over-record (§3⑥) nor to under-support judgement.
 
 **The end of responsibility must be a person or a legal entity, not "the system".** Automation may lengthen the chain of action, but it does not change where responsibility lies: the chain must end at a subject capable of bearing responsibility — a person, an organization, a definite legal entity. **If the only way to write the end of a chain is "the model decided on its own", then responsibility has not disappeared; the chain is missing a link** (the first kind of failure above). **Undecided: when the chain crosses outside this family's scope** (the counterparty does not recognize the form of authority), where the end falls.
 
@@ -393,7 +423,7 @@ Neither kind is an anomaly; both are the norm. **So the point is not "guaranteei
 
 Agent Memory is personal memory; Societal Memory is shared memory. **They are not "one scaled up"; they serve different subjects**: personal memory serves "I remember what I did", societal memory serves "**what we jointly hold to have happened, under which rules, and why those rules later changed**".
 
-A mature Agent Society needs to keep six kinds of memory, and the **writer and readers** of each are as follows (**retention** is discussed below):
+A mature Agent Society needs to keep six kinds of memory, with the **writer and read scope** of each as follows (**retention** is discussed below):
 
 | Memory | Content | Who writes | Who reads |
 |---|---|---|---|
@@ -404,9 +434,9 @@ A mature Agent Society needs to keep six kinds of memory, and the **writer and r
 | Evidence Memory | what an action rested on | the acting party | whoever needs to verify |
 | Dispute Memory | how a dispute arose and was resolved | **the dispute process** (provider undecided, see §8) | the parties and overseers |
 
-**Retention is not specified.** The document gives no retention period anywhere. This is not a matter of wording: §7's "records outlive their subject" requires a record to outlive its subject, and "how long" is exactly the step where that requirement has to become a number. **Undecided: the retention period of each of the six, and who decides what happens at expiry** (delete, archive, or withdraw obtainability while keeping verifiability).
+**The retention periods of the six classes are not specified.** §7's "records outlive their subject" requires a record to outlive its subject; the retention period is where that requirement becomes a condition in time. **Undecided: the retention period of each of the six, and who decides what happens at expiry** (delete, archive, or withdraw obtainability while keeping verifiability).
 
-**"Verifiable" and "obtainable" are two things, and must be specified separately.**
+**Verifiable and obtainable are two different requirements.**
 
 - **must be verifiable** — it can be checked that it was not altered;
 - **must be obtainable** — the content can be read.
@@ -416,7 +446,7 @@ The "who reads" column above is about **obtainability**, not verifiability. The 
 - **every class of memory must be verifiable**, without exception;
 - **the extent of obtainability is specified class by class in the table above**, and must state **who authorizes obtaining it** (the table gives "who reads", not "who approves").
 
-**Undecided: who authorizes obtaining it.** This section, §8's Due Process and §11 capability 1 all assume an authorizing role exists, and the document nowhere says so.
+**Undecided: who authorizes obtaining it.** This section, §8's Due Process and §11 capability 1 all assume an authorizing role exists; this document does not yet name it.
 
 **Verifiable memory is not blockchain.** Blockchain settles "order and immutability", at the price of full replication and full publicity. What societal memory actually needs is three things — **verifiable, controllably disclosed, forgettable** — and blockchain gives only the first half, and is of no help exactly where it is hardest (**who deletes, and by whose rules**). The direction is therefore **anchoring rather than on-chaining**: anchor "the state of a record at a moment" in a public place, so that tampering can be detected, while the record itself stays with its rights-holder, to be produced on demand, by permission, with minimal disclosure.
 
@@ -428,16 +458,16 @@ The "who reads" column above is about **obtainability**, not verifiability. The 
 
 **Its relation to the accountability chain.** **§12**'s chain answers **one action**; societal memory answers **what we jointly remember about this class of thing**. The former is vertical (the chain of one action), the latter horizontal (the layer all subjects share). Without the former, memory cannot be checked; without the latter, every action must be proved from scratch.
 
-**The relation between "memory" and §9's three kinds of "record" has to be stated.** §9 distinguishes three: experiment records, accountability-chain records, and societal memory. **Evidence Memory in the table above and §12's accountability chain are two views of the same data**: the chain looks at it vertically, **one action** at a time; Evidence Memory looks at it horizontally, **one class of fact** at a time. The other five classes of memory have no corresponding "record" kind, and **their fields are not yet specified**.
+§9 distinguishes experiment records, accountability-chain records and societal memory. **Evidence Memory in the table above and §12's accountability-chain record are two ways of organising the same data**: the chain organises it vertically around **one action**; Evidence Memory organises it horizontally around **one class of fact**. The other five classes of memory have no corresponding record kind, and **their fields are not yet specified**.
 
 ## 14. The Relation Between CHA2A and CHASI
 
-CHA2A and CHASI are two levels. This section gives the division, and states that it is **not the same kind of layering as the five layers in §10**.
+CHA2A and CHASI are two levels. This level answers ownership; the five layers in §10 answer capability composition. They are different kinds of layering.
 
 ```
 
 CHASI   Compliance Hub for Agent Society Infrastructure
-  │     stance · governance · compliance framework · research and ecosystem connection
+  │     vision · governance · compliance framework · research and ecosystem connection
   │
   │     interfaces: Identity · Delegation · Federation · Governance
   ↓
@@ -445,44 +475,44 @@ CHA2A   Agent-to-Agent / Agent Society Architecture & Protocols
 
 ```
 
-**Two senses of "layer" must be kept apart.** The five layers in §10 are **a layering of the architecture** (subjects / identity and trust / governance / evidence / interconnection); they say "which capabilities an action needs in order to hold". The levels in this section are **a layering of ownership**; they say "which document, which protocol is maintained by whom". The two are orthogonal — any one of the five layers may contain products of both CHA2A and CHASI. When §10 points here at its end, it means the latter.
+The five layers in §10 are **capability layers** (subjects / identity and trust / governance / evidence / interconnection); they answer "which capabilities an action needs in order to hold". This section is a **layering of ownership**; it answers "which document, which protocol is maintained by whom". The two are orthogonal: any one of the five layers may contain products of both CHA2A and CHASI.
 
 **The middle line is not a layer; it is a set of interfaces.** `Identity · Delegation · Federation · Governance` in the middle of the figure are **the agreed names of interfaces between the two sides**: CHASI's governance requirements land, on the CHA2A side, on those four objects. It does not constitute a layer of its own.
 
-**The division of ownership conflicts with an existing fact, and this has to be dealt with.** This section assigns **architecture** to CHA2A; but L2 in this repository *is* architecture (`governance-architecture`, see the index table in the README), and it says "why this family is layered as it is" and requires nothing of anyone. Only one explanation lets both stand: **`governance-architecture` is the architecture on the stance side of this family (principles and constraints), while CHA2A's architecture is the architecture on the protocol side (objects and messages)**. The wording of this section should be revised accordingly, or readers will think L2 in this repository is misfiled. **Undecided: whether that distinction holds** — if it does not, then one of this section and the README index table has to change.
+**`architecture` appears on both sides and is divided by maintaining party:** CHA2A's architecture specifies protocol objects and messages; L2 in this repository, `governance-architecture`, states CHASI-side principles and constraints and specifies no implementation (see the README index table). **Undecided: whether that distinction holds**; if it does not, one of this section and the README index table has to change.
 
-**The relation between CHASI and ComplianceHub.cn has to be written down.** This section's last sentence mentions ComplianceHub.cn; §11 is titled "the eight core capabilities of the Compliance Hub"; and §5 defines CHASI as "a place". The three do not say whether they are one thing or two. **Undecided: the relation between CHASI and ComplianceHub.cn** (two names for one entity, or "a place" and "a portal" as two things). Until it is written down, this document does not count ComplianceHub.cn's duties as CHASI's duties.
+**Whether CHASI and ComplianceHub.cn are the same entity is undecided.** §11 discusses the Compliance Hub's eight core capabilities, while §5 defines CHASI as a place; they may be two names for one entity, or a place and a portal. **Undecided: the relation between CHASI and ComplianceHub.cn.** Until it is written down, ComplianceHub.cn's duties do not count as CHASI's duties.
 
-**Keeping the technical work independent is the substantive aim of this section.** The CHA2A side continues to evolve architecture, protocol, profiles and extensions independently; the CHASI side carries stance, governance, compliance framework and research connection. Each side is versioned on its own, and neither blocks the other.
+**The two sides evolve independently.** CHA2A maintains architecture, protocol, profiles and extensions; CHASI carries vision, governance, compliance framework and research connection. Each side is versioned on its own, and neither blocks the other.
 
 ## 15. CHASI and the Existing Ecosystem
 
-**The purpose of this section is to give §5's "complementary" and §10's "five dispositions" objects to compare against.** Each entry therefore has to state two things: **what the object is**, and **which disposition describes this family's relation to it**.
+§5's "complementary" and §10's "five dispositions" need objects to compare against. The table states **what each object is** and **which disposition describes this family's relation to it**.
 
-**The evidence is not here; it is in `method/ecosystem-matrix.md`.** This section gives only **what the object is** and **this family's relation to it**; version, date, adoption evidence, licence, status and review condition are the six columns in that matrix. The format is: **a name without its evidence is not an entry.**
+This table gives **what the object is** and **the relation**; version, date, adoption evidence, licence, status and review condition are in `method/ecosystem-matrix.md`. **A name without its evidence is not an entry.**
 
 | Object | What it is | Relation to it (§10's five dispositions) |
 |---|---|---|
 | **A2A** | Agent-to-Agent interoperability | **Adopt + Map** (with **one redefinition**) — §10 states that CHASI defines no communication primitives (A2A exists); the task state machine is aligned to A2A Task and §8 redefines the counterparty's `TASK_STATE_COMPLETED` as **pending acceptance** |
 | **MCP** | Agent-to-tool / resource connectivity | **Adopt** — as above |
 | **DID / VC** | decentralized identity and verifiable credentials | **Adopt** — §10 already states that CHASI defines no cryptographic primitives and no DID method itself |
-| **AAIF** | the earlier table listed it alongside A2A, without describing it separately | **Undecided** — it must first be stated whether it is a body or a specification |
+| **AAIF** | a body or a specification; its form is unclear | **Undecided** — the object form must first be determined |
 | **OpenA2A** | open agent interaction / protocol research | **Undecided** |
 | **OAuth / OIDC** | authentication / authorization foundations | **Undecided** — **§10's four denials do not cover authentication / authorization frameworks as a class** |
 | **NANDA** | agent Internet discovery, registry and infrastructure research | **Undecided** |
 | **MIT / Stanford** | research on the agent Internet, human-agent interaction, memory, identity and society | **Undecided** — a research institution is not an object that can be "adopted" or "mapped" |
 
-**"Adopt" is read directly off the denials already written in §10**: §10 says CHASI defines no communication primitives (A2A, MCP exist) and no cryptographic primitives or DID method itself (DID, VC exist). **But "adopt" is not the whole relation** — A2A also carries a **mapping** (one redefinition in §8), see `method/ecosystem-matrix.md`. The rest are **undecided**: not because the object is unclear, but because **which disposition applies is unclear**. The evidence for those three is now in `method/ecosystem-matrix.md`; **the disposition itself remains undecided** — for OAuth / OIDC because §10's list of denials does not cover authentication / authorization frameworks as a class, and for AAIF and NANDA because the object has no definite form yet.
+**The adoption relation follows from the denials in §10:** CHASI defines no communication primitives (A2A, MCP exist) and no cryptographic primitives or DID method itself (DID, VC exist). A2A also carries a **mapping** (one redefinition in §8), see `method/ecosystem-matrix.md`. The rest are **undecided**: the object is not unclear; what remains undecided is **which disposition applies**. OAuth / OIDC remain undecided because §10's list does not cover authentication / authorization frameworks as a class; AAIF and NANDA because their object forms are unclear.
 
-**CHA2A and CHASI have been moved out of this table.** They are not "the existing ecosystem", they are this family itself, and the relation between them is written in §14. The earlier table listed them at the end, which matched neither this section's title nor §14.
+CHA2A and CHASI are not part of the external ecosystem; they are this family itself. The relation between them is in §14.
 
-**Research institutions and standards bodies are not the same kind of object.** MIT and Stanford produce research, not adoptable specifications; listing them in the same column as A2A and DID suggests "adopt" applies to them too. **Undecided: which word describes the relation to a research institution** — cooperation, borrowing, or merely citation as a source.
+**Research institutions and standards bodies are not the same kind of object.** MIT and Stanford produce research, not adoptable specifications; alongside A2A and DID, "adopt" does not apply to them. **Undecided: which word describes the relation to a research institution** — cooperation, borrowing, or merely citation as a source.
 
 ## 16. The Long-Term Form
 
-If this works, in ten years it should be a **citable public memory**. This is the only time reference in the whole document; it is a **horizon**, not a schedule — this section contains no deliverables and no timetable.
+If this works, in ten years it should be a **citable public memory**. Ten years is the vision's **horizon**, not a schedule; this section contains no deliverables or timetable.
 
-**What is recorded is already written in §13**: six kinds of memory, each with its writer and readers. This section adds only the two things §13 does not say — **whom this memory is for and what it is used for**, and **its relation to a society's continuity**.
+§13 specifies six kinds of memory and their writers and read scopes. This section states **whom the memory is for, what it is used for**, and its relation to a society's continuity.
 
 **First, there are two uses, and only these two.**
 
@@ -491,11 +521,11 @@ If this works, in ten years it should be a **citable public memory**. This is th
 
 **The corresponding non-use: it may not be used to negate past conduct retrospectively.** §3⑤ already provides that judgement falls at the moment the action happened; this is its counterpart here — **the checkability of memory may not be used to retry a judgement that was made under the rules then in force**. To check this, a record must mark "the rule in force then" and "the rule now" separately; §12's "which rule was in force at the time" already requires that.
 
-**Second, "how common interests are held" is marked in §2 as having no condition, and this section no longer treats it as settled memory content.** §2 states that common interest has no counterpart among §3's seven conditions; settling it requires deciding who holds it, how the holding is made checkable, and how the holder is held responsible. Until that is decided, this section does not claim it will be held.
+**Second, "how common interests are held" still lacks conditions and cannot be treated as settled memory content.** §2 states that common interest has no counterpart among §3's seven conditions; settling it requires deciding who holds it, how the holding is made checkable, and how the holder is held responsible. Until those conditions are defined, this document does not claim that common interests will be held.
 
-**Memory is the form in which a society continues.** The content of that sentence is a checkable causal claim: if a society cannot keep its common events, rule changes and dispute outcomes, its next round of decisions has nothing to cite from the last (§13 already states that without it, "every action must be proved from scratch").
+**Memory is the form in which a society continues.** This is a checkable causal claim: if a society cannot keep its common events, rule changes and dispute outcomes, its next round of decisions has nothing to cite from the last (§13 already states that without it, "every action must be proved from scratch").
 
-**This memory rests on three of §3's conditions — ①, ⑤ and ⑥ — not all seven.** ① supplies verifiability, ⑤ supplies "the change has a history", ⑥ supplies minimal disclosure; those are the three that §13 actually invokes throughout. **And ③ exitable, ④ questionable and ⑦ autonomous are conditions for a society to be liveable; this section has no basis for saying they are also preconditions of memory.**
+**This memory rests on §3's ①, ⑤ and ⑥, not all seven.** ① supplies verifiability, ⑤ supplies "the change has a history", and ⑥ supplies minimal disclosure. ③ exitable, ④ accountable and ⑦ autonomous are conditions for a society to be liveable; this document does not claim they are also preconditions of memory.
 
 ## 17. Boundaries: what this family does not do, and the conditions each would need
 
@@ -510,27 +540,27 @@ The items below are **outside this family's scope**. Each is given with the **co
 | **A high-grade ecosystem trust state** (one L4 profile, **not** the assembly profile) | ≥2 independent real verifiers, with auditable re-verification (the online L4 instance count is 0) |
 | **A run-time proof vocabulary** | the vocabulary slot is reserved, the behaviour undefined — this item differs from the five above: **it is undefined, not undone** |
 
-**These conditions are written inside this section and point outward to nothing.** This family's discipline for the public surface is "the public surface states a document's name and status only"; **a name readers cannot obtain is as good as unwritten.**
+The conditions are stated with each item. This family's discipline for the public surface is "the public surface states a document's name and status only"; **a name that cannot be obtained is as good as unwritten.**
 
-**The six fall into two classes, and the title is revised accordingly.**
+The six fall into two classes:
 
 | Class | Meaning | Items |
 |---|---|---|
 | **Undefined** | this family has not yet decided what it is | the run-time proof vocabulary |
 | **Condition not met** | this family knows what it is and what is missing | the other five |
 
-**The earlier title, "what we explicitly do not do", was only half right.** None of the six is "we do not intend to" — each states what condition would let it be done. **"Not done" describes the present scope; "the condition it would need" describes the basis for changing that scope.** Both have to be written, or readers cannot tell "we do not do this" from "we cannot do this yet".
+None of the six is permanently excluded: each states what condition would let it be reconsidered. **"Not done" describes the present scope; "the condition it would need" describes the basis for changing that scope.** Stating both distinguishes "we do not do this" from "we cannot do this yet".
 
-**Two items are easily confused with existing sections, and are stated separately.**
+**Two boundaries need to be distinguished.**
 
 - **"A high-grade ecosystem trust state" is not §11 capability 5.** Capability 5 answers, for **a single subject**, "can it still be relied on now" (revocation, downgrade, suspension, restoration); this item means a **cross-subject ecosystem-level trust state**, which needs ≥2 independent verifiers to hold at all. The former is in scope; the latter is not.
 - **"Behavioural monitoring · content compliance" is out of scope** on the condition in the table above: what is disclosed is decided by the declaring party, and this family does only checkability. Until that disclosure layer exists, this family performs no content-related assessment.
 
-## 18. The Status of This Document, and Its Own Rules
+## 18. The Status and Constraints of This Document
 
-**Experimental.** This is a stance (vision); it changes as understanding changes. CHASI's specification documents are a separate set, each with its own version and its own way of being judged.
+**Experimental.** This is a vision; it changes as understanding changes. CHASI's specification documents are a separate set, each with its own version and its own way of being judged.
 
-**This document makes no demand on the reader.** This has to be stated precisely, because the document contains many "must" and "must not" (`必须` appears 34 times, `不得` 14 times). They fall into three classes, **none of which is a demand on the reader**:
+**This document imposes no obligation on any third party.** Its uses of "must" and "must not" occur only in three places, none of which creates such an obligation:
 
 | Where it appears | Who it binds |
 |---|---|
@@ -538,11 +568,11 @@ The items below are **outside this family's scope**. Each is given with the **co
 | descriptions of liveability conditions (§3's seven) | descriptive — not met, and that society is not liveable |
 | a proposal to society (§8's ten) | binds no one; whether to adopt it is the society's own decision |
 
-The ten clauses in §8 read like commands in form ("should have", "must"), **which is the natural form of a constitutional clause**; they are a **proposal**, not an obligation this document imposes.
+The ten clauses in §8 use the form of "should" and "must"; they are a **proposal** and do not create an obligation imposed by this document.
 
-**Where this document conflicts with a specification, the specification governs.** How that is judged: **a specification (the volumes under `architecture/` and `specs/`) says "must"; this document states conditions, positions and proposals**; where the two describe the same thing inconsistently, the specification governs.
+**Where this document conflicts with a specification, the specification governs.** Specifications (the volumes under `architecture/` and `specs/`) state binding "must"; this document states conditions, judgments and proposals. Where the two describe the same thing inconsistently, the specification governs.
 
-**It is living**: a position may be revised, the trace may not — so every substantive change raises the version number. **The criterion for "substantive" is that the change alters the meaning of a sentence**; wording, examples and formatting do not count.
+This document is a vision under continuing revision: every substantive change raises the version number. **The criterion for "substantive" is that the change alters the meaning of a sentence**; wording, examples and formatting do not count.
 
 **A note of what changed is written only once the version it supersedes has been public.** "Public" means that version was obtainable on some surface with no access restriction on this document. Before that, each version is a pre-publication iteration and carries no change note.
 
@@ -562,4 +592,4 @@ It is not there to control agents, but so that autonomy, trust, responsibility a
 
 In that sense, what lets such a society exist at scale is not a restriction on agents but **verifiability** — which is what Compliance in this document's name refers to (see §5), not a compliance judgement.
 
-—— CHASI Vision · v2.23
+—— CHASI Vision · v2.25

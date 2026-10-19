@@ -5,7 +5,7 @@
 > **We envision an Internet where humans and autonomous agents can participate, cooperate, transact and coexist through open, trusted and governed social infrastructure.**
 > — *CHASI Vision*, closing statement
 
-## The stance
+## The vision
 
 **The next transformation is not simply better AI, but the emergence of an Agent Society.** Artificial intelligence is moving from models that generate information toward autonomous agents that can discover services, communicate, collaborate, make decisions, delegate authority, transact, and act on behalf of humans and organizations.
 
@@ -19,26 +19,29 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 
 | Layer | Document | Version |
 |---|---|---|
-| **L1 · stance** | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v2.23 |
-| | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.23 |
+| **L1 · vision** | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v2.25 |
+| | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.25 |
 | **L2 · architecture** *(states no requirements)* | [`protocol-suite-architecture.md`](./architecture/protocol-suite-architecture.md) · [`-zh`](./architecture/protocol-suite-architecture-zh.md) — the upper architecture | v0.2 |
 | | [`governance-architecture.md`](./architecture/governance-architecture.md) · [`-zh`](./architecture/governance-architecture-zh.md) | v0.3 |
-| **L3 · specifications** | [`overview.md`](./specs/overview.md) · [`-zh`](./specs/overview-zh.md) — **the entry to this layer, and to the family** | v0.2 |
+| | [`compliance-hub-architecture.md`](./architecture/compliance-hub-architecture.md) · [`-zh`](./architecture/compliance-hub-architecture-zh.md) | v0.1 |
+| **L3 · specifications** | [`overview.md`](./specs/overview.md) · [`-zh`](./specs/overview-zh.md) — **the entry to this layer, and to the family** | v0.3 |
 | | [`organization-governance.md`](./specs/organization-governance.md) · [`-zh`](./specs/organization-governance-zh.md) | v0.2 |
 | | [`group-collaboration.md`](./specs/group-collaboration.md) · [`-zh`](./specs/group-collaboration-zh.md) | v0.2 |
-| | [`question.md`](./specs/question.md) · [`-zh`](./specs/question-zh.md) | v0.1 |
-| | [`naming.md`](./specs/naming.md) · [`-zh`](./specs/naming-zh.md) | v0.3 |
+| | [`question.md`](./specs/question.md) · [`-zh`](./specs/question-zh.md) | v0.2 |
+| | [`naming.md`](./specs/naming.md) · [`-zh`](./specs/naming-zh.md) | v0.4 |
+| | [`passport.md`](./specs/passport.md) · [`-zh`](./specs/passport-zh.md) — the Passport object | v1.0 |
 | **L4 · profiles** | [`assembly.md`](./profiles/assembly.md) · [`-zh`](./profiles/assembly-zh.md) | v0.3 |
 | | [`lexicon.md`](./profiles/lexicon.md) · [`-zh`](./profiles/lexicon-zh.md) | v0.2 |
+| | [`compliance-profile.md`](./profiles/compliance-profile.md) · [`-zh`](./profiles/compliance-profile-zh.md) | v0.1 |
 | **L5 · evidence and conformance** | *not in this repository* — evidence lives in `did-method-cha2a`; conformance vectors and checkers in `cha2a-conformance` | — |
 | **L6 · implementation and operation** | *not in this repository* — implementations live in their own repositories | — |
 | **L7 · method** | [`use-case-laboratory.md`](./method/use-case-laboratory.md) · [`-zh`](./method/use-case-laboratory-zh.md) | v1.0 |
 | | [`ecosystem-matrix.md`](./method/ecosystem-matrix.md) · [`-zh`](./method/ecosystem-matrix-zh.md) | v0.1 |
 | **L8 · distribution** | *not in this repository* — distribution is dated per delivery and is not kept here | — |
 
-**Which layer owns what.** L1 states the stance. **L2 states no requirements** — where a "must" belongs, it points at the volume that owns it (`governance-architecture.md` §1.1). L3 states the requirements, each volume for its own subject. L4 holds profiles over the layers below. L5 holds conformance vectors and checkers. L6 holds implementations and operations. L7 holds the method — how an experiment is designed, run and recorded. L8 holds what is delivered outward. **`specs/overview.md` is the family's entry document**; the table above is **this repository's** layer index. They are not alternatives: the entry says what the family is, the index says what this repository holds. **The "eight layers" above are not the same set as the upper architecture's "eight layers"**: the upper architecture (`protocol-suite-architecture.md` §4) splits the **protocol suite's functional layers** (CHA2A Core · Governance · Passport & Interoperability · Group & Collaboration · Federation · Evidence & Trust · Marketplace / Commerce · Workflow / Task); the table above is **this repository's layer index**. Same name, different things.
+**Which layer owns what.** L1 states the vision. **L2 states no requirements** — where a "must" belongs, it points at the volume that owns it (`governance-architecture.md` §1.1). L3 states the requirements, each volume for its own subject. L4 holds profiles over the layers below. L5 holds conformance vectors and checkers. L6 holds implementations and operations. L7 holds the method — how an experiment is designed, run and recorded. L8 holds what is delivered outward. **`specs/overview.md` is the family's entry document**; the table above is **this repository's** layer index. They are not alternatives: the entry says what the family is, the index says what this repository holds. **The "eight layers" above are not the same set as the upper architecture's "eight layers"**: the upper architecture (`protocol-suite-architecture.md` §4) splits the **protocol suite's functional layers** (CHA2A Core · Governance · Passport & Interoperability · Group & Collaboration · Federation · Evidence & Trust · Marketplace / Commerce · Workflow / Task); the table above is **this repository's layer index**. Same name, different things.
 
-**Every layer is either present or accounted for.** L5, L6 and L8 are empty *here* by decision, not by omission: L5 is held by **two** companion repositories (evidence in `did-method-cha2a`, conformance in `cha2a-conformance`), L6 by the implementations' own repositories, L8 is dated per delivery. **L4 holds one profile and reserves another**: the assembly profile is written; the high-grade ecosystem trust state stays reserved until at least two independent real verifiers exist.
+**Every layer is either present or accounted for.** L5, L6 and L8 are empty *here* by decision, not by omission: L5 is held by **two** companion repositories (evidence in `did-method-cha2a`, conformance in `cha2a-conformance`), L6 by the implementations' own repositories, L8 is dated per delivery. **L4 now holds three profiles**: assembly, lexicon and compliance; the high-grade ecosystem trust state stays reserved until at least two independent real verifiers exist.
 
 **The identity core is elsewhere.** Identity, evidence and the DID method itself live in the companion repository **`did-method-cha2a`**; implementations live in their own repositories.
 
@@ -91,15 +94,11 @@ English-first for the architecture layer and the volumes: each carries a Chinese
 
 Experimental drafts. Each specification volume states requirements for its own subject; the architecture layer states none.
 
-## Provenance
-
-The three governance volumes were written inside the CHA2A specification group and moved into their own repository so that the governance model reads without assuming a particular DID method. §11 of the method specification — its companion index, which is **not** edited — lists `evidence-record.md`, `agent-identity.md` and `EVIDENCE.md`, and has never listed these volumes, so that move changed no reference in it.
-
 ## Participation and change control
 
 - **Licence**: Apache License 2.0 (see `LICENSE`).
 - **Participation**: via GitHub issues / PRs.
-- **What belongs in this repository**: **only material intended to be read.** This repository is private today, but it is private *until it is ready to be read* — not a place to park things that should not be published. Work plans, version plans, ledgers, internal reviews and distribution material are kept elsewhere and do not enter it, in any directory and at any revision.
+- **What belongs in this repository**: **only material intended to be read.** "Not yet public" means *not yet ready to be read* — not a place to park things that should not be published. Work plans, version plans, ledgers, internal reviews and distribution material are kept elsewhere and do not enter it, in any directory and at any revision.
 - **Change discipline**: a substantive change to a volume bumps that volume's version. A note describing what changed is written **only once the version it supersedes has been public** — before that, the iteration is not narrated. Editing and links may be committed on their own.
 - **Review cadence**: items left to the deploying parties, and any question a volume does not answer, are revisited when that volume is version-bumped.
 - **Reference deployment of the worked binding**: `https://compliancehub.cn`.

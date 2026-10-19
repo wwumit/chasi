@@ -296,7 +296,7 @@ A companion preprint from the same group — *A Global Switchboard for the Agent
 
 ## 13. Fixed by this volume, and left to the deploying parties
 
-This volume leaves **every requirement decided**. It draws one line: between what the protocol fixes and what a deploying party chooses. Each fixed item states the principle it is derived from, so a reader can challenge the derivation rather than the conclusion.
+This volume leaves **every requirement decided**. It draws one line: between what the protocol fixes and what a deploying party chooses. Each fixed item states the principle it is derived from, so that the derivation can be challenged, not only the conclusion.
 
 ### 13.1 Fixed by this volume
 

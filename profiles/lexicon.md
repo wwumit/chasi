@@ -69,6 +69,8 @@ The four below were **measured**, not imagined; this volume **also fixed the non
 | **分级 · 等级 · 档位** (grading / level / tier) | `评级` (rating) when used as a synonym | §11 capability 7 is "compliance profiles and **grading**" — it **declares what must be met**, and does not judge who has met it; `等级` is a cumulative value (L0–L4), `档位` is an admission tier. None of the three names a "rating" — see the 判定 entry |
 | **第三方** (third party) | — | not the same as `验证方`: `第三方` stresses **belonging to no party** (the wording of §3①); `验证方` stresses **reaching the verdict**. One subject can be both |
 
+**Sufficiency criterion**: every term used in any volume of this family either has its proper name here or is not prohibited by it; a term this volume does not carry, where a real two-sense risk exists, is a signal that the lexicon needs to grow. That is the point to stop; do not extend.
+
 ---
 
 ## 4. What this volume does not do

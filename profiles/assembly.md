@@ -130,6 +130,8 @@ An assembly holds not when "all four slots are filled" but when **all four verdi
 
 **Undecided: whether the vectors are executable.** What this section gives today is a **verdict table**, with no executable implementation. `cha2a-conformance` is the executable precedent (68 vectors, dual-verifier interlock); to make these executable in the same way, the **machine-readable form of each slot's part interface** has to be decided first.
 
+**Sufficiency criterion**: an assembler belonging to no party can, from the four slot interface requirements alone, decide whether an assembly holds and state which slot is missing and with whom — without asking this family. That is the point to stop; do not extend.
+
 ---
 
 ## 6. What this document does not do
