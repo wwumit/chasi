@@ -3,7 +3,7 @@
 > Status: draft (v0.2)
 > Date: 2026-10-01
 > Position: this family's volume on the **cross-organizational collaboration context** — **a peer of** `organization-governance.md` (this repository) and of `agent-identity.md` and `evidence-record.md` (the identity core, a companion repository). It defines the objects and rules of that context
-> Principle: **if an existing standard can be used, do not invent one** — the task state machine aligns to A2A Task; the evidence format cites `evidence-record.md`; **the skeleton is this volume's own**, because every external group service carries a trust model this volume rejects (§2).
+> Principle: **if an existing standard can be used, do not invent one** — the task state machine aligns to A2A Task; the evidence format cites `evidence-record.md`; **the core protocol is defined by this volume**, because every external group service carries a trust model this volume rejects (§2).
 > **Relation to an identity binding.** Identity is **cited, not restated**: the rules below are written against an **identity binding that resolves a subject across domains and answers for its status**, and **`did:cha2a` is the worked example** (experimental draft v1.1.0, recorded in the W3C DID Extensions registry). §9 states what this volume needs from such a binding, so another one satisfying it can take its place.
 > Related: `organization-governance.md` (this repository) · `agent-identity.md` §7 (delegation and authorization scope) · `evidence-record.md` (evidence format) · `overview.md` (family entry) · `did-method-cha2a.md` (the worked identity binding)
 
@@ -36,7 +36,7 @@
 | Evidence format | in-toto / `evidence-record.md` | — |
 | **The Group object · membership · admission** | **the collaboration plane's own subject.** The split into identity · presence · group management is the **common decomposition of any group service**, and this volume claims no part of it as its own — but that common decomposition **stops at the boundary of a single trust domain** | **this volume's own subject**: membership and admission *across* trust domains, and the rules in §5 |
 
-**Why the skeleton is this volume's own**: the group services that exist — carrier messaging, federated chat — each carry their own identity and account model (a phone number, an operator account, a homeserver account), and **adopting any one of them as the skeleton would import precisely the platform assertion this family exists to remove**. They are **interoperation targets** (§11), not foundations.
+**Why this volume defines the core protocol**: existing group services, including carrier messaging and federated chat, carry their own identity and account models (a phone number, an operator account, a homeserver account). **Adopting any one of them as the core protocol would import the platform assertion this family exists to remove.** They are **interoperation targets** (§11), not core dependencies.
 
 **On ordering**: this is where the chain of §1 lands at the collaboration layer — identity resolution (who) → `agent-identity.md` (authorized to do what) → `organization-governance.md` (who was qualified to authorize it) → this volume (in which context they do it together). **Four links**: a Group admits a member whose authority traces back through its organization, and that step belongs to `organization-governance.md` §4 (the four-layer chain) — this volume's §4.1 admission gates each read it.
 
@@ -275,7 +275,7 @@ A companion preprint from the same group — *A Global Switchboard for the Agent
 | `evidence-record.md` | join records, task acceptance, execution results and revocations **all use the Evidence Record format**; nothing new is invented |
 | status query of the identity binding (worked example: `trust/query` of `did:cha2a`) | status and revocation are checked; **for any decision that changes authority, unreachable means denied — no staleness window**; for read-only judgements a declared ceiling applies and the state timestamp must be recorded with the judgement (§5.2); **an unreviewed break-glass is visible here** (`organization-governance.md` §7.5) |
 | A2A Agent Card / ARD | discovery entry points; this volume's objects can be indexed as entries |
-| **Group-service components** (carrier messaging, federated chat — RCS among them) | **interoperation targets**: reachable through a gateway or adapter, with the internal model staying agent-native. **The core protocol is this volume's own**, and an external group service is reached through a gateway or adapter rather than imported |
+| **Group-service components** (carrier messaging, federated chat — RCS among them) | **interoperation targets**: reachable through a gateway or adapter, with the internal model staying agent-native. **The core protocol is defined by this volume**, and an external group service is reached through a gateway or adapter rather than imported as a core dependency |
 | `organization-governance.md` | supplies "who may represent the Organization"; this volume supplies "how to collaborate once inside" |
 
 **One cryptographic implementation, serving three places**: card signatures, credential signatures and collaboration-record signatures should share one stack (JWS + JCS canonicalization).

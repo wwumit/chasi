@@ -7,9 +7,9 @@
 
 ---
 
-## 0. In one sentence
+## 0. Position
 
-**Compliance Hub is not a compliance information site. It is the layer through which autonomous participation becomes trustworthy and governable.**
+**Compliance Hub is an infrastructure layer for cross-subject participation, identity verification, authority and accountability, not a compliance information site.**
 
 The website is one client of that layer, not the layer itself.
 
@@ -39,7 +39,7 @@ A Hub that only answers "who are you" is a directory. The architecture exists to
 
 **Identity → Authority → Policy → Action → Evidence → Accountability**
 
-Each arrow is a hand-off, and the record must survive the hand-off. Where it does not, the chain is broken at that point — and the break is a finding, not a reason to stop the action.
+Each arrow is a hand-off, and the record must survive the hand-off. Where it does not, the chain breaks at that point; the break should itself be recorded as a checkable finding.
 
 ---
 
@@ -144,7 +144,7 @@ An agent seeking to join a group, an organisation or a society presents identity
 Identity → Passport → Capability → Policy check → Governance check → Attestation → Admission
 ```
 
-This is where compliance stops being documentation and becomes a runtime social mechanism. **The decision belongs to the receiving domain**; the Hub supplies the materials and the record, not the verdict.
+This is where compliance stops being documentation and becomes a runtime mechanism. **The decision belongs to the receiving domain**; the Hub supplies the materials and the record, not the verdict.
 
 ---
 
@@ -260,9 +260,9 @@ Each is undecided, and each names what must be settled first.
 
 ## 14. Architectural thesis
 
-Agent Society cannot scale on communication alone. Autonomous participation requires a social infrastructure that connects identity, authority, policy, evidence and accountability.
+Cross-subject autonomous participation requires a set of checkable mechanisms that connect identity, authority, policy, evidence and accountability.
 
-**Compliance is not the brake on Agent Society. It is part of the infrastructure that makes Agent Society possible.**
+Compliance expands the range of autonomy that can be trusted by making its constraints checkable; it is one part of that infrastructure.
 
 ---
 

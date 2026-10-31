@@ -112,7 +112,7 @@ COLLABORATION PLANE — who acts together, and in what scope
           · capacity  : the organization it acts for here, or itself
 ```
 
-**Reading of the diagram:**
+**Diagram notes:**
 
 - **`Organization` is the only node that owns authority.** Admin, policies and agents hang off it because they derive their standing from it, not because they are its parts.
 - **An organization is a *kind of member*.** A group spanning three organizations has **three organization members**, and the acting members' `home_org` points at them.
@@ -199,7 +199,7 @@ Governance actions — registration, authorization, joining and leaving an organ
 
 ## 9. Premises this architecture departs from
 
-**Why this section exists**: writing while knowing that related work exists obliges this architecture to name the premises it **departs from**. **Naming premises rather than documents is deliberate** — a premise is a claim about an *approach*, which anyone can check against whatever systems they know, while a document citation dates. Recording *which* documents hold *which* premise, at what version and what status, is a **survey**, and it belongs to the ecosystem matrix of the protocol-suite architecture rather than to this layer. Naming no object is also why the status-recording obligation of the family's reading conventions (`overview.md` §5) is not triggered here.
+**Why this section exists**: writing while knowing that related work exists obliges this architecture to name the premises it **departs from**. **Naming premises rather than documents is deliberate** — a premise is a claim about an *approach*, which anyone can check against whatever systems they know, while a document citation dates. Recording *which* documents hold *which* premise, at what version and what status, is a **survey**, and it belongs to the ecosystem matrix of the protocol-suite architecture rather than to this layer. Naming no object is also why the status-recording obligation of the family's house conventions (`overview.md` §5) is not triggered here.
 
 | # | The premise | Where it is common | What importing it would break |
 |---|---|---|---|

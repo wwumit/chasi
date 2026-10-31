@@ -38,7 +38,7 @@ Scenario → Experiment → Observation → Architecture → Specification → R
 
 ## 3. 第一批旗舰 Use Cases
 
-| # | 场景 | 一句话 |
+| # | 场景 | 简述 |
 |---|---|---|
 | UC-01 | 跨组织 Group Collaboration | 三个组织为一次共同任务临时成立 Group |
 | UC-02 | Agent Joining a New Society | 一个 agent 第一次进入别的组织主导的 Society |
@@ -164,7 +164,7 @@ Governance · Accountability · Federation
 - **Architecture Change**——实验导致什么架构修改。
 - **Specification Change**——最终形成什么规范变化。
 
-**模板的意义在于后五项。** 前九项是场景要交代的，后五项才是实验要产出的——**只有前者没有后者的场景，写出来读着漂亮，什么也不会改变。**
+**模板的重点在后五项。** 前九项是场景必须说明的，后五项是实验必须产出的；**只有前者而没有后者的场景看起来完整，却不会产生可核对的结论。**
 
 ## 11. 与 ITU-T Focus Group TIDA 的关系
 

@@ -21,7 +21,7 @@ Vision §5 says "**complementary** — fill only the gaps the ecosystem leaves i
 
 ## 2. The format
 
-| Column | How to read it |
+| Column | How to use it |
 |---|---|
 | **Object** | only the name in general use, not a product name |
 | **Version / date** | from the object's own public information; **where none is available it is "—"**, not a word like "unknown" |

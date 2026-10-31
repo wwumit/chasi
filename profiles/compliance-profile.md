@@ -66,7 +66,7 @@ This profile fixes no numeric scale. It fixes three things:
 
 ## 6. Relation to admission and judgment
 
-Admission reads the profile: the receiving domain checks the materials against the profile it declared, then decides. **The decision stays with the receiving domain** (`overview.md` §4.4 R3; `group-collaboration.md` §4.3).
+Admission uses the profile: the receiving domain checks the materials against the profile it declared, then decides. **The decision stays with the receiving domain** (`overview.md` §4.4 R3; `group-collaboration.md` §4.3).
 
 A profile is not an entry threshold. It is chosen by a verifier or a receiving domain; the family imposes no single profile on everyone.
 
