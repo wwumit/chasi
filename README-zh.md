@@ -1,26 +1,25 @@
 # CHASI: Compliance Hub for Agent Society Infrastructure
 
-**Toward a Governed, Interoperable and Human-Centric Agent Society**
+**Specifications for cross-subject identity, authority and evidence in an agent society**
 
-> **我们设想这样一个互联网：人与自主智能体能够通过开放、可信、受治理的社会基础设施，共同参与、协作、交易与共存。**
-> —— 《CHASI Vision》结语
+> **CHASI 研究跨主体身份、授权、证据与治理的开放文档。**
 
-## 愿景
+## 问题与目标
 
-**下一次转变，不只是更好的 AI，而是一个 Agent Society 的出现。** 人工智能正在从“生成信息的模型”走向“能够发现服务、通信、协作、决策、委托权威、交易，并代表人与组织行动的自主智能体”。
+**本仓讨论的核心对象是 Agent Society。** 它指由人、组织、agent 与群体共同构成、需要跨主体治理与互操作的运行环境。人工智能系统正在从生成信息，转向发现服务、通信、协作、决策、接受委托并代表主体行动。
 
-CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：一个开放、可互操作、受治理的环境，人与智能体、组织与群组在其中能够建立**身份、信任、权威、关系、证据与问责**。
+CHASI 研究这一环境所需的治理与互操作基础设施，包括跨主体的**身份、信任、权威、关系、证据与问责**。
 
-**CHASI 不是又一个 agent 协议，也不是监管机构。** 它互补并连接已有的协议与标准，补上那一层治理与社会基础设施——当智能体从孤立的工具变成互联网规模社会中的持久参与者时，这一层就变得必要。
+**CHASI 不是又一个 agent 协议，也不是监管机构。** 它连接现有协议与标准，补充跨组织场景中的治理、证据与问责接口。
 
-**其核心主张，一句话**——*Organization 是治理主体，Group 是协作主体。* 治理边界与协作边界**分开表达**，且**两者都不预设一个中心信任根**。
+**文档层面的核心划分是：** *Organization 是治理主体，Group 是协作主体。* 治理边界与协作边界**分开表达**，且**两者都不预设一个中心信任根**。
 
 ## 本仓有什么
 
 | 层 | 文档 | 版本 |
 |---|---|---|
-| **L1 · 愿景** | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.25 |
-| | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v2.25 |
+| **L1 · 愿景** | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.26 |
+| | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v2.26 |
 | **L2 · 架构**（*不陈述要求*） | [`protocol-suite-architecture-zh.md`](./architecture/protocol-suite-architecture-zh.md) · [`en`](./architecture/protocol-suite-architecture.md) —— 上位架构 | v0.2 |
 | | [`governance-architecture-zh.md`](./architecture/governance-architecture-zh.md) · [`en`](./architecture/governance-architecture.md) | v0.3 |
 | | [`compliance-hub-architecture-zh.md`](./architecture/compliance-hub-architecture-zh.md) · [`en`](./architecture/compliance-hub-architecture.md) | v0.1 |
@@ -29,9 +28,9 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 | | [`group-collaboration-zh.md`](./specs/group-collaboration-zh.md) · [`en`](./specs/group-collaboration.md) | v0.2 |
 | | [`question-zh.md`](./specs/question-zh.md) · [`en`](./specs/question.md) | v0.2 |
 | | [`naming-zh.md`](./specs/naming-zh.md) · [`en`](./specs/naming.md) | v0.4 |
-| | [`passport-zh.md`](./specs/passport-zh.md) · [`en`](./specs/passport.md) —— Passport 对象 | v1.0 |
+| | [`passport-zh.md`](./specs/passport-zh.md) · [`en`](./specs/passport.md) —— Passport 对象 | v1.2 |
 | **L4 · 剖面** | [`assembly-zh.md`](./profiles/assembly-zh.md) · [`en`](./profiles/assembly.md) | v0.3 |
-| | [`lexicon-zh.md`](./profiles/lexicon-zh.md) · [`en`](./profiles/lexicon.md) | v0.2 |
+| | [`lexicon-zh.md`](./profiles/lexicon-zh.md) · [`en`](./profiles/lexicon.md) | v0.3 |
 | | [`compliance-profile-zh.md`](./profiles/compliance-profile-zh.md) · [`en`](./profiles/compliance-profile.md) | v0.1 |
 | **L5 · 证据与一致性** | *不在本仓*——证据由 `did-method-cha2a` 承载；一致性向量与核对器在 `cha2a-conformance` | — |
 | **L6 · 实现与运营** | *不在本仓*——各实现另在自己的仓 | — |
@@ -73,7 +72,7 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 
 每一个接口点都列在行使它的那一册的 §10 或 §11 里，因此**满足这些接口的另一个绑定可以取代这个示例**。
 
-## 阅读顺序
+## 文档顺序
 
 | 顺序 | 文档 | 回答什么 |
 |---|---|---|
@@ -98,7 +97,7 @@ CHASI 提出的是这个社会随之所需的**社会基础设施**的愿景：�
 
 - **许可**：Apache License 2.0（见 `LICENSE`）。
 - **参与**：通过 GitHub issues / PRs。
-- **本仓放什么**：**只放准备让人读的内容。** “暂不公开”的含义是**尚未准备好被读**，不是“用来堆放不宜公开的东西”。工作计划、版本计划、台账、内部评审与分发材料一律另置，**任何目录、任何版本都不进本仓**。
+- **本仓放什么**：**只放准备公开的内容。** “暂不公开”的含义是**尚未准备好公开**，不是“用来堆放不宜公开的东西”。工作计划、版本计划、台账、内部评审与分发材料一律另置，**任何目录、任何版本都不进本仓**。
 - **变更纪律**：对某一册的实质变更，提升该册版本号。改动说明**只在该版所取代的版本曾经公开之后**才写；在那之前，迭代不对外交代。编辑与链接可以单独提交。
 - **复核节奏**：留给部署方的条目、以及某一册未回答的问题，在该册版本提升时重新审视。
 - **所依据绑定的参考部署**：`https://compliancehub.cn`。

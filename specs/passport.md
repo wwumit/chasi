@@ -2,11 +2,11 @@
 
 **A Verifiable, Portable and Governable Social Identity for Autonomous Agents**
 
-> Status: draft (v1.0)
-> Date: 2026-10-19
+> Status: draft (v1.2)
+> Date: 2026-10-31
 > Layer: **L3 · specifications** — states the requirements for its own subject
 > Position: the members, signature, lifecycle, verification procedure, disclosure sets and conformance requirements of the Passport object
-> Principle: identity semantics are normative in `did-method-cha2a.md` and evidence semantics in `evidence-record.md`; this document neither restates, extends nor amends them
+> Principle: identity semantics follow the DID method in use: `did:cha2a` is normative in `did-method-cha2a.md`, and other methods are normative in their own specifications. Evidence semantics are normative in `evidence-record.md`. This document neither restates, extends nor amends any referenced specification
 > Related: `organization-governance.md` (who is qualified to authorize) · `group-collaboration.md` (collaboration context) · `overview.md` §4.4 (placement between Registry and application) · `assembly.md` (assembly)
 
 ---
@@ -15,15 +15,13 @@
 
 This document specifies the **CHA2A Agent Passport**: a signed, portable document that carries an agent's subject identifier, the principal it acts for, the authority it holds, the governance context that bounds that authority, and references to the evidence behind it.
 
-Every open item is disposed in §24 — as decided, as a deployment parameter, or as not-in-this-version with a stated precondition. No item is left blank.
-
 | Item | Value |
 |---|---|
 | Specification status | Working Draft / Experimental |
-| Specification version | 1.0 |
+| Specification version | 1.2 |
 | Subject of the document | the **portable identity of an agent**, and the authority under which it acts |
 | Normative scope | the Passport object, its fields, its verification procedure, and its conformance requirements |
-| Identity semantics | normative in `did-method-cha2a.md`; this document reuses them and adds no identifier syntax |
+| Identity semantics | follow the DID method in use: `did:cha2a` is normative in `did-method-cha2a.md`, and other methods in their own specifications; this document adds no identifier syntax |
 | Evidence semantics | normative in `evidence-record.md`; this document reuses its predicates and adds no evidence format |
 | Ecosystem | CHASI / Compliance Hub / CHA2A specification group |
 
@@ -33,7 +31,7 @@ Every open item is disposed in §24 — as decided, as a deployment parameter, o
 2. **Timestamps** — RFC 3339, UTC, terminated by `Z`, second precision or finer.
 3. **Canonicalization** — RFC 8785 JSON Canonicalization Scheme (JCS).
 4. **Digests** — SHA-256, lowercase hexadecimal.
-5. **Requirement identifiers** — `PP-n` denotes a normative requirement; `DP-n` a deployment parameter; `NIV-n` an item deliberately not defined in this version. §26 indexes every identifier.
+5. **Requirement identifiers** — `PP-n` denotes a normative requirement; `DP-n` a deployment parameter; `NIV-n` an item deliberately not defined in this version. §25 gives the complete grouping and ranges by normative object.
 6. **Derivation stated** — a decided item states the principle it is derived from, so that the derivation can be challenged, not only the conclusion.
 
 ---
@@ -90,7 +88,7 @@ Each goal carries the test that falsifies it. A goal without a test is an aspira
 - verification profiles and the verification procedure (§15)
 - the disclosure sets that bound what a verifier may learn (§16)
 - the trust context that bounds where a passport is valid (§17)
-- requirements and conformance tests (§23, §26)
+- requirements and conformance tests (§23, §25)
 
 ### 3.2 Dependencies — reused, not redefined
 
@@ -296,6 +294,8 @@ urn:cha2a:passport:<issuer-scope>:<opaque>
 ### 7.1 Identifier binding
 
 **PP-16.** `subject` MUST be a DID, and MUST resolve to a DID Document through a method the verifier supports.
+
+**PP-16 does not constrain the choice of DID method.** Method-specific rules apply only under that method: the identifier rules for `did:cha2a` are in PP-17; other methods determine their identifier syntax, resolution and verification relationships in their own specifications. A deployment declares the methods it supports under DP-2.
 
 **PP-17.** When `subject` uses the `did:cha2a` method, the DID MUST conform to the ABNF of `did-method-cha2a.md` §3.1, and the literal prefix and resource-type slot MUST be treated as case-sensitive lowercase as required by its §3.4. A verifier MUST apply the method's normalization rules before comparing identifiers.
 
@@ -595,6 +595,18 @@ A passport identifies the policies under which its authority holds. It does not 
                    terminal
 ```
 
+### 14.1.1 Lifecycle separation
+
+A passport may refer to several lifecycles at once. They are separate observations and MUST NOT be substituted for one another.
+
+| Lifecycle | Authoritative status source | Does not replace |
+|---|---|---|
+| Passport revision | the issuer | the subject's identifier status |
+| Subject identifier | the identity binding or registry | the passport revision status |
+| Registration evidence | the registrar or declared registration status source | the passport or subject identifier status |
+| Credential or evidence | the credential issuer or evidence status source | delegation revocation status |
+| Delegation or authority | the delegator, governance record or `revocationRef` | credential status |
+
 ### 14.2 Transitions
 
 | Transition | From → To | Who may perform it | Effect |
@@ -684,7 +696,64 @@ A passport identifies the policies under which its authority holds. It does not 
 
 **PP-75.** `indeterminate` MUST name the party or source that could not be reached and the check that depended on it.
 
-### 15.4 Procedure
+### 15.4 Verification Result Structure
+
+A verification result MUST express at least the following semantic fields. A deployment may choose its own serialization, but it may not omit their meanings:
+
+| Field | Meaning |
+|---|---|
+| `verdict` | `valid`, `invalid` or `indeterminate` |
+| `reasonCode` | the reason code supporting the verdict; `valid` uses `none` |
+| `trustContext` | the trust context used for the decision |
+| `facts` | the facts relied upon, each with source, time and integrity information |
+| `links` | each link's attribution, result and failure location along the verification path |
+| `authorityBasis` | the authority source, scope, coverage, time and limitations behind a negative authority decision |
+| `policyAction` | a relying-party action; if present, it MUST remain separate from the verification verdict |
+
+**PP-109.** Every verification MUST return a `reasonCode`. `valid` MUST use `none`; `invalid` and `indeterminate` MUST use a declared reason code. Free text may supplement the code, but MUST NOT replace it.
+
+**PP-110.** A confirmed revocation MUST be reported as `invalid` / `revoked`; an unreachable status source MUST be reported as `indeterminate` / `status_unavailable`. Confirmed revocation MUST NOT be reported as `indeterminate` or `valid`, and unavailable status MUST NOT be reported as `invalid` or `revoked`.
+
+**PP-111.** When the verdict depends on a negative authority determination, the result MUST carry `authorityBasis` stating the source, coverage, time, federation path and residual limitations. Only when that basis is sufficient to establish the absence of authority in the relevant scope may the result report `invalid` / `authorization_rejected`; an insufficient basis MUST produce `indeterminate` / `authority_basis_incomplete`.
+
+**PP-112.** A result MUST preserve a per-link record for every required verification path, including at least `linkId`, `claim`, `source`, `scope`, `verdict` and `reasonCode`. If an implementation also supplies a relying-party action, it MUST be in a separate `policyAction` field and MUST NOT change the verification verdict.
+
+#### 15.4.1 Minimum reason codes
+
+| Reason code | Typical verdict | Meaning |
+|---|---|---|
+| `none` | valid | no failure reason |
+| `proof_invalid` | invalid | signature, digest or canonicalization failure |
+| `status_unavailable` | indeterminate | the status source is unreachable or cannot be obtained |
+| `status_stale` | indeterminate | the status observation could not be refreshed within the allowed age |
+| `revoked` | invalid | confirmed revocation |
+| `authorization_missing` | indeterminate | evidence needed to determine the authority scope cannot currently be obtained |
+| `authorization_rejected` | invalid | an authoritative basis confirms that the action is out of scope or not authorized |
+| `authority_basis_incomplete` | indeterminate | the authority basis for a negative decision cannot be established |
+| `scope_mismatch` | invalid | the action does not fall within the declared scope |
+| `constraint_unevaluable` | indeterminate | the constraint exists but cannot currently be evaluated |
+| `pointer_unresolved` | indeterminate | a pointer or reference cannot be resolved |
+
+**PP-113.** When the reason codes above are used, their meanings MUST match this table. An implementation MAY add namespaced extension codes, but MUST NOT change the verdict mapping of the base codes.
+
+#### 15.4.2 `authorityBasis`
+
+When a verdict depends on a negative authority determination, `authorityBasis` MUST contain:
+
+| Field | Meaning |
+|---|---|
+| `source` | the source or governance authority that provides the authoritative answer |
+| `scope` | the subjects, resources, operations or claim types the source covers |
+| `coverage` | whether the source is complete for that scope and what remains uncovered |
+| `timeBasis` | the observation or effective time to which the answer applies |
+| `federationPath` | the recognised federation path through which the source applies; state explicitly when no federation is involved |
+| `limitations` | residual limitations |
+
+**PP-114.** If `authorityBasis` lacks any of `source`, `scope`, `coverage`, `timeBasis`, `federationPath` or `limitations`, it MUST NOT support `invalid` / `authorization_rejected`; the verdict MUST be reduced to `indeterminate` / `authority_basis_incomplete`.
+
+**Numbering note.** PP-109 to PP-114 are appended after PP-108 to keep existing identifiers stable; PP-109 to PP-114 remain normative requirements in verification group E.
+
+### 15.5 Procedure
 
 ```
   1  STRUCTURE   P conforms to §6; specVersion supported;
@@ -710,8 +779,8 @@ A passport identifies the policies under which its authority holds. It does not 
  10  EVIDENCE    for P3+, refresh each credential's status (PP-61)       → unknown → indeterminate
                                                                           failed result → invalid
  11  DISCLOSE    emit only the fields of the profile's disclosure set (§16)
- 12  OUTPUT      verdict · trust context · facts relied on, each with
-                 source and observation time
+ 12  OUTPUT      verdict · reason code · trust context · per-link results,
+                 facts relied on (source and observation time) · authority basis for negative decisions
 ```
 
 **PP-76.** The checks MUST be performed in an order in which a failure at an earlier step prevents reliance on a later result. A verifier MUST NOT report any Layer B or Layer C fact as established when step 2 failed.
@@ -851,7 +920,7 @@ The passport's placement relative to the registry and the application follows `o
 
 ## 20. Relationship to the CHA2A Specification Group
 
-**PP-95.** This document MUST NOT be cited as amending identifier semantics, evidence semantics, or governance semantics. Identity is normative in `did-method-cha2a.md`; evidence is normative in `evidence-record.md`; who is qualified to authorize is normative in `organization-governance.md`; group collaboration is normative in `group-collaboration.md`.
+**PP-95.** This document MUST NOT be cited as amending identifier semantics, evidence semantics, or governance semantics. Identity semantics follow the DID method in use: `did:cha2a` is normative in `did-method-cha2a.md`, and other methods in their own specifications; evidence is normative in `evidence-record.md`; who is qualified to authorize is normative in `organization-governance.md`; group collaboration is normative in `group-collaboration.md`.
 
 **PP-96.** The requirements of this document are normative for the **Passport object**: its members, its signature, its lifecycle, its verification procedure, its disclosure sets and its conformance tests. Where a requirement here and a requirement in another volume of the family apply to the same conduct, this document governs the passport object and the other volume governs its own subject.
 
@@ -918,7 +987,7 @@ A conformance claim names a **role**. The roles are distinct and are claimed sep
 | Role | Must satisfy |
 |---|---|
 | **Issuer** | PP-1 … PP-15, PP-19, PP-24, PP-29, PP-34, PP-37, PP-38, PP-48, PP-52, PP-56 … PP-58, PP-64 … PP-66, PP-81, PP-95 |
-| **Verifier** | PP-2, PP-6 … PP-18, PP-21 … PP-23, PP-28, PP-30 … PP-33, PP-35, PP-36, PP-39 … PP-51, PP-53 … PP-55, PP-59 … PP-63, PP-67 … PP-80, PP-83 … PP-94, PP-97 … PP-102 |
+| **Verifier** | PP-2, PP-6 … PP-18, PP-21 … PP-23, PP-28, PP-30 … PP-33, PP-35, PP-36, PP-39 … PP-51, PP-53 … PP-55, PP-59 … PP-63, PP-67 … PP-80, PP-83 … PP-94, PP-97 … PP-102, PP-109 … PP-114 |
 | **Holder** | PP-78, PP-79, PP-81 … PP-83 |
 
 **PP-103.** A conformance claim MUST name its role, the profiles it supports, the signature suites it implements, and the version of this specification. A claim that names none of these MUST NOT be made.
@@ -960,32 +1029,15 @@ A conformance claim names a **role**. The roles are distinct and are claimed sep
 | **T-13** | A passport carrying a member outside the requested profile's disclosure set is reported as over-disclosing (PP-79). |
 | **T-14** | A passport whose `principal` is deactivated produces `invalid` with the registry's record named as the reason (PP-69). |
 | **T-15** | An `active` subject record with `level: 0` and `verificationStatus: self-declared` passes an existence check and fails a verification check (PP-68). |
+| **T-16** | A confirmed revocation produces `invalid` / `revoked`; an unreachable status source produces `indeterminate` / `status_unavailable`; an insufficient authority basis produces `indeterminate` / `authority_basis_incomplete`. The three MUST remain distinguishable (PP-109, PP-110, PP-111). |
+| **T-17** | The result preserves per-link `linkId`, `source`, `scope`, `verdict` and `reasonCode`; if `policyAction` is present, it remains separate and does not change the verdict (PP-112). |
+| **T-18** | A complete `authorityBasis` can support an authoritatively confirmed negative authorization result; when any required field is missing, the result must be `indeterminate` / `authority_basis_incomplete` (PP-113, PP-114). |
 
 **PP-105.** Conformance evidence MUST be reproducible offline from published vectors, and MUST record the date of the run and the version of this specification tested.
 
 ---
 
-## 24. Disposition of the v0.1 Open Issues
-
-The v0.1 draft listed eleven open issues. None remains open as blank space.
-
-| v0.1 item | Disposition | Where |
-|---|---|---|
-| Exact JSON / JSON-LD data model | **decided** — JSON with JCS canonicalization, the member set of §6.1, an optional RDF context | §6, §22.1, PP-99 |
-| Normative DID / VC profile | **decided for DID** (PD-16 … PP-20, reuse of `did-method-cha2a.md`); **mapping decided, profile deferred** for VC | §7, §22.2, PP-100 |
-| Credential and attestation formats | **reused, not defined** — the evidence layer's predicates and digest form | §13.1, PP-56, PP-57 |
-| Policy expression and evaluation interface | **decided as a reference**: identifier, issuer, version, scope, window, optional digest. Evaluation is excluded | §12, PP-52 … PP-55 |
-| Delegation-chain semantics | **decided** — attenuation, monotonicity, depth, acyclicity, termination, per-link signature, validity intersection, revocation cascade | §11, PP-42 … PP-51 |
-| Revocation protocol | **registry-side, observed** — `status` and per-link `revocationRef`; the protocol itself is **NIV-1** with a precondition | §11.3, §14.3 |
-| Federation trust model | **decided for the single-domain case** — `validityDomain` plus verified `mapping`; multi-registry endorsement deferred | §17, PP-84 … PP-88 |
-| Privacy-preserving verification | **decided as disclosure sets**; **cryptographic selective disclosure is deferred** with a precondition | §16, §3.4 |
-| Human Override protocol | **not in this version (NIV-2)** — the requirement is recorded and the authority named; the protocol is excluded with a counter-example test | §11.3, PP-36 |
-| Interoperability mapping to Agent Card and A2A | **decided** — the mapping of §18.1, the boundary of PP-89, and the two counter-example tests | §18, T-7a, T-7b |
-| Relationship between Passport and organizational identity systems | **decided as placement** — the passport references, the organization's records decide | §10, §19, PP-41, PP-93 |
-
----
-
-## 25. Recommended Experimental Sequence
+## 24. Recommended Experimental Sequence
 
 Each step names what it establishes and what it depends on. The order is the order of increasing dependence on facts the reference deployment does not yet provide (Appendix B).
 
@@ -1007,7 +1059,25 @@ Each step names what it establishes and what it depends on. The order is the ord
 
 ---
 
-## 26. Normative Core — Requirement Index
+## 25. Requirement Structure and Normative Core
+
+The 114 `PP` requirements are grouped by the Passport's normative objects:
+
+| Group | Range | Count | Scope | Sections |
+|---|---:|---:|---|---|
+| A | PP-1 … PP-15 | 15 | object members, source classes, digests, signatures and canonicalization | §6 |
+| B | PP-16 … PP-28 | 13 | subject identifiers, principal and the end of responsibility | §7–§8 |
+| C | PP-29 … PP-55 | 27 | capability and authority, governance context, delegation, policy references | §9–§12 |
+| D | PP-56 … PP-71 | 16 | credentials and evidence, lifecycle and status | §13–§14 |
+| E | PP-72 … PP-83, PP-109 … PP-114 | 18 | verification procedure, verdicts, disclosure and privacy | §15–§16 |
+| F | PP-84 … PP-94 | 11 | trust context, federation, external interoperability and placement | §17–§19 |
+| G | PP-95 … PP-98 | 4 | specification boundaries, relation to other volumes, security | §20–§21 |
+| H | PP-99 … PP-105 | 7 | serialization, VC mapping, conformance claims and evidence | §22–§23 |
+| I | PP-106 … PP-108 | 3 | experimental sequence, normative-core support, implementation-status disclosure | §24, Appendix B |
+
+**Numbering rule.** A `PP` is a requirement block, not an atomic assertion. It may contain several interdependent obligations, but the block belongs to one group. Identifiers are never reused; a new requirement takes the next number and is assigned to the relevant group. A conformance test cites the `PP` identifier and states the particular condition it checks.
+
+**Normative core.** The following members and rules are the common object set on which every Passport profile depends:
 
 ```
 IDENTITY      subject · subjectKey · issuer · identifier normalization
@@ -1018,7 +1088,7 @@ DELEGATION    attenuation · monotonicity · depth · acyclic · terminates · s
 POLICY        id · issuer · version — referenced, never evaluated
 EVIDENCE      predicate by reference · evidenceRef · artifactDigest · status observed
 STATUS        passport state ⊥ identifier state · source · observedAt · statusMaxAge
-VERIFICATION  profile named · three-valued verdict · procedure order · provenance reported
+VERIFICATION  profile named · three-valued verdict · reason code · authority basis · procedure order · per-link results
 DISCLOSURE    disclosure set per profile · excluded members
 TRUST CONTEXT validityDomain · verified mapping · trust context named in the verdict
 ```
@@ -1170,7 +1240,7 @@ Recorded 2026-10-04, item by item, against the reference deployment. The gaps ar
 
 | # | Capability this specification requires | Status in the reference deployment | Consequence |
 |---|---|---|---|
-| B-1 | Passport issuance and verification | **not implemented** — no passport endpoint exists; `/api/v1/passport` and `/api/passports` return 404 with a `text/html` body | steps 1–2 of §25 are greenfield |
+| B-1 | Passport issuance and verification | **not implemented** — no passport endpoint exists; `/api/v1/passport` and `/api/passports` return 404 with a `text/html` body | steps 1–2 of §24 are greenfield |
 | B-2 | Subject identifier resolution | **implemented** — `/api/v1/did/{did}` returns a DID Core document | PP-16, PP-17 satisfied |
 | B-3 | Subject-held key, registered and rotatable | **implemented for registration** — `/api/v1/agent/{did}/keys` returns `#agent-key` with fingerprint and rotation state; **not implemented for action signing** — no endpoint or convention records a subject signature over an action | PP-21 satisfied; PP-23 and threat TH-2 unexercised |
 | B-4 | Signature suite and signed payload | **implemented as a liveness proof** — `/api/v1/trust/proof` returns `Ed25519Signature2020` over a payload of `{did, type, created}` | PP-11 satisfied; the payload **does not bind claim content**, so a passport needs its own payload (PP-10) |
@@ -1186,4 +1256,4 @@ Recorded 2026-10-04, item by item, against the reference deployment. The gaps ar
 
 ---
 
-*CHASI · CHA2A specification group · Agent Passport · v1.0 · 2026-10-19*
+*CHASI · CHA2A specification group · Agent Passport · v1.2 · 2026-10-31*

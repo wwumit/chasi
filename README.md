@@ -1,26 +1,25 @@
 # CHASI: Compliance Hub for Agent Society Infrastructure
 
-**Toward a Governed, Interoperable and Human-Centric Agent Society**
+**Specifications for cross-subject identity, authority and evidence in an agent society**
 
-> **We envision an Internet where humans and autonomous agents can participate, cooperate, transact and coexist through open, trusted and governed social infrastructure.**
-> — *CHASI Vision*, closing statement
+> **CHASI documents open interfaces for cross-subject identity, authority, evidence and governance.**
 
-## The vision
+## Problem and objective
 
-**The next transformation is not simply better AI, but the emergence of an Agent Society.** Artificial intelligence is moving from models that generate information toward autonomous agents that can discover services, communicate, collaborate, make decisions, delegate authority, transact, and act on behalf of humans and organizations.
+**The central object of this repository is the Agent Society.** It is an operating environment composed of people, organizations, agents and groups that requires cross-subject governance and interoperability. AI systems are moving from generating information toward discovering services, communicating, collaborating, making decisions, accepting delegated authority and acting on behalf of a subject.
 
-CHASI proposes a vision for the **social infrastructure** that society then needs: an open, interoperable and governed environment in which humans, agents, organizations and groups can establish **identity, trust, authority, relationships, evidence and accountability**.
+CHASI studies the governance and interoperability infrastructure this environment requires, including **identity, trust, authority, relationships, evidence and accountability** across subjects.
 
-**CHASI is not another agent protocol, and it is not a regulator.** It complements and connects existing protocols and standards, and fills the governance and social-infrastructure layer that becomes necessary when agents move from isolated tools to persistent participants in an Internet-scale society.
+**CHASI is not another agent protocol, and it is not a regulator.** It connects existing protocols and standards and adds governance, evidence and accountability interfaces for cross-organizational use.
 
-**Its core claim, in one line** — *an organization is a governance subject; a group is a collaboration subject.* Governance boundaries and collaboration boundaries are **expressed separately**, and **neither presupposes a central trust root**.
+**At the document level, the core division is:** *an organization is a governance subject; a group is a collaboration subject.* Governance boundaries and collaboration boundaries are **expressed separately**, and **neither presupposes a central trust root**.
 
 ## What is in this repository
 
 | Layer | Document | Version |
 |---|---|---|
-| **L1 · vision** | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v2.25 |
-| | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.25 |
+| **L1 · vision** | [`chasi-vision-en.md`](./vision/chasi-vision-en.md) — English | v2.26 |
+| | [`chasi-vision-zh.md`](./vision/chasi-vision-zh.md) — 中文 | v2.26 |
 | **L2 · architecture** *(states no requirements)* | [`protocol-suite-architecture.md`](./architecture/protocol-suite-architecture.md) · [`-zh`](./architecture/protocol-suite-architecture-zh.md) — the upper architecture | v0.2 |
 | | [`governance-architecture.md`](./architecture/governance-architecture.md) · [`-zh`](./architecture/governance-architecture-zh.md) | v0.3 |
 | | [`compliance-hub-architecture.md`](./architecture/compliance-hub-architecture.md) · [`-zh`](./architecture/compliance-hub-architecture-zh.md) | v0.1 |
@@ -29,9 +28,9 @@ CHASI proposes a vision for the **social infrastructure** that society then need
 | | [`group-collaboration.md`](./specs/group-collaboration.md) · [`-zh`](./specs/group-collaboration-zh.md) | v0.2 |
 | | [`question.md`](./specs/question.md) · [`-zh`](./specs/question-zh.md) | v0.2 |
 | | [`naming.md`](./specs/naming.md) · [`-zh`](./specs/naming-zh.md) | v0.4 |
-| | [`passport.md`](./specs/passport.md) · [`-zh`](./specs/passport-zh.md) — the Passport object | v1.0 |
+| | [`passport.md`](./specs/passport.md) · [`-zh`](./specs/passport-zh.md) — the Passport object | v1.2 |
 | **L4 · profiles** | [`assembly.md`](./profiles/assembly.md) · [`-zh`](./profiles/assembly-zh.md) | v0.3 |
-| | [`lexicon.md`](./profiles/lexicon.md) · [`-zh`](./profiles/lexicon-zh.md) | v0.2 |
+| | [`lexicon.md`](./profiles/lexicon.md) · [`-zh`](./profiles/lexicon-zh.md) | v0.3 |
 | | [`compliance-profile.md`](./profiles/compliance-profile.md) · [`-zh`](./profiles/compliance-profile-zh.md) | v0.1 |
 | **L5 · evidence and conformance** | *not in this repository* — evidence lives in `did-method-cha2a`; conformance vectors and checkers in `cha2a-conformance` | — |
 | **L6 · implementation and operation** | *not in this repository* — implementations live in their own repositories | — |
@@ -73,7 +72,7 @@ These documents state **no identity requirement of their own**. They are written
 
 Every interface point is listed in §10 or §11 of the volume that exercises it, so a different binding satisfying them can take the example's place.
 
-## Reading order
+## Document order
 
 | Order | Document | What it answers |
 |---|---|---|
@@ -98,7 +97,7 @@ Experimental drafts. Each specification volume states requirements for its own s
 
 - **Licence**: Apache License 2.0 (see `LICENSE`).
 - **Participation**: via GitHub issues / PRs.
-- **What belongs in this repository**: **only material intended to be read.** "Not yet public" means *not yet ready to be read* — not a place to park things that should not be published. Work plans, version plans, ledgers, internal reviews and distribution material are kept elsewhere and do not enter it, in any directory and at any revision.
+- **What belongs in this repository**: **only material intended for publication.** "Not yet public" means *not yet ready for publication*, not a place to park things that should not be published. Work plans, version plans, ledgers, internal reviews and distribution material are kept elsewhere and do not enter it, in any directory and at any revision.
 - **Change discipline**: a substantive change to a volume bumps that volume's version. A note describing what changed is written **only once the version it supersedes has been public** — before that, the iteration is not narrated. Editing and links may be committed on their own.
 - **Review cadence**: items left to the deploying parties, and any question a volume does not answer, are revisited when that volume is version-bumped.
 - **Reference deployment of the worked binding**: `https://compliancehub.cn`.

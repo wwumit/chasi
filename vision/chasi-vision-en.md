@@ -4,20 +4,20 @@
 
 ---
 
-> Status: draft v2.25 | Kind: **vision**
+> Status: draft v2.26 | Kind: **vision**
 > **This document says *why*, and *where to*. It creates no obligation for any party.** Where it conflicts with a specification, the specification governs.
 
 ---
 
-## 0. One Sentence
+## 0. Summary
 
-> **A person need not read the inside of any agent, and need not trust any platform, in order to live and work alongside them —**
-> **and to keep the room to question, to hold others to account, to leave, and not to be watched without bound.**
+> **A third party belonging to no party should be able to check who acted, who authorized the action, which rules applied, what evidence was left, and who finally bears responsibility.**
 >
-> **This is not only a matter between people and agents.** Every relationship among organizations, groups and agents should be checkable by a third party **that belongs to none of them** — rather than booked by one of the parties.
+> **The same requirement applies to every relationship among organizations, groups and agents.**
+
 ## 1. Membership Is Plural
 
-An agent society is not "a crowd of agents", and it is not "humans and agents". From the Internet to the Agent Internet to Agent Societies, what has increased is never the number of connections, but **which kinds of member have appeared in the society**.
+**The Agent Society in this vision has four kinds of subject: people, organizations, agents and groups.** The kinds of member determine the boundaries of governance and collaboration; the number of connections is not the criterion.
 
 | Position | Who / what | Note |
 |---|---|---|
@@ -27,13 +27,13 @@ An agent society is not "a crowd of agents", and it is not "humans and agents". 
 | | **Group** | temporary, long-lived, cross-organizational; **a family or a community is its smallest form**; it may have rules and a memory of its own |
 | **Not a subject** | **Service · tool · resource · data** | they do not belong to the society, but the society uses them — **so they too need names that can be cited, and those names must not be mistaken for subjects** |
 
-**One agent may belong to several organizations and groups at once**, and its role in each may differ. This is the ground the whole vision stands on: **if "belongs to whom" has only one answer, there is no society, only ownership.**
+**One agent may belong to several organizations and groups at once**, and its role in each may differ. Belonging therefore cannot be reduced to a single answer; identity and authority must be expressed for each context.
 
 **One kind that has no place here yet.** The four kinds of subject above are peers, but there will be entities that are **both an agent and an organization** — an autonomous entity that is itself a legal person, holding assets, concluding contracts, bearing responsibility and being held to it. This table gives it no place yet. **Undecided: which kind it is** — to be settled by whether its capability set differs from both an organization's and an agent's.
 
 ## 2. What Is in This Society
 
-Not "what features will it have", but **the things a society normally has** — **this section is the body of the vision**. The third column gives the condition each one rests on; **the conditions themselves are in §3**, and are only pointed at and supplemented here:
+This section lists the elements a society normally needs. The third column gives the condition each one rests on; **the conditions themselves are in §3**, and are only pointed at and supplemented here:
 
 | It has | Meaning | The condition it rests on |
 |---|---|---|
@@ -54,7 +54,7 @@ Not "what features will it have", but **the things a society normally has** — 
 
 **One boundary.** Exchange, payment, settlement and listing are outside this family's scope (§17); the authority and evidence an exchange rests on are inside it, and their condition is **①**.
 
-## 3. Seven Conditions That Make It Liveable
+## 3. Seven Conditions for Sustained Operation
 
 **① is necessary, not sufficient.**
 
@@ -85,15 +85,15 @@ Not "what features will it have", but **the things a society normally has** — 
 
 **Two items that used to be listed as separate questions are folded in above.** "How far the scope reached" is part of the answer to the second question; "who bears responsibility" is part of the answer to the fourth. They are not fifth and sixth questions — **treating them as separate questions means judging the same thing twice in two places.**
 
-**① makes actions checkable; ②–⑦ make actions safe to take.** A world with only ① is **auditable but not liveable**: everything can be established after the fact, and nothing can be done with confidence.
+**① makes actions checkable; ②–⑦ define the range in which actions can take place safely.** With only ①, an action can be established after the fact, but participants lack dependable boundaries.
 
-## 4. From here to there
+## 4. What Is Missing
 
-§1–§3 describe a habitable agent society.
+§1–§3 describe an agent society that can operate sustainably.
 
-**What these capabilities are for, in the end, is one thing: tracing responsibility to its source.** Starting from an action, one can find who did it, under whose authority, under which version of the rules, on what evidence, and who finally answers for it — without a break in the chain.
+**These capabilities serve one purpose: tracing responsibility to its source.** Starting from an action, one can find who did it, under whose authority, under which version of the rules, on what evidence, and who finally answers for it, without a break in the chain.
 
-Getting there does not need another identity protocol — identity, credentials, discovery, scope narrowing and audit each have people working on them. What is missing is two positions, and two defaults that will be picked unless they are named.
+Identity, credentials, discovery, scope narrowing and audit already have work behind them. What is missing is two positions, and two defaults that are likely to be adopted unless they are named.
 
 **One. The seven conditions are spread across different parties, and no single place carries them together.**
 
@@ -103,9 +103,9 @@ Getting there does not need another identity protocol — identity, credentials,
 | ① Third-party answer | the records that count are mostly held by the parties themselves | a third party belonging to no one can answer |
 | ⑤ Time coordinate | no layer carries "which rule was in force then" | a rule change is itself citable |
 
-Each of the three has someone working on it; none has a single place carrying all three. **What is missing is a position, not a capability.**
+Each of the three has someone working on it; none has a single place carrying all three. **The capabilities exist separately; what is missing is a position that carries them together.**
 
-**Two. Two defaults push the society toward the uninhabitable side.**
+**Two. Two defaults make these conditions difficult to hold at the same time.**
 
 | Default | What the world becomes | What is lost |
 |---|---|---|
@@ -122,7 +122,7 @@ The second does not follow from ① itself. ① asks only that a question be ans
 
 ## 5. A governable agent internet
 
-A governable agent internet is not one where every agent is plugged into a single platform. It is one where agents carry their own identity, authority and evidence across each other's boundaries — and no party has to be persuaded first to trust a centre.
+In a governable agent internet, agents carry their own identity, authority and evidence across boundaries, and no party has to accept a centre first.
 
 What we have in mind:
 
@@ -137,9 +137,9 @@ What we have in mind:
 9. **Exit is normal, not an incident.** A member can leave; rights and obligations each have a destination; records do not disappear because someone left.
 10. **People are not monitored wholesale, but can question and hold others to account.** Governance and audit take the minimum necessary; any agent's action can be traced to a party answerable for it; a person can question that party and seek accountability under law or agreement.
 
-**Together: governance is not concentrated anywhere; it is distributed across the members, and there is always a third party belonging to no one that can check it.**
+**Governance is distributed across the members, and a third party belonging to no one can check it.**
 
-### 5.1 Where CHASI sits in this picture
+### 5.1 Where CHASI sits in this target state
 
 **A venue.** It assembles parts from different sources, uses experiments it designs and runs itself to test whether these ten can hold at once, and publishes the result of every experiment as a record.
 
@@ -168,7 +168,7 @@ CHASI is not a regulator and will not become one. But a vision can hold expectat
 
 ---
 
-## 6. What this picture does not include
+## 6. What this target state does not include
 
 - **Not another agent protocol.** Communication, identity, discovery and narrowing delegation each have their own owners (§5);
 - **Not a standards body.** It does not vote, does not ballot, sets no entry threshold;
@@ -187,9 +187,9 @@ CHASI is not a regulator and will not become one. But a vision can hold expectat
 
 **This family's own responsible entity is not yet written down.** §12 requires the end of responsibility to be a person or a legal entity; this section and the document as a whole impose that requirement on every subject, but **do not say which legal entity is responsible for the records CHASI itself publishes**. A record published by CHASI and later shown to be wrong needs a party that can be held to account. **Undecided: this family's own responsible entity.**
 
-## 7. What CHASI Gives Up for This Picture
+## 7. What CHASI Does Not Adopt for This Target State
 
-For this picture to hold, CHASI has to give up several things that would be easier to do. Each row is a trade-off and what it binds this family to.
+For this target state to hold, CHASI has to exclude several easier options. Each row is a trade-off and what it binds this family to.
 
 | Given up | Why | Therefore CHASI must |
 |---|---|---|
@@ -198,11 +198,11 @@ For this picture to hold, CHASI has to give up several things that would be easi
 | **Facts, not ratings** | record facts; judgement is left to each verifier. Issuing a rating would make the issuer a party to the trust judgement | no conclusive rating by this family appears in a record. §11 capability 7's "profiles and grading" **declares what must be met**, it does **not judge who has met it** |
 | **Records outlive their subject** | a record must be able to outlive the organization and platform that produced it; otherwise it is a log, not evidence | see below — this is in tension with the design in §13, and is unresolved |
 | **Downgrades must be visible** | a silent downgrade is a deception | a status transition must leave a trace, and be **visible to every party that relies on that status**; "visible" needs defining: who, within what time, by what route |
-| **Presuppose no system** | otherwise this place is only the entrance hall of one ecosystem | no identity system or runtime may be made a precondition of taking part |
+| **Presuppose no system** | otherwise admission would depend on one ecosystem's conditions | no identity system or runtime may be made a precondition of taking part |
 | **Autonomy is not an exception** | autonomy within boundaries is the norm; a system that must ask at every step is a tool, not a member | **"asking at every step" may not be used as the means of satisfying verifiability**; verification defaults to after the fact or to sampling, and departing from that default must be justified by the declaring party (§4) |
 | **Questioning and accountability replace surveillance** | questioning and holding to account do not require seeing everything; unbounded surveillance is not a precondition of accountability | **a record published by this family must let a third party belonging to none of the parties answer "who did it, on what authority"**; a record may not be visible only to the parties |
 
-**The last two restate the conditions in §3; they are not repeated here — only what they require of this family.** §3④ and §3⑦ say what a society needs in order to be liveable; this table says what CHASI must therefore do. **Each "therefore" entry gives a checkable landing point.**
+**The last two restate the conditions in §3; they are not repeated here — only what they require of this family.** §3④ and §3⑦ state conditions for sustained operation; this table says what CHASI must therefore do. **Each "therefore" entry gives a checkable landing point.**
 
 **One unresolved tension: records outlive their subject × each organization keeps its own memory.**
 
@@ -214,13 +214,13 @@ The fourth row above requires that "a record be able to outlive the organization
 
 ## 8. Constitutional Principles for an Agent Society (a proposal)
 
-If the Agent Society becomes a new social form, then besides protocols it needs a set of clauses something like a constitution. This section puts forward one, provisionally called the **CHASI Agent Society Constitutional Principles**.
+If the Agent Society needs a set of common clauses something like a constitution, then besides protocols it needs a set of constraints. This section puts forward one, provisionally called the **CHASI Agent Society Constitutional Principles**.
 
 The three tables bind different parties:
 
 | Section | What it is | Who it binds |
 |---|---|---|
-| §3, the seven conditions | the properties a society needs in order to be liveable | descriptive — not met, and it is not liveable |
+| §3, the seven conditions | the properties a society needs for sustained operation | descriptive — if unmet, sustained operation is not possible |
 | §7, CHASI's own choices | constraints this place accepts for itself | binds this family only |
 | **§8, this section** | which clauses a constitution would at least have to contain | **binds no one** — whether to adopt them is the society's own decision |
 
@@ -330,11 +330,11 @@ CHASI has exactly one boundary — **the stretch that crosses subjects and cross
 
 The five dispositions form a decision procedure and therefore need a decision record. Which dispositions were tested, and where the conclusion landed, should be checkable; otherwise there is no telling whether "define our own" was necessary or merely convenient. **Undecided: who makes the decision, where it is recorded, and which of §9's record classes it belongs to.**
 
-**Composition, not replacement.** What is missing today is not agents that can talk to each other, but the layer that keeps "who authorized what, on what basis, and who answers for the result" verifiable when those agents belong to different organizations and different trust domains. CHASI produces no new intelligence; it produces **cross-domain verifiability**.
+**CHASI provides a composition layer.** When agents belong to different organizations and different trust domains, they need a layer that keeps "who authorized what, on what basis, and who answers for the result" verifiable. CHASI produces **cross-domain verifiability**, not new intelligence.
 
 ## 11. The Eight Core Capabilities of the Compliance Hub
 
-These eight are not eight small features but **eight links in one chain**: from "who you are" to "you can be found".
+The eight form **eight links in one chain**: from "who you are" to "you can be found".
 
 The eight are **conditions of a composition**, not mechanism definitions (§5): this family does not specify "how to identify an agent" or "how to discover"; it specifies **what a path assembled from these parts must satisfy**. Each row below therefore gives both "what it does" and "what it does not do".
 
@@ -359,7 +359,7 @@ The eight are **conditions of a composition**, not mechanism definitions (§5): 
 
 ## 12. Causal Accountability Chain
 
-One of CHASI's key lines of research is turning **action by a subject** from "black-box execution" into a verifiable causal accountability chain.
+One of CHASI's key lines of research is turning **action by a subject** from an uncheckable execution record into a verifiable causal accountability chain.
 
 ```
 
@@ -379,7 +379,17 @@ Evidence → Outcome → Accountability
 
 Each arrow in the figure is a kind of **delegation**; each link carries the seven items below, which make the chain checkable.
 
-What it must finally answer is not only "what happened", but "why it happened, who authorized it, what the scope of that authority was, whether it was exceeded, and who bears responsibility".
+**This chain is one path for tracing responsibility, not the only governance topology.** Registrars, discovery providers, credential issuers and controllers may be authorized separately; their verification paths may run in parallel, cross one another, or refer to one another. The causal accountability chain answers how one action is authorized and traced to a responsible subject; it does not force every role into a single delegation chain.
+
+| Path | The question it answers |
+|---|---|
+| Causal accountability chain | how one action is derived from authority and traced to a responsible subject |
+| Registration path | who may register a subject, within which scope and with what current status |
+| Discovery path | who may index and return a resource, and what provenance the result carries |
+| Credential path | which credential issuer makes a claim under which profile, and what its status is |
+| Control path | which controller or delegated operator may make the change or perform the action |
+
+It must ultimately answer why the action happened, who authorized it, what the scope of that authority was, whether it was exceeded, and who bears responsibility. Answering only "what happened" is insufficient for responsibility.
 
 **"Causal" adds a derivation of justification beyond an audit log.** The three differ as follows:
 
@@ -454,7 +464,7 @@ The "who reads" column above is about **obtainability**, not verifiability. The 
 
 **Different memories of the same event are allowed.** A centralized database carries an implicit assumption: "there is only one correct version". But disagreement is the norm: two parties' understandings of the same transaction may both be honest and still not agree. Societal memory should therefore not pretend there is one version, but keep **records from several sources and the disagreements among them**; **no party may be the sole adjudicator of a memory it is party to** — adjudication goes to a dispute process. (**The provider of the dispute process is undecided**, see §8; this section and §8's Due Process both depend on it, and it is the writer of Dispute Memory.)
 
-**Federated, not central.** CHASI's direction is not to build a centralized "all-knowing database" but to explore a verifiable, authorizable, minimally disclosing Federated Societal Memory: each organization keeps its own memory, and across domains only the necessary part is exchanged, with "what was exchanged" itself leaving a trace. **Undecided: who holds the trace of an exchange** — if either party to the exchange holds it alone, the problem returns to "the holder is the adjudicator".
+**Federated societal memory.** CHASI explores a verifiable, authorizable, minimally disclosing Federated Societal Memory: each organization keeps its own memory, and across domains only the necessary part is exchanged, with "what was exchanged" itself leaving a trace. **Undecided: who holds the trace of an exchange**; if either party to the exchange holds it alone, that holder becomes the adjudicator.
 
 **Its relation to the accountability chain.** **§12**'s chain answers **one action**; societal memory answers **what we jointly remember about this class of thing**. The former is vertical (the chain of one action), the latter horizontal (the layer all subjects share). Without the former, memory cannot be checked; without the latter, every action must be proved from scratch.
 
@@ -525,7 +535,7 @@ If this works, in ten years it should be a **citable public memory**. Ten years 
 
 **Memory is the form in which a society continues.** This is a checkable causal claim: if a society cannot keep its common events, rule changes and dispute outcomes, its next round of decisions has nothing to cite from the last (§13 already states that without it, "every action must be proved from scratch").
 
-**This memory rests on §3's ①, ⑤ and ⑥, not all seven.** ① supplies verifiability, ⑤ supplies "the change has a history", and ⑥ supplies minimal disclosure. ③ exitable, ④ accountable and ⑦ autonomous are conditions for a society to be liveable; this document does not claim they are also preconditions of memory.
+**This memory rests on §3's ①, ⑤ and ⑥, not all seven.** ① supplies verifiability, ⑤ supplies "the change has a history", and ⑥ supplies minimal disclosure. ③ exitable, ④ accountable and ⑦ autonomous are conditions for sustained operation; this document does not claim they are also preconditions of memory.
 
 ## 17. Boundaries: what this family does not do, and the conditions each would need
 
@@ -565,7 +575,7 @@ None of the six is permanently excluded: each states what condition would let it
 | Where it appears | Who it binds |
 |---|---|
 | this family's constraints on itself (e.g. §10, "may not dictate how a lower layer is implemented"; the "what it does not do" of each item in §11) | binds this family only |
-| descriptions of liveability conditions (§3's seven) | descriptive — not met, and that society is not liveable |
+| descriptions of sustained-operation conditions (§3's seven) | descriptive — if unmet, that society cannot operate sustainably |
 | a proposal to society (§8's ten) | binds no one; whether to adopt it is the society's own decision |
 
 The ten clauses in §8 use the form of "should" and "must"; they are a **proposal** and do not create an obligation imposed by this document.
@@ -588,8 +598,8 @@ This document is a vision under continuing revision: every substantive change ra
 
 If CHA2A is our technical exploration of the Agent Internet and the Agent Society, then CHASI can be a larger vision: an open governance hub belonging to no single company, platform or agent runtime.
 
-It is not there to control agents, but so that autonomy, trust, responsibility and freedom can exist at the same time.
+CHASI does not control agents; its objective is to let autonomy, trust, responsibility and freedom hold at the same time.
 
-In that sense, what lets such a society exist at scale is not a restriction on agents but **verifiability** — which is what Compliance in this document's name refers to (see §5), not a compliance judgement.
+The basis for such a society to exist at scale is **verifiability**. Compliance in this document's name refers to that condition (see §5), not to a compliance judgement.
 
-—— CHASI Vision · v2.25
+—— CHASI Vision · v2.26
