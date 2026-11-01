@@ -99,6 +99,10 @@ Experimental drafts. Each specification volume states requirements for its own s
 
 - **Licence**: Apache License 2.0 (see `LICENSE`).
 - **Participation**: via GitHub issues / PRs.
+- **Contribution rules**: [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+- **Security reports**: [`SECURITY.md`](./SECURITY.md), using private reporting
+  rather than a public issue.
+- **Conduct**: [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md).
 - **What belongs in this repository**: **only material intended for publication.** "Not yet public" means *not yet ready for publication*, not a place to park things that should not be published. Work plans, version plans, ledgers, internal reviews and distribution material are kept elsewhere and do not enter it, in any directory and at any revision.
 - **Change discipline**: a substantive change to a volume bumps that volume's version. A note describing what changed is written **only once the version it supersedes has been public** — before that, the iteration is not narrated. Editing and links may be committed on their own.
 - **Review cadence**: items left to the deploying parties, and any question a volume does not answer, are revisited when that volume is version-bumped.
