@@ -118,6 +118,21 @@ successful Passport verification is not admission.
 - Existing camelCase catalog projections require adapters; they do not define
   the public Card format.
 
+### 7.1 Signature profile
+
+When a public Card carries `signatures[]`, the profile uses A2A detached JWS:
+
+- each signature has `protected` and `signature`;
+- the protected header is base64url-encoded JSON;
+- `alg` is `EdDSA`;
+- `kid` selects the verification key;
+- the detached payload is
+  `BASE64URL(protected) + "." + BASE64URL(JCS(card without signatures))`.
+
+A verifier MUST reject a malformed signature, an unresolved `kid`, or a
+signature that does not verify. Presence of a signature establishes the signing
+key, not the truth of capability claims.
+
 ## 8. Conformance
 
 Minimum conformance requires:
@@ -128,6 +143,7 @@ Minimum conformance requires:
 4. Passport reference, if present, has an absolute URI and SHA-256 digest;
 5. no embedded dynamic trust level or revocation claim;
 6. verification sequence executes without treating Card presence as trust.
+7. any present Card signature verifies under the selected `kid`.
 
 ## 9. Open decisions
 

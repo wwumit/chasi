@@ -109,6 +109,20 @@ Card 被发现不等于可信；被 Registry 收录不等于可信；Passport �
 - 私有或 catalog 投影与规范 well-known Card 分离；
 - 现有 camelCase catalog 通过适配器兼容，不定义公开 Card 格式。
 
+### 7.1 签名剖面
+
+公开 Card 携带 `signatures[]` 时，本剖面采用 A2A detached JWS：
+
+- 每个签名包含 `protected` 与 `signature`；
+- protected header 是 base64url 编码的 JSON；
+- `alg` 为 `EdDSA`；
+- `kid` 用于选择验签公钥；
+- detached payload 为
+  `BASE64URL(protected) + "." + BASE64URL(JCS(移除了 signatures 的 card))`。
+
+签名畸形、`kid` 无法解析或验签失败时必须拒绝。签名只确立签名密钥，不证明能力
+声明为真。
+
 ## 8. 一致性
 
 最小一致性要求：
@@ -119,6 +133,7 @@ Card 被发现不等于可信；被 Registry 收录不等于可信；Passport �
 4. Passport 引用存在时具有绝对 URI 和 SHA-256 摘要；
 5. 不内嵌动态信任等级或撤销结论；
 6. 完整验证序列不得把 Card 存在当作信任。
+7. 存在 Card 签名时，必须能按 `kid` 验证通过。
 
 ## 9. 开放问题
 
