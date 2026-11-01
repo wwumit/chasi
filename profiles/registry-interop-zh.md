@@ -1,6 +1,6 @@
 # Passport–Registry 互操作剖面
 
-> 状态：起草稿（v0.1）| 日期：2026-11-01 | 层级：**L4 · 剖面**
+> 状态：起草稿（v0.2）| 日期：2026-11-01 | 层级：**L4 · 剖面**
 >
 > 本剖面约束 Passport 验证方如何消费 Registry。它不替代 DID 方法、
 > Registry API 或验证方策略。
@@ -56,13 +56,15 @@ Registry 回答，验证方决定。
 | `source` | 观测来源 |
 | `registryDid` | 记录所属 Registry |
 | `observedAt` | 验证方观测时间 |
+| `timeBasis` | `source` 或 `adapter-observation` |
 | `subjectRecord` | 来源特定的状态事实 |
 
 `revision` 和 `proof` 是可选能力。声明 `revisioned-reads` 的 Registry
 必须保证同一主体的 revision 单调递增。
 
-Registry 如果提供自身断言时间，适配器宜暴露为 `sourceAssertedAt`，且必须与
-`observedAt` 区分。
+Registry 如果提供自身断言时间，适配器宜暴露为 `sourceAssertedAt`，并将
+`timeBasis` 设为 `source`。否则 `timeBasis` 必须为 `adapter-observation`；
+适配器不得把自己的取得时间表述为 Registry 断言。
 
 优先级为 `revoked` > `suspended` > `expired` > `active`。缺失、矛盾或无法映射的
 状态不得转换为 `active`。
@@ -105,8 +107,9 @@ Registry 未提供 `sourceAssertedAt` 时，适配器可以使用取得响应的
 4. peer 失败不得转换成本地成功；
 5. 自动 peer 发现不属于本剖面。
 
-Peer 认证可采用 mTLS、工作负载身份或受作用域限制的 Bearer Token。具体机制由部署
-选择，但信任响应前必须建立 peer 身份。
+Peer 认证可采用 mTLS、签名请求、工作负载身份，或在受控试点中使用受作用域限制的
+Bearer Token。具体机制由部署选择，但信任响应前必须建立 peer 身份。长期共享
+Bearer Token 不构成生产一致性声明。
 
 ## 6. Registry 写入
 
@@ -146,6 +149,9 @@ Registry 可声明：
 
 不支持的能力必须省略，不得以保留能力名义对外声明。
 
+能力声明的规范位置是 Registry 发现文档 `/.well-known/cha2a` 中的
+`capabilities`。另设独立能力文档需要未来版本重新规定。
+
 ## 9. 一致性
 
 最小一致性要求：
@@ -157,11 +163,12 @@ Registry 可声明：
 5. unknown 不得转为 active；
 6. peer 来源显式且故障 fail-closed。
 
-Proof、证据、revision 和写入属于独立能力测试。
+Proof、证据、revision 和写入属于独立能力测试。基础 `v0.2` 不强制状态 proof；
+验证方可以在跨域准入策略中自行要求。
 
-## 10. 开放问题
+## 10. v0.2 决定
 
-- 未来主版本是否强制要求 `sourceAssertedAt`；
-- 跨域准入是否强制要求状态 proof；
-- peer 身份采用 mTLS、签名请求还是工作负载身份；
-- Registry 能力文档的规范位置。
+- 不强制 `sourceAssertedAt`，但强制 `timeBasis`；
+- 基础 Profile 不强制状态 proof，由验证方策略决定；
+- peer 必须显式配置并完成身份认证，不固定唯一技术；
+- 能力声明放在 `/.well-known/cha2a`。

@@ -32,8 +32,8 @@ CHASI 研究这一环境所需的治理与互操作基础设施，包括跨主�
 | **L4 · 剖面** | [`assembly-zh.md`](./profiles/assembly-zh.md) · [`en`](./profiles/assembly.md) | v0.3 |
 | | [`lexicon-zh.md`](./profiles/lexicon-zh.md) · [`en`](./profiles/lexicon.md) | v0.3 |
 | | [`compliance-profile-zh.md`](./profiles/compliance-profile-zh.md) · [`en`](./profiles/compliance-profile.md) | v0.1 |
-| | [`registry-interop-zh.md`](./profiles/registry-interop-zh.md) · [`en`](./profiles/registry-interop.md) | v0.1 |
-| | [`agent-card-identity-zh.md`](./profiles/agent-card-identity-zh.md) · [`en`](./profiles/agent-card-identity.md) | v0.1 |
+| | [`registry-interop-zh.md`](./profiles/registry-interop-zh.md) · [`en`](./profiles/registry-interop.md) | v0.2 |
+| | [`agent-card-identity-zh.md`](./profiles/agent-card-identity-zh.md) · [`en`](./profiles/agent-card-identity.md) | v0.2 |
 | **L5 · 证据与一致性** | *不在本仓*——证据由 `did-method-cha2a` 承载；一致性向量与核对器在 `cha2a-conformance` | — |
 | **L6 · 实现与运营** | *不在本仓*——各实现另在自己的仓 | — |
 | **L7 · 方法** | [`use-case-laboratory-zh.md`](./method/use-case-laboratory-zh.md) · [`en`](./method/use-case-laboratory.md) | v1.0 |
