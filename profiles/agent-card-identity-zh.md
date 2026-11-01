@@ -1,6 +1,6 @@
 # Agent Card 身份扩展剖面
 
-> 状态：起草稿（v0.1）| 日期：2026-11-01 | 层级：**L4 · 剖面**
+> 状态：起草稿（v0.2）| 日期：2026-11-01 | 层级：**L4 · 剖面**
 >
 > 本剖面采用 A2A Agent Card 作为能力发现对象，只增加身份引用。它不重定义 A2A。
 
@@ -34,7 +34,7 @@ Agent Card 不确立责任、授权或当前信任状态。这些分别由 Passp
 urn:cha2a:ext:agent-identity:v1
 ```
 
-它是暂定 URN。命名空间和解析策略稳定前，不得发布正式 HTTP URI。
+`v0.2` 继续使用该暂定 URN。命名空间和解析策略稳定前，不得发布正式 HTTP URI。
 
 扩展只携带引用，不复制第二份凭证：
 
@@ -67,7 +67,7 @@ urn:cha2a:ext:agent-identity:v1
 | 成员 | 要求 |
 |---|---|
 | `uri` | 绝对 HTTP(S) URI |
-| `digest` | 所取工件的 `sha256:` 摘要 |
+| `digest` | 出现 Passport 对象时必选；所取工件的 `sha256:` 摘要 |
 | `media_type` | Passport 表示的媒体类型 |
 | `profile` | Passport 对象或剖面版本 |
 
@@ -86,16 +86,17 @@ urn:cha2a:ext:agent-identity:v1
 https://agent.example/.well-known/agent-card.json
 ```
 
-Registry 托管的索引或回退 Card 可以使用，但响应必须标识其为 Registry 托管，
-不得与 Agent 自身 Card 混淆。
+Registry 托管的索引或回退 Card 可以使用，但必须标识 Registry 托管来源。
+托管副本必须保留原始 Card 字节和签名，或明确标注为不可验签副本。托管副本
+不产生新的权威，也不得与 Agent 自身 Card 混淆。
 
 ## 6. 验证顺序
 
 1. 获取 Agent Card；
-2. 如带签名，先验证 Card 签名；
+2. 如带签名，先验证 Card 签名；验证方策略可以强制要求签名并拒绝未签名 Card；
 3. 提取 `agent_did` 和 `registry_did`；
 4. 解析 `agent_did`；
-5. 获取引用的 Passport，并按需校验 `digest`；
+5. 获取引用的 Passport，并校验必选的 `digest`；
 6. 验证 Passport subject、issuer、授权和有效期；
 7. 查询 Registry 状态与撤销；
 8. 验证方执行自己的准入策略。
@@ -123,6 +124,10 @@ Card 被发现不等于可信；被 Registry 收录不等于可信；Passport �
 签名畸形、`kid` 无法解析或验签失败时必须拒绝。签名只确立签名密钥，不证明能力
 声明为真。
 
+默认情况下，`kid` 解析到 subject DID Document 的 `#agent-key` verification
+method。Registry 控制的 `#registry-key` 不得作为主体签署 Card 的证明，除非
+验证方策略显式允许。
+
 ## 8. 一致性
 
 最小一致性要求：
@@ -134,11 +139,13 @@ Card 被发现不等于可信；被 Registry 收录不等于可信；Passport �
 5. 不内嵌动态信任等级或撤销结论；
 6. 完整验证序列不得把 Card 存在当作信任。
 7. 存在 Card 签名时，必须能按 `kid` 验证通过。
+8. 验证方要求签名时，未签名 Card 必须拒绝。
+9. 默认 subject-held 密钥策略下，`#registry-key` 必须拒绝。
 
-## 9. 开放问题
+## 9. v0.2 决定
 
-- 扩展最终命名空间 URI；
-- 公开发现是否强制 Card 签名；
-- Passport URI 是否必须与 Card 同源；
-- 媒体类型注册；
-- Registry 托管回退 Card 的语义。
+- 扩展继续使用上述暂定 URN；
+- 公开发现是否要求签名由验证方策略决定；
+- Passport 与 Card 不要求同源；
+- Registry 托管回退是保留字节的缓存，不是新的权威；
+- IANA 媒体类型注册和最终命名空间 URI 暂缓。

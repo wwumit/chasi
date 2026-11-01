@@ -32,8 +32,8 @@ CHASI studies the governance and interoperability infrastructure this environmen
 | **L4 · profiles** | [`assembly.md`](./profiles/assembly.md) · [`-zh`](./profiles/assembly-zh.md) | v0.3 |
 | | [`lexicon.md`](./profiles/lexicon.md) · [`-zh`](./profiles/lexicon-zh.md) | v0.3 |
 | | [`compliance-profile.md`](./profiles/compliance-profile.md) · [`-zh`](./profiles/compliance-profile-zh.md) | v0.1 |
-| | [`registry-interop.md`](./profiles/registry-interop.md) · [`-zh`](./profiles/registry-interop-zh.md) | v0.1 |
-| | [`agent-card-identity.md`](./profiles/agent-card-identity.md) · [`-zh`](./profiles/agent-card-identity-zh.md) | v0.1 |
+| | [`registry-interop.md`](./profiles/registry-interop.md) · [`-zh`](./profiles/registry-interop-zh.md) | v0.2 |
+| | [`agent-card-identity.md`](./profiles/agent-card-identity.md) · [`-zh`](./profiles/agent-card-identity-zh.md) | v0.2 |
 | **L5 · evidence and conformance** | *not in this repository* — evidence lives in `did-method-cha2a`; conformance vectors and checkers in `cha2a-conformance` | — |
 | **L6 · implementation and operation** | *not in this repository* — implementations live in their own repositories | — |
 | **L7 · method** | [`use-case-laboratory.md`](./method/use-case-laboratory.md) · [`-zh`](./method/use-case-laboratory-zh.md) | v1.0 |

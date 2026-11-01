@@ -1,6 +1,6 @@
 # Passport–Registry Interoperability Profile
 
-> Status: draft (v0.1) | Date: 2026-11-01 | Layer: **L4 · profile**
+> Status: draft (v0.2) | Date: 2026-11-01 | Layer: **L4 · profile**
 >
 > This profile constrains how a Passport verifier consumes a Registry. It does
 > not replace a DID method, Registry API, or verifier policy.
@@ -59,13 +59,16 @@ A status observation MUST contain:
 | `source` | observation source |
 | `registryDid` | Registry responsible for the record |
 | `observedAt` | verifier observation time |
+| `timeBasis` | `source` or `adapter-observation` |
 | `subjectRecord` | source-specific status facts |
 
 `revision` and `proof` are optional capabilities. A Registry that asserts
 `revisioned-reads` MUST make revisions monotonic for one subject.
 
 If the Registry supplies its own assertion time, the adapter SHOULD expose it
-as `sourceAssertedAt` and MUST distinguish it from `observedAt`.
+as `sourceAssertedAt` and MUST set `timeBasis` to `source`. Otherwise
+`timeBasis` MUST be `adapter-observation`; an adapter MUST NOT present its own
+retrieval time as a Registry assertion.
 
 `revoked` takes precedence over `suspended`, which takes precedence over
 `expired`, which takes precedence over `active`. A missing, contradictory, or
@@ -114,9 +117,11 @@ Federation is explicit:
    local success.
 5. Automatic peer discovery is outside this profile.
 
-Peer authentication may use mTLS, workload identity, or a scoped bearer token.
-The deployment selects the mechanism; the profile requires that the peer
-identity be established before a response is trusted.
+Peer authentication may use mTLS, signed requests, workload identity, or a
+scoped bearer token for a controlled pilot. The deployment selects the
+mechanism; the profile requires that the peer identity be established before a
+response is trusted. Long-lived shared bearer tokens are not a production
+conformance claim.
 
 ## 6. Registry writes
 
@@ -160,6 +165,10 @@ A Registry MAY declare:
 
 Unsupported capabilities MUST be omitted, not advertised as reserved.
 
+The canonical location for capability declarations is the Registry discovery
+document at `/.well-known/cha2a`, under `capabilities`. A separate capability
+document requires a future profile revision.
+
 ## 9. Conformance
 
 Minimum conformance requires:
@@ -172,10 +181,13 @@ Minimum conformance requires:
 6. explicit peer provenance and fail-closed peer failure.
 
 Proof, evidence, revision and write tests are separate capability profiles.
+Status proofs are not mandatory in the base v0.2 profile; a verifier may require
+them under its own cross-domain admission policy.
 
-## 10. Open decisions
+## 10. v0.2 decisions
 
-- whether `sourceAssertedAt` is required in a future major profile;
-- whether status proofs become mandatory for cross-domain admission;
-- the peer identity profile: mTLS, signed request, or workload identity;
-- the canonical Registry capability document.
+- `sourceAssertedAt` is not mandatory; `timeBasis` is mandatory;
+- base status proof is optional and policy-driven;
+- peer identity is explicit and authenticated, without prescribing one
+  technology;
+- capabilities are declared in `/.well-known/cha2a`.

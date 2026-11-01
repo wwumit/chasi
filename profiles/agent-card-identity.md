@@ -1,6 +1,6 @@
 # Agent Card Identity Extension Profile
 
-> Status: draft (v0.1) | Date: 2026-11-01 | Layer: **L4 · profile**
+> Status: draft (v0.2) | Date: 2026-11-01 | Layer: **L4 · profile**
 >
 > This profile adopts the A2A Agent Card as the capability-discovery object and
 > adds only an identity reference. It does not redefine A2A.
@@ -35,8 +35,8 @@ The provisional extension identifier is:
 urn:cha2a:ext:agent-identity:v1
 ```
 
-It is provisional. A final HTTP URI must not be published until its namespace
-and resolution policy are stable.
+The identifier remains provisional for v0.2. A final HTTP URI must not be
+published until its namespace and resolution policy are stable.
 
 The extension carries references, not a second credential:
 
@@ -69,7 +69,7 @@ Optional Passport reference:
 | Member | Requirement |
 |---|---|
 | `uri` | absolute HTTP(S) URI |
-| `digest` | `sha256:` digest of the fetched artifact |
+| `digest` | REQUIRED when the Passport object is present; `sha256:` digest of the fetched artifact |
 | `media_type` | media type of the Passport representation |
 | `profile` | Passport object/profile version |
 
@@ -91,17 +91,20 @@ The preferred canonical location is the agent origin:
 https://agent.example/.well-known/agent-card.json
 ```
 
-A Registry-hosted card is allowed as an indexed or fallback representation.
-The response must identify that it is Registry-hosted and must not be confused
-with the agent-origin card.
+A Registry-hosted Card is allowed as an indexed or fallback representation.
+It MUST identify the Registry-hosted source. The hosted representation MUST
+preserve the original Card bytes and signatures, or explicitly state that the
+copy is not signature-verifiable. A hosted copy does not become a new
+authority and MUST NOT be confused with the agent-origin Card.
 
 ## 6. Verification sequence
 
 1. Fetch the Agent Card.
-2. Verify the Card signature if one is present.
+2. Verify the Card signature if one is present. A verifier policy may require
+   a signature and reject an unsigned Card.
 3. Extract `agent_did` and `registry_did`.
 4. Resolve `agent_did`.
-5. Fetch the referenced Passport and enforce `digest`, if present.
+5. Fetch the referenced Passport and enforce its required `digest`.
 6. Verify the Passport subject, issuer, authority and validity.
 7. Query Registry status and revocation.
 8. Apply the verifier's own admission policy.
@@ -133,6 +136,11 @@ A verifier MUST reject a malformed signature, an unresolved `kid`, or a
 signature that does not verify. Presence of a signature establishes the signing
 key, not the truth of capability claims.
 
+By default, `kid` resolves to the subject DID Document verification method
+`#agent-key`. A Registry-controlled `#registry-key` MUST NOT count as proof
+that the subject signed the Card unless the verifier policy explicitly allows
+that key.
+
 ## 8. Conformance
 
 Minimum conformance requires:
@@ -144,11 +152,13 @@ Minimum conformance requires:
 5. no embedded dynamic trust level or revocation claim;
 6. verification sequence executes without treating Card presence as trust.
 7. any present Card signature verifies under the selected `kid`.
+8. a verifier that requires signatures rejects an unsigned Card;
+9. `#registry-key` is rejected under the default subject-held key policy.
 
-## 9. Open decisions
+## 9. v0.2 decisions
 
-- final extension namespace URI;
-- mandatory Card signature for public discovery;
-- whether Passport URI must be same-origin with the Card;
-- media type registration;
-- Registry-hosted fallback Card semantics.
+- the extension remains the provisional URN above;
+- public discovery signatures remain verifier-policy controlled;
+- Passport and Card need not share an origin;
+- Registry-hosted fallback is a byte-preserving cache, not a new authority;
+- IANA media-type registration and a final namespace URI are deferred.
