@@ -32,6 +32,8 @@ CHASI 研究这一环境所需的治理与互操作基础设施，包括跨主�
 | **L4 · 剖面** | [`assembly-zh.md`](./profiles/assembly-zh.md) · [`en`](./profiles/assembly.md) | v0.3 |
 | | [`lexicon-zh.md`](./profiles/lexicon-zh.md) · [`en`](./profiles/lexicon.md) | v0.3 |
 | | [`compliance-profile-zh.md`](./profiles/compliance-profile-zh.md) · [`en`](./profiles/compliance-profile.md) | v0.1 |
+| | [`registry-interop-zh.md`](./profiles/registry-interop-zh.md) · [`en`](./profiles/registry-interop.md) | v0.1 |
+| | [`agent-card-identity-zh.md`](./profiles/agent-card-identity-zh.md) · [`en`](./profiles/agent-card-identity.md) | v0.1 |
 | **L5 · 证据与一致性** | *不在本仓*——证据由 `did-method-cha2a` 承载；一致性向量与核对器在 `cha2a-conformance` | — |
 | **L6 · 实现与运营** | *不在本仓*——各实现另在自己的仓 | — |
 | **L7 · 方法** | [`use-case-laboratory-zh.md`](./method/use-case-laboratory-zh.md) · [`en`](./method/use-case-laboratory.md) | v1.0 |
@@ -40,7 +42,7 @@ CHASI 研究这一环境所需的治理与互操作基础设施，包括跨主�
 
 **哪一层归谁。** L1 陈述愿景。**L2 不陈述任何要求**——凡出现「必须」，都指向拥有该条的分册（`governance-architecture.md` §1.1）。L3 陈述要求，每一册管自己的主题。L4 承载叠在其下各层之上的剖面。L5 承载一致性向量与核对器。L6 承载实现与运营。L7 承载方法——一次实验怎么设计、怎么跑、怎么记。L8 承载对外交付物。**`specs/overview-zh.md` 是本族的入口文档**；上表是**本仓**的层索引。两者不是二选一——入口讲这一族是什么，索引讲本仓有什么。**上表的「八层」与上位架构的「八层」不是同一套**：上位架构（`protocol-suite-architecture.md` §4）分的是**协议族的功能层**（CHA2A Core · Governance · Passport & Interoperability · Group & Collaboration · Federation · Evidence & Trust · Marketplace / Commerce · Workflow / Task）；上表分的是**本仓文档的层索引**。同名不同物。
 
-**每一层要么有，要么有交代。** L5 / L6 / L8 在**本仓**为空，是决定，不是遗漏：L5 由**两个**并列仓承载（证据在 `did-method-cha2a`、一致性在 `cha2a-conformance`），L6 由各实现自己的仓承载，L8 按次 dated。**L4 已有三份剖面**：组装、词表与合规；「高级别的生态信任态」仍预留，直到出现至少两个独立真实验证方。
+**每一层要么有，要么有交代。** L5 / L6 / L8 在**本仓**为空，是决定，不是遗漏：L5 由**两个**并列仓承载（证据在 `did-method-cha2a`、一致性在 `cha2a-conformance`），L6 由各实现自己的仓承载，L8 按次 dated。**L4 已有五份剖面**：组装、词表、合规、Registry 互操作和 Agent Card 身份；「高级别的生态信任态」仍预留，直到出现至少两个独立真实验证方。
 
 **身份核心不在这里。** 身份、证据与 DID 方法本身，维护在并列仓 **`did-method-cha2a`**；各实现另在自己的仓。
 
