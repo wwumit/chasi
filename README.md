@@ -32,6 +32,8 @@ CHASI studies the governance and interoperability infrastructure this environmen
 | **L4 · profiles** | [`assembly.md`](./profiles/assembly.md) · [`-zh`](./profiles/assembly-zh.md) | v0.3 |
 | | [`lexicon.md`](./profiles/lexicon.md) · [`-zh`](./profiles/lexicon-zh.md) | v0.3 |
 | | [`compliance-profile.md`](./profiles/compliance-profile.md) · [`-zh`](./profiles/compliance-profile-zh.md) | v0.1 |
+| | [`registry-interop.md`](./profiles/registry-interop.md) · [`-zh`](./profiles/registry-interop-zh.md) | v0.1 |
+| | [`agent-card-identity.md`](./profiles/agent-card-identity.md) · [`-zh`](./profiles/agent-card-identity-zh.md) | v0.1 |
 | **L5 · evidence and conformance** | *not in this repository* — evidence lives in `did-method-cha2a`; conformance vectors and checkers in `cha2a-conformance` | — |
 | **L6 · implementation and operation** | *not in this repository* — implementations live in their own repositories | — |
 | **L7 · method** | [`use-case-laboratory.md`](./method/use-case-laboratory.md) · [`-zh`](./method/use-case-laboratory-zh.md) | v1.0 |
@@ -40,7 +42,7 @@ CHASI studies the governance and interoperability infrastructure this environmen
 
 **Which layer owns what.** L1 states the vision. **L2 states no requirements** — where a "must" belongs, it points at the volume that owns it (`governance-architecture.md` §1.1). L3 states the requirements, each volume for its own subject. L4 holds profiles over the layers below. L5 holds conformance vectors and checkers. L6 holds implementations and operations. L7 holds the method — how an experiment is designed, run and recorded. L8 holds what is delivered outward. **`specs/overview.md` is the family's entry document**; the table above is **this repository's** layer index. They are not alternatives: the entry says what the family is, the index says what this repository holds. **The "eight layers" above are not the same set as the upper architecture's "eight layers"**: the upper architecture (`protocol-suite-architecture.md` §4) splits the **protocol suite's functional layers** (CHA2A Core · Governance · Passport & Interoperability · Group & Collaboration · Federation · Evidence & Trust · Marketplace / Commerce · Workflow / Task); the table above is **this repository's layer index**. Same name, different things.
 
-**Every layer is either present or accounted for.** L5, L6 and L8 are empty *here* by decision, not by omission: L5 is held by **two** companion repositories (evidence in `did-method-cha2a`, conformance in `cha2a-conformance`), L6 by the implementations' own repositories, L8 is dated per delivery. **L4 now holds three profiles**: assembly, lexicon and compliance; the high-grade ecosystem trust state stays reserved until at least two independent real verifiers exist.
+**Every layer is either present or accounted for.** L5, L6 and L8 are empty *here* by decision, not by omission: L5 is held by **two** companion repositories (evidence in `did-method-cha2a`, conformance in `cha2a-conformance`), L6 by the implementations' own repositories, L8 is dated per delivery. **L4 now holds five profiles**: assembly, lexicon, compliance, Registry interoperability and Agent Card identity; the high-grade ecosystem trust state stays reserved until at least two independent real verifiers exist.
 
 **The identity core is elsewhere.** Identity, evidence and the DID method itself live in the companion repository **`did-method-cha2a`**; implementations live in their own repositories.
 
