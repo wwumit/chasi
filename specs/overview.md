@@ -1,7 +1,7 @@
 # CHA2A Specification Group — Overview
 
-> Status: draft (v0.3)
-> Date: 2026-10-19
+> Status: draft (v0.4)
+> Date: 2026-11-21
 > Position: **the entry document and index of this family**; §3 gives the document order
 > Layer: **L3 · specifications** — the entry and index of that layer; this repository's eight-layer index is `README.md`
 > Principle: this family adds only the layer that existing standards lack — **judgement across trust domains**; identity, evidence, collaboration and transport keep the standards they already have
@@ -68,7 +68,17 @@ This repository — the specification layer (each volume states the requirements
   naming.md                    naming, reference and versioning
 ```
 
-Layer L4 holds two further profiles, `assembly.md` and `lexicon.md`, laid over the layers below; this entry does not index them one by one — see the layer index in `README.md`.
+Layer L4 holds six profiles laid over the layers below:
+
+- `assembly.md` — how the family's parts are assembled;
+- `lexicon.md` — the controlled vocabulary;
+- `compliance-profile.md` — verifiability conditions for compliance use;
+- `registry-interop.md` — Registry observations, status and freshness;
+- `agent-card-identity.md` — discovery and identity references;
+- `agent-action-authorization.md` — standing privilege, operation contracts and one-action decisions.
+
+This entry states the family boundary; `README.md` remains the layer index and
+the profiles remain the owners of their respective constraints.
 
 **The companion volumes are peers of each other**, and the method specification has a **different** status: normative rather than informative. `governance-architecture.md` sits at the layer above them all: it explains why the family is shaped this way and **holds principles and constraints**; where a "must" belongs, it points at the volume that owns it (`governance-architecture.md` §1.1). Each answers a different question about a different subject: an organization exists without agents; an agent can act without belonging to an organization; a collaboration spans organizations; and a record outlives all of them.
 
@@ -205,10 +215,18 @@ These rules are informative — they describe the division a conforming deployme
 | **authentication** | confirmation of identity **at the connection layer**. Avoid using it as a loose synonym for verification |
 | **certification** | **never used to refer to this family**; used only when citing regulation or describing a third party |
 | **trust summary** | the aggregate result of L0–L4 — a *summary of facts*, not a score and not a guarantee |
+| **authorization** | a determination that a subject may perform a specified action; it is not an identity, a credential or an execution |
+| **standing privilege** | a capability held over a task window; it does not by itself decide one attempted action |
 | **delegation** | a scoped, time-bounded, revocable authorization relationship |
 | **representative** | a member acting for a subject in a given context |
+| **no decision** | no required check was performed or no decision was taken; distinct from an indeterminate verification outcome and from a policy stop |
 
-> The three-way split (verification / authentication / certification) is not wording fastidiousness: **in some jurisdictions the word "certification" triggers a specific liability shape and licensing requirement**. This family's products and documents use "verification" throughout.
+> The four-way split (verification / authentication / authorization /
+> delegation) is not wording fastidiousness: each answers a different question
+> and licenses a different conclusion. Certification remains separate:
+> **in some jurisdictions the word "certification" triggers a specific
+> liability shape and licensing requirement**. This family's products and
+> documents use "verification" throughout.
 
 ---
 

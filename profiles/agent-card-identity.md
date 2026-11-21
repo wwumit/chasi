@@ -1,6 +1,6 @@
 # Agent Card Identity Extension Profile
 
-> Status: draft (v0.2) | Date: 2026-11-01 | Layer: **L4 · profile**
+> Status: draft (v0.3) | Date: 2026-11-21 | Layer: **L4 · profile**
 >
 > This profile adopts the A2A Agent Card as the capability-discovery object and
 > adds only an identity reference. It does not redefine A2A.
@@ -35,7 +35,7 @@ The provisional extension identifier is:
 urn:cha2a:ext:agent-identity:v1
 ```
 
-The identifier remains provisional for v0.2. A final HTTP URI must not be
+The identifier remains provisional for v0.3. A final HTTP URI must not be
 published until its namespace and resolution policy are stable.
 
 The extension carries references, not a second credential:
@@ -97,6 +97,22 @@ preserve the original Card bytes and signatures, or explicitly state that the
 copy is not signature-verifiable. A hosted copy does not become a new
 authority and MUST NOT be confused with the agent-origin Card.
 
+A discovery result is surface-local. A Card not returned by one discovery
+surface, search index or Registry-hosted copy MUST NOT by itself be reported as
+ecosystem-wide absence. Where a discovery response is retained for review, it
+SHOULD preserve:
+
+- the discovery surface and source;
+- the query or capability context needed to interpret the result;
+- the observation and retrieval time;
+- the response digest or equivalent content binding;
+- the scope and coverage of the surface, or an explicit statement that coverage
+  is unknown.
+
+The no-match, unavailable and unresolved meanings are defined by
+`registry-interop.md` and the applicable discovery profile; this profile does
+not create a second discovery-result vocabulary.
+
 ## 6. Verification sequence
 
 1. Fetch the Agent Card.
@@ -154,11 +170,16 @@ Minimum conformance requires:
 7. any present Card signature verifies under the selected `kid`.
 8. a verifier that requires signatures rejects an unsigned Card;
 9. `#registry-key` is rejected under the default subject-held key policy.
+10. a no-result from one surface is not recorded as ecosystem-wide absence;
+11. retained discovery evidence identifies the surface and retrieval context,
+    or explicitly says it cannot.
 
-## 9. v0.2 decisions
+## 9. v0.3 decisions
 
 - the extension remains the provisional URN above;
 - public discovery signatures remain verifier-policy controlled;
 - Passport and Card need not share an origin;
 - Registry-hosted fallback is a byte-preserving cache, not a new authority;
+- discovery results are surface-local and do not create global absence;
+- retrieval provenance may reference the Registry Interop profile;
 - IANA media-type registration and a final namespace URI are deferred.

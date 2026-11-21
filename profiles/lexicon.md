@@ -1,7 +1,7 @@
 # Lexicon — the Terminology Volume
 
-> Status: draft (v0.3)
-> Date: 2026-10-31
+> Status: draft (v0.4)
+> Date: 2026-11-21
 > Position: the **single source for this family's terminology**. Where any document conflicts with it, this volume governs
 > Principle: **one concept, one word** — the same thing written two ways in two places means it may be judged twice
 > Related: all volumes
@@ -75,6 +75,10 @@ The four below were **measured**, not imagined; this volume **also fixed the non
 | **行动时状态** (material state) | `当前状态` when used as a historical substitute | the model, configuration, environment, version and other conditions in force at action time; the current state does not replace them retrospectively |
 | **状态不可达** (status unavailable) | `撤销` · `无效` | inability to obtain a status source is not a confirmed revocation or a confirmed invalidity |
 | **原因代码** (reason code) | `错误码` · `结果` when conflated | explains why a verdict is verified, unresolved or rejected; it is neither the relying party's action nor another verdict |
+| **授权** (authorization) | `鉴权` · `委托` · `执行` when used as synonyms | a determination that one subject may perform one action; identity establishes who, authentication establishes the presentation, and execution is a later event |
+| **持久授权** (standing privilege) | `单次动作授权` | authority held over a task window; it does not itself decide one attempted action |
+| **操作契约** (operation contract) | `授权书` · `凭证` | an application-side statement of required inputs, checks and failure dispositions; it grants no authority |
+| **未作决定** (no decision) | `indeterminate` · `deny` | no required check was performed or no decision was taken; it is neither a verification outcome nor a policy action |
 | **依赖方动作** (policy action) | `验证结论` · `quarantined` as a verdict | an action taken by the relying party under policy; the verdict comes first and the relying party decides the action |
 
 **Sufficiency criterion**: every term used in any volume of this family either has its proper name here or is not prohibited by it; a term this volume does not carry, where a real two-sense risk exists, is a signal that the lexicon needs to grow. That is the point to stop; do not extend.
@@ -88,4 +92,4 @@ The four below were **measured**, not imagined; this volume **also fixed the non
 - it does no **automatic substitution** of synonyms — every conflict it lists has been fixed in place (§2);
 - it does not fix **English** usage, except the few points noted here (proper names capital, `agent` lower-case); English has its own conventions in each volume.
 
-—— Lexicon · v0.3
+—— Lexicon · v0.4

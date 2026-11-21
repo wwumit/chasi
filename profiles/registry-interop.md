@@ -1,6 +1,6 @@
 # Passport–Registry Interoperability Profile
 
-> Status: draft (v0.2) | Date: 2026-11-01 | Layer: **L4 · profile**
+> Status: draft (v0.3) | Date: 2026-11-21 | Layer: **L4 · profile**
 >
 > This profile constrains how a Passport verifier consumes a Registry. It does
 > not replace a DID method, Registry API, or verifier policy.
@@ -88,6 +88,33 @@ The consumer MUST distinguish:
 These are observations, not final Passport verdicts. A verifier applies its
 policy and fails closed when the required observation is unavailable.
 
+### 3.4 Scope, coverage and retrieval
+
+A negative observation is local to what the source was asked and qualified to
+answer. `not_found` alone MUST NOT be read as ecosystem-wide absence.
+
+Every observation used for a definitive negative result SHOULD preserve:
+
+| Semantic member | Requirement |
+|---|---|
+| `queryScope` | the subject, claim or status question actually asked |
+| `coverage` | the authorities checked, whether the check is complete for that scope, and any residual limitation |
+| `retrieval` | source surface, request time, response time and response digest or equivalent content binding |
+
+Where the source cannot establish coverage for the relevant time, scope or
+federation path, the verifier reports the result as unresolved/indeterminate,
+not as an authoritative negative finding.
+
+The following are different observations:
+
+- no record in a source whose declared coverage is established;
+- no record in a source whose coverage is unknown;
+- source unavailable;
+- a complete source that affirmatively confirms non-revocation.
+
+An empty revocation list does not establish non-revocation unless the profile
+declares the list complete for the requested subject, time and scope.
+
 ## 4. Freshness
 
 Freshness policy belongs to the verifier. A Registry MUST NOT decide that an
@@ -99,6 +126,10 @@ An observation should carry enough information for the verifier to apply:
 - whether a proof is required;
 - whether a live lookup is required;
 - whether a cached observation is permitted.
+
+The applicable action-authorization profile MAY bind a freshness budget to a
+decision class. The same observation age can be acceptable for a read-only
+lookup and insufficient for an irreversible action.
 
 If a Registry does not provide `sourceAssertedAt`, an adapter MAY use the
 retrieval time as `observedAt` and MUST label the time basis as an adapter
@@ -178,16 +209,21 @@ Minimum conformance requires:
 3. source and observation time;
 4. not-found and unavailable distinctions;
 5. no conversion of unknown state to active;
-6. explicit peer provenance and fail-closed peer failure.
+6. explicit peer provenance and fail-closed peer failure;
+7. a negative result identifies the scope and coverage under which it was obtained;
+8. a retrieval receipt or equivalent trace binds source, query, observation time and response content;
+9. an empty revocation response is not reported as confirming non-revocation unless completeness is established.
 
 Proof, evidence, revision and write tests are separate capability profiles.
-Status proofs are not mandatory in the base v0.2 profile; a verifier may require
+Status proofs are not mandatory in the base v0.3 profile; a verifier may require
 them under its own cross-domain admission policy.
 
-## 10. v0.2 decisions
+## 10. v0.3 decisions
 
 - `sourceAssertedAt` is not mandatory; `timeBasis` is mandatory;
 - base status proof is optional and policy-driven;
 - peer identity is explicit and authenticated, without prescribing one
   technology;
-- capabilities are declared in `/.well-known/cha2a`.
+- capabilities are declared in `/.well-known/cha2a`;
+- negative observations are scoped by coverage;
+- retrieval provenance is part of the observation, not a logging convenience.
