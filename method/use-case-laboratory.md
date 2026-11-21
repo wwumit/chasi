@@ -6,7 +6,7 @@ Driving CHASI / CHA2A architecture, governance and protocol evolution from scena
 
 ---
 
-> Status: draft v1.0 | Date: 2026-10-04 | Kind: **method**
+> Status: draft v1.1 | Date: 2026-11-21 | Kind: **method**
 > This is **a set of experimental scenarios**, not a requirements specification and not a specification frozen for adoption. It answers "which scenarios do we use to stress the architecture"; it does not answer "which one we do when".
 
 ---
@@ -166,7 +166,36 @@ The five use cases should not become five separate models. **The point of the ex
 
 **The point of the template is in its last five entries.** The first nine are what a scenario has to state; the last five are what an experiment has to produce; **a scenario with the former and not the latter looks complete but produces no checkable conclusion.**
 
-## 11. Its Relation to the ITU-T Focus Group TIDA
+## 11. Conformance experiment record
+
+A scenario that produces a pass/fail result should produce a **conformance
+experiment record**, not only prose observation.
+
+Minimum record:
+
+| Member | Purpose |
+|---|---|
+| scenario and requirement | what the experiment is meant to exercise |
+| suite version | immutable identity of the vector set |
+| implementation identity | what was exercised |
+| environment and observation boundary | what the result does and does not establish |
+| per-vector input digest | exact content tested |
+| expected result and reason code | the declared oracle |
+| actual result and reason code | what the implementation produced |
+| negative controls | checks that must fail for the run to mean anything |
+| unresolved / not-evaluated items | what the run did not establish |
+
+Requirements:
+
+- negative cases should outnumber positive cases;
+- a missing check is not a rejection and not a pass;
+- `not evaluated`, `indeterminate` and `deny` remain distinct;
+- a test result is evidence about the implementation, suite and environment it
+  names, not a general certification;
+- changing expected outcomes creates a new suite version or an explicit,
+  reviewable oracle change.
+
+## 12. Its Relation to the ITU-T Focus Group TIDA
 
 CHASI can follow and draw on the scenario research produced by ITU-T Focus Group TIDA and related work, but its own Use Case Laboratory need not wait for a standards body to reach final consensus. Five attitudes:
 
@@ -176,7 +205,7 @@ CHASI can follow and draw on the scenario research produced by ITU-T Focus Group
 - **Verifiable** — turn every important idea into an executable scenario as far as possible.
 - **Evolvable** — use case results feed directly into updates of the architecture and the specification.
 
-## 12. The Question the First Batch Is Meant to Answer
+## 13. The Question the First Batch Is Meant to Answer
 
 The first batch of scenarios is not there to show a few demos, but to answer one fundamental question: **now that agents are turning from "tools" into social participants with identity, authority, relationships, responsibility and autonomy, is the existing Internet / cloud / AI-agent stack enough to support that social structure?**
 
@@ -184,4 +213,4 @@ The value of CHASI should emerge gradually through these scenarios: not starting
 
 The end goal is a continuing loop: **real scenarios produce problems, experiments produce evidence, evidence drives the architecture, the architecture forms specifications, and the specifications go back into new scenarios for validation.**
 
-—— CHASI Use Case Laboratory · v1.0
+—— CHASI Use Case Laboratory · v1.1

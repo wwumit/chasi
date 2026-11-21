@@ -1,7 +1,7 @@
 # Cross-Organization Agent Governance — Architecture
 
-> Status: architecture draft (v0.3)
-> Date: 2026-10-03
+> Status: architecture draft (v0.4)
+> Date: 2026-11-21
 > Position: the **architecture** layer of this family — one level above the specification volumes. It answers **why the family is shaped this way**; the volumes answer **what must hold**.
 > **This document holds principles and constraints.** Where a "must" belongs, it points to the volume that owns it. See §1.1 — that rule is what keeps the two layers from becoming two sources of truth.
 > **Relation to an identity binding.** This layer states no identity requirement of its own. It presupposes only that a subject is **identifiable across domains**, and names **`did:cha2a` as the worked example** its volumes are written against — an experimental draft (v1.1.0) recorded in the W3C DID Extensions registry. The requirements stay with the binding, and replacing the example changes nothing on this page.
@@ -66,14 +66,15 @@ Each principle is stated with **what it settles** — not with what anyone must 
 | 2 | **Identity ≠ DID** | Every agent needs an *identifiable context*; **a DID is the escalation of that context into something verifiable across domains**. This is why an object can exist and be named long before it has a DID |
 | 3 | **Organization = trust / governance domain** | An organization is the unit that can be trusted or distrusted as a whole, and the unit that appoints and revokes |
 | 4 | **Group = collaboration domain** | A group is a scope of work, not a sub-organization. It may span organizations, outlive any one of them, and be created by a task initiator rather than by an authority |
-| 5 | **Role = a permission context; delegation = an authorization relationship; representation = who an agent acts for in a given context** | These are three different things and collapsing them is the usual source of authority bugs |
+| 5 | **Identity, authentication, authorization and delegation are distinct; role and representation are two further contexts** | Identity names a subject; authentication proves a presentation; authorization decides an action; delegation transfers bounded authority. Collapsing them is the usual source of authority bugs |
 | 6 | **Registry = discovery and resolution infrastructure; the trust anchor is the verifier's own resolver** | A registry is where records are found. What a verifier trusts is the resolver it configured, which is why migration is possible |
 | 7 | **Runtime-neutral** | Nothing here depends on a particular agent runtime, model vendor, or hosting platform |
 | 8 | **Governance boundary and collaboration boundary are expressed separately** | Membership of an organization does not by itself confer anything inside a group, and a group role does not extend into an organization |
 | 9 | **Trust roots stay where they are** | Registry migration and multiple coexisting registries are both permitted; no implementation may make cross-domain trust conditional on a record being resolvable through its own registry |
 | 10 | **Records outlive their context** | Historical evidence is not deleted when a membership, an office or an organization ends — the record reflects the change rather than disappearing with it |
+| 11 | **Standing authority and action-time decision are separate time scales** | A grant may establish what an agent can hold over a task window; it does not by itself decide whether one action is permitted now |
 
-**Where these principles become requirements**: principles 2, 3, 8 and 10 in `organization-governance.md` and `group-collaboration.md`; 1 and 9 in `group-collaboration.md` §9 and §4.5; 6 in the **resolver contract of the identity binding in use** — `did-method-cha2a.md` §4.1 in the worked example.
+**Where these principles become requirements**: principles 2, 3, 8 and 10 in `organization-governance.md` and `group-collaboration.md`; 1 and 9 in `group-collaboration.md` §9 and §4.5; 6 in the **resolver contract of the identity binding in use** — `did-method-cha2a.md` §4.1 in the worked example; 5, 11 and the separation of discovery from authorization in `agent-action-authorization.md`.
 
 ---
 
@@ -135,6 +136,12 @@ COLLABORATION PLANE — who acts together, and in what scope
 
 **The three levels are peers.** Organization does not contain group, and group does not contain federation. Two organizations can collaborate with no federation: federation is optional infrastructure at the **Federation** level, not a precondition at the **Group** level. **It follows that the corresponding volumes are peers rather than a hierarchy.**
 
+**An action-time decision is not a fourth governance subject.** It is a profile
+over the existing levels: it consumes the organization's authority, the group's
+collaboration context and the verifier's resolution of Registry facts, then
+decides whether one attempted action is permitted. The decision does not replace
+the authority source that made the standing grant possible.
+
 ---
 
 ## 5. Where authority comes from
@@ -180,6 +187,8 @@ These are the constraints **that span the volumes**, because each is a property 
 | **C3** | **Cross-domain trust rests on the verifier's own resolver configuration** | principle 9. The resolver a verifier configured is the trust anchor; a subject's registry is not |
 | **C4** | **A record must remain verifiable from the record and public material alone** | a record whose truth is established by an operator's availability is not evidence |
 | **C5** | **Every boundary between two parties must be expressible bilaterally** | collaboration and federation are both bilateral; introducing a mandatory intermediary would reinstate the centre the model removes |
+| **C6** | **A standing grant does not itself authorize each action** | a task-window grant may permit an agent to act within a scope, but a consequential action still needs a decision against the inputs in force at that time |
+| **C7** | **A check that was not performed cannot be reported as a decision** | no decision, an indeterminate verdict and a policy stop are different states; fail-closed must not manufacture a verification conclusion |
 
 **C1 and C3 together are what federation's 够用判据 tests.** The criterion, which this layer owns because no volume can state it alone:
 
@@ -194,6 +203,18 @@ That criterion is a *test*, not a description. It fails if the answer requires a
 Governance actions — registration, authorization, joining and leaving an organization, joining and leaving a group, task delegation, task results, revocation — are expected to be able to form evidence. Whether they must, and in what format, is `organization-governance.md` §8 and `evidence-record.md`.
 
 **What this layer contributes is the shape of the requirement**, not its content: audit and governance data are held separately from live runtime state, so that an audit does not depend on the running system, and so that a system going down does not take the record with it. That is C4 in §7.
+
+An action-time decision record additionally distinguishes:
+
+- the standing authority it consumed;
+- the operation contract in force;
+- the decision inputs and their versions;
+- the verification outcome;
+- the relying party's policy action;
+- whether no decision was taken;
+- whether a control-plane change was recorded, acknowledged or observed as effective.
+
+Those distinctions are profiled in `agent-action-authorization.md`.
 
 ---
 
